@@ -1,0 +1,14 @@
+# Created by .ignore support plugin (hsz.mobi)
+# IntelliJ файлы проекта
+.DS_Store
+.idea
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
+node_modules/
+build/
+npm-debug.*
+#source/css/*.css
+Thumbs.db

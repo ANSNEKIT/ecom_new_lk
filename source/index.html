@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Тестовая страница</title>
+
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+<main class="container">
+  <h2>Сформировать чек</h2>
+  <form action="POST">
+    <fieldset class="FormGroup1 mb-5">
+
+      <div class="form-group row">
+        <label for="storeID" class="col-sm-2 col-form-label">Магазин</label>
+        <div class="col-sm-10">
+          <select class="form-control" name="storeID" id="storeID">
+            <option value="2" selected>Демо магазин для тестирования</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="saleCharge" class="col-sm-2 col-form-label">Признак расчета</label>
+        <div class="col-sm-10">
+          <select class="form-control" name="saleCharge" id="saleCharge">
+            <option value="" selected>Приход</option>
+            <option value="">Возврат прихода</option>
+            <option value="">Расход</option>
+            <option value="">Возврат расхода</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group" id="isElectronic_field">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="isElectronic">
+          <label class="form-check-label" for="isElectronic">
+            Электронный чек
+          </label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="FormGroup2 mb-5">
+      <legend>Покупатель</legend>
+
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="">Данные покупателя</label>
+            <input type="text" class="form-control" id="" placeholder="Имя" value="" >
+            <div class="valid-tooltip"></div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="">ИНН покупателя</label>
+            <input type="text" class="form-control" id="" placeholder="" value="" >
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-6">
+            <label for="">Телефон без +7</label>
+            <input type="tel" class="form-control" id="" placeholder="Имя" value="" >
+            <div class="valid-tooltip"></div>
+          </div>
+          <div class="col-md-6">
+            <label for="">Email покупателя</label>
+            <input type="email" class="form-control" id="" placeholder="" value="" required>
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="FormGroup3 mb-5">
+      <legend>Товарные позиции</legend>
+
+      <button type="button">Добавить</button>
+
+      <div class="form-group goods">
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="items_0_name">Наименование</label>
+            <input type="text" class="form-control" id="items_0_name" value="Название товара" required>
+            <div class="valid-tooltip">Укажите название товарной позиции</div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="items_0_price">Цена, руб</label>
+            <input type="text" class="form-control" id="items_0_price" value="1.00" required>
+            <div class="valid-tooltip">Укажите цену в рублях</div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="items_0_paymentObject">Предмет расчета</label>
+            <select class="form-control" id="items_0_paymentObject" name="items[0].paymentObject">
+              <option value="COMMODITY" selected="">Товар</option>
+              <option value="EXCISE">Подакцизный товар</option>
+              <option value="JOB">Работа</option>
+              <option value="SERVICE">Услуга</option>
+              <option value="GAMBLING_BET">Ставка азартной игры</option>
+              <option value="GAMBLING_PRIZE">Выигрыш азартной игры</option>
+              <option value="LOTTERY">Лотерейный билет</option>
+              <option value="LOTTERY_PRIZE">Выигрыш лотереи</option>
+              <option value="INTELLECTUAL_ACTIVITY">Интеллектуальная собственность</option>
+              <option value="PAYMENT">Платёж</option>
+              <option value="AGENT_COMMISSION">Вознаграждение агента</option>
+              <option value="COMPOSITE">Составной предмет расчёта</option>
+              <option value="ANOTHER">Иной предмет расчёта</option>
+              <option value="PROPERTY_RIGHT">Имущественное право</option>
+              <option value="NON_OPERATING_GAIN">Внереализационный доход</option>
+              <option value="INSURANCE_PREMIUM">Страховые взносы</option>
+              <option value="SALES_TAX">Торговый сбор</option>
+              <option value="RESORT_FEE">Курортный сбор</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="items_0_vatType">НДС</label>
+            <select class="form-control" id="items_0_vatType" name="items[0].vatType">
+              <option value="VAT_NONE" selected>Без НДС</option>
+              <option value="VAT_0PCT">НДС 0%</option>
+              <option value="VAT_10PCT">НДС 10%</option>
+              <option value="VAT_110PCT">НДС 10/110</option>
+              <option value="VAT_20PCT">НДС 20%</option>
+              <option value="VAT_120PCT">НДС 20/120</option>
+            </select>
+          </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="items_0_amount">Количество</label>
+              <input type="text" class="form-control" id="items_0_amount" value="1" >
+              <div class="valid-tooltip">Укажите количество больше нуля</div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="items_0_paymentMethod">Признак расчета</label>
+              <select class="form-control" id="items_0_paymentMethod" name="items[0].paymentMethod">
+                <option value="FULL_PAYMENT" selected>Полный расчёт</option>
+                <option value="FULL_PREPAYMENT">Полная предоплата</option>
+                <option value="PREPAYMENT">Предоплата</option>
+                <option value="ADVANCE">Аванс</option>
+                <option value="PARTIAL_PAYMENT">Частичная оплата и кредит</option>
+                <option value="CREDIT">Передача в кредит</option>
+                <option value="CREDIT_PAYMENT">Оплата кредит</option>
+              </select>
+          </div>
+        </div>
+
+        <p>Являетесь ли вы платежным агентом?</p>
+
+        <div class="form-group row" id="isAgent">
+          <div class="form-check col-sm-2">
+            <input class="form-check-input" type="radio" id="AgentFalse" name="agent" checked>
+            <label class="form-check-label" for="AgentFalse">Нет</label>
+          </div>
+          <div class="form-check col-sm-2">
+            <input class="form-check-input" type="radio" id="AgentTrue" name="agent">
+            <label class="form-check-label" for="AgentTrue">Да</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group agentGoods">
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="">Операция агента</label>
+            <input type="text" class="form-control" id="" placeholder="Имя" value="" >
+            <div class="valid-tooltip"></div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="">Телефон агента</label>
+            <input type="text" class="form-control" id="" placeholder="" value="" >
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-6">
+            <label for="">Наименование агента</label>
+            <input type="tel" class="form-control" id="" placeholder="Имя" value="" >
+            <div class="valid-tooltip"></div>
+          </div>
+          <div class="col-md-6">
+            <label for="">Адрес агента</label>
+            <input type="email" class="form-control" id="" placeholder="" value="" required>
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="">ИНН агента</label>
+            <input type="text" class="form-control" id="" placeholder="Имя" value="" >
+            <div class="valid-tooltip"></div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="">Наименование поставщика</label>
+            <input type="text" class="form-control" id="" placeholder="" value="" >
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-6">
+            <label for="">Телефон поставщика</label>
+            <input type="tel" class="form-control" id="" placeholder="Имя" value="" >
+            <div class="valid-tooltip"></div>
+          </div>
+          <div class="col-md-6">
+            <label for="">ИНН Поставщика</label>
+            <input type="email" class="form-control" id="" placeholder="" value="" required>
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button">Удалить</button>
+    </fieldset>
+
+    <fieldset class="FormGroup3 mb-5">
+      <legend>Оплата</legend>
+
+      <button type="button">Добавить</button>
+
+      <div class="form-group row">
+        <div class="col-md-6 mb-3">
+          <label for="payments_0_type">Вид оплаты</label>
+          <select id="payments_0_type" name="payments[0].type" class="form-control">
+            <option value="CASH" selected="">Наличными</option>
+            <option value="CREDIT_CARD">Банковская карта</option>
+            <option value="PRE_PAID">Предоплата</option>
+            <option value="POST_PAID">Постоплата</option>
+            <option value="COUNTER_OFFER">Встречное предоставление</option>
+          </select>
+          <div class="valid-tooltip"></div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="">Сумма, руб</label>
+          <input type="text" class="form-control" id="" value="1.0" placeholder="Введите итоговую сумму оплаты" required>
+          <div class="valid-tooltip"></div>
+        </div>
+      </div>
+
+      <button type="button">Удалить</button>
+
+    </fieldset>
+
+    <button type="submit">Отправить</button>
+
+  </form>
+</main>
+
+</body>
+</html>
