@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Тестовая страница</title>
+  <title>Формирование чека вручную</title>
 
-  <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+
 </head>
 <body>
 
 <main class="container">
   <h2>Сформировать чек</h2>
-  <form action="POST">
+  <form action="POST" method="get">
     <fieldset class="FormGroup1 mb-5">
 
       <div class="form-group row">
@@ -29,17 +30,17 @@
         <label for="saleCharge" class="col-sm-2 col-form-label">Признак расчета</label>
         <div class="col-sm-10">
           <select class="form-control" name="saleCharge" id="saleCharge">
-            <option value="" selected>Приход</option>
-            <option value="">Возврат прихода</option>
-            <option value="">Расход</option>
-            <option value="">Возврат расхода</option>
+            <option value="SALE" selected>Приход</option>
+            <option value="SALE_RETURN">Возврат прихода</option>
+            <option value="CHARGE">Расход</option>
+            <option value="CHARGE_RETURN">Возврат расхода</option>
           </select>
         </div>
       </div>
 
       <div class="form-group" id="isElectronic_field">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="isElectronic">
+          <input class="form-check-input" name="isElectronic" type="checkbox" id="isElectronic">
           <label class="form-check-label" for="isElectronic">
             Электронный чек
           </label>
@@ -53,26 +54,28 @@
       <div class="form-group">
         <div class="form-row">
           <div class="col-md-6 mb-3">
-            <label for="">Данные покупателя</label>
-            <input type="text" class="form-control" id="" placeholder="Имя" value="" >
+            <label for="customer_name">Данные покупателя</label>
+            <input type="text" class="form-control" id="customer_name" placeholder="Имя" value="" name="customer.name" >
             <div class="valid-tooltip"></div>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="">ИНН покупателя</label>
-            <input type="text" class="form-control" id="" placeholder="" value="" >
+            <label for="customer_taxNumber">ИНН покупателя</label>
+            <input type="text" class="form-control" id="customer_taxNumber" placeholder="" value=""
+                   name="customer.taxNumber">
             <div class="valid-tooltip"></div>
           </div>
         </div>
 
         <div class="form-row">
           <div class="col-md-6">
-            <label for="">Телефон без +7</label>
-            <input type="tel" class="form-control" id="" placeholder="Имя" value="" >
+            <label for="customer_phone">Телефон без +7</label>
+            <input type="tel" class="form-control" id="customer_phone" placeholder="Имя" value="" name="customer.phone">
             <div class="valid-tooltip"></div>
           </div>
           <div class="col-md-6">
-            <label for="">Email покупателя</label>
-            <input type="email" class="form-control" id="" placeholder="" value="" required>
+            <label for="customer_email">Email покупателя</label>
+            <input type="email" class="form-control" id="customer_email" placeholder="" value="" name="customer.email"
+                   required>
             <div class="valid-tooltip"></div>
           </div>
         </div>
@@ -82,19 +85,19 @@
     <fieldset class="FormGroup3 mb-5">
       <legend>Товарные позиции</legend>
 
-      <button type="button">Добавить</button>
+      <button type="button" name="action" value="add.item">Добавить</button>
 
       <div class="form-group goods">
         <div class="form-row">
           <div class="col-md-4 mb-3">
             <label for="items_0_name">Наименование</label>
-            <input type="text" class="form-control" id="items_0_name" value="Название товара" required>
+            <input type="text" class="form-control" id="items_0_name" name="items[0].name" value="Название товара" required>
             <div class="valid-tooltip">Укажите название товарной позиции</div>
           </div>
 
           <div class="col-md-4 mb-3">
             <label for="items_0_price">Цена, руб</label>
-            <input type="text" class="form-control" id="items_0_price" value="1.00" required>
+            <input type="text" class="form-control" id="items_0_price" name="items[0].name" value="1.00" required>
             <div class="valid-tooltip">Укажите цену в рублях</div>
           </div>
 
@@ -171,73 +174,85 @@
       </div>
 
       <div class="form-group agentGoods">
+        <div class="form-row mb-3">
+          <label for="items_0_agentType">Тип агента</label>
+          <select class="form-control" id="items_0_agentType" name="items[0].agentType">
+            <option value="PAYING_AGENT" selected>платежный агент</option>
+            <option value="PAYING_SUBAGENT">платежный субагент</option>
+            <option value="BANK_PAYING_AGENT">Банковский платежный агент</option>
+            <option value="BANK_PAYING_SUBAGENT">Банковский платежный субагент</option>
+            <option value="ATTORNEY">Поверенный</option>
+            <option value="COMMISSION_AGENT">Комиссионер</option>
+            <option value="ANOTHER">Прочие агенты</option>
+          </select>
+        </div>
         <div class="form-row">
           <div class="col-md-6 mb-3">
-            <label for="">Операция агента</label>
-            <input type="text" class="form-control" id="" placeholder="Имя" value="" >
+            <label for="items_0_agentOperation">Операция агента</label>
+            <input type="text" class="form-control" id="items_0_agentOperation" name="items[0].agentOperation" placeholder="" value="" >
             <div class="valid-tooltip"></div>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="">Телефон агента</label>
-            <input type="text" class="form-control" id="" placeholder="" value="" >
+            <label for="items_0_agentPhones">Телефоны агента</label>
+            <input type="text" class="form-control" id="items_0_agentPhones" name="items[0].agentPhones" placeholder="" value="" >
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="items_0_agentName">Наименование агента</label>
+            <input type="tel" class="form-control" id="items_0_agentName" name="items[0].agentName" placeholder="" value="" >
+            <div class="valid-tooltip"></div>
+          </div>
+          <div class="col-md-6">
+            <label for="items_0_agentAddress">Адрес агента</label>
+            <input type="email" class="form-control" id="items_0_agentAddress" name="items[0].agentAddress" placeholder="" value="" required>
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="items_0_agentTaxNumber">ИНН агента</label>
+            <input type="text" class="form-control" id="items_0_agentTaxNumber" name="items[0].agentTaxNumber" placeholder="Имя" value="" >
+            <div class="valid-tooltip"></div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="items_0_supplierName">Наименование поставщика</label>
+            <input type="text" class="form-control" id="items_0_supplierName" name="items[0].supplierName" placeholder="" value="" >
             <div class="valid-tooltip"></div>
           </div>
         </div>
 
         <div class="form-row">
           <div class="col-md-6">
-            <label for="">Наименование агента</label>
-            <input type="tel" class="form-control" id="" placeholder="Имя" value="" >
+            <label for="items_0_supplierPhones">Телефон поставщика</label>
+            <input type="tel" class="form-control" id="items_0_supplierPhones" name="items[0].supplierPhones" placeholder="Имя" value="" >
             <div class="valid-tooltip"></div>
           </div>
           <div class="col-md-6">
-            <label for="">Адрес агента</label>
-            <input type="email" class="form-control" id="" placeholder="" value="" required>
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col-md-6 mb-3">
-            <label for="">ИНН агента</label>
-            <input type="text" class="form-control" id="" placeholder="Имя" value="" >
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="">Наименование поставщика</label>
-            <input type="text" class="form-control" id="" placeholder="" value="" >
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col-md-6">
-            <label for="">Телефон поставщика</label>
-            <input type="tel" class="form-control" id="" placeholder="Имя" value="" >
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6">
-            <label for="">ИНН Поставщика</label>
-            <input type="email" class="form-control" id="" placeholder="" value="" required>
+            <label for="items_0_supplierTaxNumber">ИНН Поставщика</label>
+            <input type="email" class="form-control" id="items_0_supplierTaxNumber" name="items[0].supplierTaxNumber" placeholder="" value="" required>
             <div class="valid-tooltip"></div>
           </div>
         </div>
       </div>
 
-      <button type="button">Удалить</button>
+      <button type="button" name="action" value="remove.item.0">Удалить</button>
     </fieldset>
 
     <fieldset class="FormGroup3 mb-5">
       <legend>Оплата</legend>
 
-      <button type="button">Добавить</button>
+      <button type="button" name="action" value="add.payment">Добавить</button>
 
       <div class="form-group row">
         <div class="col-md-6 mb-3">
           <label for="payments_0_type">Вид оплаты</label>
           <select id="payments_0_type" name="payments[0].type" class="form-control">
-            <option value="CASH" selected="">Наличными</option>
-            <option value="CREDIT_CARD">Банковская карта</option>
+            <option value="CASH">Наличными</option>
+            <option value="CREDIT_CARD" selected>Банковская карта</option>
             <option value="PRE_PAID">Предоплата</option>
             <option value="POST_PAID">Постоплата</option>
             <option value="COUNTER_OFFER">Встречное предоставление</option>
@@ -245,17 +260,18 @@
           <div class="valid-tooltip"></div>
         </div>
         <div class="col-md-6 mb-3">
-          <label for="">Сумма, руб</label>
-          <input type="text" class="form-control" id="" value="1.0" placeholder="Введите итоговую сумму оплаты" required>
+          <label for="payments_0_amount">Сумма, руб</label>
+          <input type="text" class="form-control" id="payments_0_amount" value="1.0" placeholder="Введите итоговую сумму оплаты" required>
           <div class="valid-tooltip"></div>
         </div>
       </div>
 
-      <button type="button">Удалить</button>
+      <button type="button" name="action" value="remove.payment.0">Удалить</button>
 
     </fieldset>
 
-    <button type="submit">Отправить</button>
+    <button type="submit" value="submit">Создать</button>
+    <a href="https://app.ecomkassa.ru/admin/orders" class="btn">Отмена</a>
 
   </form>
 </main>
