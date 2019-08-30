@@ -60,7 +60,7 @@
           </div>
           <div class="col-md-6 mb-4">
             <label for="customer_taxNumber">ИНН покупателя</label>
-            <input type="text" class="form-control" id="customer_taxNumber" placeholder="" value=""
+            <input type="number" class="form-control" id="customer_taxNumber" placeholder="" value=""
                    name="customer.taxNumber" pattern="[0-9]{10}">
             <div class="valid-tooltip"></div>
           </div>
@@ -68,15 +68,15 @@
 
         <div class="form-row">
           <div class="col-md-6 mb-4">
-            <label for="customer_phone">Телефон</label>
-            <input type="tel" class="form-control" id="customer_phone" placeholder="+71112223344" value=""
-                   name="customer.phone">
+            <label for="customer_phone">Телефон +7</label>
+            <input type="tel" class="form-control" id="customer_phone" placeholder="1112223344" value=""
+                   name="customer.phone" pattern="[0-9]{10}">
             <div class="valid-tooltip"></div>
           </div>
           <div class="col-md-6 mb-4">
             <label for="customer_email">Email покупателя <span class="badge label-required">*</span></label>
             <input type="email" class="form-control inp-required" id="customer_email" placeholder="" value=""
-                   name="customer.email" pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"
+                   name="customer.email" pattern="[a-z0-9\.@-]+"
                    required>
             <div class="valid-tooltip">Введите корретный email без заглавных символов. Пример: test-one@indextest.ru</div>
           </div>
@@ -84,7 +84,7 @@
       </div>
     </fieldset>
 
-    <fieldset class="FormGroup3 mb-5">
+    <fieldset class="FormGroupProduct mb-5">
       <legend class="pl-4">Товарные позиции</legend>
 
       <div class="form-group goods">
@@ -173,8 +173,8 @@
         </div>
       </div>
 
-      <fieldset class="form-group agentGoods" disabled>
-        <!--d-none-->
+      <fieldset class="form-group agentGoods " >
+        <!--d-none  disabled visuallyHidden-->
         <div class="form-row mb-4">
           <label for="items_0_agentType">Тип агента</label>
           <select class="form-control" id="items_0_agentType" name="items[0].agentType">
@@ -195,7 +195,8 @@
           </div>
           <div class="col-md-6">
             <label for="items_0_agentPhones">Телефоны агента</label>
-            <input type="text" class="form-control" id="items_0_agentPhones" name="items[0].agentPhones" placeholder="" value="" >
+            <input type="tel" class="form-control" id="items_0_agentPhones" name="items[0].agentPhones"
+                   placeholder="+71112223344" value="" pattern="[0-9\+]{12}">
             <div class="valid-tooltip"></div>
           </div>
         </div>
@@ -203,13 +204,13 @@
         <div class="form-row mb-4">
           <div class="col-md-6">
             <label for="items_0_agentName">Наименование агента</label>
-            <input type="tel" class="form-control" id="items_0_agentName" name="items[0].agentName" placeholder=""
+            <input type="text" class="form-control" id="items_0_agentName" name="items[0].agentName" placeholder=""
                    value="">
             <div class="valid-tooltip"></div>
           </div>
           <div class="col-md-6">
             <label for="items_0_agentAddress">Адрес агента</label>
-            <input type="email" class="form-control" id="items_0_agentAddress" name="items[0].agentAddress" placeholder="" value="" required>
+            <input type="text" class="form-control" id="items_0_agentAddress" name="items[0].agentAddress" placeholder="" value="">
             <div class="valid-tooltip"></div>
           </div>
         </div>
@@ -217,7 +218,7 @@
         <div class="form-row mb-4">
           <div class="col-md-6">
             <label for="items_0_agentTaxNumber">ИНН агента <span class="badge label-required">*</span></label>
-            <input type="text" class="form-control inp-required" id="items_0_agentTaxNumber" name="items[0].agentTaxNumber"
+            <input type="number" class="form-control inp-required" id="items_0_agentTaxNumber" name="items[0].agentTaxNumber"
                    pattern="[0-9]{10}" required>
             <div class="valid-tooltip"></div>
           </div>
@@ -232,12 +233,16 @@
         <div class="form-row">
           <div class="col-md-6">
             <label for="items_0_supplierPhones">Телефон поставщика</label>
-            <input type="tel" class="form-control" id="items_0_supplierPhones" name="items[0].supplierPhones" placeholder="Имя" value="" >
+            <input type="tel" class="form-control" id="items_0_supplierPhones" name="items[0].supplierPhones"
+                   placeholder="+71112223344" value="" >
             <div class="valid-tooltip"></div>
           </div>
           <div class="col-md-6">
-            <label for="items_0_supplierTaxNumber">ИНН Поставщика <span class="badge label-required">*</span></label>
-            <input type="email" class="form-control inp-required" id="items_0_supplierTaxNumber" name="items[0].supplierTaxNumber"
+            <label for="items_0_supplierTaxNumber">ИНН Поставщика
+              <span class="badge label-required">*</span>
+            </label>
+            <input type="number" class="form-control inp-required" id="items_0_supplierTaxNumber"
+                   name="items[0].supplierTaxNumber"
                    pattern="[0-9]{10}" required>
             <div class="valid-tooltip"></div>
           </div>
@@ -277,9 +282,8 @@
 
     </fieldset>
 
-    <div class="form-group mb-5"><button type="submit" class="btn btn-primary btn-lg mr-5"
-                                         value="submit">Создать чек
-    </button>
+    <div class="form-group mb-5">
+      <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Создать чек</button>
     <a href="https://app.ecomkassa.ru/admin/orders" class="btn btn-outline-secondary btn-lg">Отмена</a></div>
 
   </form>

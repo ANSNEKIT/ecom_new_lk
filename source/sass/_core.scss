@@ -3,11 +3,15 @@ body{
   @include fontParams();
 }
 
+.visuallyHidden {
+  @include visuallyHidden();
+}
+
 .page-header {
 
 }
 
-.FormGroup2, .FormGroup3, .FormGroup4 {
+.FormGroup2, .FormGroup3, .FormGroupProduct {
   border: 1px solid rgba(180, 180, 180, 0.5);
   padding: 25px;
 }
