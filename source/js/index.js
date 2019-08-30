@@ -4,6 +4,7 @@ let isAgentFalse = document.getElementById("isAgentFalse");
 let agentTrueCheckbox = document.getElementById("AgentTrue");
 let agentFalseCheckbox = document.getElementById("AgentFalse");
 
+
 var checkYes = () => {
     if (agentTrueCheckbox.checked === true) {
         agentGroup[0].removeAttribute("disabled");
@@ -22,3 +23,5 @@ var checkNo = () => {
 
 isAgentTrue.addEventListener("click", checkYes);
 isAgentFalse.addEventListener("click", checkNo);
+
+
