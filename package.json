@@ -19,6 +19,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
+    "normalize-scss": "^7.0.1",
     "posthtml-include": "^1.2.0",
     "run-sequence": "^2.2.1"
   },
