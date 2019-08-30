@@ -70,7 +70,8 @@ function copy(done) {
     gulp.src([
         'source/fonts/**/*.{woff, woff2}',
         'source/img/**',
-        'source/js/**'
+        'source/js/**',
+        `source/css/**/*.min.css`
     ], {
         base: 'source'
     })
