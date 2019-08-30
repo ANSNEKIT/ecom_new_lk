@@ -1,0 +1,47 @@
+body{
+  font-family: "OpenSans", "Arial", "Tahoma", sans-serif;
+  @include fontParams();
+}
+
+.page-header {
+
+}
+
+.FormGroup2, .FormGroup3 {
+  border: 3px solid rgba(180, 180, 180, 0.5);
+  padding: 25px;
+}
+
+.label-required {
+  color: red;
+}
+
+.inp-required {
+  border: 1px solid rgba(255, 10, 10, 0.33);
+}
+
+.btn-remove {
+  color: #333;
+  background-color: rgba(190, 0, 0, 0.36);
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.3);
+  &:hover {
+    color: #fff;
+    background-color: rgba(190, 0, 0, 0.8);
+    box-shadow: 0 0 6px 0 #721c24;
+  }
+}
+
+.btn-add {
+  color: #333;
+  background-color: rgba(50, 70, 55, 0.45);
+  box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.4);
+  &:hover {
+    color: #fff;
+    background-color: rgba(0, 128, 30, 0.5);
+    box-shadow: 0 0 6px 0 #0b2e13;
+  }
+}
+
+.form-control {
+  color: #000;
+}
