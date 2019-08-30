@@ -173,7 +173,7 @@
         </div>
       </div>
 
-      <fieldset class="form-group agentGoods " >
+      <fieldset class="form-group agentGoods" disabled>
         <!--d-none  disabled visuallyHidden-->
         <div class="form-row mb-4">
           <label for="items_0_agentType">Тип агента</label>
@@ -196,7 +196,7 @@
           <div class="col-md-6">
             <label for="items_0_agentPhones">Телефоны агента</label>
             <input type="tel" class="form-control" id="items_0_agentPhones" name="items[0].agentPhones"
-                   placeholder="+71112223344" value="" pattern="[0-9\+]{12}">
+                   placeholder="+71112223344" value="" pattern="([\+]7[0-9]{10}[,]*)+">
             <div class="valid-tooltip"></div>
           </div>
         </div>
@@ -233,8 +233,7 @@
         <div class="form-row">
           <div class="col-md-6">
             <label for="items_0_supplierPhones">Телефон поставщика</label>
-            <input type="tel" class="form-control" id="items_0_supplierPhones" name="items[0].supplierPhones"
-                   placeholder="+71112223344" value="" >
+            <input type="tel" class="form-control" id="items_0_supplierPhones" name="items[0].supplierPhones" placeholder="+71112223344" value="" pattern="([\+]7[0-9]{10}[,]*)+">
             <div class="valid-tooltip"></div>
           </div>
           <div class="col-md-6">
