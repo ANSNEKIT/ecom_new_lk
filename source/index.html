@@ -162,11 +162,11 @@
         <p>Являетесь ли вы платежным агентом?</p>
 
         <div class="form-group row mb-4" id="isAgent">
-          <div class="form-check col-sm-2 ml-3">
+          <div class="form-check col-sm-2 ml-3" id="isAgentFalse">
             <input class="form-check-input" type="radio" id="AgentFalse" name="agent" checked>
             <label class="form-check-label" for="AgentFalse">Нет</label>
           </div>
-          <div class="form-check col-sm-2">
+          <div class="form-check col-sm-2" id="isAgentTrue">
             <input class="form-check-input" type="radio" id="AgentTrue" name="agent">
             <label class="form-check-label" for="AgentTrue">Да</label>
           </div>
@@ -249,7 +249,7 @@
       <button type="button" class="btn btn-remove mt-5" name="action" value="remove.item.0">Удалить</button>
     </fieldset>
 
-    <fieldset class="FormGroup3 mb-5">
+    <fieldset class="FormGroup4 mb-5">
       <legend class="pl-4">Оплата</legend>
 
       <div class="form-group row">
@@ -285,5 +285,6 @@
   </form>
 </main>
 
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
