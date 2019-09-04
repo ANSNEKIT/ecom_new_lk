@@ -4,6 +4,10 @@
 
 }
 
+.visuallyHidden {
+  @include visuallyHidden();
+}
+
 //.addCheckForm label {
 //  font-size: 14px;
 //}

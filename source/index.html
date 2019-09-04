@@ -14,7 +14,7 @@
 
 <main class="container">
   <h2 class="page-header text-center pt-4 pb-5">Сформировать чек</h2>
-  <form action="POST" method="get" class="mt-3 addCheckForm">
+  <form action="GET" method="get" class="mt-3 addCheckForm">
     <fieldset class="FormGroup1 mb-4">
 
       <div class="form-group form-row">
@@ -61,7 +61,7 @@
         </div>
         <div class="col-md-6 mb-4 inp-group">
           <input type="number" class="form-control inp-form" id="customer_taxNumber" placeholder="" value=""
-                 name="customer.taxNumber" pattern="[0-9]{10}">
+                 name="customer.taxNumber" pattern="(^$)|([0-9]{10})">
           <label class="label-form" for="customer_taxNumber">ИНН покупателя</label>
           <div class="valid-tooltip"></div>
         </div>
@@ -70,13 +70,13 @@
       <div class="form-row">
         <div class="col-md-6 mb-4 inp-group">
           <input type="tel" class="form-control inp-form" id="customer_phone" placeholder="+71112223344" value=""
-                 name="customer.phone" pattern="+7[0-9]{10}">
+                 name="customer.phone" pattern="(^$)|([\+]7[0-9]{10})">
           <label class="label-form" for="customer_phone">Телефон </label>
           <div class="valid-tooltip"></div>
         </div>
         <div class="col-md-6 mb-4 inp-group">
           <input type="email" class="form-control inp-form" id="customer_email" placeholder="" value=""
-                 name="customer.email" pattern="[a-z0-9\.@-]*">
+                 name="customer.email" pattern="(^$)|([a-z0-9\.@-]+@[a-z0-9\.@-]+)">
           <label class="label-form" for="customer_email">Email покупателя</label>
           <div class="valid-tooltip">Введите корретный email без заглавных символов. Пример: test-one@indextest.ru</div>
         </div>
@@ -90,183 +90,184 @@
         <button type="button" class="btn btn-add" id="" name="action" value="add.item">Добавить</button>
       </div>
 
-      <div class="form-group goods">
-        <div class="form-row">
-          <div class="col-md-4 mb-4 inp-group">
-            <input type="text" class="form-control inp-form" id="items_0_name" name="items[0].name" value="Название товара" required>
-            <label class="label-form" for="items_0_name">Наименование</label>
-            <div class="valid-tooltip">Укажите название товарной позиции</div>
+      <div class="position_0">
+        <div class="form-group goods">
+          <div class="form-row">
+            <div class="col-md-4 mb-4 inp-group">
+              <input type="text" class="form-control inp-form" id="items_0_name" name="items[0].name" value="Название товара" required>
+              <label class="label-form" for="items_0_name">Наименование</label>
+              <div class="valid-tooltip">Укажите название товарной позиции</div>
+            </div>
+
+            <div class="col-md-4 mb-4 inp-group">
+              <input type="text" class="form-control inp-form" id="items_0_price" name="items[0].name" value="1.00" required>
+              <label class="label-form" for="items_0_price">Цена, руб</label>
+              <div class="valid-tooltip">Укажите цену в рублях</div>
+            </div>
+
+            <div class="col-md-4 mb-4 inp-group">
+              <select class="form-control inp-form" id="items_0_paymentObject" name="items[0].paymentObject">
+                <option value="COMMODITY" selected="">Товар</option>
+                <option value="EXCISE">Подакцизный товар</option>
+                <option value="JOB">Работа</option>
+                <option value="SERVICE">Услуга</option>
+                <option value="GAMBLING_BET">Ставка азартной игры</option>
+                <option value="GAMBLING_PRIZE">Выигрыш азартной игры</option>
+                <option value="LOTTERY">Лотерейный билет</option>
+                <option value="LOTTERY_PRIZE">Выигрыш лотереи</option>
+                <option value="INTELLECTUAL_ACTIVITY">Интеллектуальная собственность</option>
+                <option value="PAYMENT">Платёж</option>
+                <option value="AGENT_COMMISSION">Вознаграждение агента</option>
+                <option value="COMPOSITE">Составной предмет расчёта</option>
+                <option value="ANOTHER">Иной предмет расчёта</option>
+                <option value="PROPERTY_RIGHT">Имущественное право</option>
+                <option value="NON_OPERATING_GAIN">Внереализационный доход</option>
+                <option value="INSURANCE_PREMIUM">Страховые взносы</option>
+                <option value="SALES_TAX">Торговый сбор</option>
+                <option value="RESORT_FEE">Курортный сбор</option>
+              </select>
+              <label class="label-form" for="items_0_paymentObject">Предмет расчета</label>
+            </div>
           </div>
 
-          <div class="col-md-4 mb-4 inp-group">
-            <input type="text" class="form-control inp-form" id="items_0_price" name="items[0].name" value="1.00" required>
-            <label class="label-form" for="items_0_price">Цена, руб</label>
-            <div class="valid-tooltip">Укажите цену в рублях</div>
+          <div class="form-row">
+            <div class="col-md-4 mb-4 inp-group">
+              <select class="form-control inp-form" id="items_0_vatType" name="items[0].vatType">
+                <option value="VAT_NONE" selected>Без НДС</option>
+                <option value="VAT_0PCT">НДС 0%</option>
+                <option value="VAT_10PCT">НДС 10%</option>
+                <option value="VAT_110PCT">НДС 10/110</option>
+                <option value="VAT_20PCT">НДС 20%</option>
+                <option value="VAT_120PCT">НДС 20/120</option>
+              </select>
+              <label class="label-form" for="items_0_vatType">НДС</label>
+            </div>
+
+            <div class="col-md-4 mb-4 inp-group">
+              <input type="text" class="form-control inp-form" id="items_0_amount" value="1" >
+              <label class="label-form" for="items_0_amount">Количество</label>
+              <div class="valid-tooltip">Укажите количество больше нуля</div>
+            </div>
+
+            <div class="col-md-4 mb-4 inp-group">
+              <select class="form-control inp-form" id="items_0_paymentMethod" name="items[0].paymentMethod">
+                <option value="FULL_PAYMENT" selected>Полный расчёт</option>
+                <option value="FULL_PREPAYMENT">Полная предоплата</option>
+                <option value="PREPAYMENT">Предоплата</option>
+                <option value="ADVANCE">Аванс</option>
+                <option value="PARTIAL_PAYMENT">Частичная оплата и кредит</option>
+                <option value="CREDIT">Передача в кредит</option>
+                <option value="CREDIT_PAYMENT">Оплата кредит</option>
+              </select>
+              <label class="label-form" for="items_0_paymentMethod">Признак расчета</label>
+            </div>
           </div>
 
-          <div class="col-md-4 mb-4 inp-group">
-            <select class="form-control inp-form" id="items_0_paymentObject" name="items[0].paymentObject">
-              <option value="COMMODITY" selected="">Товар</option>
-              <option value="EXCISE">Подакцизный товар</option>
-              <option value="JOB">Работа</option>
-              <option value="SERVICE">Услуга</option>
-              <option value="GAMBLING_BET">Ставка азартной игры</option>
-              <option value="GAMBLING_PRIZE">Выигрыш азартной игры</option>
-              <option value="LOTTERY">Лотерейный билет</option>
-              <option value="LOTTERY_PRIZE">Выигрыш лотереи</option>
-              <option value="INTELLECTUAL_ACTIVITY">Интеллектуальная собственность</option>
-              <option value="PAYMENT">Платёж</option>
-              <option value="AGENT_COMMISSION">Вознаграждение агента</option>
-              <option value="COMPOSITE">Составной предмет расчёта</option>
-              <option value="ANOTHER">Иной предмет расчёта</option>
-              <option value="PROPERTY_RIGHT">Имущественное право</option>
-              <option value="NON_OPERATING_GAIN">Внереализационный доход</option>
-              <option value="INSURANCE_PREMIUM">Страховые взносы</option>
-              <option value="SALES_TAX">Торговый сбор</option>
-              <option value="RESORT_FEE">Курортный сбор</option>
+          <p>Являетесь ли вы платежным агентом?</p>
+
+          <div class="form-group form-row" id="isAgent">
+            <div class="form-check col-sm-2 mb-2" id="isAgentFalse">
+              <input class="form-check-input" type="radio" id="AgentFalse" name="agent" checked>
+              <label class="form-check-label" for="AgentFalse">
+                <span></span>Нет</label>
+            </div>
+            <div class="form-check col-sm-2 mb-2" id="isAgentTrue">
+              <input class="form-check-input" type="radio" id="AgentTrue" name="agent">
+              <label class="form-check-label" for="AgentTrue">
+                <span></span>Да</label>
+            </div>
+          </div>
+
+        </div>
+
+        <fieldset class="form-group agentGoods" >
+          <!--d-none  disabled visuallyHidden-->
+          <div class="form-row mb-3 pr-1 pl-1 inp-group">
+            <select class="form-control inp-form" id="items_0_agentType" name="items[0].agentType">
+              <option value="PAYING_AGENT" selected>платежный агент</option>
+              <option value="PAYING_SUBAGENT">платежный субагент</option>
+              <option value="BANK_PAYING_AGENT">Банковский платежный агент</option>
+              <option value="BANK_PAYING_SUBAGENT">Банковский платежный субагент</option>
+              <option value="ATTORNEY">Поверенный</option>
+              <option value="COMMISSION_AGENT">Комиссионер</option>
+              <option value="ANOTHER">Прочие агенты</option>
             </select>
-            <label class="label-form" for="items_0_paymentObject">Предмет расчета</label>
+            <label class="label-form" for="items_0_agentType">Тип агента</label>
           </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3 inp-group">
+              <input type="text" class="form-control inp-form" id="items_0_agentOperation" name="items[0].agentOperation"
+                     placeholder="" value="" >
+              <label class="label-form" for="items_0_agentOperation">Операция агента</label>
+              <div class="valid-tooltip"></div>
+            </div>
+            <div class="col-md-6 mb-3 inp-group">
+              <input type="tel" class="form-control inp-form" id="items_0_agentPhones" name="items[0].agentPhones"
+                     placeholder="+71112223344" value="" pattern="([\+]7[0-9]{10}[,]*)+">
+              <label class="label-form" for="items_0_agentPhones">Телефоны агента</label>
+              <div class="valid-tooltip"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 mb-3 inp-group">
+              <input type="text" class="form-control inp-form" id="items_0_agentName" name="items[0].agentName" placeholder=""
+                     value="">
+              <label class="label-form" for="items_0_agentName">Наименование агента</label>
+              <div class="valid-tooltip"></div>
+            </div>
+            <div class="col-md-6 mb-3 inp-group">
+              <input type="text" class="form-control inp-form" id="items_0_agentAddress" name="items[0].agentAddress" placeholder=""
+                     value="">
+              <label class="label-form" for="items_0_agentAddress">Адрес агента</label>
+              <div class="valid-tooltip"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 mb-3 inp-group">
+              <input type="number" class="form-control inp-form" id="items_0_agentTaxNumber"
+                     name="items[0].agentTaxNumber"
+                     pattern="[0-9]{10}">
+              <label class="label-form" for="items_0_agentTaxNumber">ИНН агента</label>
+              <div class="valid-tooltip"></div>
+            </div>
+            <div class="col-md-6 mb-3 inp-group">
+              <input type="text" class="form-control inp-form inp-required" id="items_0_supplierName" name="items[0].supplierName"
+                     placeholder="">
+              <label class="label-form" for="items_0_supplierName">Наименование поставщика <span class="badge label-required">*</span></label>
+              <div class="valid-tooltip"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 mb-3 inp-group">
+              <input type="tel" class="form-control inp-form inp-required" id="items_0_supplierPhones" name="items[0].supplierPhones"
+                     placeholder="+71112223344" value="" pattern="(^$)|([\+]7[0-9]{10}[,]*)+">
+              <label class="label-form" for="items_0_supplierPhones">Телефон поставщика <span class="badge label-required">*</span></label>
+              <div class="valid-tooltip"></div>
+            </div>
+            <div class="col-md-6 mb-3 inp-group">
+              <input type="number" class="form-control inp-form inp-required" id="items_0_supplierTaxNumber"
+                     name="items[0].supplierTaxNumber"
+                     pattern="(^$)|([0-9]{10})">
+              <label class="label-form" for="items_0_supplierTaxNumber">ИНН Поставщика
+                <span class="badge label-required">*</span>
+              </label>
+              <div class="valid-tooltip"></div>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="col-sm-12 text-right">
+          <button type="button" class="btn btn-remove mt-1" name="action" value="remove.item.0">Удалить</button>
         </div>
-
-        <div class="form-row">
-          <div class="col-md-4 mb-4 inp-group">
-            <select class="form-control inp-form" id="items_0_vatType" name="items[0].vatType">
-              <option value="VAT_NONE" selected>Без НДС</option>
-              <option value="VAT_0PCT">НДС 0%</option>
-              <option value="VAT_10PCT">НДС 10%</option>
-              <option value="VAT_110PCT">НДС 10/110</option>
-              <option value="VAT_20PCT">НДС 20%</option>
-              <option value="VAT_120PCT">НДС 20/120</option>
-            </select>
-            <label class="label-form" for="items_0_vatType">НДС</label>
-          </div>
-
-          <div class="col-md-4 mb-4 inp-group">
-            <input type="text" class="form-control inp-form" id="items_0_amount" value="1" >
-            <label class="label-form" for="items_0_amount">Количество</label>
-            <div class="valid-tooltip">Укажите количество больше нуля</div>
-          </div>
-
-          <div class="col-md-4 mb-4 inp-group">
-            <select class="form-control inp-form" id="items_0_paymentMethod" name="items[0].paymentMethod">
-              <option value="FULL_PAYMENT" selected>Полный расчёт</option>
-              <option value="FULL_PREPAYMENT">Полная предоплата</option>
-              <option value="PREPAYMENT">Предоплата</option>
-              <option value="ADVANCE">Аванс</option>
-              <option value="PARTIAL_PAYMENT">Частичная оплата и кредит</option>
-              <option value="CREDIT">Передача в кредит</option>
-              <option value="CREDIT_PAYMENT">Оплата кредит</option>
-            </select>
-            <label class="label-form" for="items_0_paymentMethod">Признак расчета</label>
-          </div>
-        </div>
-
-        <p>Являетесь ли вы платежным агентом?</p>
-
-        <div class="form-group form-row" id="isAgent">
-          <div class="form-check col-sm-2 mb-2" id="isAgentFalse">
-            <input class="form-check-input" type="radio" id="AgentFalse" name="agent" checked>
-            <label class="form-check-label" for="AgentFalse">
-              <span></span>Нет</label>
-          </div>
-          <div class="form-check col-sm-2 mb-2" id="isAgentTrue">
-            <input class="form-check-input" type="radio" id="AgentTrue" name="agent">
-            <label class="form-check-label" for="AgentTrue">
-              <span></span>Да</label>
-          </div>
-        </div>
-      </div>
-
-      <fieldset class="form-group agentGoods" disabled>
-        <!--d-none  disabled visuallyHidden-->
-        <div class="form-row mb-3 pr-1 pl-1 inp-group">
-          <select class="form-control inp-form" id="items_0_agentType" name="items[0].agentType">
-            <option value="PAYING_AGENT" selected>платежный агент</option>
-            <option value="PAYING_SUBAGENT">платежный субагент</option>
-            <option value="BANK_PAYING_AGENT">Банковский платежный агент</option>
-            <option value="BANK_PAYING_SUBAGENT">Банковский платежный субагент</option>
-            <option value="ATTORNEY">Поверенный</option>
-            <option value="COMMISSION_AGENT">Комиссионер</option>
-            <option value="ANOTHER">Прочие агенты</option>
-          </select>
-          <label class="label-form" for="items_0_agentType">Тип агента</label>
-        </div>
-        <div class="form-row">
-          <div class="col-md-6 mb-3 inp-group">
-            <input type="text" class="form-control inp-form" id="items_0_agentOperation" name="items[0].agentOperation"
-                   placeholder="" value="" >
-            <label class="label-form" for="items_0_agentOperation">Операция агента</label>
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 mb-3 inp-group">
-            <input type="tel" class="form-control inp-form" id="items_0_agentPhones" name="items[0].agentPhones"
-                   placeholder="+71112223344" value="" pattern="([\+]7[0-9]{10}[,]*)+">
-            <label class="label-form" for="items_0_agentPhones">Телефоны агента</label>
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col-md-6 mb-3 inp-group">
-            <input type="text" class="form-control inp-form" id="items_0_agentName" name="items[0].agentName" placeholder=""
-                   value="">
-            <label class="label-form" for="items_0_agentName">Наименование агента</label>
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 mb-3 inp-group">
-            <input type="text" class="form-control inp-form" id="items_0_agentAddress" name="items[0].agentAddress" placeholder=""
-                   value="">
-            <label class="label-form" for="items_0_agentAddress">Адрес агента</label>
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col-md-6 mb-3 inp-group">
-            <input type="number" class="form-control inp-form inp-required" id="items_0_agentTaxNumber"
-                   name="items[0].agentTaxNumber"
-                   pattern="[0-9]{10}" required>
-            <label class="label-form" for="items_0_agentTaxNumber">ИНН агента <span class="badge label-required">*</span></label>
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 mb-3 inp-group">
-            <input type="text" class="form-control inp-form inp-required" id="items_0_supplierName" name="items[0].supplierName"
-                   placeholder=""
-                   required>
-            <label class="label-form" for="items_0_supplierName">Наименование поставщика <span class="badge label-required">*</span></label>
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col-md-6 mb-3 inp-group">
-            <input type="tel" class="form-control inp-form" id="items_0_supplierPhones" name="items[0].supplierPhones"
-                   placeholder="+71112223344" value="" pattern="([\+]7[0-9]{10}[,]*)+">
-            <label class="label-form" for="items_0_supplierPhones">Телефон поставщика</label>
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 mb-3 inp-group">
-            <input type="number" class="form-control inp-form inp-required" id="items_0_supplierTaxNumber"
-                   name="items[0].supplierTaxNumber"
-                   pattern="[0-9]{10}" required>
-            <label class="label-form" for="items_0_supplierTaxNumber">ИНН Поставщика
-              <span class="badge label-required">*</span>
-            </label>
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-      </fieldset>
-
-      <div class="col-sm-12 text-right">
-        <button type="button" class="btn btn-remove mt-1" name="action" value="remove.item.0">Удалить</button>
       </div>
 
     </fieldset>
 
     <fieldset class="FormGroup4 mb-5">
       <legend class="pl-4">Оплата</legend>
-
       <div class="form-group form-row">
         <div class="col-md-6 mb-3 inp-group">
           <select class="form-control inp-form" id="payments_0_type" name="payments[0].type">
@@ -296,6 +297,9 @@
   </form>
 </main>
 
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+
 </body>
 </html>
