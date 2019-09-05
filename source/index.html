@@ -6,6 +6,7 @@
 
   <title>Формирование чека вручную</title>
 
+  <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 
@@ -14,25 +15,46 @@
 
 <!--При закрытии добавить класс d-none-->
 <div class="row">
-  <aside class="col-md-3 col-lg-2 menu menu--active" id="menu">
-    <div class="logo px-3"></div>
-    <nav class="px-3">
-      <ul class="nav flex-column mb-5">
-        <li class="nav-item"><a class="nav-link" href="#">Главная</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Организация</a>
+  <aside class="d-flex flex-column col-md-3 col-lg-2 menu menu--active" id="menu">
+    <div class="logo py-3">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo_navbar.png" alt="E-COM Kassa" width="199" height="80">
+      </a>
+    </div>
+    <nav class="nav flex-column flex-fill justify-content-between">
+      <ul class="nav flex-column">
+        <li class="nav-parent">
+          <a class="nav-link" href="#">
+            <i class="fas fa-home"></i>
+            <span>Главная</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="far fa-building"></i>
+            <span>Организация</span>
+           </a>
           <ul class="nav flex-column">
             <li><a>Точка продаж 1</a></li>
             <li><a>Точка продаж 2</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#">Чеки</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="far fa-check-square"></i>
+            <span>Чеки</span>
+          </a>
           <ul class="nav flex-column">
             <li class="nav-item"><a href="#" class="nav-link">Создать чек</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Создать чек коррекции</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Загрузить CSV</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#">Услуги</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-donate"></i>
+            <span>Услуги</span>
+          </a>
           <ul class="nav flex-column">
             <li class="nav-item"><a href="#" class="nav-link">Витрина тарифов</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Витрина касс</a></li>
@@ -41,7 +63,12 @@
             <li class="nav-item"><a href="#" class="nav-link">Баланс</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#">Интеграция</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="far fa-handshake"></i>
+            <span>Интеграция</span>
+          </a>
+        </li>
         <!--<li class="nav-item"><a class="nav-link" href="#">Ссылки на оплату</a>
           <ul class="nav flex-column">
             <li class="nav-item"><a href="#" class="nav-link">История</a></li>
@@ -52,17 +79,35 @@
 
 
       <ul class="nav flex-column">
-        <li class="nav-item"><a class="nav-link" href="#">Профиль</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-user-tie"></i>
+            <span>Профиль</span>
+          </a>
 
         </li>
-        <li class="nav-item"><a class="nav-link" href="#">Настройки</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-cogs"></i>
+            <span>Настройки</span>
+          </a>
           <ul class="nav flex-column">
             <li><a class="nav-link" href="#">Имя пользователя</a></li>
             <li><a class="nav-link" href="#">Изменить пароль</a></li>
-            <li><a class="nav-link" href="#">Выход</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#">Справочник</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="far fa-question-circle"></i>
+            <span>Справочник</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">
+            <i class="fas fa-door-open"></i>
+            <span>Выход</span>
+          </a>
+        </li>
       </ul>
     </nav>
   </aside>
@@ -355,6 +400,8 @@
   </main>
 </div>
 
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/index.js"></script>

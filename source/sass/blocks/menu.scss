@@ -1,6 +1,16 @@
 @import "../variables";
 
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
+
 .menu {
+  padding: 0;
 
   background-color: $bg-menu;
 
