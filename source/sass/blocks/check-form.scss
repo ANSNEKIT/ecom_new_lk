@@ -68,10 +68,14 @@
 
   background-color: rgb(255, 255, 255);
 
-  padding: 0px 15px;
+  padding: 0 15px;
   border: 1px solid $border-normal;
 
   transition: all 0.3s ease 0s;
+
+  &:invalid {
+    border: 2px solid $border-invalid;
+  }
 }
 
 .FormGroup2, .FormGroup4, .FormGroupProduct {
@@ -80,12 +84,14 @@
 }
 
 .label-required {
-  color: $required-color;
+  color: $border-invalid;
 }
 
 .inp-required {
   border: 1px solid $border-required;
 }
+
+
 
 .btn-remove {
   color: $btn-del-color;

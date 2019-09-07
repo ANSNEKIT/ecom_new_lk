@@ -5,6 +5,7 @@ let agentTrueCheckbox = document.getElementById("AgentTrue");
 let agentFalseCheckbox = document.getElementById("AgentFalse");
 
 
+
 /*
 var checkYes = () => {
     if (agentTrueCheckbox.checked === true) {
@@ -47,6 +48,7 @@ isAgentTrue.addEventListener("click", checkYes);
 isAgentFalse.addEventListener("click", checkNo);
 
 /*
+
 var max = 50;
 
 function AddPositionButtonClick() {
@@ -72,25 +74,6 @@ function DeletePositionClick(number) {
     }
 }
 
-function CalculateTotalSum()
-{
-    var sum = 0;
-
-    for(var i = 0; i < max; i++)
-    {
-        if ($("#hdn_" + i).val() == 'True' || $("#hdn_" + i).val() == 'true')
-        {
-            var price = $("#price_" + i).val();
-            var count = $("#count_" + i).val();
-            if (price != '' && count != '')
-            {
-                sum += (parseFloat(price) * parseFloat(count));
-            }
-        }
-    }
-
-    $("#TotalSum").val(sum);
-}
 */
 
 // Click Element Action
@@ -101,10 +84,27 @@ jQuery('.scroll-to-top.visible').on('click', function (e) {
     return false;
 });
 
-/*$el.on('click', function(e) {
-    e.preventDefault();
-    $('body, html').animate({
-        scrollTop: 0
-    }, self.options.delay);
-    return false;
-});*/
+function calculateTotalSum() {
+    var priceInput = $('.js-price');
+    var countInput = $('.js-count');
+    var totalSumElem = $('#payments_0_amount');
+    var totalSum = 0;
+
+    for(let i=0; i < priceInput.length; i++) {
+        var resultPrice = 0;
+        var resultCount = 0;
+
+        resultCount += parseInt(countInput.val());
+        resultPrice += parseFloat(priceInput.val());
+
+        totalSum += resultPrice * resultCount;
+        totalSum = parseFloat(Math.round(totalSum * 100) / 100).toFixed(2);
+    }
+
+    totalSumElem.val(totalSum);
+}
+
+
+
+
+

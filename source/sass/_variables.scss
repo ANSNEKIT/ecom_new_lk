@@ -11,8 +11,10 @@ $border-fieldset: rgba(180, 180, 180, 1); //рамка блока fieldset на 
 $border-normal: #ced4da;
 $border-required: #e49b9b;
 
-$required-color: red; // цвет для обязательных полей
+$border-valid: green;
+$border-invalid: red; // цвет для обязательных полей
 $focus-color: #80bdff; // Цвет активного поля
+
 
 // Цвета кнопок
 $btn-add-color: $white;
