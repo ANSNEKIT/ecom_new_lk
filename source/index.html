@@ -14,109 +14,229 @@
 <body>
 
 <!--При закрытии добавить класс d-none-->
-<div class="row">
-  <aside class="d-flex flex-column col-md-3 col-lg-2 menu menu--active" id="menu">
-    <div class="logo py-3">
+  <div class="nav header">
+    <div class="logo">
       <a class="navbar-brand" href="index.html">
         <img src="img/logo_navbar.png" alt="E-COM Kassa" width="199" height="80">
       </a>
     </div>
-    <nav class="nav flex-column flex-fill justify-content-between">
-      <ul class="nav flex-column">
-        <li class="nav-parent">
-          <a class="nav-link" href="#">
-            <i class="fas fa-home"></i>
-            <span>Главная</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="far fa-building"></i>
-            <span>Организация</span>
-           </a>
-          <ul class="nav flex-column">
-            <li><a>Точка продаж 1</a></li>
-            <li><a>Точка продаж 2</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="far fa-check-square"></i>
-            <span>Чеки</span>
-          </a>
-          <ul class="nav flex-column">
-            <li class="nav-item"><a href="#" class="nav-link">Создать чек</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Создать чек коррекции</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Загрузить CSV</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-donate"></i>
-            <span>Услуги</span>
-          </a>
-          <ul class="nav flex-column">
-            <li class="nav-item"><a href="#" class="nav-link">Витрина тарифов</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Витрина касс</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Витрина доп услуг</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Витрина лицензий</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Баланс</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="far fa-handshake"></i>
-            <span>Интеграция</span>
-          </a>
-        </li>
-        <!--<li class="nav-item"><a class="nav-link" href="#">Ссылки на оплату</a>
-          <ul class="nav flex-column">
-            <li class="nav-item"><a href="#" class="nav-link">История</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Ссылка на оплату</a></li>
-          </ul>
-        </li>-->
-      </ul>
-
-
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-user-tie"></i>
-            <span>Профиль</span>
-          </a>
-
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-cogs"></i>
-            <span>Настройки</span>
-          </a>
-          <ul class="nav flex-column">
-            <li><a class="nav-link" href="#">Имя пользователя</a></li>
-            <li><a class="nav-link" href="#">Изменить пароль</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="far fa-question-circle"></i>
-            <span>Справочник</span>
-          </a>
-        </li>
-        <li>
-          <a class="nav-link" href="#">
-            <i class="fas fa-door-open"></i>
-            <span>Выход</span>
-          </a>
-        </li>
-      </ul>
+    <nav class="topNavbar">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
+              aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             x="0px" y="0px"
+             width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">
+        <g>
+          <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
+          <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
+          <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
+        </g>
+        </svg>
+      </span>
+      </button>
+      <span class="labelForButtonMenu">Меню</span>
     </nav>
-  </aside>
+  </div>
+  <div class="flexContainer">
+    <aside class="menu menu--active collapse show" id="menu">
+      <nav class="nav flex-column flex-fill justify-content-between " id="test1">
+        <ul class="nav flex-column mb-5">
+          <li class="navParent">
+            <a class="nav-link" href="#">
+              <span class="fas fa-home leftIcon"></span>
+              <span class="menuTitle">Главная</span>
+            </a>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="#collapse-menu_1" data-toggle="collapse"  role="button" aria-expanded="false" aria-controls="#collapse-menu_1">
+              <span class="far fa-building leftIcon"></span>
+              <span class="menuTitle">Организация</span>
+              <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                 <g data-name="Layer 2">
+                   <g data-name="chevron-down">
+                     <rect width="24" height="24" opacity="0"></rect>
+                     <path
+                         d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                     </path>
+                   </g>
+                 </g>
+                </svg>
+              </span>
+             </a>
+            <ul class="menuItems collapse" id="collapse-menu_1">
+              <li class="menuItem"><a href="#"><span class="menuTitle">Точка продаж 1</span></a></li>
+              <li class="menuItem"><a href="#"><span class="menuTitle">Точка продаж 2</span></a></li>
+            </ul>
+          </li>
+          <li class="navParent navParent--active">
+            <a class="nav-link" href="#collapse-menu_2" data-toggle="collapse"  role="button" aria-expanded="false"
+               aria-controls="#collapse-menu_2">
+              <span class="far fa-check-square leftIcon"></span>
+              <span class="menuTitle">Чеки</span>
+              <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                 <g data-name="Layer 2">
+                   <g data-name="chevron-down">
+                     <rect width="24" height="24" opacity="0"></rect>
+                     <path
+                         d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                     </path>
+                   </g>
+                 </g>
+                </svg>
+              </span>
+            </a>
+            <ul class="menuItems collapse" id="collapse-menu_2">
+              <li class="menuItem"><a href="#" class="nav-link">Создать чек</a></li>
+              <li class="menuItem"><a href="#" class="nav-link">Создать чек коррекции</a></li>
+              <li class="menuItem"><a href="#" class="nav-link">Загрузить CSV</a></li>
+            </ul>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="#collapse-menu_3" data-toggle="collapse"  role="button" aria-expanded="false"
+               aria-controls="#collapse-menu_3">
+              <span class="fas fa-donate leftIcon"></span>
+              <span class="menuTitle">Услуги</span>
+              <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                 <g data-name="Layer 2">
+                   <g data-name="chevron-down">
+                     <rect width="24" height="24" opacity="0"></rect>
+                     <path
+                         d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                     </path>
+                   </g>
+                 </g>
+                </svg>
+              </span>
+            </a>
+            <ul class="menuItems collapse" id="collapse-menu_3">
+              <li class="menuItem">
+                <a href="#">
+                  <span class="menuTitle">Витрина тарифов</span>
+                </a>
+              </li>
+              <li class="menuItem">
+                <a href="#">
+                  <span class="menuTitle">Витрина касс</span>
+                </a>
+              </li>
+              <li class="menuItem">
+                <a href="#">
+                  <span class="menuTitle">Витрина доп услуг</span>
+                </a>
+              </li>
+              <li class="menuItem">
+                <a href="#">
+                  <span class="menuTitle">Витрина лицензий</span>
+                </a>
+              </li>
+              <li class="menuItem">
+                <a href="#">
+                  <span class="menuTitle">Баланс</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="#">
+              <span class="far fa-handshake leftIcon"></span>
+              <span class="menuTitle">Интеграция</span>
+            </a>
+          </li>
 
-<!--При закрытии меню удалять классы col-md-9 col-lg-10 mainContent
-и добавить content-->
-  <main class="col-md-9 col-lg-10 mainContent">
-    <h2 class="page-header text-center pt-4 pb-5">Сформировать чек</h2>
-    <form action="GET" method="get" class="mt-3 addCheckForm">
+          <!--
+          <li class="navParent">
+            <a class="nav-link" href="#collapse-menu-reffer" data-toggle="collapse"  role="button" aria-expanded="false"
+               aria-controls="#collapse-menu-reffer">
+              <span class="fas fa-donate leftIcon"></span>
+              <span class="menuTitle">Услуги</span>
+              <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                 <g data-name="Layer 2">
+                   <g data-name="chevron-down">
+                     <rect width="24" height="24" opacity="0"></rect>
+                     <path
+                         d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                     </path>
+                   </g>
+                 </g>
+                </svg>
+              </span>
+            </a>
+            <ul class="menuItems collapse" id="collapse-menu-reffer">
+              <li class="menuItem">
+                <a href="#">
+                  <span class="menuTitle">История</span>
+                </a>
+              </li>
+              <li class="menuItem">
+                <a href="#">
+                  <span class="menuTitle">Ссылка на оплату</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          -->
+
+        </ul>
+
+        <ul class="nav flex-column">
+          <li class="navParent">
+            <a class="nav-link" href="#">
+              <span class="fas fa-user-tie leftIcon"></span>
+              <span class="menuTitle">Профиль</span>
+            </a>
+
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="#collapse-menu_4" data-toggle="collapse"  role="button" aria-expanded="false"
+               aria-controls="#collapse-menu_4">
+              <span class="fas fa-cogs leftIcon"></span>
+              <span class="menuTitle">Настройки</span>
+              <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                 <g data-name="Layer 2">
+                   <g data-name="chevron-down">
+                     <rect width="24" height="24" opacity="0"></rect>
+                     <path
+                         d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                     </path>
+                   </g>
+                 </g>
+                </svg>
+              </span>
+            </a>
+            <ul class="menuItems collapse" id="collapse-menu_4">
+              <li class="menuItem"><a href="#"><span class="menuTitle">Имя пользователя</span></a></li>
+              <li class="menuItem"><a href="#"><span class="menuTitle">Изменить пароль</span></a></li>
+            </ul>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="#">
+              <span class="far fa-question-circle leftIcon"></span>
+              <span class="menuTitle">Справочник</span>
+            </a>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="#">
+              <span class="fas fa-door-open leftIcon"></span>
+              <span class="menuTitle">Выход</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!--При закрытии меню удалять классы col-md-9 col-lg-10 mainContent
+    и добавить content-->
+    <main class="mainContent">
+
+    <form action="GET" method="get" class="addCheckForm">
+      <h2 class="page-header text-center pt-4 pb-5">Сформировать чек</h2>
       <fieldset class="FormGroup1 mb-4">
 
         <div class="form-group form-row">
@@ -398,7 +518,7 @@
 
     </form>
   </main>
-</div>
+  </div>
 
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>

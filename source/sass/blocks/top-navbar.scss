@@ -1,0 +1,44 @@
+@import "../variables";
+
+.header {
+  align-items: center;
+
+  background-color: $white;
+  box-shadow: 0 0.5rem 1rem 0 $shadow-global;
+}
+
+.logo {
+  display: flex;
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
+
+.navbar-toggler {
+  //position: absolute;
+  //top: 0;
+  ////right: -3rem;
+  //left: 0;
+
+  padding: .5rem .75rem;
+
+  border: 1px solid $bd-menu;
+  background-color: $gray333;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  font-size: 0.9rem;
+  line-height: inherit;
+}
+
+.navbar-toggler .navbar-toggler-icon svg {
+  color: #fff;
+}
+
+.labelForButtonMenu {
+  font-size: 1rem;
+  font-weight: 400;
+
+  padding: 0 10px;
+}

@@ -5,7 +5,8 @@
 @import "mixins";
 @import "core";
 
-//Стили страницы с формой добавления чека
+//Стили на всех страницах ЛК
+@import "blocks/top-navbar";
 @import "blocks/check-form";
 
 // Страница авторизации

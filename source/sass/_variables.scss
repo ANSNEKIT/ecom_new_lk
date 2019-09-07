@@ -1,26 +1,40 @@
-//Цвета бордеров
-$border-fieldset: rgba(180, 180, 180, 0.5); //рамка блока fieldset на странице создания чека
+// Основные цвета
+$black: black;
+$white: white;
+$gray333: #333;
+$logo-color: #6364ED;
+$bg-page: #edf1f7;
+$shadow-global: rgba(44,51,73,.1);
+
+//Цвета бордеров полей формы
+$border-fieldset: rgba(180, 180, 180, 1); //рамка блока fieldset на странице создания чека
 $border-normal: #ced4da;
 $border-required: #e49b9b;
-
 
 $required-color: red; // цвет для обязательных полей
 $focus-color: #80bdff; // Цвет активного поля
 
 // Цвета кнопок
-$bgc-btn-del: rgba(190, 0, 0, 0.36);
-$btn-shadow-del: #721c24;
-$bgc-btn-add: rgba(162, 195, 170, 0.5);
-$bgc-btn-add-hover: rgba(0, 82, 20, 0.5);
+$btn-add-color: $white;
+$btn-add-color-hover: black;
+$bgc-btn-add: #306C37;
+$bgc-btn-add-hover: #7EB685;
 $btn-shadow-add: #0b2e13;
 
-// Основные цвета
-$black: black;
-$white: white;
-$gray333: #333;
+$btn-del-color: $white;
+$btn-del-color-hover: black;
+$bgc-btn-del: #8C413E;
+$bgc-btn-del-hover: #C58C89;
+$btn-shadow-del: #721c24;
 
-// Цвета фонов
-$bg-menu: #aaa;
+// ====== Блок меню =======
+$menu-li-hover: #598bff;
+$icon-color: #8f9bb3;
+$menu-li: #1a2138;
+$bd-menu: #edf1f7;
+$bg-menu: #eee;
+$color-active: #36f;
+
 
 
 
