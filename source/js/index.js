@@ -92,3 +92,19 @@ function CalculateTotalSum()
     $("#TotalSum").val(sum);
 }
 */
+
+// Click Element Action
+jQuery('.scroll-to-top.visible').on('click', function (e) {
+    $('body, html').animate({
+        scrollTop: 0
+    }, 400);
+    return false;
+});
+
+/*$el.on('click', function(e) {
+    e.preventDefault();
+    $('body, html').animate({
+        scrollTop: 0
+    }, self.options.delay);
+    return false;
+});*/
