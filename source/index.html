@@ -304,12 +304,11 @@
 
         <fieldset class="FormGroupProduct mb-4">
           <legend class="pl-4">Товарные позиции</legend>
-
           <div class="btnAddPosition">
             <button type="button" class="btn btn-add" id="" name="action" value="add.item">Добавить</button>
           </div>
 
-          <div class="position_0">
+          <div class="position_0 mb-5 bdr-bottom">
             <div class="form-group goods">
               <div class="form-row">
                 <div class="col-md-4 mb-4 inp-group">
@@ -388,12 +387,12 @@
 
               <div class="form-group form-row js-isAgent">
                 <div class="form-check col-sm-2 mb-2 js-isAgentFalse" id="isAgentFalse_0">
-                  <input class="form-check-input" type="radio" id="AgentFalse_0" name="agent" checked>
+                  <input class="form-check-input js-AgentFalse" type="radio" id="AgentFalse_0" name="agent" checked>
                   <label class="form-check-label" for="AgentFalse_0">
                     <span></span>Нет</label>
                 </div>
                 <div class="form-check col-sm-2 mb-2 js-isAgentTrue" id="isAgentTrue_0">
-                  <input class="form-check-input" type="radio" id="AgentTrue_0" name="agent">
+                  <input class="form-check-input js-AgentTrue" type="radio" id="AgentTrue_0" name="agent">
                   <label class="form-check-label" for="AgentTrue_0">
                     <span></span>Да</label>
                 </div>
@@ -482,11 +481,10 @@
 
             <!--
             <div class="col-sm-12 text-right">
-              <button type="button" class="btn btn-remove mt-1" name="action" value="remove.item.0">Удалить</button>
+              <button type="button" class="btn btn-remove mt-1 mb-3" name="action" value="remove.item.0">Удалить</button>
             </div>
             -->
           </div>
-
         </fieldset>
 
         <fieldset class="FormGroup4 mb-5">
@@ -504,7 +502,7 @@
               <div class="valid-tooltip"></div>
             </div>
             <div class="col-md-6 mb-3 inp-group">
-              <input type="text" class="form-control inp-form" id="payments_0_amount" value="1"
+              <input type="text" class="form-control inp-form" id="payments_0_amount" value="1.00"
                      disabled>
               <label class="label-form" for="payments_0_amount">Итоговая сумма, руб</label>
               <div class="valid-tooltip"></div>
@@ -530,7 +528,7 @@
 
 
 <template id="checkItems">
-  <div class="position_count">
+  <div class="position_count mb-5 bdr-bottom">
     <div class="form-group goods">
       <div class="form-row">
         <div class="col-md-4 mb-4 inp-group">
@@ -610,12 +608,12 @@
 
       <div class="form-group form-row js-isAgent">
         <div class="form-check col-sm-2 mb-2 js-isAgentFalse" id="isAgentFalse_count">
-          <input class="form-check-input" type="radio" id="AgentFalse_count" name="agent" checked>
+          <input class="form-check-input js-AgentFalse" type="radio" id="AgentFalse_count" name="agent" checked>
           <label class="form-check-label" for="AgentFalse_count">
             <span></span>Нет</label>
         </div>
         <div class="form-check col-sm-2 mb-2 js-isAgentTrue" id="isAgentTrue_count">
-          <input class="form-check-input" type="radio" id="AgentTrue_count" name="agent">
+          <input class="form-check-input js-AgentTrue" type="radio" id="AgentTrue_count" name="agent">
           <label class="form-check-label" for="AgentTrue_count">
             <span></span>Да</label>
         </div>
@@ -701,7 +699,7 @@
       </div>
     </fieldset>
 
-    <div class="col-sm-12 text-right">
+    <div class="col-sm-12 text-right mb-3">
       <button type="button" class="btn btn-remove mt-1" name="action" value="remove.item.count">Удалить</button>
     </div>
 

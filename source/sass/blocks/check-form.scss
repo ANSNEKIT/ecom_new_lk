@@ -171,6 +171,10 @@
   position: relative;
 }
 
+.bdr-bottom {
+  border-bottom: 5px solid $gray333;
+}
+
 @-moz-document url-prefix() {
   .FormGroupProduct .btnAddPosition {
     position: absolute;
