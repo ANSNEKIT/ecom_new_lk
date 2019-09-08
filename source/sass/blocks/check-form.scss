@@ -91,7 +91,11 @@
   border: 1px solid $border-required;
 }
 
-
+.FormGroupProduct .btnAddPosition {
+  position: absolute;
+  top: 0;
+  right: 40px;
+}
 
 .btn-remove {
   color: $btn-del-color;
@@ -167,12 +171,13 @@
   position: relative;
 }
 
-.FormGroupProduct .btnAddPosition {
-  position: absolute;
-  top: 0;
-  right: 40px;
+@-moz-document url-prefix() {
+  .FormGroupProduct .btnAddPosition {
+    position: absolute;
+    top: -40px;
+    right: 40px;
+  }
 }
-
 
 
 
