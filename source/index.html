@@ -280,7 +280,6 @@
             <div class="col-md-6 mb-4 inp-group">
               <input type="text" class="form-control inp-form" id="customer_taxNumber" placeholder="" value=""
                      name="customer.taxNumber" maxlength="10" pattern="(^$)|([0-9]{10})">
-              <!--(^$)|([0-9]{10})-->
               <label class="label-form" for="customer_taxNumber">ИНН покупателя</label>
               <div class="valid-tooltip"></div>
             </div>
@@ -305,7 +304,7 @@
         <fieldset class="FormGroupProduct mb-4">
           <legend class="pl-4">Товарные позиции</legend>
           <div class="btnAddPosition">
-            <button type="button" class="btn btn-add" id="" name="action" value="add.item">Добавить</button>
+            <button type="button" class="btn btn-add" name="action" value="add.item">Добавить</button>
           </div>
 
           <div class="position_0 mb-5 bdr-bottom">
@@ -319,7 +318,7 @@
 
                 <div class="col-md-4 mb-4 inp-group">
                   <input type="text" class="form-control inp-form js-price" id="items_0_price" name="items[0].name"
-                         value="1.00" pattern="^\d{1,8}(?:\.\d{2})?$" required onkeyup="calculateTotalSum()">
+                         value="1.00" pattern="^\d{1,8}(?:\.\d{2})?$" required>
                   <label class="label-form" for="items_0_price">Цена, руб</label>
                   <div class="valid-tooltip">Укажите цену в рублях</div>
                 </div>
@@ -364,7 +363,7 @@
 
                 <div class="col-md-4 mb-4 inp-group">
                   <input type="number" class="form-control inp-form js-count" id="items_0_amount" value="1"
-                        min="1" onchange="calculateTotalSum()">
+                        min="1">
                   <label class="label-form" for="items_0_amount">Количество</label>
                   <div class="valid-tooltip">Укажите количество больше нуля</div>
                 </div>
@@ -381,6 +380,7 @@
                   </select>
                   <label class="label-form" for="items_0_paymentMethod">Признак расчета</label>
                 </div>
+
               </div>
 
               <p>Являетесь ли вы платежным агентом?</p>
@@ -540,7 +540,7 @@
 
         <div class="col-md-4 mb-4 inp-group">
           <input type="text" class="form-control inp-form js-price" id="items_count_price" name="items[count].name"
-                 value="1.00" pattern="^\d{1,8}(?:\.\d{2})?$" required onkeyup="calculateTotalSum()">
+                 value="1.00" pattern="^\d{1,8}(?:\.\d{2})?$" required>
           <label class="label-form" for="items_count_price">Цена, руб</label>
           <div class="valid-tooltip">Укажите цену в рублях</div>
         </div>
@@ -585,7 +585,7 @@
 
         <div class="col-md-4 mb-4 inp-group">
           <input type="number" class="form-control inp-form js-count" id="items_count_amount" value="1"
-                 min="1" onchange="calculateTotalSum()">
+                 min="1">
           <label class="label-form" for="items_count_amount">Количество</label>
           <div class="valid-tooltip">Укажите количество больше нуля</div>
         </div>

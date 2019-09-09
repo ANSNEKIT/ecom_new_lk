@@ -8,43 +8,6 @@ let checkGroupPosition = document.querySelector('.FormGroupProduct');
 //let agentTrueCheckbox = isAgentTrue.querySelector(".js-AgentTrue");
 //let agentFalseCheckbox = isAgentFalse.querySelector(".js-AgentFalse");
 
-// let agentGroup = document.querySelector(".agentGoods");
-// let isAgent = document.querySelector(".js-isAgent");
-// let isAgentTrue = isAgent.querySelector(".js-isAgentTrue");
-// let isAgentFalse = isAgent.querySelector(".js-isAgentFalse");
-// let agentTrueCheckbox = isAgentTrue.querySelector(".js-AgentTrue");
-// let agentFalseCheckbox = isAgentFalse.querySelector(".js-AgentFalse");
-
-//let agentGroup = document.querySelector(".agentGoods");
-// let isAgent = document.querySelector(".js-isAgent");
-// let isAgentTrue = isAgent.querySelector(".js-isAgentTrue");
-// let isAgentFalse = isAgent.querySelector(".js-isAgentFalse");
-// let agentTrueCheckbox = isAgentTrue.querySelector(".js-AgentTrue");
-// let agentFalseCheckbox = isAgentFalse.querySelector(".js-AgentFalse");
-
-// console.log("agentGroup = ", agentGroup);
-// console.log("isAgent = ", isAgent);
-// console.log("isAgentTrue = ", isAgentTrue);
-// console.log("isAgentFalse = ", isAgentFalse);
-// console.log("agentTrueCheckbox = ", agentTrueCheckbox);
-// console.log("agentFalseCheckbox = ", agentFalseCheckbox);
-
-/*isAgentTrue[0].addEventListener("click", () => {
-    if (agentTrueCheckbox[0].checked === true) {
-        agentGroup[0].classList.remove("visuallyHidden");
-    } else {
-        agentGroup[0].classList.add("visuallyHidden");
-    }
-});*/
-
-/*isAgentFalse[0].addEventListener("click", () => {
-    if (agentFalseCheckbox[0].checked === true) {
-        agentGroup[0].classList.add("visuallyHidden");
-    } else {
-        agentGroup[0].classList.remove("visuallyHidden");
-    }
-});*/
-
 checkGroupPosition.addEventListener("click", (evt) => {
     let e = evt.target;
     let template = document.querySelector('#checkItems');
@@ -164,6 +127,29 @@ checkGroupPosition.addEventListener("click", (evt) => {
     }
 });
 
+checkGroupPosition.addEventListener("change", () => {
+    let priceInput = jQuery('.js-price');
+    let countInput = jQuery('.js-count');
+    let totalSumElem = jQuery('#payments_0_amount');
+    let totalSum = 0;
+
+    for(let i=0; i < priceInput.length; i++) {
+        var resultPrice = 0;
+        var resultCount = 0;
+        var resultSum = 0;
+
+        resultCount = parseInt(countInput[i].value);
+        resultPrice = parseFloat(priceInput[i].value);
+        resultSum = (resultPrice * resultCount);
+        resultSum = parseFloat(Math.round(resultSum * 100) / 100).toFixed(2);
+
+        totalSum += parseFloat(resultSum);
+        totalSum = parseFloat(Math.floor(totalSum.toFixed(2) * 100) / 100);
+
+    }
+    totalSumElem.val(totalSum);
+});
+
 // Click Element Action
 jQuery('.scroll-to-top.visible').on('click', function () {
     $('body, html').animate({
@@ -171,27 +157,6 @@ jQuery('.scroll-to-top.visible').on('click', function () {
     }, 400);
     return false;
 });
-
-function calculateTotalSum() {
-    let priceInput = $('.js-price');
-    let countInput = $('.js-count');
-    let totalSumElem = $('#payments_0_amount');
-    let totalSum = 0;
-
-    for(let i=0; i < priceInput.length; i++) {
-        var resultPrice = 0;
-        var resultCount = 0;
-
-        resultCount += parseInt(countInput.val());
-        resultPrice += parseFloat(priceInput.val());
-
-        totalSum += resultPrice * resultCount;
-        totalSum = parseFloat(Math.round(totalSum * 100) / 100).toFixed(2);
-    }
-
-    totalSumElem.val(totalSum);
-}
-
 
 
 
