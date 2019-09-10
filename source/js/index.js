@@ -111,10 +111,11 @@ checkGroupPosition.addEventListener("click", (evt) => {
         //console.log(elemItems_btnRemove);
 
         checkGroupPosition.append(clone);
-
+eee
     } else if (e.classList.contains("btn-remove")) {
         e.parentNode.parentNode.remove();
         countPosition -= 1;
+        checkSumm();
     } else if (e.classList.contains("js-AgentTrue")) {
         if (e.parentNode.childNodes[1].checked === true) {
             e.parentNode.parentNode.parentNode.nextSibling.nextSibling.classList.remove("visuallyHidden");
@@ -130,7 +131,9 @@ checkGroupPosition.addEventListener("click", (evt) => {
     }
 });
 
-checkGroupPosition.addEventListener("change", () => {
+checkGroupPosition.addEventListener("change", checkSumm);
+
+function checkSumm () {
     let priceInput = jQuery('.js-price');
     let countInput = jQuery('.js-count');
     let totalSumElem = jQuery('#payments_0_amount');
@@ -151,7 +154,7 @@ checkGroupPosition.addEventListener("change", () => {
 
     }
     totalSumElem.val(totalSum);
-});
+}
 
 toggleLeftMenu.addEventListener("click", () => {
     let leftMenu = $("aside.menu");

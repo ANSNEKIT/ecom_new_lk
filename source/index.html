@@ -42,13 +42,19 @@
       </button>
       <!--<span class="labelForButtonMenu">Меню</span>-->
     </div>
-    <nav class="nav mr-3 ml-auto topNavbar">
+    <nav class="nav ml-auto topNavbar">
       <ul class="nav userMenu">
+        <li class="navParent navParent--active">
+          <a href="mailto:help@ecomkassa.ru" class="nav-link mailTo">
+            <span class="fas fa-envelope leftIcon"></span>
+            <span class="menuTitle">HELP@ECOMKASSA.RU</span>
+          </a>
+        </li>
         <li class="dropdown navParent">
           <a class="nav-link" href="#" id="topHiddenMenu" role="button" data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="false">
             <span class="fas fa-user-tie leftIcon"></span>
-            <span class="menuTitle">test@test.ru</span>
+            <span class="menuTitle">Тестовый юзер</span>
             <span class="arrow">
               <i class="fas fa-chevron-down js-icon"></i>
             </span>
@@ -119,8 +125,8 @@
               </span>
              </a>
             <ul class="menuItems collapse" id="collapse-menu_1">
-              <li class="menuItem"><a href="#"><span class="menuTitle">Точка продаж 1</span></a></li>
-              <li class="menuItem"><a href="#"><span class="menuTitle">Точка продаж 2</span></a></li>
+              <li class="menuItem"><a href="#" class="nav-link"><span class="menuTitle">Точка продаж 1</span></a></li>
+              <li class="menuItem"><a href="#" class="nav-link"><span class="menuTitle">Точка продаж 2</span></a></li>
             </ul>
           </li>
           <li class="navParent navParent--active">
@@ -167,27 +173,27 @@
             </a>
             <ul class="menuItems collapse" id="collapse-menu_3">
               <li class="menuItem">
-                <a href="#">
+                <a href="#" class="nav-link">
                   <span class="menuTitle">Витрина тарифов</span>
                 </a>
               </li>
               <li class="menuItem">
-                <a href="#">
+                <a href="#" class="nav-link">
                   <span class="menuTitle">Витрина касс</span>
                 </a>
               </li>
               <li class="menuItem">
-                <a href="#">
+                <a href="#" class="nav-link">
                   <span class="menuTitle">Витрина доп услуг</span>
                 </a>
               </li>
               <li class="menuItem">
-                <a href="#">
+                <a href="#" class="nav-link">
                   <span class="menuTitle">Витрина лицензий</span>
                 </a>
               </li>
               <li class="menuItem">
-                <a href="#">
+                <a href="#" class="nav-link">
                   <span class="menuTitle">Баланс</span>
                 </a>
               </li>
@@ -240,7 +246,7 @@
 
     <main class="mainContent">
       <form action="GET" method="get" class="addCheckForm">
-        <h2 class="page-header text-center pt-4 pb-5">Сформировать чек</h2>
+        <h2 class="page-header text-center pt-5 pb-5">Сформировать чек</h2>
         <fieldset class="FormGroup1 mb-4">
 
           <div class="form-group form-row">
@@ -275,7 +281,8 @@
         </fieldset>
 
         <fieldset class="FormGroup2 mb-4">
-          <legend class="pl-4">Данные о покупателе</legend>
+          <!--<legend class="pl-4">Данные о покупателе</legend>-->
+          <h3 class="pl-4 pb-4">Данные о покупателе</h3>
 
           <div class="form-row">
             <div class="col-md-6 mb-4 inp-group">
@@ -310,7 +317,8 @@
         </fieldset>
 
         <fieldset class="FormGroupProduct mb-4">
-          <legend class="pl-4">Товарные позиции</legend>
+          <!--<legend class="pl-4">Товарные позиции</legend>-->
+          <h3 class="pl-4 pb-4">Товарные позиции</h3>
           <div class="btnAddPosition">
             <button type="button" class="btn btn-add" name="action" value="add.item">Добавить</button>
           </div>
@@ -496,7 +504,8 @@
         </fieldset>
 
         <fieldset class="FormGroup4 mb-5">
-          <legend class="pl-4">Оплата</legend>
+          <!--<legend class="pl-4">Оплата</legend>-->
+          <h3 class="pl-4 pb-4">Оплата</h3>
           <div class="form-group form-row">
             <div class="col-md-6 mb-3 inp-group">
               <select class="form-control inp-form" id="payments_0_type" name="payments[0].type">
