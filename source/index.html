@@ -6,10 +6,13 @@
 
   <title>Формирование чека вручную</title>
 
-  <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+  <!--<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="css/fontawesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
 
@@ -19,29 +22,79 @@
         <img src="img/logo_navbar.png" alt="E-COM Kassa" width="199" height="80">
       </a>
     </div>
-    <nav class="topNavbar">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
-              aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon">
-        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-             xmlns:xlink="http://www.w3.org/1999/xlink"
-             x="0px" y="0px"
-             width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">
-        <g>
-          <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
-          <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
-          <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
-        </g>
-        </svg>
-      </span>
+    <div class="mx-1 menuGamburger">
+      <button class="navbar-toggler" type="button">
+        <!-- data-toggle="collapse" data-target="#menu" aria-controls="menu"
+              aria-expanded="false" aria-label="Toggle navigation" -->
+
+          <span class="navbar-toggler-icon">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 x="0px" y="0px"
+                 width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">
+            <g>
+              <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
+              <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
+              <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
+            </g>
+            </svg>
+          </span>
       </button>
-      <span class="labelForButtonMenu">Меню</span>
+      <!--<span class="labelForButtonMenu">Меню</span>-->
+    </div>
+    <nav class="nav mr-3 ml-auto topNavbar">
+      <ul class="nav userMenu">
+        <li class="dropdown navParent">
+          <a class="nav-link" href="#" id="topHiddenMenu" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            <span class="fas fa-user-tie leftIcon"></span>
+            <span class="menuTitle">test@test.ru</span>
+            <span class="arrow">
+              <i class="fas fa-chevron-down js-icon"></i>
+            </span>
+          </a>
+          <ul class="dropdown-menu menuItems" aria-labelledby="topHiddenMenu">
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="#">
+                <span class="fas fa-id-card-alt leftIcon"></span>
+                <span class="menuTitle">Мой профиль</span>
+              </a>
+            </li>
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="#">
+                <span class="fas fa-cogs leftIcon"></span>
+                <span class="menuTitle">Настройки</span>
+              </a>
+            </li>
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="#">
+                <span class="far fa-question-circle leftIcon"></span>
+                <span class="menuTitle">Справочник</span>
+              </a>
+            </li>
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="#">
+                <span class="fas fa-key leftIcon"></span>
+                <span class="menuTitle">Изменить пароль</span>
+              </a>
+            </li>
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="#">
+                <span class="fas fa-door-open leftIcon"></span>
+                <span class="menuTitle">Выход</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </nav>
   </div>
+
   <div class="flexContainer">
-    <aside class="menu menu--active collapse show" id="menu">
+    <aside class="menu menu--active" id="menu">
+      <!-- collapse show -->
       <nav class="nav flex-column flex-fill justify-content-between " id="test1">
-        <ul class="nav flex-column mb-5">
+        <ul class="nav flex-column">
           <li class="navParent">
             <a class="nav-link" href="#">
               <span class="fas fa-home leftIcon"></span>
@@ -181,51 +234,6 @@
           </li>
           -->
 
-        </ul>
-
-        <ul class="nav flex-column">
-          <li class="navParent">
-            <a class="nav-link" href="#">
-              <span class="fas fa-user-tie leftIcon"></span>
-              <span class="menuTitle">Профиль</span>
-            </a>
-
-          </li>
-          <li class="navParent">
-            <a class="nav-link" href="#collapse-menu_4" data-toggle="collapse"  role="button" aria-expanded="false"
-               aria-controls="#collapse-menu_4">
-              <span class="fas fa-cogs leftIcon"></span>
-              <span class="menuTitle">Настройки</span>
-              <span class="arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
-                 <g data-name="Layer 2">
-                   <g data-name="chevron-down">
-                     <rect width="24" height="24" opacity="0"></rect>
-                     <path
-                         d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
-                     </path>
-                   </g>
-                 </g>
-                </svg>
-              </span>
-            </a>
-            <ul class="menuItems collapse" id="collapse-menu_4">
-              <li class="menuItem"><a href="#"><span class="menuTitle">Имя пользователя</span></a></li>
-              <li class="menuItem"><a href="#"><span class="menuTitle">Изменить пароль</span></a></li>
-            </ul>
-          </li>
-          <li class="navParent">
-            <a class="nav-link" href="#">
-              <span class="far fa-question-circle leftIcon"></span>
-              <span class="menuTitle">Справочник</span>
-            </a>
-          </li>
-          <li class="navParent">
-            <a class="nav-link" href="#">
-              <span class="fas fa-door-open leftIcon"></span>
-              <span class="menuTitle">Выход</span>
-            </a>
-          </li>
         </ul>
       </nav>
     </aside>
@@ -518,6 +526,7 @@
       </form>
     </main>
   </div>
+
   <div class="scrollUp d-sm-none d-md-block">
     <button type="button" class="scroll-to-top visible">
       <i class="fa fa-chevron-up"></i>
@@ -707,9 +716,9 @@
 </template>
 
 
-<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 
 </body>

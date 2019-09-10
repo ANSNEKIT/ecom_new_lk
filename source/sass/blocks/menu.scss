@@ -7,21 +7,37 @@
   position: relative;
   width: 250px;
   //max-width: 250px;
-  min-width: 250px;
+  overflow-y: auto;
 
   padding: 0;
-  margin-left: 0;
+  margin: 0;
+  margin-left: -250px;
 
   background-color: $white;
   box-shadow: 0 0.5rem 1rem 0 $shadow-global;
 
+  z-index: 10;
+
+  transition-property: margin-left, margin-top;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+  transition-delay: initial;
+
   &--active {
-    //margin-left: 0;
+    margin-left: 0;
   }
 
   @media (max-width: 992px) {
+    margin-top: -285px;
     justify-content: flex-start;
     width: 100%;
+    margin-left: 0;
+    z-index: -100;
+
+    &--active {
+      z-index: 10;
+      margin-top: 0;
+    }
   }
 }
 

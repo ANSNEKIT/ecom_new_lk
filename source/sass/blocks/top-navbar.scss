@@ -1,12 +1,14 @@
 @import "../variables";
 
 .header {
+  //justify-content: center;
   position: relative;
 
   align-items: center;
 
   background-color: $white;
   box-shadow: 0 0.5rem 1rem 0 $shadow-global;
+  z-index: 100;
 }
 
 .logo {
@@ -17,16 +19,21 @@
   margin-right: 0;
 }
 
-.navbar-toggler {
+.menuGamburger .navbar-toggler {
   //position: absolute;
   //top: 0;
   ////right: -3rem;
   //left: 0;
+  color: $gray-light;
 
   padding: .5rem .75rem;
 
-  border: 1px solid $bd-menu;
-  background-color: $gray333;
+  //border: 1px solid $bd-menu;
+  background-color: $gray555;
+  &:hover {
+    color: $white;
+    background-color: $gray333;
+  }
 }
 
 .navbar-toggler .navbar-toggler-icon {
@@ -43,4 +50,41 @@
   font-weight: 400;
 
   padding: 0 10px;
+}
+
+.header .topNavbar {
+  /*flex-grow: 1;
+  justify-content: flex-end;*/
+}
+
+.userMenu .arrow svg {
+  font-size: .8rem;
+  line-height: 1;
+  margin-left: .5rem;
+}
+
+.userMenu .dropdown {
+  border-left: 1px solid $border-normal;
+}
+
+.userMenu .navParent {
+  border-bottom: none;
+}
+
+.userMenu .menuItems {
+  margin: 0;
+  padding: 0;
+}
+
+.menuItems .menuItem {
+  padding: 0.25rem 1rem;
+}
+
+.userMenu .nav-link .leftIcon {
+  font-size: 1rem;
+  width: 1em;
+  margin-right: .5em;
+  text-align: center;
+  vertical-align: middle;
+  color: $icon-color;
 }
