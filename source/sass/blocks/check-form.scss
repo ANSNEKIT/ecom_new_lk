@@ -167,6 +167,10 @@
   border-bottom: 5px solid $border-normal;
 }
 
+.labelPayment {
+  background-color: transparent;
+}
+
 @-moz-document url-prefix() {
   .FormGroupProduct .btnAddPosition {
     position: absolute;
