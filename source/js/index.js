@@ -111,7 +111,9 @@ checkGroupPosition.addEventListener("click", (evt) => {
         //console.log(elemItems_btnRemove);
 
         checkGroupPosition.append(clone);
-eee
+
+        checkSumm();
+
     } else if (e.classList.contains("btn-remove")) {
         e.parentNode.parentNode.remove();
         countPosition -= 1;
