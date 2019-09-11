@@ -1,27 +1,37 @@
 .scroll-to-top {
   position: fixed;
   right: 10px;
-  bottom: 0px;
+  bottom: 210px;
 
   display: block;
-  height: 9px;
+  width: 40px;
+  height: 40px;
+  //height: 9px;
 
-  padding: 5px 10px 25px;
+  //padding: 5px 10px 25px;
 
   background: #282d36;
-  border-radius: 7px 7px 0 0;
+  //border-radius: 7px 7px 0 0;
+  border-radius: 50%;
   border: none;
   color: #FFF;
   opacity: 0;
   text-align: center;
-  min-width: 39px;
+  //min-width: 39px;
   z-index: 140;
 
   transition: all 0.3s;
 
+  @media (max-width: 992px) {
+    display: none;
+  }
 }
 
 .scroll-to-top.visible {
-  opacity: 0.75;
+  opacity: 0.5;
   outline: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }

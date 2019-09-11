@@ -18,7 +18,7 @@
 .mainFooter .footerHeader {
   padding-top: 30px;
 
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: 600;
   line-height: 1.2rem;
 
@@ -29,27 +29,29 @@
   margin: 0;
   padding: 0;
   //padding-left: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 
   list-style: none;
 }
 
 .footerItems .footerItem {
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: 400;
-  line-height: 2rem;
+  line-height: 1.5rem;
 
 }
 
 .footerItem .footerLink {
   color: #6ea9ea;
 
-  &:hover {
-    color: #97dcdd;
-    text-decoration: none;
-  }
+
   &:visited {
     color: #aea3ff;
   }
+  &:hover {
+    color: #97c7dd;
+    text-decoration: none;
+  }
+
 }
 
