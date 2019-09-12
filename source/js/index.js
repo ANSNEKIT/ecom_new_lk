@@ -158,10 +158,10 @@ function checkSumm () {
     totalSumElem.val(totalSum);
 }
 
-toggleLeftMenu.addEventListener("click", () => {
+/*toggleLeftMenu.addEventListener("click", () => {
     let leftMenu = $("aside.menu");
     leftMenu.toggleClass("menu--active");
-});
+});*/
 
 /*
 document.addEventListener("click", (evt) => {
@@ -181,12 +181,12 @@ document.addEventListener("click", (evt) => {
 
 
 // Click Element Action
-jQuery('.scroll-to-top.visible').on('click', function () {
+/*jQuery('.scroll-to-top.visible').on('click', function () {
     $('body, html').animate({
         scrollTop: 0
     }, 400);
     return false;
-});
+});*/
 
 
 
