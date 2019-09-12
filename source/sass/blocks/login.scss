@@ -1,0 +1,80 @@
+.loginPage {
+  background-color: $white;
+}
+
+.loginPage .userMenu {
+  //padding-right: 2rem;
+}
+
+.loginPage .navParent {
+  padding-right: 1rem;
+}
+
+.loginPage .loginForm {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 4rem;
+
+  @media (max-width: 992px) {
+    width: 350px;
+  }
+}
+
+.loginPage .page-header {
+  font-weight: 600;
+}
+
+.loginForm .label-form {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+
+  color: $black;
+  background-color: $white;
+  transition: all .3s ease 0s;
+}
+
+.loginForm .inp-form {
+  &:invalid {
+    border: 1px solid #b81d5b;
+  }
+}
+
+.loginForm .custom-control-label {
+  cursor: pointer;
+  &::before {
+    top: 0.4rem;
+  }
+
+  &::after {
+    top: 0.4rem;
+  }
+}
+
+.loginForm .label-with-link {
+  display: flex;
+  justify-content: space-between;
+}
+
+.loginForm .forgot-pass {
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+
+  font-family: Open Sans,sans-serif;
+  font-size: .8rem;
+  font-weight: 600;
+  line-height: 1rem;
+
+  color: $link-gray;
+
+  &:hover {
+    color: $logo-color;
+  }
+}
+
+.loginForm .form-text {
+  font-size: 0.8rem;
+  font-family: Open Sans,sans-serif;
+  font-weight: 400;
+  line-height: 1.25rem;
+}

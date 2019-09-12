@@ -34,7 +34,7 @@
   position: relative;
 }
 
-.label-form {
+.addCheckForm .label-form {
   position: absolute;
   top: -9px;
   left: 20px;
@@ -50,7 +50,7 @@
   transition: all 0.3s ease 0s;
 }
 
-.inp-form:focus + .label-form {
+.addCheckForm .inp-form:focus + .label-form {
   padding: 0 5px;
 }
 
@@ -142,7 +142,7 @@
   }
 }
 
-.form-check input[type="radio"]:checked + .form-check-label span {
+.form-check-input:checked + .form-check-label span {
   border: 2px solid $focus-color;
   &::after {
     content: "";
