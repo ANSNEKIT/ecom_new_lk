@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Регистрация</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<!--<div class="form-group">
+  <label class="label-form" for="password">Введите пароль</label>
+  <input type="password" class="form-control inp-form" id="password" placeholder="Ваш пароль" minlength="4"
+         maxlength="40"
+         name="password" required>
+</div>-->
+
+<body class="signUpPage">
+  <div class="nav header">
+    <div class="logo">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo_navbar.png" alt="E-COM Kassa" width="199" height="80">
+      </a>
+    </div>
+    <nav class="nav ml-auto topNavbar">
+      <ul class="nav userMenu">
+        <li class="navParent navParent--active">
+          <a href="mailto:help@ecomkassa.ru" class="nav-link mailTo">
+            <span class="fas fa-envelope leftIcon"></span>
+            <span class="menuTitle">HELP@ECOMKASSA.RU</span>
+          </a>
+        </li>
+        <li class="dropdown navParent">
+          <a class="nav-link" href="login.html">
+            <span class="fas fa-share-square leftIcon"></span>
+            <span class="menuTitle">Вход</span>
+          </a>
+        </li>
+        <li class="dropdown navParent">
+          <a class="nav-link" href="#">
+            <span class="fas fa-user-tie leftIcon"></span>
+            <span class="menuTitle">Регистрация</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <h1 class="page-header text-center pt-5">Регистрация</h1>
+    <p class="text-center">Зарегистрируйте новую учетную запись</p>
+    <form action="" class="loginForm">
+      <div class="form-row">
+        <div class="col-md-12 form-group mb-3">
+          <label class="label-form" for="firmName">Название компании</label>
+          <input type="text" id="firmName" class="form-control inp-form"
+                 placeholder="ООО Тестовая компания, ИП Иванов Иван Иванович" name="firmName" maxlength="120" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3 inp-group">
+          <label class="label-form" for="legalAddress">Юридический адрес</label>
+          <input type="text" class="form-control inp-form" id="legalAddress" name="legalAddress" maxlength="150"
+                 placeholder="112233, г.Москва, ул.Ленина, д.1, корп.2, оф.3" required>
+          <div class="valid-tooltip"></div>
+        </div>
+        <div class="col-md-6 mb-3 inp-group">
+          <label class="label-form" for="actualAddress">Фактический адрес</label>
+          <input type="text" class="form-control inp-form" id="actualAddress" name="actualAddress" maxlength="150"
+                 placeholder="112233, г.Москва, Красная площадь, мавзолей 1" required>
+          <div class="valid-tooltip"></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3 inp-group">
+          <label class="label-form" for="taxNo">ИНН покупателя</label>
+          <input type="number" class="form-control inp-form" id="taxNo" placeholder="1122334455" name="taxNo"
+                 maxlength="10" pattern="(^$)|([0-9]{10})" required>
+          <div class="valid-tooltip"></div>
+      </div>
+        <div class="col-md-6 mb-3 inp-group parentSelect">
+          <label class="label-form" for="taxVariant">Система налогообложения</label>
+          <select id="taxVariant" class="form-control inp-form select" name="taxVariant" required>
+            <option value="GENERAL">ОСН</option>
+            <option value="SIMPLIFIED_INCOME" selected>УСН доход</option>
+            <option value="SIMPLIFIED_IN_OUT">УСН доход-расход</option>
+            <option value="SINGLE_INCOME_TAX">ЕНВД</option>
+            <option value="SINGLE_AGRICULTURE_TAX">ЕСХН</option>
+            <option value="PATENT">ПСН</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-4 mb-3 inp-group">
+          <label class="label-form" for="lastName">Фамилия</label>
+          <input type="text" class="form-control inp-form" id="lastName"
+                 name="lastName" maxlength="50" required>
+          <div class="valid-tooltip"></div>
+        </div>
+        <div class="col-md-4 mb-3 inp-group">
+          <label class="label-form" for="firstName">Имя</label>
+          <input type="text" class="form-control inp-form" id="firstName"
+                 name="firstName" maxlength="50" required>
+          <div class="valid-tooltip"></div>
+        </div>
+        <div class="col-md-4 mb-3 inp-group">
+          <label class="label-form" for="middleName">Отчество</label>
+          <input type="text" class="form-control inp-form" id="middleName"
+                 name="middleName" maxlength="50">
+          <div class="valid-tooltip"></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3 inp-group">
+          <label class="label-form" for="phone">Телефон </label>
+          <input type="tel" class="form-control inp-form" id="phone" placeholder="+71112223344"
+                 name="phone" pattern="(^$)|([\+]7[0-9]{10})" required>
+          <div class="valid-tooltip"></div>
+        </div>
+        <div class="col-md-6 mb-3 inp-group">
+          <label class="label-form" for="email">Email покупателя</label>
+          <input type="email" class="form-control inp-form" id="email" placeholder="" name="email"
+                 pattern="(^$)|([a-z0-9\.@-]+@[a-z0-9\.@-]+)" required>
+          <div class="valid-tooltip">Введите корретный email без заглавных символов. Пример: test-one@indextest.ru</div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3 inp-group">
+          <label class="label-form" for="password">Введите пароль</label>
+          <input type="password" class="form-control inp-form" id="password" placeholder="Ваш пароль" minlength="4" maxlength="40" name="password" required>
+        </div>
+        <div class="col-md-6 mb-3 inp-group">
+          <label class="label-form" for="passwordRepeat">Повтор пароля</label>
+          <input type="password" class="form-control inp-form" id="passwordRepeat" placeholder="Ваш пароль" minlength="4" maxlength="40" name="passwordRepeat" required>
+        </div>
+      </div>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" id="rememberMe" class="custom-control-input" name="rememberMe">
+        <label class="custom-control-label" for="rememberMe">Запомнить меня на этом компьютере</label>
+      </div>
+
+      <!--<input type="hidden" name="navigateTo" value="">-->
+
+      <button type="submit" class="btn btn-primary btn-lg btn-block mt-4 mb-4" value="submit">Войти</button>
+
+      <p class="form-text">
+        Ещё не стали участником?
+        <a href="#">Зарегистрироваться</a>
+      </p>
+      <p class="form-text mt-5">Совершая вход, Вы принимаете условия и
+        <a href="https://app.ecomkassa.ru/assets/docs/license-agreement-ru.pdf">договор-оферту на использование программы "E-COM Kassa"</a>,
+        <a href="https://app.ecomkassa.ru/assets/docs/leasing-public-ru.pdf">договор-оферту на аренду кассы "E-COM Kassa online"</a>, а также выражаете своё согласие на обработку
+        <a href="https://app.ecomkassa.ru/assets/docs/personal-data-agreement.pdf">персональных данных</a>
+      </p>
+
+    </form>
+  </div>
+</body>
+</html>

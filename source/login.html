@@ -14,35 +14,34 @@
 
 <body class="loginPage">
   <div class="nav header">
-  <div class="logo">
-    <a class="navbar-brand" href="index.html">
-      <img src="img/logo_navbar.png" alt="E-COM Kassa" width="199" height="80">
-    </a>
+    <div class="logo">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo_navbar.png" alt="E-COM Kassa" width="199" height="80">
+      </a>
+    </div>
+    <nav class="nav ml-auto topNavbar">
+      <ul class="nav userMenu">
+        <li class="navParent navParent--active">
+          <a href="mailto:help@ecomkassa.ru" class="nav-link mailTo">
+            <span class="fas fa-envelope leftIcon"></span>
+            <span class="menuTitle">HELP@ECOMKASSA.RU</span>
+          </a>
+        </li>
+        <li class="dropdown navParent">
+          <a class="nav-link" href="#">
+            <span class="fas fa-share-square leftIcon"></span>
+            <span class="menuTitle">Вход</span>
+          </a>
+        </li>
+        <li class="dropdown navParent">
+          <a class="nav-link" href="registration.html" >
+            <span class="fas fa-user-tie leftIcon"></span>
+            <span class="menuTitle">Регистрация</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <nav class="nav ml-auto topNavbar">
-    <ul class="nav userMenu">
-      <li class="navParent navParent--active">
-        <a href="mailto:help@ecomkassa.ru" class="nav-link mailTo">
-          <span class="fas fa-envelope leftIcon"></span>
-          <span class="menuTitle">HELP@ECOMKASSA.RU</span>
-        </a>
-      </li>
-      <li class="dropdown navParent">
-        <a class="nav-link" href="#">
-          <span class="fas fa-share-square leftIcon"></span>
-          <span class="menuTitle">Вход</span>
-        </a>
-      </li>
-      <li class="dropdown navParent">
-        <a class="nav-link" href="#" role="button"
-           aria-haspopup="true" aria-expanded="false">
-          <span class="fas fa-user-tie leftIcon"></span>
-          <span class="menuTitle">Регистрация</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</div>
   <div class="container">
     <h1 class="page-header text-center pt-5">Войти</h1>
     <p class="text-center">Войдите, используя свои учётные данные</p>
@@ -72,9 +71,9 @@
 
       <p class="form-text">
         Ещё не стали участником?
-        <a href="#">Зарегистрироваться</a>
+        <a href="registration.html">Зарегистрироваться</a>
       </p>
-      <p class="form-text">Совершая вход, Вы принимаете условия и
+      <p class="form-text mt-5">Совершая вход, Вы принимаете условия и
         <a href="https://app.ecomkassa.ru/assets/docs/license-agreement-ru.pdf">договор-оферту на использование программы "E-COM Kassa"</a>,
         <a href="https://app.ecomkassa.ru/assets/docs/leasing-public-ru.pdf">договор-оферту на аренду кассы "E-COM Kassa online"</a>, а также выражаете своё согласие на обработку
         <a href="https://app.ecomkassa.ru/assets/docs/personal-data-agreement.pdf">персональных данных</a>

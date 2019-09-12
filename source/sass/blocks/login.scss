@@ -2,14 +2,6 @@
   background-color: $white;
 }
 
-.loginPage .userMenu {
-  //padding-right: 2rem;
-}
-
-.loginPage .navParent {
-  padding-right: 1rem;
-}
-
 .loginPage .loginForm {
   width: 500px;
   margin: 0 auto;
@@ -20,7 +12,7 @@
   }
 }
 
-.loginPage .page-header {
+.page-header {
   font-weight: 600;
 }
 
@@ -34,9 +26,20 @@
   transition: all .3s ease 0s;
 }
 
+.loginForm .parentSelect {
+  position: relative;
+
+  &::after {
+    top: 70%;
+  }
+}
+
 .loginForm .inp-form {
   &:invalid {
-    border: 1px solid #b81d5b;
+    border: 1px solid $invalid-bd;
+  }
+  &:focus {
+    border: 2px solid $focus-color;
   }
 }
 
