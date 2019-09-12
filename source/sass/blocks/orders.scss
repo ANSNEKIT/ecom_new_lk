@@ -1,0 +1,31 @@
+.page-orders .addCheckForm{
+  margin-bottom: 7rem;
+}
+
+.card {
+  flex-direction: row;
+  padding: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 $shadow-global-plus;
+  margin-bottom: 5rem;
+
+  @media (max-width: 992px) {
+    padding: 0;
+  }
+}
+.tableOrders {
+  background-color: #fff;
+}
+
+.tableOrders .thead-dark th {
+  color: #fff;
+  background-color: $bgc-th;
+  border-color: $bd-th;
+}
+
+.tableOrders tbody tr:nth-of-type(odd) {
+  background-color: $row-light;
+}
+
+.table-hover tbody tr:hover {
+  background-color: $tr-hover;
+}
