@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Регистрация</title>
+  <title>Организация</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.min.css">
@@ -12,7 +12,8 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
-<body>
+
+<body class="page-firms">
   <div class="nav header">
   <div class="logo">
     <a class="navbar-brand" href="add.html">
@@ -92,14 +93,13 @@
     </ul>
   </nav>
 </div>
-
   <div class="flexContainer">
     <aside class="menu menu--active" id="menu">
       <!-- collapse show -->
       <nav class="nav flex-column flex-fill justify-content-between pt-3" id="rightMenu">
         <ul class="nav flex-column">
           <li class="navParent">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="index.html">
               <span class="fas fa-home leftIcon"></span>
               <span class="menuTitle">Главная</span>
             </a>
@@ -122,8 +122,8 @@
               </span>
             </a>
             <ul class="menuItems collapse" id="collapse-menu_1">
-              <li class="menuItem"><a href="firms.html" class="nav-link"><span class="menuTitle">Организация</span></a></li>
-              <li class="menuItem"><a href="#" class="nav-link"><span class="menuTitle">Точка продаж</span></a></li>
+              <li class="menuItem"><a href="#" class="nav-link"><span class="menuTitle">Точка продаж 1</span></a></li>
+              <li class="menuItem"><a href="#" class="nav-link"><span class="menuTitle">Точка продаж 2</span></a></li>
             </ul>
           </li>
           <li class="navParent navParent--active">
@@ -145,7 +145,7 @@
               </span>
             </a>
             <ul class="menuItems collapse" id="collapse-menu_2">
-              <li class="menuItem"><a href="#" class="nav-link">Список чеков</a></li>
+              <li class="menuItem"><a href="orders.html" class="nav-link">Список чеков</a></li>
               <li class="menuItem"><a href="add.html" class="nav-link">Сформировать чек</a></li>
               <li class="menuItem"><a href="#" class="nav-link">Создать чек коррекции</a></li>
               <li class="menuItem"><a href="#" class="nav-link">Загрузить CSV</a></li>
@@ -241,16 +241,93 @@
         </ul>
       </nav>
     </aside>
-    <main class="mainContent">
-      <h1 class="page-header my-5 text-center">Главная страница</h1>
-      <h2 class="my-5 text-center">Добро пожаловать в личный кабинет!</h2>
-      <p class="text-center">Данная страница находится в разработке</p>
+    <main class="mainContent mt-5">
+      <h2 class="page-header text-center mb-5">Организация</h2>
+      <div class="companyBlock">
+        <h4 class="mb-5">Компания "Компания для теста"
+          <a href="#" class="rightIcon">
+            <i class="fas fa-pencil-alt"></i>
+          </a>
+        </h4>
+        <div class="row mb-3 mx-3">
+          <p class="col-md-6 col-xl-4 font-weight-bold">ID:</p>
+          <p class="col-md-6 col-xl-8">9fd3f105-1b8a-42d9-8497-55d25edf0fb0</p>
+        </div>
+        <div class="row mb-3 mx-3">
+          <p class="col-md-6 col-xl-4 font-weight-bold">Название:</p>
+          <p class="col-md-6 col-xl-8">Компания для теста</p>
+        </div>
+        <div class="row mb-3 mx-3">
+          <p class="col-md-6 col-xl-4 font-weight-bold">Система налогообложения:</p>
+          <p class="col-md-6 col-xl-8">УСН доход-расход</p>
+        </div>
+        <div class="row mb-3 mx-3">
+          <p class="col-md-6 col-xl-4 font-weight-bold">ИНН:</p>
+          <p class="col-md-6 col-xl-8">7708317992</p>
+        </div>
+        <div class="row mb-3 mx-3">
+          <p class="col-md-6 col-xl-4 font-weight-bold">Адрес юридический:</p>
+          <p class="col-md-6 col-xl-8">г. Москва</p>
+        </div>
+        <div class="row mb-3 mx-3">
+          <p class="col-md-6 col-xl-4 font-weight-bold">Адрес фактический:</p>
+          <p class="col-md-6 col-xl-8">ecomkassa.ru</p>
+        </div>
+        <div class="row mb-3 mx-3">
+          <p class="col-md-6 col-xl-4 font-weight-bold">Телефон:</p>
+          <p class="col-md-6 col-xl-8">+79163316587</p>
+        </div>
+        <div class="row mb-3 mx-3">
+          <p class="col-md-6 col-xl-4 font-weight-bold">Блокировка:</p>
+          <p class="col-md-6 col-xl-8">
+            <i class="far fa-square"></i>
+          </p>
+        </div>
+        <div class="row mb-3 mx-3">
+          <p class="col-md-6 col-xl-4 font-weight-bold">Точка продаж:</p>
+          <button type="submit" class="btn btn-add" value="submit">Добавить</button>
+        </div>
+      </div>
+
+      <div class="companyBlock">
+        <table class="table table-striped table-bordered table-sm table-hover tableOrders">
+          <thead class="thead-dark">
+          <tr>
+            <th class="text-center">ID</th>
+            <th>Название</th>
+            <th class="">Место продаж</th>
+            <th class=""></th>
+          </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th class="text-center" scope="row"><a href="admin/stores/71">71</a></th>
+              <td class="">не использовать для тестирования</td>
+              <td class="">ecomkassa.ru</td>
+              <td class="text-center"><button class="btn btn-add" value="submit">Добавить</button></td>
+            </tr>
+            <tr>
+              <th class="text-center" scope="row"><a href="admin/stores/71">2</a></th>
+              <td class="">Демо-магазин для тестирования</td>
+              <td class="">ecomkassa.ru</td>
+              <td class="text-center"><button class="btn btn-add" value="submit">Добавить</button></td>
+            </tr>
+            <tr>
+              <th class="text-center" scope="row"><a href="admin/stores/71">2</a></th>
+              <td class="">Демо-магазин для тестирования</td>
+              <td class="">ecomkassa.ru</td>
+              <td class="text-center"><button class="btn btn-add" value="submit">Добавить</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </main>
   </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/menu.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/menu.js"></script>
 </body>
 </html>

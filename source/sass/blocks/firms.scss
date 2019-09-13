@@ -1,0 +1,28 @@
+.mainContent .rightIcon{
+  padding-left: 1rem;
+  font-size: 1.125rem;
+}
+
+.page-firms .companyBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+  padding: 2rem;
+
+  box-shadow: 0 0.5rem 1rem 0 $shadow-global;
+  margin-bottom: 3rem;
+
+  @media (max-width: 992px) {
+    padding: 2rem;
+  }
+
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.companyBlock p {
+  padding: 0;
+  margin-bottom: 0;
+}
