@@ -1,0 +1,9 @@
+.page-import .FormGroup1 {
+  padding: 3.5rem;
+
+
+}
+
+.form-row .inp-required:invalid {
+  border: 1px solid $invalid-bd;
+}

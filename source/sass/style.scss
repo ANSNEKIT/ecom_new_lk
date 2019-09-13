@@ -13,11 +13,11 @@
 @import "blocks/check-form";
 @import "blocks/main-footer";
 @import "blocks/scroll-up";
+
+// Стили на остальных страницах
 @import "blocks/login";
 @import "blocks/registration";
 @import "blocks/orders";
 @import "blocks/firms";
 @import "blocks/add-correction";
-
-
-// Страница авторизации
+@import "blocks/import";

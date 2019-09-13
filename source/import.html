@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Чек коррекции</title>
+  <title>Импорт чеков</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.min.css">
@@ -13,7 +13,7 @@
 </head>
 
 
-<body class="page-add_correction">
+<body class="page-import">
 <header class="nav header">
   <div class="logo">
     <a class="navbar-brand" href="add.html">
@@ -148,9 +148,24 @@
           <ul class="menuItems collapse" id="collapse-menu_2">
             <li class="menuItem"><a href="orders.html" class="nav-link">Список чеков</a></li>
             <li class="menuItem"><a href="add.html" class="nav-link">Сформировать чек</a></li>
-            <li class="menuItem"><a href="#" class="nav-link">Создать чек коррекции</a></li>
+            <li class="menuItem"><a href="add-correction.html" class="nav-link">Создать чек коррекции</a></li>
             <li class="menuItem"><a href="#" class="nav-link">Загрузить CSV</a></li>
           </ul>
+        </li>
+        <li class="navParent">
+          <a class="nav-link" href="#">
+            <!--<span class="fas fa-comment-dollar leftIcon"></span>-->
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas"
+                 data-icon="comment-dollar" class="svg-inline--fa fa-comment-dollar fa-w-16 leftIcon" role="img"
+                 viewBox="0 0 512 512"><path fill="currentColor" d="M256 32C114.62 32 0 125.12 0 240c0 49.56 21.41 95.01 57.02 130.74C44.46 421.05 2.7 465.97 2.2 466.5A7.995 7.995 0 0 0 8 480c66.26 0 115.99-31.75 140.6-51.38C181.29 440.93 217.59 448 256 448c141.38 0 256-93.12 256-208S397.38 32 256 32zm24 302.44V352c0 8.84-7.16 16-16 16h-16c-8.84 0-16-7.16-16-16v-17.73c-11.42-1.35-22.28-5.19-31.78-11.46-6.22-4.11-6.82-13.11-1.55-18.38l17.52-17.52c3.74-3.74 9.31-4.24 14.11-2.03 3.18 1.46 6.66 2.22 10.26 2.22h32.78c4.66 0 8.44-3.78 8.44-8.42 0-3.75-2.52-7.08-6.12-8.11l-50.07-14.3c-22.25-6.35-40.01-24.71-42.91-47.67-4.05-32.07 19.03-59.43 49.32-63.05V128c0-8.84 7.16-16 16-16h16c8.84 0 16 7.16 16 16v17.73c11.42 1.35 22.28 5.19 31.78 11.46 6.22 4.11 6.82 13.11 1.55 18.38l-17.52 17.52c-3.74 3.74-9.31 4.24-14.11 2.03a24.516 24.516 0 0 0-10.26-2.22h-32.78c-4.66 0-8.44 3.78-8.44 8.42 0 3.75 2.52 7.08 6.12 8.11l50.07 14.3c22.25 6.36 40.01 24.71 42.91 47.67 4.05 32.06-19.03 59.42-49.32 63.04z"/></svg>
+            <span class="menuTitle">Оплаты</span>
+          </a>
+        </li>
+        <li class="navParent">
+          <a class="nav-link" href="#">
+            <span class="fas fa-users leftIcon"></span>
+            <span class="menuTitle">Пользователи</span>
+          </a>
         </li>
         <!--<li class="navParent">
           <a class="nav-link" href="#collapse-menu_3" data-toggle="collapse"  role="button" aria-expanded="false"
@@ -242,107 +257,33 @@
       </ul>
     </nav>
   </aside>
-  <main class="mainContent mt-5">
-    <h2 class="page-header text-center py-5">Создать чек коррекции</h2>
+
+  <main class="mainContent mb-5">
+    <h2 class="page-header text-center py-5">Импорт чеков в CSV формате</h2>
     <form class="addCheckForm" action="get" method="get">
-      <fieldset class="FormGroup1 mb-4">
-        <div class="form-group form-row">
-          <label for="storeID" class="col-sm-3 col-form-label">Магазин</label>
-          <div class="col-sm-9 parentSelect">
+      <fieldset class="FormGroup1">
+        <div class="form-group form-row mb-5">
+          <label for="storeID" class="col-sm-4 col-form-label">Магазин</label>
+          <div class="col-sm-8 parentSelect">
             <select class="form-control select" name="storeID" id="storeID">
               <option value="2" selected>Демо магазин для тестирования</option>
             </select>
           </div>
         </div>
-        <div class="form-group form-row">
-          <label for="saleCharge" class="col-sm-3 col-form-label">Признак расчета</label>
-          <div class="col-sm-9 parentSelect">
-            <select id="saleCharge" class="form-control form-control input-lg select" name="saleCharge" required>
-              <option value="SALE_CORRECTION">Коррекция прихода</option>
-              <option value="CHARGE_CORRECTION">Коррекция расхода</option>
-            </select>
+
+        <div class="form-group form-row mb-5">
+          <label for="csvFile" class="col-sm-4 col-form-label">Файл для загрузки</label>
+          <div class="col-sm-8">
+            <input type="file" id="csvFile" class="form-control inp-form inp-required py-2" name="csvFile"
+                   accept="text/csv" required>
           </div>
+        </div>
+
+        <div class="form-group mb-4 pt-4">
+          <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Загрузить</button>
+          <a href="orders.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
         </div>
       </fieldset>
-
-      <fieldset class="FormGroup2 mb-4">
-        <h3 class="pl-4 pb-4">Параметры коррекции</h3>
-        <div class="form-row">
-          <div class="col-md-6 mb-4 inp-group parentSelect">
-            <select id="correctionType" class="form-control form-control select" name="correctionType" required>
-              <option value="SELF_MADE">Самостоятельная операция</option>
-              <option value="PRESCRIBED">Операция по предписанию</option>
-            </select>
-            <label class="label-form" for="correctionType">Тип коррекции</label>
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 mb-4 inp-group parentSelect">
-            <select id="vatType" class="form-control form-control select" name="vatType" required>
-              <option value="VAT_NONE" selected>Без НДС</option>
-              <option value="VAT_0PCT">НДС 0%</option>
-              <option value="VAT_10PCT">НДС 10%</option>
-              <option value="VAT_110PCT">НДС 10/110</option>
-              <option value="VAT_20PCT">НДС 20%</option>
-              <option value="VAT_120PCT">НДС 20/120</option>
-            </select>
-            <label class="label-form" for="vatType">НДС</label>
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-6 inp-group mb-4">
-              <input type="text" class="form-control inp-form inp-required" id="description"
-                     name="description" required>
-              <label class="label-form" for="description">Основание коррекции</label>
-              <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 inp-group mb-4">
-            <input type="number" class="form-control inp-form inp-required" id="documentNumber" min="1" maxlength="15"
-                   name="documentNumber" required>
-            <label class="label-form" for="documentNumber">Номер документа основания</label>
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-12 inp-group mb-4">
-            <input type="date" class="form-control inp-form inp-required" id="documentDate"
-                   name="documentDate" required>
-            <label class="label-form" for="documentDate">Дата документа коррекции</label>
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-      </fieldset>
-
-      <fieldset class="FormGroup4 mb-5">
-        <!--<legend class="pl-4">Оплата</legend>-->
-        <h3 class="pl-4 pb-4">Оплата</h3>
-        <div class="form-group form-row">
-          <div class="col-md-6 mb-3 inp-group parentSelect">
-            <select class="form-control inp-form select" id="payments_0_type" name="payments[0].type">
-              <option value="CASH">Наличными</option>
-              <option value="CREDIT_CARD" selected>Банковская карта</option>
-              <option value="PRE_PAID">Предоплата</option>
-              <option value="POST_PAID">Постоплата</option>
-              <option value="COUNTER_OFFER">Встречное предоставление</option>
-            </select>
-            <label class="label-form" for="payments_0_type">Вид оплаты</label>
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 mb-3 inp-group">
-            <input type="text" class="form-control inp-form inp-required" id="payments_0_amount" placeholder="1.00"
-                   pattern="[0-9]{8}.[0-9]{2}" required>
-            <label class="label-form labelPayment" for="payments_0_amount">Итоговая сумма, руб</label>
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-
-      </fieldset>
-
-      <div class="form-group mb-5">
-        <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Создать чек</button>
-        <a href="orders.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
-      </div>
-
     </form>
   </main>
 </div>
