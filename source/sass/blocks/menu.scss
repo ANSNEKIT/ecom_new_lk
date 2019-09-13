@@ -3,9 +3,10 @@
 .menu {
   display: flex;
   flex-direction: column;
-
+  //flex: 1 1 auto;
   position: relative;
   width: 250px;
+  //height: 100%;
   //max-width: 250px;
   overflow-y: auto;
   visibility: hidden;
@@ -34,7 +35,7 @@
     justify-content: flex-start;
 
     width: 100%;
-
+    height: initial;
     margin-top: -285px;
     margin-left: 0;
     visibility: hidden;
