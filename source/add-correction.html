@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Чек коррекции</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+
+<body class="page-add_correction">
+<header class="nav header">
+  <div class="logo">
+    <a class="navbar-brand" href="add.html">
+      <img src="img/logo_navbar.png" alt="E-COM Kassa" width="199" height="80">
+    </a>
+  </div>
+  <div class="mx-1 menuGamburger">
+    <button class="navbar-toggler" type="button">
+      <!-- data-toggle="collapse" data-target="#menu" aria-controls="menu"
+            aria-expanded="false" aria-label="Toggle navigation" -->
+
+      <span class="navbar-toggler-icon">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 x="0px" y="0px"
+                 width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">
+            <g>
+              <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
+              <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
+              <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
+            </g>
+            </svg>
+          </span>
+    </button>
+    <!--<span class="labelForButtonMenu">Меню</span>-->
+  </div>
+  <nav class="nav ml-auto topNavbar">
+    <ul class="nav userMenu">
+      <li class="navParent navParent--active">
+        <a href="mailto:help@ecomkassa.ru" class="nav-link mailTo">
+          <span class="fas fa-envelope leftIcon"></span>
+          <span class="menuTitle">HELP@ECOMKASSA.RU</span>
+        </a>
+      </li>
+      <li class="dropdown navParent">
+        <a class="nav-link" href="#" id="topHiddenMenu" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+          <span class="fas fa-user-tie leftIcon"></span>
+          <span class="menuTitle">Тестовый юзер</span>
+          <span class="arrow">
+              <i class="fas fa-chevron-down js-icon"></i>
+            </span>
+        </a>
+        <ul class="dropdown-menu menuItems" aria-labelledby="topHiddenMenu">
+          <li class="dropdown-item menuItem">
+            <a class="nav-link" href="#">
+              <span class="fas fa-id-card-alt leftIcon"></span>
+              <span class="menuTitle">Мой профиль</span>
+            </a>
+          </li>
+          <li class="dropdown-item menuItem">
+            <a class="nav-link" href="#">
+              <span class="fas fa-cogs leftIcon"></span>
+              <span class="menuTitle">Настройки</span>
+            </a>
+          </li>
+          <li class="dropdown-item menuItem">
+            <a class="nav-link" href="#">
+              <span class="far fa-question-circle leftIcon"></span>
+              <span class="menuTitle">FAQ</span>
+            </a>
+          </li>
+          <li class="dropdown-item menuItem">
+            <a class="nav-link" href="#">
+              <span class="fas fa-key leftIcon"></span>
+              <span class="menuTitle">Изменить пароль</span>
+            </a>
+          </li>
+          <li class="dropdown-item menuItem">
+            <a class="nav-link" href="login.html">
+              <span class="fas fa-door-open leftIcon"></span>
+              <span class="menuTitle">Выход</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<div class="flexContainer">
+  <aside class="menu menu--active" id="menu">
+    <!-- collapse show -->
+    <nav class="nav flex-column flex-fill justify-content-between pt-3" id="rightMenu">
+      <ul class="nav flex-column">
+        <li class="navParent">
+          <a class="nav-link" href="index.html">
+            <span class="fas fa-home leftIcon"></span>
+            <span class="menuTitle">Главная</span>
+          </a>
+        </li>
+        <li class="navParent">
+          <a class="nav-link" href="#collapse-menu_1" data-toggle="collapse"  role="button" aria-expanded="false" aria-controls="#collapse-menu_1">
+            <span class="far fa-building leftIcon"></span>
+            <span class="menuTitle">Организация</span>
+            <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                 <g data-name="Layer 2">
+                   <g data-name="chevron-down">
+                     <rect width="24" height="24" opacity="0"></rect>
+                     <path
+                         d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                     </path>
+                   </g>
+                 </g>
+                </svg>
+              </span>
+          </a>
+          <ul class="menuItems collapse" id="collapse-menu_1">
+            <li class="menuItem"><a href="firms.html" class="nav-link"><span class="menuTitle">Организация</span></a></li>
+            <li class="menuItem"><a href="#" class="nav-link"><span class="menuTitle">Точки продаж</span></a></li>
+          </ul>
+        </li>
+        <li class="navParent navParent--active">
+          <a class="nav-link" href="#collapse-menu_2" data-toggle="collapse"  role="button" aria-expanded="false"
+             aria-controls="#collapse-menu_2">
+            <span class="far fa-check-square leftIcon"></span>
+            <span class="menuTitle">Чеки</span>
+            <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                 <g data-name="Layer 2">
+                   <g data-name="chevron-down">
+                     <rect width="24" height="24" opacity="0"></rect>
+                     <path
+                         d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                     </path>
+                   </g>
+                 </g>
+                </svg>
+              </span>
+          </a>
+          <ul class="menuItems collapse" id="collapse-menu_2">
+            <li class="menuItem"><a href="orders.html" class="nav-link">Список чеков</a></li>
+            <li class="menuItem"><a href="add.html" class="nav-link">Сформировать чек</a></li>
+            <li class="menuItem"><a href="#" class="nav-link">Создать чек коррекции</a></li>
+            <li class="menuItem"><a href="#" class="nav-link">Загрузить CSV</a></li>
+          </ul>
+        </li>
+        <!--<li class="navParent">
+          <a class="nav-link" href="#collapse-menu_3" data-toggle="collapse"  role="button" aria-expanded="false"
+             aria-controls="#collapse-menu_3">
+            <span class="fas fa-donate leftIcon"></span>
+            <span class="menuTitle">Услуги</span>
+            <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                 <g data-name="Layer 2">
+                   <g data-name="chevron-down">
+                     <rect width="24" height="24" opacity="0"></rect>
+                     <path
+                         d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                     </path>
+                   </g>
+                 </g>
+                </svg>
+              </span>
+          </a>
+          <ul class="menuItems collapse" id="collapse-menu_3">
+            <li class="menuItem">
+              <a href="#" class="nav-link">
+                <span class="menuTitle">Витрина тарифов</span>
+              </a>
+            </li>
+            <li class="menuItem">
+              <a href="#" class="nav-link">
+                <span class="menuTitle">Витрина касс</span>
+              </a>
+            </li>
+            <li class="menuItem">
+              <a href="#" class="nav-link">
+                <span class="menuTitle">Витрина доп услуг</span>
+              </a>
+            </li>
+            <li class="menuItem">
+              <a href="#" class="nav-link">
+                <span class="menuTitle">Витрина лицензий</span>
+              </a>
+            </li>
+            <li class="menuItem">
+              <a href="#" class="nav-link">
+                <span class="menuTitle">Баланс</span>
+              </a>
+            </li>
+          </ul>
+        </li>-->
+        <!--<li class="navParent">
+          <a class="nav-link" href="#">
+            <span class="far fa-handshake leftIcon"></span>
+            <span class="menuTitle">Интеграция</span>
+          </a>
+        </li>-->
+
+        <!--
+        <li class="navParent">
+          <a class="nav-link" href="#collapse-menu-reffer" data-toggle="collapse"  role="button" aria-expanded="false"
+             aria-controls="#collapse-menu-reffer">
+            <span class="fas fa-donate leftIcon"></span>
+            <span class="menuTitle">Услуги</span>
+            <span class="arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+               <g data-name="Layer 2">
+                 <g data-name="chevron-down">
+                   <rect width="24" height="24" opacity="0"></rect>
+                   <path
+                       d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                   </path>
+                 </g>
+               </g>
+              </svg>
+            </span>
+          </a>
+          <ul class="menuItems collapse" id="collapse-menu-reffer">
+            <li class="menuItem">
+              <a href="#">
+                <span class="menuTitle">История</span>
+              </a>
+            </li>
+            <li class="menuItem">
+              <a href="#">
+                <span class="menuTitle">Ссылка на оплату</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        -->
+
+      </ul>
+    </nav>
+  </aside>
+  <main class="mainContent mt-5">
+    <h2 class="page-header text-center py-5">Создать чек коррекции</h2>
+    <form class="addCheckForm" action="get" method="get">
+      <fieldset class="FormGroup1 mb-4">
+        <div class="form-group form-row">
+          <label for="storeID" class="col-sm-3 col-form-label">Магазин</label>
+          <div class="col-sm-9 parentSelect">
+            <select class="form-control select" name="storeID" id="storeID">
+              <option value="2" selected>Демо магазин для тестирования</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group form-row">
+          <label for="saleCharge" class="col-sm-3 col-form-label">Признак расчета</label>
+          <div class="col-sm-9 parentSelect">
+            <select id="saleCharge" class="form-control form-control input-lg select" name="saleCharge" required>
+              <option value="SALE_CORRECTION">Коррекция прихода</option>
+              <option value="CHARGE_CORRECTION">Коррекция расхода</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="FormGroup2 mb-4">
+        <h3 class="pl-4 pb-4">Параметры коррекции</h3>
+        <div class="form-row">
+          <div class="col-md-6 mb-4 inp-group parentSelect">
+            <select id="correctionType" class="form-control form-control select" name="correctionType" required>
+              <option value="SELF_MADE">Самостоятельная операция</option>
+              <option value="PRESCRIBED">Операция по предписанию</option>
+            </select>
+            <label class="label-form" for="correctionType">Тип коррекции</label>
+            <div class="valid-tooltip"></div>
+          </div>
+          <div class="col-md-6 mb-4 inp-group parentSelect">
+            <select id="vatType" class="form-control form-control select" name="vatType" required>
+              <option value="VAT_NONE" selected>Без НДС</option>
+              <option value="VAT_0PCT">НДС 0%</option>
+              <option value="VAT_10PCT">НДС 10%</option>
+              <option value="VAT_110PCT">НДС 10/110</option>
+              <option value="VAT_20PCT">НДС 20%</option>
+              <option value="VAT_120PCT">НДС 20/120</option>
+            </select>
+            <label class="label-form" for="vatType">НДС</label>
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 inp-group mb-4">
+              <input type="text" class="form-control inp-form inp-required" id="description"
+                     name="description" required>
+              <label class="label-form" for="description">Основание коррекции</label>
+              <div class="valid-tooltip"></div>
+          </div>
+          <div class="col-md-6 inp-group mb-4">
+            <input type="number" class="form-control inp-form inp-required" id="documentNumber" min="1" maxlength="15"
+                   name="documentNumber" required>
+            <label class="label-form" for="documentNumber">Номер документа основания</label>
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-12 inp-group mb-4">
+            <input type="date" class="form-control inp-form inp-required" id="documentDate"
+                   name="documentDate" required>
+            <label class="label-form" for="documentDate">Дата документа коррекции</label>
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="FormGroup4 mb-5">
+        <!--<legend class="pl-4">Оплата</legend>-->
+        <h3 class="pl-4 pb-4">Оплата</h3>
+        <div class="form-group form-row">
+          <div class="col-md-6 mb-3 inp-group parentSelect">
+            <select class="form-control inp-form select" id="payments_0_type" name="payments[0].type">
+              <option value="CASH">Наличными</option>
+              <option value="CREDIT_CARD" selected>Банковская карта</option>
+              <option value="PRE_PAID">Предоплата</option>
+              <option value="POST_PAID">Постоплата</option>
+              <option value="COUNTER_OFFER">Встречное предоставление</option>
+            </select>
+            <label class="label-form" for="payments_0_type">Вид оплаты</label>
+            <div class="valid-tooltip"></div>
+          </div>
+          <div class="col-md-6 mb-3 inp-group">
+            <input type="text" class="form-control inp-form inp-required" id="payments_0_amount" placeholder="1.00"
+                   pattern="[0-9]{8}.[0-9]{2}" required>
+            <label class="label-form labelPayment" for="payments_0_amount">Итоговая сумма, руб</label>
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+
+      </fieldset>
+
+      <div class="form-group mb-5">
+        <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Создать чек</button>
+        <a href="orders.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
+      </div>
+    </form>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+</body>
+</html>
