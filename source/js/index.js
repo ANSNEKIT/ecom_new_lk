@@ -1,6 +1,5 @@
 let countPosition = 0;
 let checkGroupPosition = document.querySelector('.FormGroupProduct');
-let toggleLeftMenu = document.querySelector(".menuGamburger").firstElementChild;
 
 //let topMenuBtn = document.getElementById("topHiddenMenu");
 
