@@ -1,36 +1,33 @@
 let toggleLeftMenu = document.querySelector(".menuGamburger").firstElementChild;
 
-// let scrollWidth = Math.max(
-//     document.body.scrollWidth, document.documentElement.scrollWidth,
-//     document.body.offsetWidth, document.documentElement.offsetWidth,
-//     document.body.clientWidth, document.documentElement.clientWidth
-// );
-
-let scrollHeight = Math.max(
-    document.body.scrollHeight, document.documentElement.scrollHeight,
-    document.body.offsetHeight, document.documentElement.offsetHeight,
-    document.body.clientHeight, document.documentElement.clientHeight
-);
-
+// let height_content = $('main').height();
+// let height_menu = $('.menu').height();
 //let height_menu = $('.menu');
 
-function calcHeightMenu(winHeight) {
-    let height_body = $('body').height();
+function calcHeightMenu() {
+    let scrollHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+    );
+    let scrollWidth = Math.max(
+        document.body.scrollWidth, document.documentElement.scrollWidth,
+        document.body.offsetWidth, document.documentElement.offsetWidth,
+        document.body.clientWidth, document.documentElement.clientWidth
+    );
+    let height_content = $('main').height();
     let height_menu = $('.menu').height();
-    let resultHeight = winHeight - 90;
+    let resultHeight = scrollHeight - 90;
 
     console.log("height_menu", height_menu);
+    console.log("height_content", height_content);
 
-    $('.menu').css({'height': resultHeight});
-
-    console.log("height_menu", height_menu);
-};
-
-if (document.documentElement.clientWidth > 992) {
-    calcHeightMenu(document.documentElement.clientHeight);
-} else {
-    $('.menu').css({'height': 'auto'});
+    if ((document.documentElement.clientWidth > 992) && (height_content < document.documentElement.clientHeight)) {
+        $('.menu').css({'height': resultHeight});
+    }
 }
+
+calcHeightMenu();
 
 toggleLeftMenu.addEventListener("click", () => {
     let leftMenu = $("aside.menu");
@@ -38,13 +35,7 @@ toggleLeftMenu.addEventListener("click", () => {
 });
 
 window.onresize = function () {
-    if ((document.documentElement.clientWidth > 992) && (document.documentElement.clientHeight < scrollHeight)) {
-        calcHeightMenu(document.documentElement.clientHeight);
-    } else if ((document.documentElement.clientWidth > 992) && (document.documentElement.clientHeight > scrollHeight)) {
-        calcHeightMenu(document.documentElement.clientHeight);
-    }else {
-        $('.menu').css({'height': 'auto'});
-    }
+    calcHeightMenu();
 };
 
 // Click Element Action
