@@ -1,0 +1,42 @@
+.parentEditDel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 2rem;
+  box-sizing: border-box;
+}
+
+.editDelete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+  word-break: keep-all;
+
+  font-family: Open Sans,sans-serif;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  font-size: 1.3rem;
+
+  color: $icon-color;
+  background-color: transparent;
+
+  text-align: center;
+  text-decoration: none;
+  border-right: 1px solid $table-bd;
+  box-sizing: border-box;
+
+  &:last-child {
+    border: none;
+  }
+}
