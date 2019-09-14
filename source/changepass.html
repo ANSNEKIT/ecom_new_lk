@@ -226,20 +226,25 @@
       <h3 class="page-header text-center py-5">Изменить пароль</h3>
       <form action="" method="post" class="FormGroup1 was-validated" autocomplete="off">
         <p class="text-center">Устойчивые надежные пароли состоят из букв, цифр и знаков пунктуации.</p>
+
         <div class="form-group mb-4">
           <label class="label-form" for="current-password">Текущий пароль</label>
           <input type="password" id="current-password" class="form-control inp-form inp-required" placeholder="Введите текущий пароль"
-                 name="current-password" required>
+                 name="current-password" autocomplete="off" required>
           <div class="invalid-feedback"></div>
         </div>
-        <div class="form-group mb-4">
+
+        <div class="">
           <label class="label-form" for="new-password">Новый пароль</label>
-          <input type="text" id="new-password" class="form-control inp-form inp-required" placeholder="Введите новый пароль"
+          <input type="password" id="new-password" class="form-control inp-form inp-required"
+                 placeholder="Введите новый пароль" autocomplete="off"
                  name="new-password" minlength="8" required>
           <!-- Пароль (Строчные и прописные латинские буквы, цифры, спецсимволы. Минимум 8 символов):
 (?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$ -->
           <div class="invalid-feedback">Минимальное количество символов: 8</div>
         </div>
+
+        <meter id="password-strength-meter" min="0" max="8" low="8" value="0"></meter>
 
         <div class="form-row">
           <button type="submit" class="btn btn-primary btn-lg mt-4 mb-4 mr-5" value="submit">Изменить
@@ -255,5 +260,6 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/menu.js"></script>
+  <script type="text/javascript" src="js/changepass.js"></script>
 </body>
 </html>
