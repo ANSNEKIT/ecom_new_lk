@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Список пользователей</title>
+  <title>Точки продаж</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
 </head>
-
 
 <body>
   <header class="nav header">
@@ -76,7 +75,7 @@
               </a>
             </li>
             <li class="dropdown-item menuItem">
-              <a class="nav-link" href="changepass.html">
+              <a class="nav-link" href="#">
                 <span class="fas fa-key leftIcon"></span>
                 <span class="menuTitle">Изменить пароль</span>
               </a>
@@ -123,10 +122,10 @@
             </a>
             <ul class="menuItems collapse" id="collapse-menu_1">
               <li class="menuItem"><a href="profile.html" class="nav-link"><span class="menuTitle">Организация</span></a></li>
-              <li class="menuItem"><a href="pointofsales.html" class="nav-link"><span class="menuTitle">Точки продаж</span></a></li>
+              <li class="menuItem"><a href="#" class="nav-link"><span class="menuTitle">Точки продаж</span></a></li>
             </ul>
           </li>
-          <li class="navParent">
+          <li class="navParent navParent--active">
             <a class="nav-link" href="#collapse-menu_2" data-toggle="collapse"  role="button" aria-expanded="false"
                aria-controls="#collapse-menu_2">
               <span class="far fa-check-square leftIcon"></span>
@@ -160,7 +159,7 @@
               <span class="menuTitle">Оплаты</span>
             </a>
           </li>
-          <li class="navParent navParent--active">
+          <li class="navParent">
             <a class="nav-link" href="users.html">
               <span class="fas fa-users leftIcon"></span>
               <span class="menuTitle">Пользователи</span>
@@ -219,161 +218,62 @@
             </a>
           </li>-->
 
-          <!--
-          <li class="navParent">
-            <a class="nav-link" href="#collapse-menu-reffer" data-toggle="collapse"  role="button" aria-expanded="false"
-               aria-controls="#collapse-menu-reffer">
-              <span class="fas fa-donate leftIcon"></span>
-              <span class="menuTitle">Услуги</span>
-              <span class="arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
-                 <g data-name="Layer 2">
-                   <g data-name="chevron-down">
-                     <rect width="24" height="24" opacity="0"></rect>
-                     <path
-                         d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
-                     </path>
-                   </g>
-                 </g>
-                </svg>
-              </span>
-            </a>
-            <ul class="menuItems collapse" id="collapse-menu-reffer">
-              <li class="menuItem">
-                <a href="#">
-                  <span class="menuTitle">История</span>
-                </a>
-              </li>
-              <li class="menuItem">
-                <a href="#">
-                  <span class="menuTitle">Ссылка на оплату</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          -->
-
         </ul>
       </nav>
     </aside>
     <main class="mainContent mt-5">
-      <h2 class="page-header text-center py-5">Список пользователей</h2>
-      <div class="d-flex">
-        <div class="pb-4 ml-auto">
-          <a href="#" class="btn btn-add">
-            <span class="fas fa-plus-circle pr-1"></span>
-            Добавить пользователя
-          </a>
-        </div>
-      </div>
-      <div class="card mb-5">
-        <table class="table table-striped table-bordered table-sm table-hover tableOrders">
-          <thead class="">
+      <h2 class="page-header text-center py-5">Точки продаж</h2>
+
+      <div class="companyBlock">
+        <table class="table table-striped table-bordered table-sm table-hover tableOrders mb-5">
+          <thead class="thead-dark">
           <tr>
-            <th class="">Логин</th>
-            <th>Фирма</th>
-            <th class="">Имя</th>
-            <th class="">Email</th>
-            <th class="">Блокировка</th>
+            <th class="text-center">ID</th>
+            <th>Название</th>
+            <th class="">Место продаж</th>
             <th class=""></th>
           </tr>
           </thead>
 
           <tbody>
-            <tr>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="">Компания для теста	</td>
-              <td class="">Александр Носов</td>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="text-center">
-                <i class="far fa-square"></i>
-                <!--<i class="far fa-check-square"></i>-->
-              </td>
-              <td class="text-center new">
-                <form action="" method="POST">
-                  <div class="parentEditDel">
-                    <a href="#" class="editDelete">
-                      <span class="fas fa-pencil-alt"></span>
-                    </a>
-                    <input type="hidden" name="registrarID" value="4513b883-b985-40b6-8e4c-7638d6e9772e">
-                    <a href="#" value="submit" class="editDelete">
-                      <span class="fas fa-trash-alt"></span>
-                    </a>
-                  </div>
-                </form>
-              </td>
-            </tr>
-            <tr>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="">Компания для теста	</td>
-              <td class="">Александр Носов</td>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="text-center">
-                <i class="far fa-square"></i>
-                <!--<i class="far fa-check-square"></i>-->
-              </td>
-              <td class="text-center">
-                <form action="" method="POST">
-                  <div class="parentEditDel">
-                    <a href="#" class="editDelete">
-                      <span class="fas fa-pencil-alt"></span>
-                    </a>
-                    <input type="hidden" name="registrarID" value="4513b883-b985-40b6-8e4c-7638d6e9772e">
-                    <a href="#" value="submit" class="editDelete">
-                      <span class="fas fa-trash-alt"></span>
-                    </a>
-                  </div>
-                </form>
-              </td>
-            </tr>
-            <tr>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="">Компания для теста	</td>
-              <td class="">Александр Носов</td>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="text-center">
-                <i class="far fa-square"></i>
-                <!--<i class="far fa-check-square"></i>-->
-              </td>
-              <td class="text-center">
-                <form action="" method="POST">
-                  <div class="parentEditDel">
-                    <a href="#" class="editDelete">
-                      <span class="fas fa-pencil-alt"></span>
-                    </a>
-                    <input type="hidden" name="registrarID" value="4513b883-b985-40b6-8e4c-7638d6e9772e">
-                    <a href="#" value="submit" class="editDelete">
-                      <span class="fas fa-trash-alt"></span>
-                    </a>
-                  </div>
-                </form>
-              </td>
-            </tr>
-            <tr>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="">Компания для теста	</td>
-              <td class="">Александр Носов</td>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="text-center">
-                <i class="far fa-square"></i>
-                <!--<i class="far fa-check-square"></i>-->
-              </td>
-              <td class="text-center">
-                <form action="" method="POST">
-                  <div class="parentEditDel">
-                    <a href="#" class="editDelete">
-                      <span class="fas fa-pencil-alt"></span>
-                    </a>
-                    <input type="hidden" name="registrarID" value="4513b883-b985-40b6-8e4c-7638d6e9772e">
-                    <a href="#" value="submit" class="editDelete">
-                      <span class="fas fa-trash-alt"></span>
-                    </a>
-                  </div>
-                </form>
-              </td>
-            </tr>
+          <tr>
+            <th class="text-center" scope="row"><a href="admin/stores/71">71</a></th>
+            <td class="">не использовать для тестирования</td>
+            <td class="">ecomkassa.ru</td>
+            <td class="text-center">
+              <button class="btn btn-remove" value="submit">
+                <span class="fas fa-times-circle pr-1"></span>
+                Удалить
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-center" scope="row"><a href="admin/stores/71">2</a></th>
+            <td class="">Демо-магазин для тестирования</td>
+            <td class="">ecomkassa.ru</td>
+            <td class="text-center">
+              <button class="btn btn-remove" value="submit">
+                <span class="fas fa-times-circle pr-1"></span>
+                Удалить
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-center" scope="row"><a href="admin/stores/71">2</a></th>
+            <td class="">Демо-магазин для тестирования</td>
+            <td class="">ecomkassa.ru</td>
+            <td class="text-center">
+              <button class="btn btn-remove" value="submit">
+                <span class="fas fa-times-circle pr-1"></span>
+                Удалить
+              </button>
+            </td>
+          </tr>
           </tbody>
         </table>
+        <a href="profile.html" class="mr-1">
+          Вернуться в профиль организации
+        </a>
       </div>
     </main>
   </div>
