@@ -1,7 +1,5 @@
 let toggleLeftMenu = document.querySelector(".menuGamburger").firstElementChild;
 
-console.log(toggleLeftMenu);
-
 // let height_content = $('main').height();
 // let height_menu = $('.menu').height();
 //let height_menu = $('.menu');
@@ -23,6 +21,8 @@ function calcHeightMenu() {
 
     if ((document.documentElement.clientWidth > 992) && (height_content < document.documentElement.clientHeight)) {
         $('.menu').css({'height': resultHeight});
+    } else if (document.documentElement.clientWidth < 992) {
+        $('.menu').css({'height': 'auto'});
     }
 }
 
