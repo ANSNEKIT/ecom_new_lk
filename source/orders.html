@@ -233,6 +233,7 @@
               <input type="number" id="page" class="form-control inp-form"  name="page" maxlength="10" min="1" value="1">
               <div class="valid-tooltip"></div>
             </div>
+
             <div class="col-md-6 mb-3 inp-group parentSelect">
               <label class="label-form" for="size">Размер страницы</label>
               <select id="size" class="form-control inp-form select" name="size">
@@ -269,8 +270,8 @@
             </div>
           </div>
           <div class="form-row">
-            <div class="col-md-6 mb-3 inp-group parentSelect">
-              <label class="label-form" for="storeId">Статус чека</label>
+            <div class="col-md-6 mb-5 inp-group parentSelect">
+              <label class="label-form" for="status">Статус чека</label>
               <select id="status" class="form-control inp-form select" name="status">
                 <option value="none" selected>Не выбран</option>
                 <option value="CREATED">Создан</option>
@@ -282,15 +283,34 @@
               </select>
               <div class="valid-tooltip"></div>
             </div>
-            <div class="col-md-6 mb-3 inp-group">
+            <div class="col-md-6 mb-5 inp-group">
               <label class="label-form" for="cashier">Кассир</label>
               <input type="text" id="cashier" class="form-control inp-form"  name="cashier">
               <div class="valid-tooltip"></div>
             </div>
           </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block mb-4" value="submit">Поиск чеков</button>
         </fieldset>
-        <button type="submit" class="btn btn-primary btn-lg btn-block mb-5" value="submit">Поиск чеков</button>
       </form>
+
+
+
+      <div class="row d-flex justify-content-end mb-4">
+        <div class="ml-auto">
+          <a href="add.html" class="btn btn-add mr-4 mb-4">
+            <span class="fas fa-plus-circle pr-1"></span>
+            Создать чек
+          </a>
+          <a href="addcorrection.html" class="btn btn-add mr-4 mb-4">
+            <span class="fas fa-plus-circle pr-1"></span>
+            Создать чек коррекции
+          </a>
+          <a href="import.html" class="btn btn-add mb-4 mr-4">
+            <span class="fas fa-plus-circle pr-1"></span>
+            Загрузить CSV
+          </a>
+        </div>
+      </div>
 
       <nav aria-label="Page navigation example">
         <ul class="pagination">
