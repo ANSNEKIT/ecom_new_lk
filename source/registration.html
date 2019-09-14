@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="css/style.min.css">
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
 <!--<div class="form-group">
@@ -20,7 +19,7 @@
 </div>-->
 
 <body class="signUpPage">
-  <div class="nav header">
+  <header class="nav header">
     <div class="logo">
       <a class="navbar-brand" href="add.html">
         <img src="img/logo_navbar.png" alt="E-COM Kassa" width="199" height="80">
@@ -48,11 +47,11 @@
         </li>
       </ul>
     </nav>
-  </div>
-  <div class="container">
+  </header>
+  <main class="container">
     <h1 class="page-header text-center pt-5">Регистрация</h1>
     <p class="text-center">Зарегистрируйте новую учетную запись</p>
-    <form action="" class="loginForm">
+    <form action="" method="get" class="loginForm">
       <div class="form-row">
         <div class="col-md-12 form-group mb-3">
           <label class="label-form" for="firmName">Название компании</label>
@@ -157,6 +156,8 @@
       </p>
 
     </form>
-  </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </body>
 </html>

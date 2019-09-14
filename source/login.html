@@ -9,11 +9,10 @@
   <link rel="stylesheet" href="css/style.min.css">
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
 <body class="loginPage">
-  <div class="nav header">
+  <header class="nav header">
     <div class="logo">
       <a class="navbar-brand" href="add.html">
         <img src="img/logo_navbar.png" alt="E-COM Kassa" width="199" height="80">
@@ -41,11 +40,11 @@
         </li>
       </ul>
     </nav>
-  </div>
-  <div class="container">
+  </header>
+  <main class="container">
     <h1 class="page-header text-center pt-5">Войти</h1>
     <p class="text-center">Войдите, используя свои учётные данные</p>
-    <form action="" class="loginForm">
+    <form action="" method="get" class="loginForm">
       <div class="form-group mb-4">
           <label class="label-form" for="email">Введите email</label>
           <input type="email" id="email" class="form-control inp-form" placeholder="Ваш email" pattern=".+@.+\..+"
@@ -79,6 +78,8 @@
         <a href="https://app.ecomkassa.ru/assets/docs/personal-data-agreement.pdf">персональных данных</a>
       </p>
     </form>
-  </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </body>
 </html>
