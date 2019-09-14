@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Чек коррекции</title>
+  <title></title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.min.css">
@@ -12,7 +12,7 @@
 </head>
 
 
-<body class="page-add_correction">
+<body>
 <header class="nav header">
   <div class="logo">
     <a class="navbar-brand" href="index.html">
@@ -21,19 +21,23 @@
   </div>
   <div class="mx-1 menuGamburger">
     <button class="navbar-toggler" type="button">
+      <!-- data-toggle="collapse" data-target="#menu" aria-controls="menu"
+            aria-expanded="false" aria-label="Toggle navigation" -->
+
       <span class="navbar-toggler-icon">
-        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-           xmlns:xlink="http://www.w3.org/1999/xlink"
-           x="0px" y="0px"
-           width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">
-      <g>
-        <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
-        <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
-        <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
-      </g>
-      </svg>
-      </span>
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                   xmlns:xlink="http://www.w3.org/1999/xlink"
+                   x="0px" y="0px"
+                   width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">
+              <g>
+                <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
+                <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
+                <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
+              </g>
+              </svg>
+            </span>
     </button>
+    <!--<span class="labelForButtonMenu">Меню</span>-->
   </div>
   <nav class="nav ml-auto topNavbar">
     <ul class="nav userMenu">
@@ -49,8 +53,8 @@
           <span class="fas fa-user-tie leftIcon"></span>
           <span class="menuTitle">Тестовый юзер</span>
           <span class="arrow">
-              <i class="fas fa-chevron-down js-icon"></i>
-            </span>
+                <i class="fas fa-chevron-down js-icon"></i>
+              </span>
         </a>
         <ul class="dropdown-menu menuItems" aria-labelledby="topHiddenMenu">
           <li class="dropdown-item menuItem">
@@ -72,7 +76,7 @@
             </a>
           </li>
           <li class="dropdown-item menuItem">
-            <a class="nav-link" href="changepass.html">
+            <a class="nav-link" href="#">
               <span class="fas fa-key leftIcon"></span>
               <span class="menuTitle">Изменить пароль</span>
             </a>
@@ -143,7 +147,7 @@
           <ul class="menuItems collapse" id="collapse-menu_2">
             <li class="menuItem"><a href="orders.html" class="nav-link">Список чеков</a></li>
             <li class="menuItem"><a href="add.html" class="nav-link">Сформировать чек</a></li>
-            <li class="menuItem"><a href="#" class="nav-link">Создать чек коррекции</a></li>
+            <li class="menuItem"><a href="addcorrection.html" class="nav-link">Создать чек коррекции</a></li>
             <li class="menuItem"><a href="import.html" class="nav-link">Загрузить CSV</a></li>
           </ul>
         </li>
@@ -219,107 +223,82 @@
     </nav>
   </aside>
   <main class="mainContent mt-5">
-    <h2 class="page-header text-center py-5">Создать чек коррекции</h2>
-    <form class="addCheckForm" action="" method="get">
-      <fieldset class="FormGroup1 mb-4">
-        <div class="form-group form-row">
-          <label for="storeID" class="col-sm-3 col-form-label">Магазин</label>
-          <div class="col-sm-9 parentSelect">
-            <select class="form-control select" name="storeID" id="storeID">
-              <option value="2" selected>Демо магазин для тестирования</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group form-row">
-          <label for="saleCharge" class="col-sm-3 col-form-label">Признак расчета</label>
-          <div class="col-sm-9 parentSelect">
-            <select id="saleCharge" class="form-control form-control input-lg select" name="saleCharge" required>
-              <option value="SALE_CORRECTION">Коррекция прихода</option>
-              <option value="CHARGE_CORRECTION">Коррекция расхода</option>
-            </select>
-          </div>
-        </div>
-      </fieldset>
-
-      <fieldset class="FormGroup2 mb-4">
-        <h3 class="pl-4 pb-4">Параметры коррекции</h3>
-        <div class="form-row">
-          <div class="col-md-6 mb-4 inp-group parentSelect">
-            <select id="correctionType" class="form-control form-control select" name="correctionType" required>
-              <option value="SELF_MADE">Самостоятельная операция</option>
-              <option value="PRESCRIBED">Операция по предписанию</option>
-            </select>
-            <label class="label-form" for="correctionType">Тип коррекции</label>
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 mb-4 inp-group parentSelect">
-            <select id="vatType" class="form-control form-control select" name="vatType" required>
-              <option value="VAT_NONE" selected>Без НДС</option>
-              <option value="VAT_0PCT">НДС 0%</option>
-              <option value="VAT_10PCT">НДС 10%</option>
-              <option value="VAT_110PCT">НДС 10/110</option>
-              <option value="VAT_20PCT">НДС 20%</option>
-              <option value="VAT_120PCT">НДС 20/120</option>
-            </select>
-            <label class="label-form" for="vatType">НДС</label>
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-6 inp-group mb-4">
-              <input type="text" class="form-control inp-form inp-required" id="description"
-                     name="description" required>
-              <label class="label-form" for="description">Основание коррекции</label>
-              <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 inp-group mb-4">
-            <input type="number" class="form-control inp-form inp-required" id="documentNumber" min="1" maxlength="15"
-                   name="documentNumber" required>
-            <label class="label-form" for="documentNumber">Номер документа основания</label>
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-12 inp-group mb-4">
-            <input type="date" class="form-control inp-form inp-required" id="documentDate"
-                   name="documentDate" required>
-            <label class="label-form" for="documentDate">Дата документа коррекции</label>
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-      </fieldset>
-
-      <fieldset class="FormGroup4 mb-5">
-        <!--<legend class="pl-4">Оплата</legend>-->
-        <h3 class="pl-4 pb-4">Оплата</h3>
-        <div class="form-group form-row">
-          <div class="col-md-6 mb-3 inp-group parentSelect">
-            <select class="form-control inp-form select" id="payments_0_type" name="payments[0].type">
-              <option value="CASH">Наличными</option>
-              <option value="CREDIT_CARD" selected>Банковская карта</option>
-              <option value="PRE_PAID">Предоплата</option>
-              <option value="POST_PAID">Постоплата</option>
-              <option value="COUNTER_OFFER">Встречное предоставление</option>
-            </select>
-            <label class="label-form" for="payments_0_type">Вид оплаты</label>
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 mb-3 inp-group">
-            <input type="text" class="form-control inp-form inp-required" id="payments_0_amount" placeholder="1.00"
-                   pattern="[0-9]{8}.[0-9]{2}" required>
-            <label class="label-form labelPayment" for="payments_0_amount">Итоговая сумма, руб</label>
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-
-      </fieldset>
-
-      <div class="form-group mb-5">
-        <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Создать чек</button>
-        <a href="orders.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
+    <h2 class="page-header text-center py-5">Список организаций</h2>
+    <div class="d-flex">
+      <div class="pb-4 ml-auto">
+        <a href="addfirm.html" class="btn btn-add">
+          <span class="fas fa-plus-circle pr-1"></span>
+          Добавить организацию
+        </a>
       </div>
+    </div>
+    <div class="card mb-5">
+      <table class="table table-striped table-bordered table-sm table-hover tableOrders">
+        <thead class="thead-light">
+        <tr>
+          <th class="">Название</th>
+          <th>ИНН</th>
+          <th class="">Телефон</th>
+          <th class="">Заблокирован</th>
+        </tr>
+        </thead>
 
-    </form>
+        <tbody>
+          <tr>
+          <td class="">
+            <a href="#">
+              Компания для теста
+            </a>
+          </td>
+          <td class="">7708317992</td>
+          <td class="">+79163316587</td>
+          <td class="text-center">
+            <i class="far fa-square"></i>
+            <!--<i class="far fa-check-square"></i>-->
+          </td>
+        </tr>
+          <tr>
+            <td class="">
+              <a href="#">
+                Компания для теста
+              </a>
+            </td>
+            <td class="">7708317992</td>
+            <td class="">+79163316587</td>
+            <td class="text-center">
+              <i class="far fa-square"></i>
+              <!--<i class="far fa-check-square"></i>-->
+            </td>
+          </tr>
+          <tr>
+            <td class="">
+              <a href="#">
+                Компания для теста
+              </a>
+            </td>
+            <td class="">7708317992</td>
+            <td class="">+79163316587</td>
+            <td class="text-center">
+              <i class="far fa-square"></i>
+              <!--<i class="far fa-check-square"></i>-->
+            </td>
+          </tr>
+          <tr>
+            <td class="">
+              <a href="#">
+                Компания для теста
+              </a>
+            </td>
+            <td class="">7708317992</td>
+            <td class="">+79163316587</td>
+            <td class="text-center">
+              <i class="far fa-square"></i>
+              <!--<i class="far fa-check-square"></i>-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </main>
 </div>
 
