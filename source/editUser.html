@@ -241,28 +241,31 @@
             <div class="col-md-6 inp-group mb-4">
               <input type="text" id="firstName" class="form-control inp-form" name="firstName" value="Аскар" placeholder="Имя" pattern="^([А-Я]{1})+[а-я-]+$" required>
               <label class="label-form" for="firstName">Имя</label>
-              <div class="invalid-feedback"></div>
+              <div class="invalid-feedback">Введите имя с заглавной буквы</div>
             </div>
             <div class="col-md-6 inp-group mb-4">
               <input type="text" id="lastName" class="form-control inp-form" name="lastName" value="Амиров"
                      placeholder="Фамилия" pattern="^([А-Я]{1})+[а-я-]+$" required>
               <label class="label-form" for="lastName">Фамилия</label>
-              <div class="invalid-feedback"></div>
+              <div class="invalid-feedback">Введите фамилию с заглавной буквы</div>
             </div>
           </div>
 
           <div class="form-row">
             <div class="col-md-6 inp-group mb-4">
               <input type="text" id="position" class="form-control inp-form" name="position" value="Директор"
-                     placeholder="Должность" pattern="^([А-Я]{1})+[а-я-]+$">
+                     placeholder="Должность" pattern="^([А-Я]{1})+[а-я-]+$" required>
               <label class="label-form" for="position">Должность</label>
-              <div class="invalid-feedback"></div>
+              <div class="invalid-feedback">Введите должность с заглавной буквы</div>
             </div>
             <div class="col-md-6 inp-group mb-4">
               <label class="label-form" for="email">Введите email</label>
-              <input type="email" id="email" class="form-control inp-form" placeholder="Ваш email" pattern=".+@.+\..+" name="email" value="test@test.ru" required>
+              <input type="email" id="email" class="form-control inp-form" placeholder="Ваш email"
+                     pattern="^([a-z0-9_-]{1})+([^а-яёЁА-Я])+@+[^а-яёЁА-Я]+\.[^а-яёЁА-Я]+$" name="email"
+                     value="test@test.ru"
+                     required>
+              <div class="invalid-feedback">Email должен содержать только латинские буквы</div>
             </div>
-            <div class="invalid-feedback"></div>
           </div>
 
           <div class="form-row">
