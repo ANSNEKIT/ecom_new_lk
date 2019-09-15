@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Список пользователей</title>
+  <title>Редактирование пользователя</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.min.css">
@@ -76,7 +76,7 @@
               </a>
             </li>
             <li class="dropdown-item menuItem">
-              <a class="nav-link" href="changepass.html">
+              <a class="nav-link" href="#">
                 <span class="fas fa-key leftIcon"></span>
                 <span class="menuTitle">Изменить пароль</span>
               </a>
@@ -126,7 +126,7 @@
               <li class="menuItem"><a href="pointofsales.html" class="nav-link"><span class="menuTitle">Точки продаж</span></a></li>
             </ul>
           </li>
-          <li class="navParent">
+          <li class="navParent navParent--active">
             <a class="nav-link" href="#collapse-menu_2" data-toggle="collapse"  role="button" aria-expanded="false"
                aria-controls="#collapse-menu_2">
               <span class="far fa-check-square leftIcon"></span>
@@ -160,7 +160,7 @@
               <span class="menuTitle">Оплаты</span>
             </a>
           </li>
-          <li class="navParent navParent--active">
+          <li class="navParent">
             <a class="nav-link" href="users.html">
               <span class="fas fa-users leftIcon"></span>
               <span class="menuTitle">Пользователи</span>
@@ -219,162 +219,86 @@
             </a>
           </li>-->
 
-          <!--
-          <li class="navParent">
-            <a class="nav-link" href="#collapse-menu-reffer" data-toggle="collapse"  role="button" aria-expanded="false"
-               aria-controls="#collapse-menu-reffer">
-              <span class="fas fa-donate leftIcon"></span>
-              <span class="menuTitle">Услуги</span>
-              <span class="arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
-                 <g data-name="Layer 2">
-                   <g data-name="chevron-down">
-                     <rect width="24" height="24" opacity="0"></rect>
-                     <path
-                         d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
-                     </path>
-                   </g>
-                 </g>
-                </svg>
-              </span>
-            </a>
-            <ul class="menuItems collapse" id="collapse-menu-reffer">
-              <li class="menuItem">
-                <a href="#">
-                  <span class="menuTitle">История</span>
-                </a>
-              </li>
-              <li class="menuItem">
-                <a href="#">
-                  <span class="menuTitle">Ссылка на оплату</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          -->
-
         </ul>
       </nav>
     </aside>
     <main class="mainContent mt-5">
-      <h2 class="page-header text-center py-5">Список пользователей</h2>
-      <div class="d-flex">
-        <div class="pb-4 ml-auto">
-          <a href="#" class="btn btn-add">
-            <span class="fas fa-plus-circle pr-1"></span>
-            Добавить пользователя
-          </a>
-        </div>
-      </div>
-      <div class="card mb-5">
-        <table class="table table-striped table-bordered table-sm table-hover tableOrders">
-          <thead class="">
-          <tr>
-            <th class="">Логин</th>
-            <th>Фирма</th>
-            <th class="">Имя</th>
-            <th class="">Email</th>
-            <th class="">Блокировка</th>
-            <th class=""></th>
-          </tr>
-          </thead>
+      <h2 class="page-header text-center py-5">Редактирование пользователя</h2>
+      <form class="addCheckForm was-validated" action="" method="get">
+        <fieldset class="FormGroup1 mb-4">
 
-          <tbody>
-            <tr>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="">Компания для теста	</td>
-              <td class="">Александр Носов</td>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="text-center">
-                <i class="far fa-square"></i>
-                <!--<i class="far fa-check-square"></i>-->
-              </td>
-              <td class="text-center new">
-                <form action="" method="POST">
-                  <div class="parentEditDel">
-                    <a href="editUser.html" class="editDelete">
-                      <span class="fas fa-pencil-alt"></span>
-                    </a>
-                    <input type="hidden" name="registrarID" value="4513b883-b985-40b6-8e4c-7638d6e9772e">
-                    <a href="#" value="submit" class="editDelete">
-                      <span class="fas fa-trash-alt"></span>
-                    </a>
-                  </div>
-                </form>
-              </td>
-            </tr>
-            <tr>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="">Компания для теста	</td>
-              <td class="">Александр Носов</td>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="text-center">
-                <i class="far fa-square"></i>
-                <!--<i class="far fa-check-square"></i>-->
-              </td>
-              <td class="text-center">
-                <form action="" method="POST">
-                  <div class="parentEditDel">
-                    <a href="editUser.html" class="editDelete">
-                      <span class="fas fa-pencil-alt"></span>
-                    </a>
-                    <input type="hidden" name="registrarID" value="4513b883-b985-40b6-8e4c-7638d6e9772e">
-                    <a href="#" value="submit" class="editDelete">
-                      <span class="fas fa-trash-alt"></span>
-                    </a>
-                  </div>
-                </form>
-              </td>
-            </tr>
-            <tr>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="">Компания для теста	</td>
-              <td class="">Александр Носов</td>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="text-center">
-                <i class="far fa-square"></i>
-                <!--<i class="far fa-check-square"></i>-->
-              </td>
-              <td class="text-center">
-                <form action="" method="POST">
-                  <div class="parentEditDel">
-                    <a href="editUser.html" class="editDelete">
-                      <span class="fas fa-pencil-alt"></span>
-                    </a>
-                    <input type="hidden" name="registrarID" value="4513b883-b985-40b6-8e4c-7638d6e9772e">
-                    <a href="#" value="submit" class="editDelete">
-                      <span class="fas fa-trash-alt"></span>
-                    </a>
-                  </div>
-                </form>
-              </td>
-            </tr>
-            <tr>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="">Компания для теста	</td>
-              <td class="">Александр Носов</td>
-              <td class="">aleksandr@ecomkassa.ru</td>
-              <td class="text-center">
-                <i class="far fa-square"></i>
-                <!--<i class="far fa-check-square"></i>-->
-              </td>
-              <td class="text-center">
-                <form action="" method="POST">
-                  <div class="parentEditDel">
-                    <a href="editUser.html" class="editDelete">
-                      <span class="fas fa-pencil-alt"></span>
-                    </a>
-                    <input type="hidden" name="registrarID" value="4513b883-b985-40b6-8e4c-7638d6e9772e">
-                    <a href="#" value="submit" class="editDelete">
-                      <span class="fas fa-trash-alt"></span>
-                    </a>
-                  </div>
-                </form>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+          <div class="form-row">
+            <div class="col-md-12 inp-group mb-4">
+              <input type="text" id="userID" name="userID" value="9fd3f105-1b8a-42d9-8497-55d25edf0fb0"
+                     class="form-control inp-form" readonly placeholder="ID фирмы" disabled>
+
+              <label class="label-form labelPayment" for="userID">Идентификатор пользователя</label>
+              <div class="invalid-feedback"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 inp-group mb-4">
+              <input type="text" id="firstName" class="form-control inp-form" name="firstName" value="Аскар" placeholder="Имя" pattern="^([А-Я]{1})+[а-я-]+$" required>
+              <label class="label-form" for="firstName">Имя</label>
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="col-md-6 inp-group mb-4">
+              <input type="text" id="lastName" class="form-control inp-form" name="lastName" value="Амиров"
+                     placeholder="Фамилия" pattern="^([А-Я]{1})+[а-я-]+$" required>
+              <label class="label-form" for="lastName">Фамилия</label>
+              <div class="invalid-feedback"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 inp-group mb-4">
+              <input type="text" id="position" class="form-control inp-form" name="position" value="Директор"
+                     placeholder="Должность" pattern="^([А-Я]{1})+[а-я-]+$">
+              <label class="label-form" for="position">Должность</label>
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="col-md-6 inp-group mb-4">
+              <label class="label-form" for="email">Введите email</label>
+              <input type="email" id="email" class="form-control inp-form" placeholder="Ваш email" pattern=".+@.+\..+" name="email" value="test@test.ru" required>
+            </div>
+            <div class="invalid-feedback"></div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 mb-4 inp-group">
+              <label class="label-form" for="password">Пароль</label>
+              <input type="password" id="password" class="form-control inp-form" name="password" value="" minlength="8"
+                     maxlength="50"
+                     placeholder="Пароль" required>
+              <div class="invalid-feedback">Минимальное количество символов: 8</div>
+              <meter id="pass-strength-meter" min="0" max="8" low="8" value="0"></meter>
+            </div>
+            <div class="col-md-6 mb-4 inp-group">
+              <label class="label-form" for="passwordRepeat">Повторите пароль</label>
+              <input type="password" id="passwordRepeat" class="form-control inp-form" name="passwordRepeat" value="" minlength="8"
+                     maxlength="50" placeholder="Повтор пароля" required>
+              <div class="invalid-feedback">Минимальное количество символов: 8</div>
+              <meter id="password-strength-meter" min="0" max="8" low="8" value="0"></meter>
+            </div>
+          </div>
+
+          <div class="form-row mb-5" id="blocked_field">
+            <div class="col-md-12">
+              <div class="form-check custom-control custom-checkbox">
+                <input type="checkbox" id="blocked" class="custom-control-input" name="blocked" value="true">
+                <label class="custom-control-label" for="blocked">Заблокировано</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form-group mb-5">
+          <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Сохранить</button>
+          <a href="users.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
+        </div>
+
+      </form>
     </main>
   </div>
 
@@ -382,6 +306,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/menu.js"></script>
+  <script type="text/javascript" src="js/meter.js"></script>
 
 </body>
 </html>
