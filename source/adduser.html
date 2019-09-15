@@ -13,323 +13,384 @@
 
 
 <body>
-<header class="nav header">
-  <div class="logo">
-    <a class="navbar-brand" href="index.html">
-      <img src="img/logo_navbar.png" alt="E-COM Kassa" width="199" height="80">
-    </a>
-  </div>
-  <div class="mx-1 menuGamburger">
-    <button class="navbar-toggler" type="button">
-      <!-- data-toggle="collapse" data-target="#menu" aria-controls="menu"
-            aria-expanded="false" aria-label="Toggle navigation" -->
+  <header class="nav header">
+    <div class="logo">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo_navbar.png" alt="E-COM Kassa" width="199" height="80">
+      </a>
+    </div>
+    <div class="mx-1 menuGamburger">
+      <button class="navbar-toggler" type="button">
+        <!-- data-toggle="collapse" data-target="#menu" aria-controls="menu"
+              aria-expanded="false" aria-label="Toggle navigation" -->
 
-      <span class="navbar-toggler-icon">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                     x="0px" y="0px"
-                     width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">
-                <g>
-                  <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
-                  <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
-                  <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
-                </g>
-                </svg>
-              </span>
-    </button>
-    <!--<span class="labelForButtonMenu">Меню</span>-->
-  </div>
-  <nav class="nav ml-auto topNavbar">
-    <ul class="nav userMenu">
-      <li class="navParent navParent--active">
-        <a href="mailto:help@ecomkassa.ru" class="nav-link mailTo">
-          <span class="fas fa-envelope leftIcon"></span>
-          <span class="menuTitle">HELP@ECOMKASSA.RU</span>
-        </a>
-      </li>
-      <li class="dropdown navParent">
-        <a class="nav-link" href="#" id="topHiddenMenu" role="button" data-toggle="dropdown"
-           aria-haspopup="true" aria-expanded="false">
-          <span class="fas fa-user-tie leftIcon"></span>
-          <span class="menuTitle">Тестовый юзер</span>
-          <span class="arrow">
-                  <i class="fas fa-chevron-down js-icon"></i>
+        <span class="navbar-toggler-icon">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                       xmlns:xlink="http://www.w3.org/1999/xlink"
+                       x="0px" y="0px"
+                       width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">
+                  <g>
+                    <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
+                    <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
+                    <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
+                  </g>
+                  </svg>
                 </span>
-        </a>
-        <ul class="dropdown-menu menuItems" aria-labelledby="topHiddenMenu">
-          <li class="dropdown-item menuItem">
-            <a class="nav-link" href="profile.html">
-              <span class="fas fa-id-card-alt leftIcon"></span>
-              <span class="menuTitle">Мой профиль</span>
-            </a>
-          </li>
-          <li class="dropdown-item menuItem">
-            <a class="nav-link" href="#">
-              <span class="fas fa-cogs leftIcon"></span>
-              <span class="menuTitle">Настройки</span>
-            </a>
-          </li>
-          <li class="dropdown-item menuItem">
-            <a class="nav-link" href="#">
-              <span class="far fa-question-circle leftIcon"></span>
-              <span class="menuTitle">FAQ</span>
-            </a>
-          </li>
-          <li class="dropdown-item menuItem">
-            <a class="nav-link" href="#">
-              <span class="fas fa-key leftIcon"></span>
-              <span class="menuTitle">Изменить пароль</span>
-            </a>
-          </li>
-          <li class="dropdown-item menuItem">
-            <a class="nav-link" href="login.html">
-              <span class="fas fa-door-open leftIcon"></span>
-              <span class="menuTitle">Выход</span>
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-<div class="flexContainer">
-  <aside class="menu menu--active" id="menu">
-    <!-- collapse show -->
-    <nav class="nav flex-column flex-fill justify-content-between pt-3" id="rightMenu">
-      <ul class="nav flex-column">
-        <li class="navParent">
-          <a class="nav-link" href="index.html">
-            <span class="fas fa-home leftIcon"></span>
-            <span class="menuTitle">Главная</span>
-          </a>
-        </li>
-        <li class="navParent">
-          <a class="nav-link" href="#collapse-menu_1" data-toggle="collapse"  role="button" aria-expanded="false" aria-controls="#collapse-menu_1">
-            <span class="far fa-building leftIcon"></span>
-            <span class="menuTitle">Организации</span>
-            <span class="arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
-                     <g data-name="Layer 2">
-                       <g data-name="chevron-down">
-                         <rect width="24" height="24" opacity="0"></rect>
-                         <path
-                             d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
-                         </path>
-                       </g>
-                     </g>
-                    </svg>
-                  </span>
-          </a>
-          <ul class="menuItems collapse" id="collapse-menu_1">
-            <li class="menuItem"><a href="firms.html" class="nav-link"><span class="menuTitle">Организации</span></a></li>
-            <li class="menuItem"><a href="pointofsales.html" class="nav-link"><span class="menuTitle">Точки продаж</span></a></li>
-          </ul>
-        </li>
+      </button>
+      <!--<span class="labelForButtonMenu">Меню</span>-->
+    </div>
+    <nav class="nav ml-auto topNavbar">
+      <ul class="nav userMenu">
         <li class="navParent navParent--active">
-          <a class="nav-link" href="#collapse-menu_2" data-toggle="collapse"  role="button" aria-expanded="false"
-             aria-controls="#collapse-menu_2">
-            <span class="far fa-check-square leftIcon"></span>
-            <span class="menuTitle">Чеки</span>
+          <a href="mailto:help@ecomkassa.ru" class="nav-link mailTo">
+            <span class="fas fa-envelope leftIcon"></span>
+            <span class="menuTitle">HELP@ECOMKASSA.RU</span>
+          </a>
+        </li>
+        <li class="dropdown navParent">
+          <a class="nav-link" href="#" id="topHiddenMenu" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            <span class="fas fa-user-tie leftIcon"></span>
+            <span class="menuTitle">Тестовый юзер</span>
             <span class="arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
-                     <g data-name="Layer 2">
-                       <g data-name="chevron-down">
-                         <rect width="24" height="24" opacity="0"></rect>
-                         <path
-                             d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
-                         </path>
-                       </g>
-                     </g>
-                    </svg>
+                    <i class="fas fa-chevron-down js-icon"></i>
                   </span>
           </a>
-          <ul class="menuItems collapse" id="collapse-menu_2">
-            <li class="menuItem"><a href="orders.html" class="nav-link">Список чеков</a></li>
-            <li class="menuItem"><a href="add.html" class="nav-link">Сформировать чек</a></li>
-            <li class="menuItem"><a href="addcorrection.html" class="nav-link">Создать чек коррекции</a></li>
-            <li class="menuItem"><a href="import.html" class="nav-link">Загрузить CSV</a></li>
-          </ul>
-        </li>
-        <li class="navParent">
-          <a class="nav-link" href="fees.html">
-            <!--<span class="fas fa-comment-dollar leftIcon"></span>-->
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas"
-                 data-icon="comment-dollar" class="svg-inline--fa fa-comment-dollar fa-w-16 leftIcon" role="img"
-                 viewBox="0 0 512 512"><path fill="currentColor" d="M256 32C114.62 32 0 125.12 0 240c0 49.56 21.41 95.01 57.02 130.74C44.46 421.05 2.7 465.97 2.2 466.5A7.995 7.995 0 0 0 8 480c66.26 0 115.99-31.75 140.6-51.38C181.29 440.93 217.59 448 256 448c141.38 0 256-93.12 256-208S397.38 32 256 32zm24 302.44V352c0 8.84-7.16 16-16 16h-16c-8.84 0-16-7.16-16-16v-17.73c-11.42-1.35-22.28-5.19-31.78-11.46-6.22-4.11-6.82-13.11-1.55-18.38l17.52-17.52c3.74-3.74 9.31-4.24 14.11-2.03 3.18 1.46 6.66 2.22 10.26 2.22h32.78c4.66 0 8.44-3.78 8.44-8.42 0-3.75-2.52-7.08-6.12-8.11l-50.07-14.3c-22.25-6.35-40.01-24.71-42.91-47.67-4.05-32.07 19.03-59.43 49.32-63.05V128c0-8.84 7.16-16 16-16h16c8.84 0 16 7.16 16 16v17.73c11.42 1.35 22.28 5.19 31.78 11.46 6.22 4.11 6.82 13.11 1.55 18.38l-17.52 17.52c-3.74 3.74-9.31 4.24-14.11 2.03a24.516 24.516 0 0 0-10.26-2.22h-32.78c-4.66 0-8.44 3.78-8.44 8.42 0 3.75 2.52 7.08 6.12 8.11l50.07 14.3c22.25 6.36 40.01 24.71 42.91 47.67 4.05 32.06-19.03 59.42-49.32 63.04z"/></svg>
-            <span class="menuTitle">Оплаты</span>
-          </a>
-        </li>
-        <li class="navParent">
-          <a class="nav-link" href="users.html">
-            <span class="fas fa-users leftIcon"></span>
-            <span class="menuTitle">Пользователи</span>
-          </a>
-        </li>
-        <!--<li class="navParent">
-          <a class="nav-link" href="#collapse-menu_3" data-toggle="collapse"  role="button" aria-expanded="false"
-             aria-controls="#collapse-menu_3">
-            <span class="fas fa-donate leftIcon"></span>
-            <span class="menuTitle">Услуги</span>
-            <span class="arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
-                 <g data-name="Layer 2">
-                   <g data-name="chevron-down">
-                     <rect width="24" height="24" opacity="0"></rect>
-                     <path
-                         d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
-                     </path>
-                   </g>
-                 </g>
-                </svg>
-              </span>
-          </a>
-          <ul class="menuItems collapse" id="collapse-menu_3">
-            <li class="menuItem">
-              <a href="#" class="nav-link">
-                <span class="menuTitle">Витрина тарифов</span>
+          <ul class="dropdown-menu menuItems" aria-labelledby="topHiddenMenu">
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="profile.html">
+                <span class="fas fa-id-card-alt leftIcon"></span>
+                <span class="menuTitle">Мой профиль</span>
               </a>
             </li>
-            <li class="menuItem">
-              <a href="#" class="nav-link">
-                <span class="menuTitle">Витрина касс</span>
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="#">
+                <span class="fas fa-cogs leftIcon"></span>
+                <span class="menuTitle">Настройки</span>
               </a>
             </li>
-            <li class="menuItem">
-              <a href="#" class="nav-link">
-                <span class="menuTitle">Витрина доп услуг</span>
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="#">
+                <span class="far fa-question-circle leftIcon"></span>
+                <span class="menuTitle">FAQ</span>
               </a>
             </li>
-            <li class="menuItem">
-              <a href="#" class="nav-link">
-                <span class="menuTitle">Витрина лицензий</span>
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="#">
+                <span class="fas fa-key leftIcon"></span>
+                <span class="menuTitle">Изменить пароль</span>
               </a>
             </li>
-            <li class="menuItem">
-              <a href="#" class="nav-link">
-                <span class="menuTitle">Баланс</span>
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="login.html">
+                <span class="fas fa-door-open leftIcon"></span>
+                <span class="menuTitle">Выход</span>
               </a>
             </li>
           </ul>
-        </li>-->
-        <!--<li class="navParent">
-          <a class="nav-link" href="#">
-            <span class="far fa-handshake leftIcon"></span>
-            <span class="menuTitle">Интеграция</span>
-          </a>
-        </li>-->
-
+        </li>
       </ul>
     </nav>
-  </aside>
-  <main class="mainContent mt-5">
-    <h2 class="page-header text-center py-5">Добавить пользователя</h2>
-    <form class="addCheckForm was-validated" action="" method="get">
-      <fieldset class="FormGroup1 mb-4">
+  </header>
 
-        <div class="form-row">
-          <div class="col-md-12 inp-group mb-4">
-            <input type="text" id="login" class="form-control inp-form" placeholder="Ваш никнейм или email"  name="login"
-                   pattern="[^а-яА-Я]"
-                   required>
+  <div class="flexContainer">
+    <aside class="menu menu--active" id="menu">
+      <!-- collapse show -->
+      <nav class="nav flex-column flex-fill justify-content-between pt-3" id="rightMenu">
+        <ul class="nav flex-column">
+          <li class="navParent">
+            <a class="nav-link" href="index.html">
+              <span class="fas fa-home leftIcon"></span>
+              <span class="menuTitle">Главная</span>
+            </a>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="#collapse-menu_1" data-toggle="collapse"  role="button" aria-expanded="false" aria-controls="#collapse-menu_1">
+              <span class="far fa-building leftIcon"></span>
+              <span class="menuTitle">Организации</span>
+              <span class="arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                       <g data-name="Layer 2">
+                         <g data-name="chevron-down">
+                           <rect width="24" height="24" opacity="0"></rect>
+                           <path
+                               d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                           </path>
+                         </g>
+                       </g>
+                      </svg>
+                    </span>
+            </a>
+            <ul class="menuItems collapse" id="collapse-menu_1">
+              <li class="menuItem"><a href="firms.html" class="nav-link"><span class="menuTitle">Организации</span></a></li>
+              <li class="menuItem"><a href="pointofsales.html" class="nav-link"><span class="menuTitle">Точки продаж</span></a></li>
+            </ul>
+          </li>
+          <li class="navParent navParent--active">
+            <a class="nav-link" href="#collapse-menu_2" data-toggle="collapse"  role="button" aria-expanded="false"
+               aria-controls="#collapse-menu_2">
+              <span class="far fa-check-square leftIcon"></span>
+              <span class="menuTitle">Чеки</span>
+              <span class="arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                       <g data-name="Layer 2">
+                         <g data-name="chevron-down">
+                           <rect width="24" height="24" opacity="0"></rect>
+                           <path
+                               d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                           </path>
+                         </g>
+                       </g>
+                      </svg>
+                    </span>
+            </a>
+            <ul class="menuItems collapse" id="collapse-menu_2">
+              <li class="menuItem"><a href="orders.html" class="nav-link">Список чеков</a></li>
+              <li class="menuItem"><a href="add.html" class="nav-link">Сформировать чек</a></li>
+              <li class="menuItem"><a href="addcorrection.html" class="nav-link">Создать чек коррекции</a></li>
+              <li class="menuItem"><a href="import.html" class="nav-link">Загрузить CSV</a></li>
+            </ul>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="fees.html">
+              <!--<span class="fas fa-comment-dollar leftIcon"></span>-->
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas"
+                   data-icon="comment-dollar" class="svg-inline--fa fa-comment-dollar fa-w-16 leftIcon" role="img"
+                   viewBox="0 0 512 512"><path fill="currentColor" d="M256 32C114.62 32 0 125.12 0 240c0 49.56 21.41 95.01 57.02 130.74C44.46 421.05 2.7 465.97 2.2 466.5A7.995 7.995 0 0 0 8 480c66.26 0 115.99-31.75 140.6-51.38C181.29 440.93 217.59 448 256 448c141.38 0 256-93.12 256-208S397.38 32 256 32zm24 302.44V352c0 8.84-7.16 16-16 16h-16c-8.84 0-16-7.16-16-16v-17.73c-11.42-1.35-22.28-5.19-31.78-11.46-6.22-4.11-6.82-13.11-1.55-18.38l17.52-17.52c3.74-3.74 9.31-4.24 14.11-2.03 3.18 1.46 6.66 2.22 10.26 2.22h32.78c4.66 0 8.44-3.78 8.44-8.42 0-3.75-2.52-7.08-6.12-8.11l-50.07-14.3c-22.25-6.35-40.01-24.71-42.91-47.67-4.05-32.07 19.03-59.43 49.32-63.05V128c0-8.84 7.16-16 16-16h16c8.84 0 16 7.16 16 16v17.73c11.42 1.35 22.28 5.19 31.78 11.46 6.22 4.11 6.82 13.11 1.55 18.38l-17.52 17.52c-3.74 3.74-9.31 4.24-14.11 2.03a24.516 24.516 0 0 0-10.26-2.22h-32.78c-4.66 0-8.44 3.78-8.44 8.42 0 3.75 2.52 7.08 6.12 8.11l50.07 14.3c22.25 6.36 40.01 24.71 42.91 47.67 4.05 32.06-19.03 59.42-49.32 63.04z"/></svg>
+              <span class="menuTitle">Оплаты</span>
+            </a>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="users.html">
+              <span class="fas fa-users leftIcon"></span>
+              <span class="menuTitle">Пользователи</span>
+            </a>
+          </li>
+          <!--<li class="navParent">
+            <a class="nav-link" href="#collapse-menu_3" data-toggle="collapse"  role="button" aria-expanded="false"
+               aria-controls="#collapse-menu_3">
+              <span class="fas fa-donate leftIcon"></span>
+              <span class="menuTitle">Услуги</span>
+              <span class="arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                   <g data-name="Layer 2">
+                     <g data-name="chevron-down">
+                       <rect width="24" height="24" opacity="0"></rect>
+                       <path
+                           d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                       </path>
+                     </g>
+                   </g>
+                  </svg>
+                </span>
+            </a>
+            <ul class="menuItems collapse" id="collapse-menu_3">
+              <li class="menuItem">
+                <a href="#" class="nav-link">
+                  <span class="menuTitle">Витрина тарифов</span>
+                </a>
+              </li>
+              <li class="menuItem">
+                <a href="#" class="nav-link">
+                  <span class="menuTitle">Витрина касс</span>
+                </a>
+              </li>
+              <li class="menuItem">
+                <a href="#" class="nav-link">
+                  <span class="menuTitle">Витрина доп услуг</span>
+                </a>
+              </li>
+              <li class="menuItem">
+                <a href="#" class="nav-link">
+                  <span class="menuTitle">Витрина лицензий</span>
+                </a>
+              </li>
+              <li class="menuItem">
+                <a href="#" class="nav-link">
+                  <span class="menuTitle">Баланс</span>
+                </a>
+              </li>
+            </ul>
+          </li>-->
+          <!--<li class="navParent">
+            <a class="nav-link" href="#">
+              <span class="far fa-handshake leftIcon"></span>
+              <span class="menuTitle">Интеграция</span>
+            </a>
+          </li>-->
 
-            <label class="label-form" for="login">Логин</label>
-            <div class="invalid-feedback">Обязательное поле</div>
-          </div>
-        </div>
+        </ul>
+      </nav>
+    </aside>
+    <main class="mainContent mt-5">
+      <h2 class="page-header text-center py-5">Добавить пользователя</h2>
+      <form class="addCheckForm was-validated" action="" method="get">
+        <fieldset class="FormGroup1 mb-4">
 
-        <div class="form-row">
-          <div class="col-md-6 inp-group mb-4">
-            <input type="text" id="firstName" class="form-control inp-form" name="firstName" value="" placeholder="Имя" pattern="^([А-Я]{1})+[а-я-]+$" required>
-            <label class="label-form" for="firstName">Имя</label>
-            <div class="invalid-feedback">Введите имя с заглавной буквы</div>
-          </div>
-          <div class="col-md-6 inp-group mb-4">
-            <input type="text" id="lastName" class="form-control inp-form" name="lastName" value=""
-                   placeholder="Фамилия" pattern="^([А-Я]{1})+[а-я-]+$" required>
-            <label class="label-form" for="lastName">Фамилия</label>
-            <div class="invalid-feedback">Введите фамилию с заглавной буквы</div>
-          </div>
-        </div>
+          <div class="form-row">
+            <div class="col-md-12 inp-group mb-4">
+              <input type="text" id="login" class="form-control inp-form" placeholder="Ваш никнейм или email"  name="login"
+                     pattern="[^а-яА-Я]"
+                     required>
 
-        <div class="form-row">
-          <div class="col-md-6 inp-group mb-4">
-            <input type="text" id="position" class="form-control inp-form" name="position" value="Директор"
-                   placeholder="Должность" pattern="^([А-Я]{1})+[а-я-]+$" required>
-            <label class="label-form" for="position">Должность</label>
-            <div class="invalid-feedback">Введите должность с заглавной буквы</div>
-          </div>
-          <div class="col-md-6 inp-group mb-4">
-            <label class="label-form" for="email">Введите email</label>
-            <input type="email" id="email" class="form-control inp-form" placeholder="Ваш email" pattern="^([a-z0-9_-]{1})+([^а-яёЁА-Я])+@+[^а-яёЁА-Я]+\.[^а-яёЁА-Я]+$" name="email" value="" required>
-            <div class="invalid-feedback">Email не должен содержать кириллицу. Первый символ должен быть прописной</div>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col-md-6 mb-4 inp-group">
-            <label class="label-form" for="password">Пароль</label>
-            <input type="password" id="password" class="form-control inp-form" name="password" value="" minlength="8"
-                   maxlength="50"
-                   placeholder="Пароль" required>
-            <div class="invalid-feedback">Минимальное количество символов: 8</div>
-            <meter id="pass-strength-meter" min="0" max="8" low="8" value="0"></meter>
-          </div>
-          <div class="col-md-6 mb-4 inp-group">
-            <label class="label-form" for="passwordRepeat">Повторите пароль</label>
-            <input type="password" id="passwordRepeat" class="form-control inp-form" name="passwordRepeat" value="" minlength="8"
-                   maxlength="50" placeholder="Повтор пароля" required>
-            <div class="invalid-feedback">Минимальное количество символов: 8</div>
-            <meter id="password-strength-meter" min="0" max="8" low="8" value="0"></meter>
-          </div>
-        </div>
-
-        <div class="form-row mb-5">
-          <div class="col-md-12">
-            <label class="label-form" for="firmID">Организация</label>
-            <input type="text" id="firmID" class="form-control inp-form" name="firmID" value="" placeholder="Организация">
-          </div>
-          <div class="invalid-feedback"></div>
-        </div>
-
-        <div class="form-row mb-4">
-          <div class="col-md-5 col-xl-3 mb-1" id="blocked_field">
-            <div class="form-check custom-control custom-checkbox">
-              <input type="checkbox" id="blocked" class="custom-control-input" name="blocked" value="true">
-              <label class="custom-control-label" for="blocked">Заблокировано</label>
+              <label class="label-form" for="login">Логин</label>
+              <div class="invalid-feedback">Обязательное поле</div>
             </div>
           </div>
-          <div class="col-md-5 col-xl-3" id="isAdmin_field">
-            <div class="form-check custom-control custom-checkbox">
-              <input type="checkbox" id="isAdmin" class="custom-control-input" name="isAdmin" value="true">
-              <label class="custom-control-label" for="isAdmin">Администратор</label>
-            </div>
-          </div>
-        </div>
-        <!--<div class="form-row mb-5">
-          <div class="col-md-6" id="isAdmin_field">
-            <div class="form-check custom-control custom-checkbox">
-              <input type="checkbox" id="isAdmin" class="custom-control-input" name="isAdmin" value="true">
-              <label class="custom-control-label" for="isAdmin">Администратор</label>
-            </div>
-          </div>
-        </div>-->
-      </fieldset>
 
-      <div class="form-group mb-5">
-        <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Сохранить</button>
-        <a href="users.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
+          <div class="form-row">
+            <div class="col-md-6 inp-group mb-4">
+              <input type="text" id="firstName" class="form-control inp-form" name="firstName" value="" placeholder="Имя" pattern="^([А-Я]{1})+[а-я-]+$" required>
+              <label class="label-form" for="firstName">Имя</label>
+              <div class="invalid-feedback">Введите имя с заглавной буквы</div>
+            </div>
+            <div class="col-md-6 inp-group mb-4">
+              <input type="text" id="lastName" class="form-control inp-form" name="lastName" value=""
+                     placeholder="Фамилия" pattern="^([А-Я]{1})+[а-я-]+$" required>
+              <label class="label-form" for="lastName">Фамилия</label>
+              <div class="invalid-feedback">Введите фамилию с заглавной буквы</div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 inp-group mb-4">
+              <input type="text" id="position" class="form-control inp-form" name="position" value="Директор"
+                     placeholder="Должность" pattern="^([А-Я]{1})+[а-я-]+$" required>
+              <label class="label-form" for="position">Должность</label>
+              <div class="invalid-feedback">Введите должность с заглавной буквы</div>
+            </div>
+            <div class="col-md-6 inp-group mb-4">
+              <label class="label-form" for="email">Введите email</label>
+              <input type="email" id="email" class="form-control inp-form" placeholder="Ваш email" pattern="^([a-z0-9_-]{1})+([^а-яёЁА-Я])+@+[^а-яёЁА-Я]+\.[^а-яёЁА-Я]+$" name="email" value="" required>
+              <div class="invalid-feedback">Email не должен содержать кириллицу. Первый символ должен быть прописной</div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 mb-4 inp-group">
+              <label class="label-form" for="password">Пароль</label>
+              <input type="password" id="password" class="form-control inp-form" name="password" value="" minlength="8"
+                     maxlength="50"
+                     placeholder="Пароль" required>
+              <div class="invalid-feedback">Минимальное количество символов: 8</div>
+              <meter id="pass-strength-meter" min="0" max="8" low="8" value="0"></meter>
+            </div>
+            <div class="col-md-6 mb-4 inp-group">
+              <label class="label-form" for="passwordRepeat">Повторите пароль</label>
+              <input type="password" id="passwordRepeat" class="form-control inp-form" name="passwordRepeat" value="" minlength="8"
+                     maxlength="50" placeholder="Повтор пароля" required>
+              <div class="invalid-feedback">Минимальное количество символов: 8</div>
+              <meter id="password-strength-meter" min="0" max="8" low="8" value="0"></meter>
+            </div>
+          </div>
+
+          <div class="form-row mb-5">
+            <div class="col-md-12">
+              <label class="label-form" for="firmID">Организация</label>
+              <input type="text" id="firmID" class="form-control inp-form" name="firmID" value="" placeholder="Организация">
+            </div>
+            <div class="invalid-feedback"></div>
+          </div>
+
+          <div class="form-row mb-4">
+            <div class="col-md-5 col-xl-3 mb-1" id="blocked_field">
+              <div class="form-check custom-control custom-checkbox">
+                <input type="checkbox" id="blocked" class="custom-control-input" name="blocked" value="true">
+                <label class="custom-control-label" for="blocked">Заблокировано</label>
+              </div>
+            </div>
+            <div class="col-md-5 col-xl-3" id="isAdmin_field">
+              <div class="form-check custom-control custom-checkbox">
+                <input type="checkbox" id="isAdmin" class="custom-control-input" name="isAdmin" value="true">
+                <label class="custom-control-label" for="isAdmin">Администратор</label>
+              </div>
+            </div>
+          </div>
+          <!--<div class="form-row mb-5">
+            <div class="col-md-6" id="isAdmin_field">
+              <div class="form-check custom-control custom-checkbox">
+                <input type="checkbox" id="isAdmin" class="custom-control-input" name="isAdmin" value="true">
+                <label class="custom-control-label" for="isAdmin">Администратор</label>
+              </div>
+            </div>
+          </div>-->
+        </fieldset>
+
+        <div class="form-group mb-5">
+          <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Сохранить</button>
+          <a href="users.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
+        </div>
+
+      </form>
+    </main>
+  </div>
+
+  <footer class="nav mainFooter">
+    <div class="row footerWrapper">
+      <div class="col-sm-6 col-lg-3 blockInfo">
+        <h5 class="footerHeader">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</h5>
+        <ul class="footerItems">
+          <li class="footerItem">
+            <a href="https://app.ecomkassa.ru/assets/docs/license-agreement-ru.pdf" class="footerLink">Публичный договор
+              оферты</a>
+          </li>
+          <li class="footerItem">
+            <a href="https://app.ecomkassa.ru/assets/docs/leasing-public-ru.pdf" class="footerLink">Договор-оферта на аренду касс</a>
+          </li>
+          <li class="footerItem">
+            <a href="https://ecomkassa.ru/docs" class="footerLink">Все документы</a>
+          </li>
+        </ul>
       </div>
+      <div class="col-sm-6 col-lg-4">
+        <h5 class="footerHeader">ИНСТРУКЦИИ</h5>
+        <ul class="footerItems">
+          <li class="footerItem">
+            <a href="https://docs.google.com/document/d/1I6ZKASxSaBdbgNppl3mrgLMNl3UEqkmW5MxqPcLzS20" class="footerLink">Инструкция по настройке
+              нового клиента
+            </a>
+          </li>
+          <li class="footerItem">
+            <a href="https://docs.google.com/document/d/12TTuXy2FrfkBYi3PF_BlUsU1DzSUy53uYLrSuKXsdBw"
+               class="footerLink">Инструкция по настройке мобильного приложения</a>
+          </li>
+          <li class="footerItem">
+            <a href="https://docs.google.com/document/d/1tPyqOuk7_QSdDjXyQ5p8TDbrr1OUzztLkCpFA_uwv-E" class="footerLink">Инструкция по настройке Ecomkassa в Unitpay</a>
+          </li>
+          <li class="footerItem">
+            <a href="https://docs.google.com/document/d/11e5Yx7ur5n9caHVYXHlt42MfeumQ8poPMETwqzKfS7k" class="footerLink">Создание тестового чека в лк E-COM kassa</a>
+          </li>
+          <li class="footerItem">
+            <a href="https://www.youtube.com/watch?v=rfy6K7ryzGA" class="footerLink">Решение типичных проблем в ЛК nalog.ru</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <h5 class="footerHeader">ТЕХПОДДЕРЖКА</h5>
+        <p>Режим работы:</p>
+        <p class="ml-2">Будни: с 9:00 Мск до 18:00 Мск</p>
+        <p class="ml-2">Выходные: СБ, ВС</p>
+        <p>Почта техподдержки:</p>
+        <p class="ml-2"><a href="mailto:help@ecomkassa.ru" class="footerLink">help@ecomkassa.ru</a></p>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <h5 class="footerHeader">О КОМПАНИИ</h5>
+        <p>ООО "Зе Поинт"</p>
+        <p class="ml-2">ИНН: 7708317992</p>
+        <p class="ml-2">Юридический адрес:</p>
+        <p class="ml-2 pb-2">101000 г. Москва, пер. Уланский, д. 13 стр. 4 пом. 1</p>
+        <p class="">Генеральный директор:</p>
+        <p class="ml-2">Носов Александр Сергеевич</p>
+      </div>
+    </div>
+  </footer>
 
-    </form>
-  </main>
-</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/menu.js"></script>
-<script type="text/javascript" src="js/meter.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/menu.js"></script>
+  <script type="text/javascript" src="js/meter.js"></script>
 
 </body>
 </html>
