@@ -1,4 +1,5 @@
 .mainFooter {
+  justify-content: center;
   width: 100%;
 
   background-color: #475162;
@@ -7,12 +8,16 @@
   z-index: 100;
 }
 
-.mainFooter .row {
+.mainFooter .footerWrapper {
   width: inherit;
   justify-content: space-between;
 
-  margin: 0;
+  margin: 0 3rem 2rem;
   padding: 0;
+
+  @media (max-width: 1200px) {
+    margin: 0 1.5rem 1.5rem;
+  }
 }
 
 .mainFooter .footerHeader {
@@ -20,7 +25,7 @@
 
   font-size: .9rem;
   font-weight: 600;
-  line-height: 1.2rem;
+  line-height: 1.5rem;
 
   color: white;
 }
@@ -41,9 +46,18 @@
 
 }
 
-.footerItem .footerLink {
-  color: #6ea9ea;
+.blockInfo .footerItem{
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5rem;
 
+  @media (max-width: 1200px) {
+    font-size: 0.8rem;
+  }
+}
+
+.footerLink {
+  color: #6ea9ea;
 
   &:visited {
     color: #aea3ff;
@@ -52,6 +66,20 @@
     color: #97c7dd;
     text-decoration: none;
   }
+}
 
+.mainFooter p {
+  margin: 0;
+  padding: 0;
+
+  color: $gray-light;
+
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+
+  @media (max-width: 1200px) {
+    font-size: 0.8rem;
+  }
 }
 
