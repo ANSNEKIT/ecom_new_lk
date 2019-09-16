@@ -67,6 +67,19 @@ body{
   font-weight: 600;
 }
 
+ .was-validated .select:valid {
+   padding-right: calc(1.5em + 1.5rem);
+   background-repeat: no-repeat;
+   background-position: center right calc(.375em + 1.2rem);
+   background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+ }
+.was-validated .select:invalid {
+  padding-right: calc(1.5em + 1.5rem);
+  background-repeat: no-repeat;
+  background-position: center right calc(.375em + 1.2rem);
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
 jdiv.wrap_3s {
   display: none;
 }
