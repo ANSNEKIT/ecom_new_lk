@@ -21,6 +21,7 @@ function calcHeightMenu() {
 
     if ((document.documentElement.clientWidth > 992) && (height_content < document.documentElement.clientHeight)) {
         $('.menu').css({'height': resultHeight});
+        resultHeight = "auto";
     } else if (document.documentElement.clientWidth < 992) {
         $('.menu').css({'height': 'auto'});
     }
