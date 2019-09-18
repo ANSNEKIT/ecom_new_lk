@@ -1,0 +1,27 @@
+.page-stores .questItem {
+  align-items: center;
+
+  border: none;
+  //padding: 1rem 0;
+}
+
+.page-stores .btnPause {
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background-color: transparent;
+}
+
+.pauseIcon {
+  padding: 0;
+  margin: 0 1rem;
+  font-size: 2rem;
+
+  color: $bgc-btn-del;
+  background-color: transparent;
+
+  &:hover {
+    color: $bgc-btn-del-hover;
+  }
+}

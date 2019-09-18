@@ -12,7 +12,7 @@
 </head>
 
 
-<body>
+<body class="page-stores">
   <header class="nav header">
     <div class="logo">
       <a class="navbar-brand" href="index.html">
@@ -224,187 +224,257 @@
     </aside>
     <main class="mainContent mt-5">
       <h2 class="page-header text-center py-5">Параметры точки продаж</h2>
-      <div class="companyBlock mb-4">
+      <section class="companyBlock mb-4">
         <h4 class="mb-5">Компания "Компания для теста"
           <a href="editFirm.html" class="rightIcon">
             <i class="far fa-edit"></i>
           </a>
         </h4>
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">ID магазина:</p>
-            <p class="col-md-6 col-xl-8">2</p>
+        <div class="row mb-sm-3 mb-md-2 mx-3">
+          <p class="col-md-6 col-xl-4 font-weight-bold">ID магазина:</p>
+          <p class="col-md-6 col-xl-8">2</p>
+        </div>
+        <div class="row mb-sm-3 mb-md-2 mx-3">
+          <p class="col-md-6 col-xl-4 font-weight-bold">Идентификатор компании:</p>
+          <p class="col-md-6 col-xl-8">
+            <a href="profile.html">9fd3f105-1b8a-42d9-8497-55d25edf0fb0</a>
+          </p>
+        </div>
+        <div class="row mb-sm-3 mb-md-2mb-sm-3 mb-2 mx-3">
+          <p class="col-md-6 col-xl-4 font-weight-bold">Название:</p>
+          <p class="col-md-6 col-xl-8">Демо-магазин для тестирования</p>
+        </div>
+        <div class="row mb-sm-3 mb-md-2 mx-3">
+          <p class="col-md-6 col-xl-4 font-weight-bold">Место продаж:</p>
+          <p class="col-md-6 col-xl-8">ecomkassa.ru</p>
+        </div>
+        <div class="row mb-sm-3 mb-md-2 mx-3">
+          <p class="col-md-6 col-xl-4 font-weight-bold">Часовой пояс:</p>
+          <p class="col-md-6 col-xl-8">Европа/Москва</p>
+        </div>
+      </section>
+
+      <section class="companyBlock" id="accordion">
+        <div class="row mt-1">
+          <div class="col-sm-5 col-md-4 col-xl-3 mr-5 mb-5">
+            <h3 class="">Кассы</h3>
           </div>
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Идентификатор компании:</p>
-            <p class="col-md-6 col-xl-8">
-              <a href="profile.html">9fd3f105-1b8a-42d9-8497-55d25edf0fb0</a>
-            </p>
+          <div class="col-sm-4 col-md-3 col-xl-3">
+            <a href="#" class="btn btn-add mr-5 mb-5">
+              <span class="fas fa-plus-circle pr-1"></span>
+              Добавить кассу
+            </a>
           </div>
-          <div class="row mb-sm-3 mb-md-2mb-sm-3 mb-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Название:</p>
-            <p class="col-md-6 col-xl-8">Демо-магазин для тестирования</p>
-          </div>
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Место продаж:</p>
-            <p class="col-md-6 col-xl-8">ecomkassa.ru</p>
-          </div>
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Часовой пояс:</p>
-            <p class="col-md-6 col-xl-8">Европа/Москва</p>
-          </div>
-          <div class="row mt-5 mb-3">
-            <div class="col-sm-5 col-md-4 col-xl-3 mr-5">
-              <h3 class="">Регистраторы</h3>
+        </div>
+        <div class="questItem mb-4">
+          <div class="d-flex align-items-center">
+            <div class="flex-grow-1 questHeader" type="button" data-toggle="collapse" data-target="#collapse_1"
+                 aria-expanded="true" aria-controls="collapse_1">
+              <div class="row">
+                <div class="col-md-6 col-lg-3">
+                  <p>
+                    <span>ЗН ККТ:</span>
+                    <span>17000574</span>
+                  </p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <p>
+                    <span>ФН ККТ:</span>
+                    <span>9999078900012492</span>
+                  </p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <p>
+                    <span>РН ККТ:</span>
+                    <span>0000000000045384</span>
+                  </p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <p>
+                    <span>Статус ККТ:</span>
+                    <span>Давно не было связи</span>
+                  </p>
+                </div>
+                <!--<div class="col-md-1 text-center">-->
+                <!--<p>-->
+                <!--<span class="fas fa-pause-circle pauseIcon" data-toggle="tooltip" data-placement="top"-->
+                <!--title="Остановить кассу"></span>-->
+                <!--</p>-->
+                <!--</div>-->
+              </div>
             </div>
-            <div class="col-sm-4 col-md-3 col-xl-3">
-              <a href="#" class="btn btn-add mr-5">
-                <span class="fas fa-plus-circle pr-1"></span>
-                Добавить ФР
-              </a>
+            <div class="text-center">
+              <form action="/admin/turnOn/reg" method="POST" class="">
+                <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
+                <button type="submit" value="submit" class="btnPause">
+                  <span class="fas fa-pause-circle pauseIcon" data-toggle="tooltip" data-placement="top" title="Остановить кассу"></span>
+                </button>
+              </form>
             </div>
           </div>
-      </div>
-
-      <div class="fiscalRegistrator mb-3">
-        <button type="button" class="btn btn-primary mr-5 mb-2" data-toggle="collapse"
-                             data-target="#fiscal_reg_1"
-                    aria-expanded="false" aria-controls="fiscal_reg_1">
-          Показать кассу
-        </button>
-        <div class="companyBlock collapse" id="fiscal_reg_1">
-        <div class="row mb-sm-3 mb-md-2 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Идентификатор ФР:</p>
-          <p class="col-md-6 col-xl-8">1fa01ec7-5bcd-4302-bfa2-f3f2f4092531</p>
-        </div>
-        <div class="row mb-sm-3 mb-md-2 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Модель:</p>
-          <p class="col-md-6 col-xl-8">Умка 01 ФА</p>
-        </div>
-        <div class="row mb-sm-3 mb-md-2 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">ЗН ККТ:</p>
-          <p class="col-md-6 col-xl-8">17000574</p>
-        </div>
-        <div class="row mb-sm-3 mb-md-2 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">РН ККТ:</p>
-          <p class="col-md-6 col-xl-8">0000000000045384</p>
-        </div>
-        <div class="row mb-sm-3 mb-md-2 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">ФН:</p>
-          <p class="col-md-6 col-xl-8">9999078900012492</p>
-        </div>
-        <div class="row mb-sm-3 mb-md-2 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Название ОФД:</p>
-          <p class="col-md-6 col-xl-8">ООО "ПЕТЕР-СЕРВИС Спецтехнологии"</p>
-        </div>
-        <div class="row mb-sm-3 mb-md-2 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Провайдер:</p>
-          <p class="col-md-6 col-xl-8">FRWS</p>
-        </div>
-        <div class="row mb-sm-3 mb-md-2 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Состояние:</p>
-          <p class="col-md-6 col-xl-8">TURNED_OFF</p>
-        </div>
-        <div class="row mb-sm-3 mb-md-2 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Статус ФР:</p>
-          <p class="col-md-6 col-xl-8">Давно не было связи</p>
-        </div>
-        <div class="row mb-sm-3 mb-md-2 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Последнее обновление:</p>
-          <p class="col-md-6 col-xl-8">2019-09-07T05:09:25.958Z</p>
-        </div>
-        <div class="row mb-sm-3 mb-md-2 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Код состояния ФР:</p>
-          <p class="col-md-6 col-xl-8">3.0</p>
-        </div>
-        <div class="row mb-3 mt-4">
-          <form action="/admin/turnOn/reg" method="POST" class="col-sm-4 col-md-3 col-lg-4 mb-4">
-            <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
-            <button value="submit" class="btn btn-primary btn-lg">
-              <!--<span class="glyphicon glyphicon-play"></span>-->
-              Включить
-            </button>
-          </form>
-          <form action="/admin/remove/reg" method="POST" class="col-sm-4 col-md-3 col-lg-4 mb-4">
-            <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
-            <button value="submit" class="btn btn-remove btn-lg">
-              <span class="fas fa-times-circle pr-1"></span>
-              Удалить
-            </button>
-          </form>
-        </div>
-      </div>
-      </div>
-
-      <div class="fiscalRegistrator mb-3">
-        <button type="button" class="btn btn-primary mr-5 mb-2" data-toggle="collapse"
-                data-target="#fiscal_reg_2"
-                aria-expanded="false" aria-controls="fiscal_reg_2">
-          Показать кассу
-        </button>
-        <div class="companyBlock collapse" id="fiscal_reg_2">
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Идентификатор ФР:</p>
-            <p class="col-md-6 col-xl-8">1fa01ec7-5bcd-4302-bfa2-f3f2f4092531</p>
-          </div>
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Модель:</p>
-            <p class="col-md-6 col-xl-8">Умка 01 ФА</p>
-          </div>
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">ЗН ККТ:</p>
-            <p class="col-md-6 col-xl-8">17000574</p>
-          </div>
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">РН ККТ:</p>
-            <p class="col-md-6 col-xl-8">0000000000045384</p>
-          </div>
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">ФН:</p>
-            <p class="col-md-6 col-xl-8">9999078900012492</p>
-          </div>
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Название ОФД:</p>
-            <p class="col-md-6 col-xl-8">ООО "ПЕТЕР-СЕРВИС Спецтехнологии"</p>
-          </div>
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Провайдер:</p>
-            <p class="col-md-6 col-xl-8">FRWS</p>
-          </div>
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Состояние:</p>
-            <p class="col-md-6 col-xl-8">TURNED_OFF</p>
-          </div>
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Статус ФР:</p>
-            <p class="col-md-6 col-xl-8">Давно не было связи</p>
-          </div>
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Последнее обновление:</p>
-            <p class="col-md-6 col-xl-8">2019-09-07T05:09:25.958Z</p>
-          </div>
-          <div class="row mb-sm-3 mb-md-2 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Код состояния ФР:</p>
-            <p class="col-md-6 col-xl-8">3.0</p>
-          </div>
-          <div class="row mb-3 mt-4">
-            <form action="/admin/turnOn/reg" method="POST" class="col-sm-4 col-md-3 col-lg-4 mb-4">
-              <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
-              <button value="submit" class="btn btn-primary btn-lg">
-                <!--<span class="glyphicon glyphicon-play"></span>-->
-                Включить
-              </button>
-            </form>
-            <form action="/admin/remove/reg" method="POST" class="col-sm-4 col-md-3 col-lg-4 mb-4">
-              <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
-              <button value="submit" class="btn btn-remove btn-lg">
-                <span class="fas fa-times-circle pr-1"></span>
-                Удалить
-              </button>
-            </form>
+          <div id="collapse_1" class="collapse" aria-labelledby="questHeader" data-parent="#accordion">
+            <div class="p-4 ">
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Идентификатор ФР:</p>
+                <p class="col-md-6 col-xl-8">1fa01ec7-5bcd-4302-bfa2-f3f2f4092531</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Модель:</p>
+                <p class="col-md-6 col-xl-8">Умка 01 ФА</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">ЗН ККТ:</p>
+                <p class="col-md-6 col-xl-8">17000574</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">РН ККТ:</p>
+                <p class="col-md-6 col-xl-8">0000000000045384</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">ФН:</p>
+                <p class="col-md-6 col-xl-8">9999078900012492</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Название ОФД:</p>
+                <p class="col-md-6 col-xl-8">ООО "ПЕТЕР-СЕРВИС Спецтехнологии"</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Провайдер:</p>
+                <p class="col-md-6 col-xl-8">FRWS</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Состояние:</p>
+                <p class="col-md-6 col-xl-8">TURNED_OFF</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Статус ФР:</p>
+                <p class="col-md-6 col-xl-8">Давно не было связи</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Последнее обновление:</p>
+                <p class="col-md-6 col-xl-8">2019-09-07T05:09:25.958Z</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3 pb-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Код состояния ФР:</p>
+                <p class="col-md-6 col-xl-8">3.0</p>
+              </div>
+              <div class="row mt-4">
+                <form action="/admin/remove/reg" method="POST" class="col-sm-4 col-md-3 col-lg-4">
+                  <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
+                  <button type="submit" value="submit" class="btn btn-remove">
+                    <span class="fas fa-times-circle pr-1"></span>
+                    Удалить кассу
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
+        <div class="questItem mb-4">
+          <div class="d-flex align-items-center">
+            <div class="flex-grow-1 questHeader" type="button" data-toggle="collapse" data-target="#collapse_2"
+                 aria-expanded="true" aria-controls="collapse_2">
+              <div class="row">
+                <div class="col-md-3">
+                  <p>
+                    <span>ЗН ККТ:</span>
+                    <span>17000574</span>
+                  </p>
+                </div>
+                <div class="col-md-3">
+                  <p>
+                    <span>ФН ККТ:</span>
+                    <span>9999078900012492</span>
+                  </p>
+                </div>
+                <div class="col-md-3">
+                  <p>
+                    <span>РН ККТ:</span>
+                    <span>0000000000045384</span>
+                  </p>
+                </div>
+                <div class="col-md-3">
+                  <p>
+                    <span>Статус ККТ:</span>
+                    <span>Давно не было связи</span>
+                  </p>
+                </div>
+                <!--<div class="col-md-1 text-center">-->
+                <!--<p>-->
+                <!--<span class="fas fa-pause-circle pauseIcon" data-toggle="tooltip" data-placement="top"-->
+                <!--title="Остановить кассу"></span>-->
+                <!--</p>-->
+                <!--</div>-->
+              </div>
+            </div>
+            <div class="text-center">
+              <form action="/admin/turnOn/reg" method="POST" class="">
+                <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
+                <button type="submit" value="submit" class="btnPause">
+                  <span class="fas fa-pause-circle pauseIcon" data-toggle="tooltip" data-placement="top" title="Остановить кассу"></span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div id="collapse_2" class="collapse" aria-labelledby="questHeader" data-parent="#accordion">
+            <div class="p-4">
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Идентификатор ФР:</p>
+                <p class="col-md-6 col-xl-8">1fa01ec7-5bcd-4302-bfa2-f3f2f4092531</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Модель:</p>
+                <p class="col-md-6 col-xl-8">Умка 01 ФА</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">ЗН ККТ:</p>
+                <p class="col-md-6 col-xl-8">17000574</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">РН ККТ:</p>
+                <p class="col-md-6 col-xl-8">0000000000045384</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">ФН:</p>
+                <p class="col-md-6 col-xl-8">9999078900012492</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Название ОФД:</p>
+                <p class="col-md-6 col-xl-8">ООО "ПЕТЕР-СЕРВИС Спецтехнологии"</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Провайдер:</p>
+                <p class="col-md-6 col-xl-8">FRWS</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Состояние:</p>
+                <p class="col-md-6 col-xl-8">TURNED_OFF</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Статус ФР:</p>
+                <p class="col-md-6 col-xl-8">Давно не было связи</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Последнее обновление:</p>
+                <p class="col-md-6 col-xl-8">2019-09-07T05:09:25.958Z</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3 pb-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Код состояния ФР:</p>
+                <p class="col-md-6 col-xl-8">3.0</p>
+              </div>
+              <div class="row mt-4">
+                <form action="/admin/remove/reg" method="POST" class="col-sm-4 col-md-3 col-lg-4">
+                  <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
+                  <button type="submit" value="submit" class="btn btn-remove">
+                    <span class="fas fa-times-circle pr-1"></span>
+                    Удалить кассу
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 
