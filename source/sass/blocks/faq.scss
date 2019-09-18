@@ -1,0 +1,22 @@
+#accordion {
+
+}
+
+.questItem {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.questHeader {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: $bg-page;
+  //border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.questItem .questText {
+  padding: 1rem 1.5rem;
+}
+
+.questItem .collapse {
+
+}
