@@ -80,6 +80,65 @@ body{
   background-size: calc(.75em + .375rem) calc(.75em + .375rem);
 }
 
+.unlockIcon {
+  font-size: 1.3rem;
+  color: $gray555;
+}
+
+.blockedIcon {
+  font-size: 1.3rem;
+  color: $bgc-btn-del;
+}
+
+.editIcon, .delIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+  word-break: keep-all;
+
+  font-family: Open Sans,sans-serif;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  font-size: 1.3rem;
+
+  //color: $icon-color;
+  background-color: transparent;
+
+  text-align: center;
+  text-decoration: none;
+  border-right: 1px solid $table-bd;
+  box-sizing: border-box;
+}
+
+.editIcon {
+  color: $color-active;
+
+  &:hover {
+    color: $menu-li-hover;
+  }
+}
+
+.delIcon {
+  color: $bgc-btn-del;
+
+  border-right: none;
+
+  &:hover {
+    color: $bgc-btn-del-hover;
+  }
+
+}
+
 jdiv.wrap_3s {
   display: none;
 }
