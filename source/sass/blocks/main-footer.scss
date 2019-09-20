@@ -2,18 +2,18 @@
   justify-content: center;
   width: 100%;
 
-  background-color: #475162;
+  background-color: $white;
 
-  box-shadow: 0 -0.5rem 1rem 0 rgba(56,57,92,.5);
-  z-index: 100;
+  box-shadow: -0.1rem -0.3rem 1rem 0 rgba(56, 57, 92, .2);
+  z-index: -10;
 }
 
 .mainFooter .footerWrapper {
   width: inherit;
   justify-content: space-between;
 
-  margin: 0 3rem 2rem;
-  padding: 0;
+  margin: 0;
+  padding: 1rem 2rem;
 
   @media (max-width: 1200px) {
     margin: 0 1.5rem 1.5rem;
@@ -21,32 +21,25 @@
 }
 
 .mainFooter .footerHeader {
-  padding-top: 30px;
+  padding: 0;
+  //padding-top: 30px;
 
   font-size: .9rem;
   font-weight: 600;
   line-height: 1.5rem;
 
-  color: white;
+  color: $black;
 }
 
 .mainFooter .footerItems {
   margin: 0;
   padding: 0;
   //padding-left: 1rem;
-  margin-bottom: 1.5rem;
 
   list-style: none;
 }
 
 .footerItems .footerItem {
-  font-size: .8rem;
-  font-weight: 400;
-  line-height: 1.5rem;
-
-}
-
-.blockInfo .footerItem{
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.5rem;
@@ -68,11 +61,11 @@
   }
 }
 
-.mainFooter p {
+.mainFooter .footerText {
   margin: 0;
   padding: 0;
 
-  color: $gray-light;
+  color: $black;
 
   font-size: 0.9rem;
   font-weight: 400;
