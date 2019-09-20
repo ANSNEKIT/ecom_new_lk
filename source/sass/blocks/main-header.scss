@@ -26,13 +26,13 @@
   //left: 0;
   color: $gray-light;
 
-  padding: .5rem .75rem;
+  padding: .4rem .65rem;
 
   //border: 1px solid $bd-menu;
-  background-color: $gray555;
+  background-color: $icon-color;
   &:hover {
-    color: $white;
-    background-color: $gray333;
+    color: $gray555;
+    background-color: $menu-li-hover;
   }
 }
 
@@ -118,7 +118,7 @@
 }
 
 .userMenu .mailTo {
-  padding: 1rem 1.2rem 0 1.2rem;
+  padding: 0 1.2rem 1rem 1.2rem;
 
   font-size: .75rem;
   line-height: 1rem;

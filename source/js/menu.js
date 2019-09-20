@@ -1,10 +1,12 @@
 let toggleLeftMenu = document.querySelector(".menuGamburger").firstElementChild;
+let $aside = document.querySelector("#menu");
+
 
 // let height_content = $('main').height();
 // let height_menu = $('.menu').height();
 //let height_menu = $('.menu');
 
-function calcHeightMenu() {
+/*function calcHeightMenu() {
     let scrollHeight = Math.max(
         document.body.scrollHeight, document.documentElement.scrollHeight,
         document.body.offsetHeight, document.documentElement.offsetHeight,
@@ -29,14 +31,27 @@ function calcHeightMenu() {
 
 calcHeightMenu();
 
-toggleLeftMenu.addEventListener("click", () => {
-    let leftMenu = $("aside.menu");
-    leftMenu.toggleClass("menu--active");
-});
-
 window.onresize = function () {
     calcHeightMenu();
-};
+};*/
+
+toggleLeftMenu.addEventListener("click", () => {
+    let $leftMenu = document.querySelector("#menu");
+    let $gridContainer = document.querySelector(".gridContainer");
+
+    //console.log($leftMenu.classList.contains("menu--active"));
+
+    if ($leftMenu.classList.contains("menu--active")) {
+        $leftMenu.classList.remove("menu--active");
+        $gridContainer.classList.add("gridContainerHideMenu");
+    } else {
+        $leftMenu.classList.add("menu--active");
+        $gridContainer.classList.remove("gridContainerHideMenu");
+    }
+
+});
+
+
 
 // Click Element Action
 jQuery('.scroll-to-top.visible').on('click', function () {

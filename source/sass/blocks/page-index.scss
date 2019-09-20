@@ -1,0 +1,23 @@
+/*.mainContent .indexContent {
+  flex-direction: column;
+  justify-content: center;
+  //align-items: center;
+}*/
+
+.mainContent .indexContent_text {
+  //width: 50%;
+}
+
+.mainContent .indexContent_image {
+  margin: 0 auto;
+}
+
+.mainContent .indexContent_image img {
+  width: auto;
+  height: auto;
+  max-width: 800px;
+
+  @media (max-width: 992px) {
+    max-width: 400px;
+  }
+}

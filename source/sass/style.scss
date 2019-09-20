@@ -9,13 +9,14 @@
 @import "core";
 
 //Стили на всех страницах ЛК
-@import "blocks/top-navbar";
+@import "blocks/main-header";
 @import "blocks/check-form";
 @import "blocks/main-footer";
 @import "blocks/scroll-up";
 @import "blocks/grid";
 
 // Стили на остальных страницах
+@import "blocks/page-index";
 @import "blocks/login";
 @import "blocks/registration";
 @import "blocks/orders";
