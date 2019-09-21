@@ -13,87 +13,89 @@
 
 
 <body>
-<header class="nav header">
-  <div class="logo">
-    <a class="navbar-brand" href="index.html">
-      <img src="img/logo_navbar.png" alt="E-COM Kassa" width="199" height="80">
-    </a>
-  </div>
-  <div class="mx-1 menuGamburger">
-    <button class="navbar-toggler" type="button">
-      <!-- data-toggle="collapse" data-target="#menu" aria-controls="menu"
-            aria-expanded="false" aria-label="Toggle navigation" -->
+<div class="gridContainer" id="#gridWrapper">
+  <header class="nav header">
+    <div class="mx-1 menuGamburger mx-4">
+      <button class="navbar-toggler" type="button">
+        <!-- data-toggle="collapse" data-target="#menu" aria-controls="menu"
+              aria-expanded="false" aria-label="Toggle navigation" -->
 
-      <span class="navbar-toggler-icon">
-              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                   x="0px" y="0px"
-                   width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">
-              <g>
-                <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
-                <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
-                <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
-              </g>
-              </svg>
+        <span class="navbar-toggler-icon">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 x="0px" y="0px"
+                 width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">
+            <g>
+              <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
+              <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
+              <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
+            </g>
+            </svg>
+          </span>
+      </button>
+      <!--<span class="labelForButtonMenu">Меню</span>-->
+    </div>
+    <div class="logo">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo-02-blue.png" alt="E-COM Kassa" width="209" height="80">
+      </a>
+    </div>
+    <nav class="nav ml-auto topNavbar">
+      <ul class="nav userMenu">
+        <li class="navParent navParent--active d-flex flex-column">
+          <p class="mailToText">
+            Нужна помощь?
+          </p>
+          <a href="mailto:help@ecomkassa.ru" class="nav-link mailTo">
+            <span class="fas fa-envelope leftIcon"></span>
+            <span class="menuTitle">HELP@ECOMKASSA.RU</span>
+          </a>
+        </li>
+        <li class="dropdown navParent">
+          <a class="nav-link" href="#" id="topHiddenMenu" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            <span class="fas fa-user-tie leftIcon"></span>
+            <span class="menuTitle">Тестовый юзер</span>
+            <span class="arrow">
+              <i class="fas fa-chevron-down js-icon"></i>
             </span>
-    </button>
-    <!--<span class="labelForButtonMenu">Меню</span>-->
-  </div>
-  <nav class="nav ml-auto topNavbar">
-    <ul class="nav userMenu">
-      <li class="navParent navParent--active">
-        <a href="mailto:help@ecomkassa.ru" class="nav-link mailTo">
-          <span class="fas fa-envelope leftIcon"></span>
-          <span class="menuTitle">HELP@ECOMKASSA.RU</span>
-        </a>
-      </li>
-      <li class="dropdown navParent">
-        <a class="nav-link" href="#" id="topHiddenMenu" role="button" data-toggle="dropdown"
-           aria-haspopup="true" aria-expanded="false">
-          <span class="fas fa-user-tie leftIcon"></span>
-          <span class="menuTitle">Тестовый юзер</span>
-          <span class="arrow">
-                <i class="fas fa-chevron-down js-icon"></i>
-              </span>
-        </a>
-        <ul class="dropdown-menu menuItems" aria-labelledby="topHiddenMenu">
-          <li class="dropdown-item menuItem">
-            <a class="nav-link" href="profile.html">
-              <span class="fas fa-id-card-alt leftIcon"></span>
-              <span class="menuTitle">Мой профиль</span>
-            </a>
-          </li>
-          <li class="dropdown-item menuItem">
-            <a class="nav-link" href="#">
-              <span class="fas fa-cogs leftIcon"></span>
-              <span class="menuTitle">Настройки</span>
-            </a>
-          </li>
-          <li class="dropdown-item menuItem">
-            <a class="nav-link" href="faq.html">
-              <span class="far fa-question-circle leftIcon"></span>
-              <span class="menuTitle">FAQ</span>
-            </a>
-          </li>
-          <li class="dropdown-item menuItem">
-            <a class="nav-link" href="#">
-              <span class="fas fa-key leftIcon"></span>
-              <span class="menuTitle">Изменить пароль</span>
-            </a>
-          </li>
-          <li class="dropdown-item menuItem">
-            <a class="nav-link" href="login.html">
-              <span class="fas fa-door-open leftIcon"></span>
-              <span class="menuTitle">Выход</span>
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-<div class="flexContainer">
+          </a>
+          <ul class="dropdown-menu menuItems" aria-labelledby="topHiddenMenu">
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="profile.html">
+                <span class="fas fa-id-card-alt leftIcon"></span>
+                <span class="menuTitle">Мой профиль</span>
+              </a>
+            </li>
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="#">
+                <span class="fas fa-cogs leftIcon"></span>
+                <span class="menuTitle">Настройки</span>
+              </a>
+            </li>
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="faq.html">
+                <span class="far fa-question-circle leftIcon"></span>
+                <span class="menuTitle">FAQ</span>
+              </a>
+            </li>
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="changepass.html">
+                <span class="fas fa-key leftIcon"></span>
+                <span class="menuTitle">Изменить пароль</span>
+              </a>
+            </li>
+            <li class="dropdown-item menuItem">
+              <a class="nav-link" href="login.html">
+                <span class="fas fa-door-open leftIcon"></span>
+                <span class="menuTitle">Выход</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
   <aside class="menu menu--active" id="menu">
     <!-- collapse show -->
     <nav class="nav flex-column flex-fill justify-content-between pt-3" id="rightMenu">
@@ -294,7 +296,65 @@
       <a href="import.html" class="btn btn-outline-secondary btn-lg mb-4">Отмена</a>
     </div>
   </main>
+  <footer class="nav mainFooter">
+    <div class="row footerWrapper">
+      <div class="col-sm-6 col-lg-3 blockInfo mb-3">
+        <h5 class="footerHeader">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</h5>
+        <ul class="footerItems">
+          <li class="footerItem">
+            <a href="https://app.ecomkassa.ru/assets/docs/license-agreement-ru.pdf" class="footerLink">Публичный договор
+              оферты</a>
+          </li>
+          <li class="footerItem">
+            <a href="https://app.ecomkassa.ru/assets/docs/leasing-public-ru.pdf" class="footerLink">Договор-оферта на аренду касс</a>
+          </li>
+          <li class="footerItem">
+            <a href="https://ecomkassa.ru/docs" class="footerLink">Все документы</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-3 mb-3">
+        <h5 class="footerHeader">ИНСТРУКЦИИ</h5>
+        <ul class="footerItems">
+          <li class="footerItem">
+            <a href="#" class="footerLink">
+              <span class="fas fa-file-alt"></span>
+              Инструкции
+            </a>
+          </li>
+          <li class="footerItem">
+            <a href="#"
+               class="footerLink">
+              <span class="fab fa-youtube"></span>
+              Видеоинструкции
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-3 mb-3">
+        <h5 class="footerHeader">ТЕХПОДДЕРЖКА</h5>
+        <p class="footerText">
+          <span class="far fa-clock leftIcon"></span>
+          Пн-Пт 9:00 - 18:00 Мск
+        </p>
+        <p class="footerText">Почта техподдержки:</p>
+        <p class="footerText">
+          <a href="mailto:help@ecomkassa.ru" class="footerLink">
+            <span class="fas fa-at leftIcon"></span>
+            help@ecomkassa.ru
+          </a>
+        </p>
+      </div>
+      <div class="col-sm-6 col-lg-3 mb-3">
+        <h5 class="footerHeader">О КОМПАНИИ</h5>
+        <p class="footerText">ООО "Зе Поинт"</p>
+        <p class="footerText">ИНН: 7708317992</p>
+      </div>
+
+    </div>
+  </footer>
 </div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
