@@ -13,10 +13,19 @@
 
 .logo {
   display: flex;
+
+  margin-left: 2rem;
 }
 
 .navbar-brand {
+  padding: 0.5rem 0;
   margin-right: 0;
+}
+
+.navbar-brand img {
+  width: 130px;
+  height: auto;
+  max-width: 130px;
 }
 
 .menuGamburger .navbar-toggler {
