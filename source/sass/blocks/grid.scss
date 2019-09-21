@@ -51,6 +51,15 @@
   }
 }
 
+.loginPage .gridContainer, .signUpPage .gridContainer {
+  grid-template-areas:
+          "hedr hedr"
+          "main main"
+          "ftr ftr";
+  grid-template-rows: max-content 1fr max-content;
+  grid-template-columns: 1fr;
+}
+
 #menu {
   grid-area: aside;
 }
