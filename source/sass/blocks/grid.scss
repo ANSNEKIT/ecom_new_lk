@@ -4,7 +4,7 @@
           "hedr hedr"
           "aside main"
           "aside ftr";
-  grid-template-rows: 80px 1fr auto;
+  grid-template-rows: max-content 1fr max-content;
   grid-template-columns: 250px 1fr;
   grid-gap: 0;
   height: 100vh;
@@ -20,6 +20,7 @@
             "ftr";
     grid-template-rows: max-content max-content 1fr max-content;
     grid-template-columns: auto;
+    grid-auto-flow: row;
     grid-gap: 0;
     height: inherit;
   }
@@ -30,19 +31,23 @@
           "hedr hedr"
           "main main"
           "ftr ftr";
-  grid-template-rows: 80px 1fr auto;
-  grid-template-columns: 250px 1fr;
+  grid-template-rows: max-content 1fr max-content;
+  grid-template-columns: 1fr;
+  grid-gap: 0;
+  height: 100vh;
+  margin: 0;
 
   @media (max-width: 992px) {
     grid-template-areas:
             "hedr"
             "main"
-            "main"
             "ftr";
-    grid-template-rows: max-content 1fr 1fr max-content;
+    grid-template-rows: max-content auto max-content;
     grid-template-columns: 100%;
+    grid-auto-flow: row;
     grid-gap: 0;
-    height: inherit;
+    grid-row-gap: 0;
+    height: auto;
   }
 }
 
@@ -56,6 +61,10 @@
 
 .mainFooter {
   grid-area: ftr;
+
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .header {

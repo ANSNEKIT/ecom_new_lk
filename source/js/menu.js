@@ -37,15 +37,22 @@ window.onresize = function () {
 
 toggleLeftMenu.addEventListener("click", () => {
     let $leftMenu = document.querySelector("#menu");
-    let $gridContainer = document.querySelector(".gridContainer");
+    let $gridContainer = document.getElementById("#gridWrapper");
 
-    //console.log($leftMenu.classList.contains("menu--active"));
+    console.log($gridContainer);
 
     if ($leftMenu.classList.contains("menu--active")) {
         $leftMenu.classList.remove("menu--active");
+        $leftMenu.classList.add("visuallyHidden");
+
         $gridContainer.classList.add("gridContainerHideMenu");
-    } else {
+        $gridContainer.classList.remove("gridContainer");
+
+    } else if ($leftMenu.classList.contains("menu--active") === false) {
         $leftMenu.classList.add("menu--active");
+        $leftMenu.classList.remove("visuallyHidden");
+
+        $gridContainer.classList.add("gridContainer");
         $gridContainer.classList.remove("gridContainerHideMenu");
     }
 
