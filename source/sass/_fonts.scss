@@ -26,3 +26,38 @@
          // url('../fonts/opensansbold.woff2') format('woff2'),
           url('../fonts/OpenSans-Bold.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+  font-style: normal;
+  src:
+          url('../fonts/webfonts/fa-brands-400.woff2') format('woff2'),
+          url('../fonts/webfonts/fa-brands-400.woff') format('woff'),
+          url('../fonts/webfonts/fa-brands-400.ttf') format('ttf'),
+          url('../fonts/webfonts/fa-brands-400.eot') format('eot');
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+  font-style: normal;
+  src:
+          url('../fonts/webfonts/fa-regular-400.woff2') format('woff2'),
+          url('../fonts/webfonts/fa-regular-400.woff') format('woff'),
+          url('../fonts/webfonts/fa-regular-400.ttf') format('ttf'),
+          url('../fonts/webfonts/fa-regular-400.eot') format('eot');
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+  src:
+          url('../fonts/webfonts/fa-solid-900.woff2') format('woff2'),
+          url('../fonts/webfonts/fa-solid-900.woff') format('woff'),
+          url('../fonts/webfonts/fa-solid-900.ttf') format('ttf'),
+          url('../fonts/webfonts/fa-solid-900.eot') format('eot');
+}
+
+
