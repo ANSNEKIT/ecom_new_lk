@@ -242,12 +242,88 @@
   <main class="mainContent mt-5">
     <h2 class="page-header text-center py-5">Счета на оплату</h2>
 
-    <div class="d-flex">
-      <div class="pb-4 ml-auto">
+    <form action="" method="get" class="addCheckForm mb-5">
+      <fieldset class="FormGroup1">
+        <div class="form-row">
+          <div class="col-md-6 mb-3 inp-group">
+            <label class="label-form" for="page">Номер страницы</label>
+            <input type="number" id="page" class="form-control inp-form"  name="page" maxlength="10" min="1" value="1">
+            <div class="valid-tooltip"></div>
+          </div>
+
+          <div class="col-md-6 mb-3 inp-group parentSelect">
+            <label class="label-form" for="size">Размер страницы</label>
+            <select id="size" class="form-control select" name="size">
+              <option value="25" selected="">25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+              <option value="500">500</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3 inp-group">
+            <label class="label-form" for="storeId">Идентификатор магазина</label>
+            <input type="text" id="storeId" class="form-control"  name="storeId" maxlength="3" pattern="[0-9]">
+            <div class="valid-tooltip"></div>
+          </div>
+          <div class="col-md-6 mb-3 inp-group">
+            <label class="label-form" for="externalId">Внешний идетификатор чека</label>
+            <input type="text" id="externalId" class="form-control"  name="externalId" pattern="[0-9]">
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3 inp-group">
+            <label class="label-form" for="since_field">Дата начала поиска</label>
+            <input type="datetime" id="since_field" class="form-control datetimepicker" name="since_field"
+                   autocomplete="false">
+            <div class="valid-tooltip"></div>
+          </div>
+          <div class="col-md-6 mb-3 inp-group">
+            <label class="label-form" for="until">Дата окончания поиска</label>
+            <input type="datetime" id="until" class="form-control datetimepicker" name="until"
+                   autocomplete="false">
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-4 inp-group parentSelect">
+            <label class="label-form" for="status">Статус чека</label>
+            <select id="status" class="form-control select" name="status">
+              <option value="none" selected>Не выбран</option>
+              <option value="CREATED">Создан</option>
+              <option value="PAID">Оплачен</option>
+              <option value="COMPLETED">Завершён</option>
+              <option value="CANCELED">Отменён</option>
+              <option value="WAITING">В режиме ожидания</option>
+              <option value="FAILED">Ошибка</option>
+            </select>
+            <div class="valid-tooltip"></div>
+          </div>
+          <div class="col-md-6 mb-4 inp-group">
+            <label class="label-form" for="cashier">Кассир</label>
+            <input type="text" id="cashier" class="form-control inp-form"  name="cashier">
+            <div class="valid-tooltip"></div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" value="submit">Поиск чеков</button>
+      </fieldset>
+    </form>
+
+    <div class="d-flex pt-5">
+      <div class="pb-4 ml-auto mr-4">
         <a href="#" class="btn btn-add">
           <span class="fas fa-plus-circle pr-1"></span>
           Создать счет
         </a>
+      </div>
+      <div class="filterWrapper">
+          <span class="iconFilter" data-toggle="tooltip" data-placement="left" title="Показать/скрыть фильтр">
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="filter" class="svg-inline--fa fa-filter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"></path>
+          </svg>
+        </span>
       </div>
     </div>
 
@@ -393,6 +469,8 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/filter.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/js/all.min.js" defer></script>
 <script src="//code.jivosite.com/widget.js" data-jv-id="GfRebivBl2" defer></script>
 
