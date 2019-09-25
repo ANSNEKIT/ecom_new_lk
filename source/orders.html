@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Список чеков</title>
 
+  <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="css/all.min.css">
 
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/js/all.min.js"></script>
-  <script src="//code.jivosite.com/widget.js" data-jv-id="GfRebivBl2" async></script>
 </head>
 
 <body class="page-orders">
@@ -227,9 +225,10 @@
         </ul>
       </nav>
     </aside>
-    <main class="mainContent">
+    <main class="mainContent mb-5">
       <h2 class="page-header my-5 text-center">Список чеков</h2>
-      <form action="get" method="get" class="addCheckForm">
+
+      <form action="" method="get" class="addCheckForm">
         <fieldset class="FormGroup1">
           <div class="form-row">
             <div class="col-md-6 mb-3 inp-group">
@@ -240,7 +239,7 @@
 
             <div class="col-md-6 mb-3 inp-group parentSelect">
               <label class="label-form" for="size">Размер страницы</label>
-              <select id="size" class="form-control inp-form select" name="size">
+              <select id="size" class="form-control select" name="size">
                 <option value="25" selected="">25</option>
                 <option value="50">50</option>
                 <option value="100">100</option>
@@ -252,33 +251,33 @@
           <div class="form-row">
             <div class="col-md-6 mb-3 inp-group">
               <label class="label-form" for="storeId">Идентификатор магазина</label>
-              <input type="text" id="storeId" class="form-control inp-form"  name="storeId" maxlength="3" pattern="[0-9]">
+              <input type="text" id="storeId" class="form-control"  name="storeId" maxlength="3" pattern="[0-9]">
               <div class="valid-tooltip"></div>
             </div>
             <div class="col-md-6 mb-3 inp-group">
               <label class="label-form" for="externalId">Внешний идетификатор чека</label>
-              <input type="text" id="externalId" class="form-control inp-form"  name="externalId" pattern="[0-9]">
+              <input type="text" id="externalId" class="form-control"  name="externalId" pattern="[0-9]">
               <div class="valid-tooltip"></div>
             </div>
           </div>
           <div class="form-row">
             <div class="col-md-6 mb-3 inp-group">
               <label class="label-form" for="since_field">Дата начала поиска</label>
-              <input type="datetime" id="since_field" class="form-control inp-form datetimepicker" name="since_field"
+              <input type="datetime" id="since_field" class="form-control datetimepicker" name="since_field"
                      autocomplete="false">
               <div class="valid-tooltip"></div>
             </div>
             <div class="col-md-6 mb-3 inp-group">
               <label class="label-form" for="until">Дата окончания поиска</label>
-              <input type="datetime" id="until" class="form-control inp-form datetimepicker" name="until"
+              <input type="datetime" id="until" class="form-control datetimepicker" name="until"
                      autocomplete="false">
               <div class="valid-tooltip"></div>
             </div>
           </div>
           <div class="form-row">
-            <div class="col-md-6 mb-5 inp-group parentSelect">
+            <div class="col-md-6 mb-4 inp-group parentSelect">
               <label class="label-form" for="status">Статус чека</label>
-              <select id="status" class="form-control inp-form select" name="status">
+              <select id="status" class="form-control select" name="status">
                 <option value="none" selected>Не выбран</option>
                 <option value="CREATED">Создан</option>
                 <option value="PAID">Оплачен</option>
@@ -289,52 +288,41 @@
               </select>
               <div class="valid-tooltip"></div>
             </div>
-            <div class="col-md-6 mb-5 inp-group">
+            <div class="col-md-6 mb-4 inp-group">
               <label class="label-form" for="cashier">Кассир</label>
               <input type="text" id="cashier" class="form-control inp-form"  name="cashier">
               <div class="valid-tooltip"></div>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg btn-block mb-4" value="submit">Поиск чеков</button>
+          <button type="submit" class="btn btn-primary btn-block" value="submit">Поиск чеков</button>
         </fieldset>
       </form>
 
-
-
-      <!--<div class="row d-flex justify-content-end mb-4">
-        <div class="ml-auto">
-          <a href="add.html" class="btn btn-add mr-4 mb-4">
-            <span class="fas fa-plus-circle pr-1"></span>
-            Создать чек
-          </a>
-          <a href="addcorrection.html" class="btn btn-add mr-4 mb-4">
-            <span class="fas fa-plus-circle pr-1"></span>
-            Создать чек коррекции
-          </a>
-          <a href="import.html" class="btn btn-add mb-4 mr-4">
-            <span class="fas fa-plus-circle pr-1"></span>
-            Загрузить CSV
-          </a>
+      <div class="mb-4 navAndFilter">
+        <nav class="" aria-label="Page navigation">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        <div class="filterWrapper">
+          <span class="iconFilter" data-toggle="tooltip" data-placement="left" title="Показать/скрыть фильтр">
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="filter" class="svg-inline--fa fa-filter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"></path>
+          </svg>
+        </span>
         </div>
-      </div>-->
-
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      </div>
 
       <div class="card">
         <table class="table table-striped table-bordered table-sm table-hover tableOrders">
@@ -1024,7 +1012,7 @@
       </table>
       </div>
 
-      <nav aria-label="Page navigation example mb-5">
+      <nav aria-label="Page navigation">
         <ul class="pagination">
           <li class="page-item">
             <a class="page-link" href="#" aria-label="Previous">
@@ -1130,6 +1118,9 @@
   </script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/menu.js"></script>
+  <script type="text/javascript" src="js/filter.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/js/all.min.js" defer></script>
+  <script src="//code.jivosite.com/widget.js" data-jv-id="GfRebivBl2" defer></script>
 
 </body>
 </html>

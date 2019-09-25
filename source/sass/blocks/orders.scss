@@ -2,6 +2,47 @@
   margin-bottom: 7rem;
 }
 
+.navAndFilter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+.filterWrapper {
+  margin: 0;
+  padding: 0;
+  padding-right: 0.5rem;
+}
+
+.iconFilter {
+  display: block;
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  font-size: 1.5rem;
+  //line-height: 1.5rem;
+  color: $color-active;
+  background-color: $white;
+  cursor: pointer;
+
+  border-radius: 50%;
+
+  &:hover {
+    color: $menu-li-hover;
+  }
+}
+
+.iconFilter svg {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.5rem;
+}
+
+
 .card {
   flex-direction: row;
   padding: 1rem;

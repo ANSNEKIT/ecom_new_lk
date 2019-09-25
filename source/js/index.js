@@ -1,20 +1,16 @@
 let countPosition = 0;
-let checkGroupPosition = document.querySelector('.FormGroupProduct');
+let $checkGroupPosition = document.querySelector('.FormGroupProduct');
 
-//let topMenuBtn = document.getElementById("topHiddenMenu");
 
-//let agentGroup = document.querySelector(".agentGoods");
-//let isAgent = document.querySelector(".js-isAgent");
-//let isAgentTrue = isAgent.querySelector(".js-isAgentTrue");
-//let isAgentFalse = isAgent.querySelector(".js-isAgentFalse");
-//let agentTrueCheckbox = isAgentTrue.querySelector(".js-AgentTrue");
-//let agentFalseCheckbox = isAgentFalse.querySelector(".js-AgentFalse");
+if (!$checkGroupPosition) {
+    throw new Error("Нет функции добавления товарных позиций!");
+}
 
-checkGroupPosition.addEventListener("click", (evt) => {
+$checkGroupPosition.addEventListener("click", (evt) => {
     let e = evt.target;
-    let template = document.querySelector('#checkItems');
-    let clone = document.importNode(template.content, true);
-    let checkGroupPosition = document.querySelector('.FormGroupProduct');
+    let template = document.querySelector('#checkItems').content;
+    let clone = document.importNode(template, true);
+    //let checkGroupPosition = document.querySelector('.FormGroupProduct');
 
 
     if (e.classList.contains("btn-add")) {
@@ -109,7 +105,7 @@ checkGroupPosition.addEventListener("click", (evt) => {
         let elemItems_btnRemove = $(clone).find(".btn-remove").attr("value", items_count_btnRemove);
         //console.log(elemItems_btnRemove);
 
-        checkGroupPosition.append(clone);
+        $checkGroupPosition.append(clone);
 
         checkSumm();
 
@@ -132,7 +128,7 @@ checkGroupPosition.addEventListener("click", (evt) => {
     }
 });
 
-checkGroupPosition.addEventListener("change", checkSumm);
+$checkGroupPosition.addEventListener("change", checkSumm);
 
 function checkSumm () {
     let priceInput = jQuery('.js-price');
@@ -157,35 +153,6 @@ function checkSumm () {
     totalSumElem.val(totalSum);
 }
 
-/*toggleLeftMenu.addEventListener("click", () => {
-    let leftMenu = $("aside.menu");
-    leftMenu.toggleClass("menu--active");
-});*/
-
-/*
-document.addEventListener("click", (evt) => {
-    let icon = evt.target;
-    let menuTop = $(".userMenu .dropdown-menu");
-    console.log(icon.find(".arrow .js-icon")); //.toggleClass("fa-chevron-down fa-chevron-up");
-
-    let boolShow = menuTop.hasClass("show");
-    console.log(boolShow);
-    if(boolShow === true) {
-        //console.log(menuTop.hasClass("show"));
-        icon.toggleClass("fa-chevron-up");
-    }
-});
-
-*/
-
-
-// Click Element Action
-/*jQuery('.scroll-to-top.visible').on('click', function () {
-    $('body, html').animate({
-        scrollTop: 0
-    }, 400);
-    return false;
-});*/
 
 
 
