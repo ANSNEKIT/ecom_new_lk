@@ -1,0 +1,13 @@
+.page-preloadcheck .indexContent_image img {
+  width: auto;
+  height: auto;
+  max-width: 320px;
+
+  @media (max-width: 992px) {
+    max-width: 280px;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 200px;
+  }
+}
