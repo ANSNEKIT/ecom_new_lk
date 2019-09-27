@@ -2,7 +2,18 @@
   align-items: center;
 
   border: none;
+  cursor: pointer;
+
+  box-shadow: 0 0 0.9rem 0 rgba(44,51,73,.2);
   //padding: 1rem 0;
+}
+
+.page-stores .questHeaderWrapper {
+  border-bottom: 1px solid $table-bd;
+}
+
+.page-stores .questHeader {
+  background-color: #fff;
 }
 
 .page-stores .btnPause {
