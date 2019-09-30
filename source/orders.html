@@ -228,7 +228,7 @@
     <main class="mainContent mb-5">
       <h2 class="page-header my-5 text-center">Список чеков</h2>
 
-      <form action="" method="get" class="addCheckForm">
+      <form action="" method="get" class="addCheckForm d-none">
         <fieldset class="FormGroup1">
           <div class="form-row">
             <div class="col-md-6 mb-3 inp-group">
@@ -294,12 +294,13 @@
               <div class="valid-tooltip"></div>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary btn-block" value="submit">Поиск чеков</button>
+          <button type="submit" class="btn btn-primary mr-4" value="submit">Поиск чеков</button>
+          <button type="button" class="btn btn-outline-secondary" data-js-id="reset">Сбросить</button>
         </fieldset>
       </form>
 
       <div class="mb-4 navAndFilter">
-        <nav class="" aria-label="Page navigation">
+        <nav aria-label="Page navigation">
             <ul class="pagination">
               <li class="page-item">
                 <a class="page-link" href="#" aria-label="Previous">

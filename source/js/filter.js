@@ -6,7 +6,6 @@ if (!$filerIcon) {
 
 $filerIcon.addEventListener("click", (evt) => {
     let $formFilter = document.querySelector('.addCheckForm');
-    console.log($formFilter.classList.contains('d-none'));
     if ($formFilter.classList.contains('d-none')) {
         $formFilter.classList.remove('d-none');
     } else {
