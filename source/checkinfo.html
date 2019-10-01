@@ -225,7 +225,7 @@
       </div>
       <div class="row">
         <div class="col-8 text-left"><p>ФИСКАЛЬНЫЙ ДОКУМЕНТ</p></div>
-        <div class="col-4 text-right"><p>341</p></div>
+        <div class="col-4 text-right"><span data-class="fd">341</span></div>
       </div>
       <div class="row">
         <div class="col-5 text-left"><p>ДАТА СОЗДАНИЯ</p></div>
@@ -275,13 +275,13 @@
         <div class="col-7 text-left">
           <p>
             <span>РН ККТ</span>
-            <span>0003041888063705</span>
+            <span data-class="rnm">0003041888063705</span>
           </p>
         </div>
         <div class="col-5 text-right">
           <p>
             <span>ИНН</span>
-            <span>616711010850</span>
+            <span data-class="inn">616711010850</span>
           </p>
         </div>
       </div>
@@ -289,13 +289,13 @@
         <div class="col-6 text-left">
           <p>
             <span>ФН</span>
-            <span>9287440300244390</span>
+            <span data-class="fn">9287440300244390</span>
           </p>
         </div>
         <div class="col-6 text-right">
           <p>
             <span>ФПД</span>
-            <span>2389671340</span>
+            <span data-class="fp">2389671340</span>
           </p>
         </div>
       </div>
@@ -346,8 +346,8 @@
       <div class="row">
         <div class="col-12 text-center"><p>Здесь должен быть QR код</p></div>
       </div>
-
     </section>
+    <p class="text-center mb-5"><a href="#" data-js-id="linkToOfd">Перейти к чеку в ОФД</a></p>
   </main>
   <footer class="nav mainFooter">
     <div class="row footerWrapper">
@@ -412,6 +412,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/checkinfo.js"></script>
 
 </body>
 </html>
