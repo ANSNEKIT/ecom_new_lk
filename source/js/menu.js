@@ -1,5 +1,5 @@
 let toggleLeftMenu = document.querySelector(".menuGamburger").firstElementChild;
-let $aside = document.querySelector("#menu");
+//let $aside = document.querySelector("#menu");
 
 
 // let height_content = $('main').height();
@@ -39,7 +39,11 @@ toggleLeftMenu.addEventListener("click", () => {
     let $leftMenu = document.querySelector("#menu");
     let $gridContainer = document.getElementById("#gridWrapper");
 
-    console.log($gridContainer);
+    if (toggleLeftMenu.classList.contains('navbar-toggler--htx')) {
+        toggleLeftMenu.classList.remove('navbar-toggler--htx');
+    } else {
+        toggleLeftMenu.classList.add('navbar-toggler--htx');
+    }
 
     if ($leftMenu.classList.contains("menu--active")) {
         $leftMenu.classList.remove("menu--active");
