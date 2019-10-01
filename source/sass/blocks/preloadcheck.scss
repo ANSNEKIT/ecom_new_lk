@@ -11,3 +11,23 @@
     max-width: 200px;
   }
 }
+
+.indexContent_header {
+  @media (max-width: 576px) {
+    font-size: 1.1rem;
+    font-weight: 800;
+  }
+}
+
+.indexContent_check-info {
+  @media (max-width: 576px) {
+    font-size: 0.9rem;
+  }
+}
+
+.spinner-border {
+  @media (max-width: 576px) {
+    margin-top: 0.5rem;
+    height: 1.5rem;
+  }
+}
