@@ -1,4 +1,5 @@
-let toggleLeftMenu = document.querySelector(".menuGamburger").firstElementChild;
+let $toggleLeftMenu = document.querySelector(".navbar-toggler");
+
 //let $aside = document.querySelector("#menu");
 
 
@@ -35,14 +36,15 @@ window.onresize = function () {
     calcHeightMenu();
 };*/
 
-toggleLeftMenu.addEventListener("click", () => {
+$toggleLeftMenu.addEventListener("click", () => {
     let $leftMenu = document.querySelector("#menu");
     let $gridContainer = document.getElementById("#gridWrapper");
+    let $span = $toggleLeftMenu.querySelector('.navbar-toggler-icon');
 
-    if (toggleLeftMenu.classList.contains('navbar-toggler--htx')) {
-        toggleLeftMenu.classList.remove('navbar-toggler--htx');
+    if ($span.classList.contains('active')) {
+        $span.classList.remove('active');
     } else {
-        toggleLeftMenu.classList.add('navbar-toggler--htx');
+        $span.classList.add('active');
     }
 
     if ($leftMenu.classList.contains("menu--active")) {

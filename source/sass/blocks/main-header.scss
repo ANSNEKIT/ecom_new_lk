@@ -43,25 +43,20 @@
   border-radius: unset;
   border: none;
   cursor: pointer;
-  //position: absolute;
-  //top: 0;
-  ////right: -3rem;
-  //left: 0;
+
   color: $gray-light;
 
-  //padding: .4rem .65rem;
+
   padding: 0;
   margin: 0;
 
-  //border: 1px solid $bd-menu;
-  //background-color: $icon-color;
-
-  &:hover {
-    //color: $gray555;
-    //background-color: $menu-li-hover;
-  }
   &:focus {
     outline: none;
+    border: 1px solid $gray-light;
+  }
+
+  &:hover {
+    background-color: $gray-light;
   }
 }
 
@@ -70,53 +65,55 @@
   width: 24px;
   height: 2px;
 
-  background: $black;
-  transition: all 200ms 300ms;
+  background: rgba(0, 0, 0, 1);
+  transition: all 0ms 300ms;
 
   &::before, &::after {
+    width: 24px;
+    height: 2px;
+
     content: "";
     position: absolute;
     left: 0;
-    width: 24px;
-    height: 2px;
-    border-radius: 1px;
-    background: $black;
 
-    transition: transform 1000ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    background: rgba(0, 0, 0, 1);
   }
 
+
   &::before {
-    transform: translateY(-9px);
+    bottom: 9px;
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   &::after {
-    transform: translateY(9px);
+    top: 9px;
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 
 }
 
-.navbar-toggler--htx .navbar-toggler-icon {
-  background: transparent;
-
-  &::before, &::after {
-    transition: transform 1000ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
+.navbar-toggler-icon.active {
+  background-color: rgba(0, 0, 0, 0);
 
   &::before {
-    transform: translateY(0) rotate(-45deg);
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   &::after {
-    transform: translateY(0) rotate(45deg);
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 }
 
-.labelForButtonMenu {
+/*.labelForButtonMenu {
   font-size: 1rem;
   font-weight: 400;
 
   padding: 0 10px;
-}
+}*/
 
 .topNavbar .userMenu {
   //flex-grow: 1;
