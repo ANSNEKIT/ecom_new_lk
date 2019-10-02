@@ -11,35 +11,58 @@
   padding: 0;
 }
 
-.filterWrapper {
+.pagination {
   margin: 0;
   padding: 0;
-  padding-right: 0.5rem;
+}
+
+.filterBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0 0.5rem;
+  //padding-right: 0.5rem;
+
+  background-color: $white;
+  border-radius: 10px;
+  border: 1px solid $gray-light;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+  transition: all 0.5s linear;
+  &:hover {
+    color: $menu-li-hover;
+    border: 1px solid transparent;
+
+    box-shadow: 0 3px 8px 0 $shadow-global-plus;
+    .iconFilter {
+      color: $menu-li-hover;
+    }
+  }
 }
 
 .iconFilter {
-  display: block;
-  position: relative;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.4rem;
+  height: 2.4rem;
 
   font-size: 1.5rem;
   //line-height: 1.5rem;
   color: $color-active;
-  background-color: $white;
-  cursor: pointer;
 
-  border-radius: 50%;
-
-  &:hover {
-    color: $menu-li-hover;
-  }
 }
 
 .iconFilter svg {
-  position: absolute;
-  top: 0.7rem;
-  left: 0.5rem;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.filterBtn_text {
+  padding-right: 0.5rem;
+  word-wrap: unset;
+  white-space: nowrap;
 }
 
 
