@@ -8,13 +8,13 @@
     }
 
     $checkGroupPosition.addEventListener("click", (evt) => {
-        let e = evt.target;
+        let $elem = evt.target;
         let template = document.querySelector('#checkItems').content;
         let clone = document.importNode(template, true);
         //let checkGroupPosition = document.querySelector('.FormGroupProduct');
 
 
-        if (e.classList.contains("btn-add")) {
+        if ($elem.classList.contains("btn-add")) {
             countPosition += 1;
             let position_count = "position_" + countPosition;
             let elemPosition_count = $(clone).children(".position_count").removeClass("position_count").addClass(position_count);
@@ -110,21 +110,26 @@
 
             checkSumm();
 
-        } else if (e.classList.contains("btn-remove")) {
-            e.parentNode.parentNode.remove();
+        } else if ($elem.classList.contains("btn-remove")) {
+            let isRemoveFiscal = confirm('Удалить товарную позицию?');
+            if (!isRemoveFiscal) {
+                evt.preventDefault();
+                return;
+            }
+            $elem.parentNode.parentNode.remove();
             countPosition -= 1;
             checkSumm();
-        } else if (e.classList.contains("js-AgentTrue")) {
-            if (e.parentNode.childNodes[1].checked === true) {
-                e.parentNode.parentNode.parentNode.nextSibling.nextSibling.classList.remove("visuallyHidden");
+        } else if ($elem.classList.contains("js-AgentTrue")) {
+            if ($elem.parentNode.childNodes[1].checked === true) {
+                $elem.parentNode.parentNode.parentNode.nextSibling.nextSibling.classList.remove("visuallyHidden");
             } else {
-                e.parentNode.parentNode.parentNode.nextSibling.nextSibling.classList.add("visuallyHidden");
+                $elem.parentNode.parentNode.parentNode.nextSibling.nextSibling.classList.add("visuallyHidden");
             }
-        } else if (e.classList.contains("js-AgentFalse")) {
-            if (e.parentNode.childNodes[1].checked === true) {
-                e.parentNode.parentNode.parentNode.nextSibling.nextSibling.classList.add("visuallyHidden");
+        } else if ($elem.classList.contains("js-AgentFalse")) {
+            if ($elem.parentNode.childNodes[1].checked === true) {
+                $elem.parentNode.parentNode.parentNode.nextSibling.nextSibling.classList.add("visuallyHidden");
             } else {
-                e.parentNode.parentNode.parentNode.nextSibling.nextSibling.classList.remove("visuallyHidden");
+                $elem.parentNode.parentNode.parentNode.nextSibling.nextSibling.classList.remove("visuallyHidden");
             }
         }
     });
