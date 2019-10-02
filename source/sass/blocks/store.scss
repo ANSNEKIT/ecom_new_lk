@@ -16,7 +16,7 @@
   background-color: #fff;
 }
 
-.page-stores .btnPause {
+.page-stores .btnPause, .page-stores .btnPlay {
   padding: 0;
   margin: 0;
 
@@ -24,15 +24,29 @@
   background-color: transparent;
 }
 
-.pauseIcon {
+.pauseIcon, .playIcon {
+  width: 35px;
+  height: 35px;
+
   padding: 0;
   margin: 0 1rem;
   font-size: 2rem;
+}
 
+.pauseIcon {
   color: $bgc-btn-del;
   background-color: transparent;
 
   &:hover {
     color: $bgc-btn-del-hover;
+  }
+}
+
+.playIcon {
+  color: $bgc-btn-add;
+  background-color: transparent;
+
+  &:hover {
+    color: $bgc-btn-add-hover;
   }
 }
