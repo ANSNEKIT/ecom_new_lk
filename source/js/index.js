@@ -110,7 +110,7 @@
 
             checkSumm();
 
-        } else if ($elem.classList.contains("btn-remove")) {
+        } else if ( ($elem.tagName === 'BUTTON') && ($elem.classList.contains("btn-remove")) ) {
             let isRemoveFiscal = confirm('Удалить товарную позицию?');
             if (!isRemoveFiscal) {
                 evt.preventDefault();

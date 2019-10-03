@@ -80,14 +80,34 @@ body{
   background-size: calc(.75em + .375rem) calc(.75em + .375rem);
 }
 
-.unlockIcon {
+.unlockIcon, .blockedIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: unset;
+  background-color: transparent;
+
   font-size: 1.3rem;
+}
+
+.unlockIcon {
   color: $gray555;
+
+  &:hover {
+    color: $black;
+  }
 }
 
 .blockedIcon {
-  font-size: 1.3rem;
   color: $bgc-btn-del;
+
+  &:hover {
+    color: $bgc-btn-del-hover;
+  }
 }
 
 .editIcon, .delIcon {
