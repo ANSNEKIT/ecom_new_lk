@@ -71,8 +71,10 @@
   border-radius: 10px;
   background-color: #fff;
 
+  transition: all 0.6s ease-out;
+
   &:hover {
-    box-shadow: 0 0 1rem 0 rgba(44,51,73,.3);
+    box-shadow: 0 0.5rem 1rem 0 rgba(44,51,73,.35);
   }
 }
 
@@ -106,4 +108,22 @@
   @media (max-width: 540px) {
     font-size: 0.8rem;
   }
+}
+
+.modal .modalAside {
+  width: 40%;
+  border-right: 3px solid $gray555;
+}
+
+.modalAside .modalAside__logo {
+
+}
+
+.modalAside .modalAside__img {
+  max-width: 200px;
+  height: auto;
+}
+
+.modal .modalMain {
+  padding: 1rem 2rem;
 }

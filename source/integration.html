@@ -216,7 +216,11 @@
           <img class="companyItem__img" src="img/yandex-kassa-logo.png" alt="Яндекс касса" width="1024" height="281">
         </div>
         <div>
-          <button type="button" class="btn btn-primary disabled">Подключено</button>
+          <!--<button type="button" class="btn btn-primary disabled">Подключено</button>-->
+          <button type="button" class="btn btn-add" data-toggle="modal" data-target="#modalYandex">
+            <span class="fas fa-plus-circle pr-1"></span>
+            <span>Подключить</span>
+          </button>
         </div>
       </div>
       <div class="companyItem">
@@ -224,9 +228,9 @@
           <img class="companyItem__img" src="img/tinkoff-logo.png" alt="Тинькофф банк" width="1000" height="309">
         </div>
         <div>
+          <!--<button type="button" class="btn btn-primary disabled">Подключено</button>-->
           <button type="button" class="btn btn-add">
-              <svg class="svg-inline--fa fa-plus-circle fa-w-16 pr-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"></path></svg><!-- <span class="fas fa-plus-circle pr-1"></span> -->
-
+            <span class="fas fa-plus-circle pr-1"></span>
             <span>Подключить</span>
           </button>
         </div>
@@ -292,26 +296,62 @@
   </footer>
 </div>
 
-<!-- Модальное окно
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Подтверждение удаления пользователя</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Вы действительно хотите удалить пользователя?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
-          <button type="button" class="btn btn-primary">Да, удалить</button>
-        </div>
+ <!--Модальное окно-->
+<!-- Button trigger modal -->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Запустить модальное окно
+</button>-->
+
+<!-- Modal -->
+<section class="modal fade" id="modalYandex" tabindex="-1" role="dialog" aria-labelledby="modalYandex" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitleYandex">Интеграция с Яндекс Кассой</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex p-4">
+        <aside class="modalAside pr-4">
+          <div class="modalAside__logo mb-4">
+            <img class="modalAside__img" src="img/yandex-kassa-logo.png" alt="Яндекс касса" width="1024" height="281">
+          </div>
+          <div class="modalAside__btnWrapper">
+            <button type="button" class="btn btn-outline-dark" disabled>Не подключен</button>
+          </div>
+        </aside>
+        <main class="modalMain">
+          <div class="mb-4">
+            <div class="modalMain__description">
+              <h4>Описание:</h4>
+              <p>Это сервис выставления счетов и тд</p>
+            </div>
+            <div class="modalMain__howWork">
+              <h4>Как работает:</h4>
+              <p>
+                Создаем платежную ссылку через яндекс и передаем ее на оплату клиенту, после оплаты будет создан чек
+                автоматически
+              </p>
+            </div>
+            <div class="modalMain__connection">
+              <h4>Подключение:</h4>
+              <p>
+                Зарегистрировоться в лк Яндекс Кассы и подать заявку на подключение с такими-то параметрами (детали в
+                инструкции по ссылке), после одобрения магазина нажмите кнопку подключить.
+              </p>
+            </div>
+          </div>
+
+          <div class="modalMain__btnWrapper pt-3">
+            <a href="#" class="btn btn-add">Подключить</a>
+          </div>
+          
+        </main>
       </div>
     </div>
-  </div>-->
+  </div>
+</section>
 
 
 
@@ -320,7 +360,7 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/menu.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/js/all.min.js" defer></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/js/all.min.js" defer></script>-->
 <script src="//code.jivosite.com/widget.js" data-jv-id="GfRebivBl2" defer></script>
 
 </body>
