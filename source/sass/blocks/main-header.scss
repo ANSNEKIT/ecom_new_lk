@@ -119,11 +119,23 @@
   justify-content: flex-end;
 }
 
+.userMenu .arrow {
+  font-size: 1.3rem;
+  line-height: 1rem;
+  width: 1.1em;
+}
 
 .userMenu .arrow svg {
-  font-size: .8rem;
-  line-height: 1;
-  margin-left: .5rem;
+  font-size: 1.3rem;
+  line-height: 1rem;
+  width: 1.1em;
+
+  margin-right: 0.5em;
+  margin-left: 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+
+  color: $icon-color;
 }
 
 .userMenu .dropdown {
