@@ -13,463 +13,463 @@
 
 
 <body>
-<div class="gridContainer" id="#gridWrapper">
-  <header class="nav header">
-    <div class="mx-1 menuGamburger mx-4">         <button class="navbar-toggler" type="button" data-toggle="tooltip" data-placement="top"                 title="Показать/скрыть меню">           <!-- data-toggle="collapse" data-target="#menu" aria-controls="menu"                 aria-expanded="false" aria-label="Toggle navigation" -->            <span class="navbar-toggler-icon active">             <!--<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"                  xmlns:xlink="http://www.w3.org/1999/xlink"                  x="0px" y="0px"                  width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">             <g>               <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>               <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>               <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>             </g>             </svg>-->           </span>         </button>         <!--<span class="labelForButtonMenu">Меню</span>-->       </div>
-    <div class="logo">
-      <a class="navbar-brand" href="index.html"><img src="img/logo-02-blue.png" alt="E-COM Kassa" width="209" height="80"><!--E-COM Kassa--></a>
-    </div>
-    <nav class="nav ml-auto topNavbar">
-      <ul class="nav userMenu">
-        <li class="navParent navParent--active d-flex flex-column">
-          <p class="mailToText">
-            Нужна помощь?
-          </p>
-          <a href="mailto:help@ecomkassa.ru" class="nav-link mailTo">
-            <span class="fas fa-envelope leftIcon"></span>
-            <span class="menuTitle">HELP@ECOMKASSA.RU</span>
-          </a>
-        </li>
-        <li class="dropdown navParent">
-          <a class="nav-link" href="#" id="topHiddenMenu" role="button" data-toggle="dropdown"
-             aria-haspopup="true" aria-expanded="false">
-            <span class="fas fa-user-tie leftIcon"></span>
-            <span class="menuTitle">Тестовый юзер</span>
-            <span class="arrow">
-              <i class="fas fa-chevron-down js-icon"></i>
-            </span>
-          </a>
-          <ul class="dropdown-menu menuItems" aria-labelledby="topHiddenMenu">
-            <li class="dropdown-item menuItem">
-              <a class="nav-link" href="profile.html">
-                <span class="fas fa-id-card-alt leftIcon"></span>
-                <span class="menuTitle">Мой профиль</span>
-              </a>
-            </li>
-            <li class="dropdown-item menuItem">
-              <a class="nav-link" href="#">
-                <span class="fas fa-cogs leftIcon"></span>
-                <span class="menuTitle">Настройки</span>
-              </a>
-            </li>
-            <li class="dropdown-item menuItem">
-              <a class="nav-link" href="faq.html">
-                <span class="far fa-question-circle leftIcon"></span>
-                <span class="menuTitle">FAQ</span>
-              </a>
-            </li>
-            <li class="dropdown-item menuItem">
-              <a class="nav-link" href="changepass.html">
-                <span class="fas fa-key leftIcon"></span>
-                <span class="menuTitle">Изменить пароль</span>
-              </a>
-            </li>
-            <li class="dropdown-item menuItem">
-              <a class="nav-link" href="login.html">
-                <span class="fas fa-door-open leftIcon"></span>
-                <span class="menuTitle">Выход</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <aside class="menu menu--active" id="menu">
-    <!-- collapse show -->
-    <nav class="nav flex-column flex-fill justify-content-between pt-3" id="rightMenu">
-      <ul class="nav flex-column">
-        <li class="navParent">
-          <a class="nav-link" href="index.html">
-            <span class="fas fa-home leftIcon"></span>
-            <span class="menuTitle">Главная</span>
-          </a>
-        </li>
-        <li class="navParent">
-          <a class="nav-link" href="#collapse-menu_1" data-toggle="collapse"  role="button" aria-expanded="false" aria-controls="#collapse-menu_1">
-            <span class="far fa-building leftIcon"></span>
-            <span class="menuTitle">Организации</span>
-            <span class="arrow">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
-                   <g data-name="Layer 2">
-                     <g data-name="chevron-down">
-                       <rect width="24" height="24" opacity="0"></rect>
-                       <path
-                           d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
-                       </path>
-                     </g>
-                   </g>
-                  </svg>
-                </span>
-          </a>
-          <ul class="menuItems collapse" id="collapse-menu_1">
-            <li class="menuItem"><a href="firms.html" class="nav-link"><span class="menuTitle">Организации</span></a></li>
-            <li class="menuItem"><a href="pointofsales.html" class="nav-link"><span class="menuTitle">Точки продаж</span></a></li>
-          </ul>
-        </li>
-        <li class="navParent">
-          <a class="nav-link" href="#collapse-menu_2" data-toggle="collapse"  role="button" aria-expanded="false"
-             aria-controls="#collapse-menu_2">
-            <span class="far fa-check-square leftIcon"></span>
-            <span class="menuTitle">Чеки</span>
-            <span class="arrow">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
-                   <g data-name="Layer 2">
-                     <g data-name="chevron-down">
-                       <rect width="24" height="24" opacity="0"></rect>
-                       <path
-                           d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
-                       </path>
-                     </g>
-                   </g>
-                  </svg>
-                </span>
-          </a>
-          <ul class="menuItems collapse" id="collapse-menu_2">
-            <li class="menuItem"><a href="orders.html" class="nav-link">Список чеков</a></li>
-            <li class="menuItem"><a href="add.html" class="nav-link">Сформировать чек</a></li>
-            <li class="menuItem"><a href="addcorrection.html" class="nav-link">Создать чек коррекции</a></li>
-            <li class="menuItem"><a href="import.html" class="nav-link">Загрузить CSV</a></li>
-          </ul>
-        </li>
-        <li class="navParent navParent--active">
-          <a class="nav-link" href="#collapse-fees" data-toggle="collapse"  role="button" aria-expanded="false"
-             aria-controls="#collapse-fees">
-            <span class="far fa-credit-card leftIcon"></span>
-            <span class="menuTitle">Оплаты</span>
-            <span class="arrow">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
-                   <g data-name="Layer 2">
-                     <g data-name="chevron-down">
-                       <rect width="24" height="24" opacity="0"></rect>
-                       <path
-                           d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
-                       </path>
-                     </g>
-                   </g>
-                  </svg>
-                </span>
-          </a>
-          <ul class="menuItems collapse" id="collapse-fees">
-            <li class="menuItem"><a href="fees.html" class="nav-link">Оплата подписки</a></li>
-            <li class="menuItem"><a href="#" class="nav-link">Счета на оплату</a></li>
-          </ul>
-        </li>
-        <li class="navParent">
-          <a class="nav-link" href="users.html">
-            <span class="fas fa-users leftIcon"></span>
-            <span class="menuTitle">Пользователи</span>
-          </a>
-        </li>
-        <!--<li class="navParent">
-          <a class="nav-link" href="#collapse-menu_3" data-toggle="collapse"  role="button" aria-expanded="false"
-             aria-controls="#collapse-menu_3">
-            <span class="fas fa-donate leftIcon"></span>
-            <span class="menuTitle">Услуги</span>
-            <span class="arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
-                 <g data-name="Layer 2">
-                   <g data-name="chevron-down">
-                     <rect width="24" height="24" opacity="0"></rect>
-                     <path
-                         d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
-                     </path>
-                   </g>
-                 </g>
-                </svg>
+  <div class="gridContainer" id="#gridWrapper">
+    <header class="nav header">
+      <div class="mx-1 menuGamburger mx-4">         <button class="navbar-toggler" type="button" data-toggle="tooltip" data-placement="top"                 title="Показать/скрыть меню">           <!-- data-toggle="collapse" data-target="#menu" aria-controls="menu"                 aria-expanded="false" aria-label="Toggle navigation" -->            <span class="navbar-toggler-icon active">             <!--<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"                  xmlns:xlink="http://www.w3.org/1999/xlink"                  x="0px" y="0px"                  width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">             <g>               <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>               <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>               <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>             </g>             </svg>-->           </span>         </button>         <!--<span class="labelForButtonMenu">Меню</span>-->       </div>
+      <div class="logo">
+        <a class="navbar-brand" href="index.html"><img src="img/logo-02-blue.png" alt="E-COM Kassa" width="209" height="80"><!--E-COM Kassa--></a>
+      </div>
+      <nav class="nav ml-auto topNavbar">
+        <ul class="nav userMenu">
+          <li class="navParent navParent--active d-flex flex-column">
+            <p class="mailToText">
+              Нужна помощь?
+            </p>
+            <a href="mailto:help@ecomkassa.ru" class="nav-link mailTo">
+              <span class="fas fa-envelope leftIcon"></span>
+              <span class="menuTitle">HELP@ECOMKASSA.RU</span>
+            </a>
+          </li>
+          <li class="dropdown navParent">
+            <a class="nav-link" href="#" id="topHiddenMenu" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              <span class="fas fa-user-tie leftIcon"></span>
+              <span class="menuTitle">Тестовый юзер</span>
+              <span class="arrow">
+                <i class="fas fa-chevron-down js-icon"></i>
               </span>
+            </a>
+            <ul class="dropdown-menu menuItems" aria-labelledby="topHiddenMenu">
+              <li class="dropdown-item menuItem">
+                <a class="nav-link" href="profile.html">
+                  <span class="fas fa-id-card-alt leftIcon"></span>
+                  <span class="menuTitle">Мой профиль</span>
+                </a>
+              </li>
+              <li class="dropdown-item menuItem">
+                <a class="nav-link" href="#">
+                  <span class="fas fa-cogs leftIcon"></span>
+                  <span class="menuTitle">Настройки</span>
+                </a>
+              </li>
+              <li class="dropdown-item menuItem">
+                <a class="nav-link" href="faq.html">
+                  <span class="far fa-question-circle leftIcon"></span>
+                  <span class="menuTitle">FAQ</span>
+                </a>
+              </li>
+              <li class="dropdown-item menuItem">
+                <a class="nav-link" href="changepass.html">
+                  <span class="fas fa-key leftIcon"></span>
+                  <span class="menuTitle">Изменить пароль</span>
+                </a>
+              </li>
+              <li class="dropdown-item menuItem">
+                <a class="nav-link" href="login.html">
+                  <span class="fas fa-door-open leftIcon"></span>
+                  <span class="menuTitle">Выход</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <aside class="menu menu--active" id="menu">
+      <!-- collapse show -->
+      <nav class="nav flex-column flex-fill justify-content-between pt-3" id="rightMenu">
+        <ul class="nav flex-column">
+          <li class="navParent">
+            <a class="nav-link" href="index.html">
+              <span class="fas fa-home leftIcon"></span>
+              <span class="menuTitle">Главная</span>
+            </a>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="#collapse-menu_1" data-toggle="collapse"  role="button" aria-expanded="false" aria-controls="#collapse-menu_1">
+              <span class="far fa-building leftIcon"></span>
+              <span class="menuTitle">Организации</span>
+              <span class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                     <g data-name="Layer 2">
+                       <g data-name="chevron-down">
+                         <rect width="24" height="24" opacity="0"></rect>
+                         <path
+                             d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                         </path>
+                       </g>
+                     </g>
+                    </svg>
+                  </span>
+            </a>
+            <ul class="menuItems collapse" id="collapse-menu_1">
+              <li class="menuItem"><a href="firms.html" class="nav-link"><span class="menuTitle">Организации</span></a></li>
+              <li class="menuItem"><a href="pointofsales.html" class="nav-link"><span class="menuTitle">Точки продаж</span></a></li>
+            </ul>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="#collapse-menu_2" data-toggle="collapse"  role="button" aria-expanded="false"
+               aria-controls="#collapse-menu_2">
+              <span class="far fa-check-square leftIcon"></span>
+              <span class="menuTitle">Чеки</span>
+              <span class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                     <g data-name="Layer 2">
+                       <g data-name="chevron-down">
+                         <rect width="24" height="24" opacity="0"></rect>
+                         <path
+                             d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                         </path>
+                       </g>
+                     </g>
+                    </svg>
+                  </span>
+            </a>
+            <ul class="menuItems collapse" id="collapse-menu_2">
+              <li class="menuItem"><a href="orders.html" class="nav-link">Список чеков</a></li>
+              <li class="menuItem"><a href="add.html" class="nav-link">Сформировать чек</a></li>
+              <li class="menuItem"><a href="addcorrection.html" class="nav-link">Создать чек коррекции</a></li>
+              <li class="menuItem"><a href="import.html" class="nav-link">Загрузить CSV</a></li>
+            </ul>
+          </li>
+          <li class="navParent navParent--active">
+            <a class="nav-link" href="#collapse-fees" data-toggle="collapse"  role="button" aria-expanded="false"
+               aria-controls="#collapse-fees">
+              <span class="far fa-credit-card leftIcon"></span>
+              <span class="menuTitle">Оплаты</span>
+              <span class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                     <g data-name="Layer 2">
+                       <g data-name="chevron-down">
+                         <rect width="24" height="24" opacity="0"></rect>
+                         <path
+                             d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                         </path>
+                       </g>
+                     </g>
+                    </svg>
+                  </span>
+            </a>
+            <ul class="menuItems collapse" id="collapse-fees">
+              <li class="menuItem"><a href="fees.html" class="nav-link">Оплата подписки</a></li>
+              <li class="menuItem"><a href="#" class="nav-link">Счета на оплату</a></li>
+            </ul>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="users.html">
+              <span class="fas fa-users leftIcon"></span>
+              <span class="menuTitle">Пользователи</span>
+            </a>
+          </li>
+          <!--<li class="navParent">
+            <a class="nav-link" href="#collapse-menu_3" data-toggle="collapse"  role="button" aria-expanded="false"
+               aria-controls="#collapse-menu_3">
+              <span class="fas fa-donate leftIcon"></span>
+              <span class="menuTitle">Услуги</span>
+              <span class="arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 24 24">
+                   <g data-name="Layer 2">
+                     <g data-name="chevron-down">
+                       <rect width="24" height="24" opacity="0"></rect>
+                       <path
+                           d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                       </path>
+                     </g>
+                   </g>
+                  </svg>
+                </span>
+            </a>
+            <ul class="menuItems collapse" id="collapse-menu_3">
+              <li class="menuItem">
+                <a href="#" class="nav-link">
+                  <span class="menuTitle">Витрина тарифов</span>
+                </a>
+              </li>
+              <li class="menuItem">
+                <a href="#" class="nav-link">
+                  <span class="menuTitle">Витрина касс</span>
+                </a>
+              </li>
+              <li class="menuItem">
+                <a href="#" class="nav-link">
+                  <span class="menuTitle">Витрина доп услуг</span>
+                </a>
+              </li>
+              <li class="menuItem">
+                <a href="#" class="nav-link">
+                  <span class="menuTitle">Витрина лицензий</span>
+                </a>
+              </li>
+              <li class="menuItem">
+                <a href="#" class="nav-link">
+                  <span class="menuTitle">Баланс</span>
+                </a>
+              </li>
+            </ul>
+          </li>-->
+          <!--<li class="navParent">
+            <a class="nav-link" href="#">
+              <span class="far fa-handshake leftIcon"></span>
+              <span class="menuTitle">Интеграция</span>
+            </a>
+          </li>-->
+
+        </ul>
+      </nav>
+    </aside>
+    <main class="mainContent mt-5">
+      <h2 class="page-header text-center py-5">Платежи</h2>
+
+      <form action="" method="get" class="addCheckForm mb-5 d-none">
+        <fieldset class="FormGroup1">
+          <div class="form-row">
+            <div class="col-md-6 mb-3 inp-group">
+              <label class="label-form" for="page">Номер страницы</label>
+              <input type="number" id="page" class="form-control inp-form"  name="page" maxlength="10" min="1" value="1">
+              <div class="valid-tooltip"></div>
+            </div>
+
+            <div class="col-md-6 mb-3 inp-group parentSelect">
+              <label class="label-form" for="size">Размер страницы</label>
+              <select id="size" class="form-control select" name="size">
+                <option value="25" selected="">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="500">500</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3 inp-group">
+              <label class="label-form" for="storeId">Идентификатор магазина</label>
+              <input type="text" id="storeId" class="form-control"  name="storeId" maxlength="3" pattern="[0-9]">
+              <div class="valid-tooltip"></div>
+            </div>
+            <div class="col-md-6 mb-3 inp-group">
+              <label class="label-form" for="externalId">Внешний идетификатор чека</label>
+              <input type="text" id="externalId" class="form-control"  name="externalId" pattern="[0-9]">
+              <div class="valid-tooltip"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3 inp-group">
+              <label class="label-form" for="since_field">Дата начала поиска</label>
+              <input type="datetime" id="since_field" class="form-control datetimepicker" name="since_field"
+                     autocomplete="false">
+              <div class="valid-tooltip"></div>
+            </div>
+            <div class="col-md-6 mb-3 inp-group">
+              <label class="label-form" for="until">Дата окончания поиска</label>
+              <input type="datetime" id="until" class="form-control datetimepicker" name="until"
+                     autocomplete="false">
+              <div class="valid-tooltip"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-4 inp-group parentSelect">
+              <label class="label-form" for="status">Статус чека</label>
+              <select id="status" class="form-control select" name="status">
+                <option value="none" selected>Не выбран</option>
+                <option value="CREATED">Создан</option>
+                <option value="PAID">Оплачен</option>
+                <option value="COMPLETED">Завершён</option>
+                <option value="CANCELED">Отменён</option>
+                <option value="WAITING">В режиме ожидания</option>
+                <option value="FAILED">Ошибка</option>
+              </select>
+              <div class="valid-tooltip"></div>
+            </div>
+            <div class="col-md-6 mb-4 inp-group">
+              <label class="label-form" for="cashier">Кассир</label>
+              <input type="text" id="cashier" class="form-control inp-form"  name="cashier">
+              <div class="valid-tooltip"></div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary mr-4" value="submit">Поиск чеков</button>
+          <button type="button" class="btn btn-outline-secondary" data-js-id="reset">Сбросить</button>
+        </fieldset>
+      </form>
+
+      <div class="py-4 navAndFilter">
+        <div class="ml-auto mr-4">
+          <a href="add.html" class="btn btn-add">
+            <span class="fas fa-plus-circle pr-1"></span>
+            Создать счет
           </a>
-          <ul class="menuItems collapse" id="collapse-menu_3">
-            <li class="menuItem">
-              <a href="#" class="nav-link">
-                <span class="menuTitle">Витрина тарифов</span>
+        </div>
+        <button class="filterBtn">
+          <span class="iconFilter" data-toggle="tooltip" data-placement="left" title="Показать/скрыть фильтр">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="filter"
+                 class="svg-inline--fa fa-filter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path
+                fill="currentColor"
+                d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"></path>
+            </svg>
+          </span>
+          <span class="filterBtn_text">Фильтр чеков</span>
+        </button>
+      </div>
+
+      <div class="card mb-5">
+        <table class="table table-bordered table-sm table-hover ">
+          <thead class="">
+            <tr>
+              <th class="">ID</th>
+              <th>Тип платежной системы</th>
+              <th class="">Дата и время</th>
+              <th class="">Сумма</th>
+              <th class="text-center">Статус</th>
+              <th class="text-center">Чек</th>
+              <th class="">Ссылка на платеж</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="">123456</th>
+              <td class="">Яндекс касса</td>
+              <td class="">2019-09-12T12:19:16.831+03:00</td>
+              <td class="">1250.00</td>
+              <td class="text-center">Оплачен</td>
+              <td class="">
+                <a href="#" class="iconCheck">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="receipt" class="svg-inline--fa fa-receipt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M358.4 3.2L320 48 265.6 3.2a15.9 15.9 0 0 0-19.2 0L192 48 137.6 3.2a15.9 15.9 0 0 0-19.2 0L64 48 25.6 3.2C15-4.7 0 2.8 0 16v480c0 13.2 15 20.7 25.6 12.8L64 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L192 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L320 464l38.4 44.8c10.5 7.9 25.6.4 25.6-12.8V16c0-13.2-15-20.7-25.6-12.8zM320 360c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16z"></path></svg>
+                </a>
+              </td>
+              <td class="">
+                <a href="#" class="iconLink">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="link" class="svg-inline--fa fa-link fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th class="">223344</th>
+              <td class="">Яндекс касса</td>
+              <td class="">2019-09-12T12:19:16.831+03:00</td>
+              <td class="">4000.00</td>
+              <td class="text-center">Завершен</td>
+              <td class="">
+                <a href="#" class="iconCheck">
+                  <span class="fas fa-receipt">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="receipt" class="svg-inline--fa fa-receipt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M358.4 3.2L320 48 265.6 3.2a15.9 15.9 0 0 0-19.2 0L192 48 137.6 3.2a15.9 15.9 0 0 0-19.2 0L64 48 25.6 3.2C15-4.7 0 2.8 0 16v480c0 13.2 15 20.7 25.6 12.8L64 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L192 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L320 464l38.4 44.8c10.5 7.9 25.6.4 25.6-12.8V16c0-13.2-15-20.7-25.6-12.8zM320 360c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16z"></path></svg>
+                  </span>
+                </a>
+              </td>
+              <td class="">
+                <a href="#" class="iconLink">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="link" class="svg-inline--fa fa-link fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th class="">445566</th>
+              <td class="">Яндекс касса</td>
+              <td class="">2019-09-12T12:19:16.831+03:00</td>
+              <td class="">900.00</td>
+              <td class="text-center">Завершен</td>
+              <td class="">
+                <a href="#" class="iconCheck">
+                  <span class="fas fa-receipt">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="receipt" class="svg-inline--fa fa-receipt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M358.4 3.2L320 48 265.6 3.2a15.9 15.9 0 0 0-19.2 0L192 48 137.6 3.2a15.9 15.9 0 0 0-19.2 0L64 48 25.6 3.2C15-4.7 0 2.8 0 16v480c0 13.2 15 20.7 25.6 12.8L64 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L192 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L320 464l38.4 44.8c10.5 7.9 25.6.4 25.6-12.8V16c0-13.2-15-20.7-25.6-12.8zM320 360c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16z"></path></svg>
+                  </span>
+                </a>
+              </td>
+              <td class="">
+                <a href="#" class="iconLink">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="link" class="svg-inline--fa fa-link fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <nav class="mb-5" aria-label="Page navigation">
+        <ul class="pagination mb-5">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+    <footer class="nav mainFooter mt-5">
+      <div class="row footerWrapper">
+        <div class="col-sm-6 col-lg-3 blockInfo mb-3">
+          <h5 class="footerHeader">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</h5>
+          <ul class="footerItems">
+            <li class="footerItem">
+              <a href="https://app.ecomkassa.ru/assets/docs/license-agreement-ru.pdf" class="footerLink">Публичный договор
+                оферты</a>
+            </li>
+            <li class="footerItem">
+              <a href="https://app.ecomkassa.ru/assets/docs/leasing-public-ru.pdf" class="footerLink">Договор-оферта на аренду касс</a>
+            </li>
+            <li class="footerItem">
+              <a href="https://ecomkassa.ru/docs" class="footerLink">Все документы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <h5 class="footerHeader">ИНСТРУКЦИИ</h5>
+          <ul class="footerItems">
+            <li class="footerItem">
+              <a href="#" class="footerLink">
+                <span class="fas fa-file-alt"></span>
+                Инструкции
               </a>
             </li>
-            <li class="menuItem">
-              <a href="#" class="nav-link">
-                <span class="menuTitle">Витрина касс</span>
-              </a>
-            </li>
-            <li class="menuItem">
-              <a href="#" class="nav-link">
-                <span class="menuTitle">Витрина доп услуг</span>
-              </a>
-            </li>
-            <li class="menuItem">
-              <a href="#" class="nav-link">
-                <span class="menuTitle">Витрина лицензий</span>
-              </a>
-            </li>
-            <li class="menuItem">
-              <a href="#" class="nav-link">
-                <span class="menuTitle">Баланс</span>
+            <li class="footerItem">
+              <a href="#"
+                 class="footerLink">
+                <span class="fab fa-youtube"></span>
+                Видеоинструкции
               </a>
             </li>
           </ul>
-        </li>-->
-        <!--<li class="navParent">
-          <a class="nav-link" href="#">
-            <span class="far fa-handshake leftIcon"></span>
-            <span class="menuTitle">Интеграция</span>
-          </a>
-        </li>-->
-
-      </ul>
-    </nav>
-  </aside>
-  <main class="mainContent mt-5">
-    <h2 class="page-header text-center py-5">Платежи</h2>
-
-    <form action="" method="get" class="addCheckForm mb-5 d-none">
-      <fieldset class="FormGroup1">
-        <div class="form-row">
-          <div class="col-md-6 mb-3 inp-group">
-            <label class="label-form" for="page">Номер страницы</label>
-            <input type="number" id="page" class="form-control inp-form"  name="page" maxlength="10" min="1" value="1">
-            <div class="valid-tooltip"></div>
-          </div>
-
-          <div class="col-md-6 mb-3 inp-group parentSelect">
-            <label class="label-form" for="size">Размер страницы</label>
-            <select id="size" class="form-control select" name="size">
-              <option value="25" selected="">25</option>
-              <option value="50">50</option>
-              <option value="100">100</option>
-              <option value="200">200</option>
-              <option value="500">500</option>
-            </select>
-          </div>
         </div>
-        <div class="form-row">
-          <div class="col-md-6 mb-3 inp-group">
-            <label class="label-form" for="storeId">Идентификатор магазина</label>
-            <input type="text" id="storeId" class="form-control"  name="storeId" maxlength="3" pattern="[0-9]">
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 mb-3 inp-group">
-            <label class="label-form" for="externalId">Внешний идетификатор чека</label>
-            <input type="text" id="externalId" class="form-control"  name="externalId" pattern="[0-9]">
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-6 mb-3 inp-group">
-            <label class="label-form" for="since_field">Дата начала поиска</label>
-            <input type="datetime" id="since_field" class="form-control datetimepicker" name="since_field"
-                   autocomplete="false">
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 mb-3 inp-group">
-            <label class="label-form" for="until">Дата окончания поиска</label>
-            <input type="datetime" id="until" class="form-control datetimepicker" name="until"
-                   autocomplete="false">
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-6 mb-4 inp-group parentSelect">
-            <label class="label-form" for="status">Статус чека</label>
-            <select id="status" class="form-control select" name="status">
-              <option value="none" selected>Не выбран</option>
-              <option value="CREATED">Создан</option>
-              <option value="PAID">Оплачен</option>
-              <option value="COMPLETED">Завершён</option>
-              <option value="CANCELED">Отменён</option>
-              <option value="WAITING">В режиме ожидания</option>
-              <option value="FAILED">Ошибка</option>
-            </select>
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 mb-4 inp-group">
-            <label class="label-form" for="cashier">Кассир</label>
-            <input type="text" id="cashier" class="form-control inp-form"  name="cashier">
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary mr-4" value="submit">Поиск чеков</button>
-        <button type="button" class="btn btn-outline-secondary" data-js-id="reset">Сбросить</button>
-      </fieldset>
-    </form>
-
-    <div class="py-4 navAndFilter">
-      <div class="ml-auto mr-4">
-        <a href="add.html" class="btn btn-add">
-          <span class="fas fa-plus-circle pr-1"></span>
-          Создать счет
-        </a>
-      </div>
-      <button class="filterBtn">
-        <span class="iconFilter" data-toggle="tooltip" data-placement="left" title="Показать/скрыть фильтр">
-          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="filter"
-               class="svg-inline--fa fa-filter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path
-              fill="currentColor"
-              d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"></path>
-          </svg>
-        </span>
-        <span class="filterBtn_text">Фильтр чеков</span>
-      </button>
-    </div>
-
-    <div class="card mb-5">
-      <table class="table table-bordered table-sm table-hover ">
-        <thead class="">
-          <tr>
-            <th class="">ID</th>
-            <th>Тип платежной системы</th>
-            <th class="">Дата и время</th>
-            <th class="">Сумма</th>
-            <th class="text-center">Статус</th>
-            <th class="text-center">Чек</th>
-            <th class="">Ссылка на платеж</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th class="">123456</th>
-            <td class="">Яндекс касса</td>
-            <td class="">2019-09-12T12:19:16.831+03:00</td>
-            <td class="">1250.00</td>
-            <td class="text-center">Оплачен</td>
-            <td class="">
-              <a href="#" class="iconCheck">
-                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="receipt" class="svg-inline--fa fa-receipt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M358.4 3.2L320 48 265.6 3.2a15.9 15.9 0 0 0-19.2 0L192 48 137.6 3.2a15.9 15.9 0 0 0-19.2 0L64 48 25.6 3.2C15-4.7 0 2.8 0 16v480c0 13.2 15 20.7 25.6 12.8L64 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L192 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L320 464l38.4 44.8c10.5 7.9 25.6.4 25.6-12.8V16c0-13.2-15-20.7-25.6-12.8zM320 360c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16z"></path></svg>
-              </a>
-            </td>
-            <td class="">
-              <a href="#" class="iconLink">
-                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="link" class="svg-inline--fa fa-link fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <th class="">223344</th>
-            <td class="">Яндекс касса</td>
-            <td class="">2019-09-12T12:19:16.831+03:00</td>
-            <td class="">4000.00</td>
-            <td class="text-center">Завершен</td>
-            <td class="">
-              <a href="#" class="iconCheck">
-                <span class="fas fa-receipt">
-                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="receipt" class="svg-inline--fa fa-receipt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M358.4 3.2L320 48 265.6 3.2a15.9 15.9 0 0 0-19.2 0L192 48 137.6 3.2a15.9 15.9 0 0 0-19.2 0L64 48 25.6 3.2C15-4.7 0 2.8 0 16v480c0 13.2 15 20.7 25.6 12.8L64 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L192 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L320 464l38.4 44.8c10.5 7.9 25.6.4 25.6-12.8V16c0-13.2-15-20.7-25.6-12.8zM320 360c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16z"></path></svg>
-                </span>
-              </a>
-            </td>
-            <td class="">
-              <a href="#" class="iconLink">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="link" class="svg-inline--fa fa-link fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <th class="">445566</th>
-            <td class="">Яндекс касса</td>
-            <td class="">2019-09-12T12:19:16.831+03:00</td>
-            <td class="">900.00</td>
-            <td class="text-center">Завершен</td>
-            <td class="">
-              <a href="#" class="iconCheck">
-                <span class="fas fa-receipt">
-                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="receipt" class="svg-inline--fa fa-receipt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M358.4 3.2L320 48 265.6 3.2a15.9 15.9 0 0 0-19.2 0L192 48 137.6 3.2a15.9 15.9 0 0 0-19.2 0L64 48 25.6 3.2C15-4.7 0 2.8 0 16v480c0 13.2 15 20.7 25.6 12.8L64 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L192 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L320 464l38.4 44.8c10.5 7.9 25.6.4 25.6-12.8V16c0-13.2-15-20.7-25.6-12.8zM320 360c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16z"></path></svg>
-                </span>
-              </a>
-            </td>
-            <td class="">
-              <a href="#" class="iconLink">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="link" class="svg-inline--fa fa-link fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <nav class="mb-5" aria-label="Page navigation">
-      <ul class="pagination mb-5">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </main>
-  <footer class="nav mainFooter mt-5">
-    <div class="row footerWrapper">
-      <div class="col-sm-6 col-lg-3 blockInfo mb-3">
-        <h5 class="footerHeader">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</h5>
-        <ul class="footerItems">
-          <li class="footerItem">
-            <a href="https://app.ecomkassa.ru/assets/docs/license-agreement-ru.pdf" class="footerLink">Публичный договор
-              оферты</a>
-          </li>
-          <li class="footerItem">
-            <a href="https://app.ecomkassa.ru/assets/docs/leasing-public-ru.pdf" class="footerLink">Договор-оферта на аренду касс</a>
-          </li>
-          <li class="footerItem">
-            <a href="https://ecomkassa.ru/docs" class="footerLink">Все документы</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-sm-6 col-lg-3 mb-3">
-        <h5 class="footerHeader">ИНСТРУКЦИИ</h5>
-        <ul class="footerItems">
-          <li class="footerItem">
-            <a href="#" class="footerLink">
-              <span class="fas fa-file-alt"></span>
-              Инструкции
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <h5 class="footerHeader">ТЕХПОДДЕРЖКА</h5>
+          <p class="footerText">
+            <span class="far fa-clock leftIcon"></span>
+            Пн-Пт 9:00 - 18:00 Мск
+          </p>
+          <p class="footerText">Почта техподдержки:</p>
+          <p class="footerText">
+            <a href="mailto:help@ecomkassa.ru" class="footerLink">
+              <span class="fas fa-at leftIcon"></span>
+              help@ecomkassa.ru
             </a>
-          </li>
-          <li class="footerItem">
-            <a href="#"
-               class="footerLink">
-              <span class="fab fa-youtube"></span>
-              Видеоинструкции
-            </a>
-          </li>
-        </ul>
+          </p>
+        </div>
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <h5 class="footerHeader">О КОМПАНИИ</h5>
+          <p class="footerText">ООО "Зе Поинт"</p>
+          <p class="footerText">ИНН: 7708317992</p>
+        </div>
+
       </div>
-      <div class="col-sm-6 col-lg-3 mb-3">
-        <h5 class="footerHeader">ТЕХПОДДЕРЖКА</h5>
-        <p class="footerText">
-          <span class="far fa-clock leftIcon"></span>
-          Пн-Пт 9:00 - 18:00 Мск
-        </p>
-        <p class="footerText">Почта техподдержки:</p>
-        <p class="footerText">
-          <a href="mailto:help@ecomkassa.ru" class="footerLink">
-            <span class="fas fa-at leftIcon"></span>
-            help@ecomkassa.ru
-          </a>
-        </p>
-      </div>
-      <div class="col-sm-6 col-lg-3 mb-3">
-        <h5 class="footerHeader">О КОМПАНИИ</h5>
-        <p class="footerText">ООО "Зе Поинт"</p>
-        <p class="footerText">ИНН: 7708317992</p>
-      </div>
-
-    </div>
-  </footer>
-</div>
+    </footer>
+  </div>
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/menu.js"></script>
-<script type="text/javascript" src="js/filter.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
+  <script type="text/javascript" src="js/menu.js"></script>
+  <script type="text/javascript" src="js/filter.js"></script>
 
-<script src="//code.jivosite.com/widget.js" data-jv-id="GfRebivBl2" defer></script>
+  <script src="//code.jivosite.com/widget.js" data-jv-id="GfRebivBl2" defer></script>
 
 </body>
 </html>
