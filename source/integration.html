@@ -229,7 +229,7 @@
         </div>
         <div>
           <!--<button type="button" class="btn btn-primary disabled">Подключено</button>-->
-          <button type="button" class="btn btn-add">
+          <button type="button" class="btn btn-add" data-toggle="modal" data-target="#modalTinkoff">
             <span class="fas fa-plus-circle pr-1"></span>
             <span>Подключить</span>
           </button>
@@ -318,7 +318,7 @@
             <img class="modalAside__img" src="img/yandex-kassa-logo.png" alt="Яндекс касса" width="1024" height="281">
           </div>
           <div class="modalAside__btnWrapper">
-            <button type="button" class="btn btn-outline-dark" disabled>Не подключен</button>
+            <button type="button" class="btn btn-outline-dark modalBtnStatus" disabled>Не подключено</button>
           </div>
         </aside>
         <main class="modalMain">
@@ -347,6 +347,55 @@
             <a href="#" class="btn btn-add">Подключить</a>
           </div>
           
+        </main>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="modal fade" id="modalTinkoff" tabindex="-1" role="dialog" data-backdrop="static"
+         aria-labelledby="modalTinkoff" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitleTinkoff">Интеграция с Тинькофф</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex p-4">
+        <aside class="modalAside pr-4">
+          <div class="modalAside__logo mb-4">
+            <img class="modalAside__img" src="img/tinkoff-logo.png" alt="Тинькофф банк" width="1000" height="309">
+          </div>
+          <div class="modalAside__btnWrapper">
+            <button type="button" class="btn btn-outline-dark modalBtnStatus" disabled>Не подключено</button>
+          </div>
+        </aside>
+        <main class="modalMain">
+          <div class="mb-4">
+            <div class="modalMain__description">
+              <h4>Описание:</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae eaque ex nemo odit sunt!</p>
+            </div>
+            <div class="modalMain__howWork">
+              <h4>Как работает:</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet delectus dicta eaque recusandae ullam. Accusamus animi autem blanditiis commodi, debitis delectus dolor dolore earum fuga harum hic id, laborum maiores molestiae molestias mollitia nesciunt non nostrum perspiciatis quasi quis repellendus sequi sit sunt temporibus veritatis voluptatum! Beatae dolorem sunt voluptas!
+              </p>
+            </div>
+            <div class="modalMain__connection">
+              <h4>Подключение:</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias doloribus ducimus exercitationem fugit iure magni, obcaecati qui sint suscipit temporibus?
+              </p>
+            </div>
+          </div>
+
+          <div class="modalMain__btnWrapper pt-3">
+            <a href="#" class="btn btn-add">Подключить</a>
+          </div>
+
         </main>
       </div>
     </div>

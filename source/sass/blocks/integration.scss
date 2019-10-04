@@ -101,6 +101,8 @@
   padding: .375rem .75rem;
   margin-left: 0.5rem;
 
+  white-space: nowrap;
+
   @media (max-width: 992px) {
     font-size: 1rem;
   }
@@ -110,9 +112,25 @@
   }
 }
 
+
 .modal .modalAside {
   width: 40%;
   border-right: 3px solid $gray555;
+}
+
+.page-integration .modalBtnStatus {
+  font-size: 1.1rem;
+  padding: 0 .75rem;
+  margin-left: 0.5rem;
+
+  @media (max-width: 992px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 0.8rem;
+    margin-left: 0;
+  }
 }
 
 .modalAside .modalAside__logo {
@@ -122,8 +140,70 @@
 .modalAside .modalAside__img {
   max-width: 200px;
   height: auto;
+
+  @media (max-width: 1200px) {
+    width: auto;
+    height: auto;
+    max-width: 175px;
+  }
+
+  @media (max-width: 992px) {
+    width: auto;
+    height: auto;
+    max-width: 150px;
+  }
+
+  @media (max-width: 540px) {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+  }
+
 }
 
 .modal .modalMain {
   padding: 1rem 2rem;
+
+  @media (max-width: 992px) {
+    padding: 1rem 1.3rem;
+  }
+
+  @media (max-width: 540px) {
+    padding: 1rem;
+  }
+}
+
+.modal h4 {
+
+  @media (max-width: 1200px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 0.9rem;
+  }
+
+}
+
+.modal p {
+
+  @media (max-width: 1200px) {
+    font-size: 0.9rem;
+    line-height: 1.7rem;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
 }
