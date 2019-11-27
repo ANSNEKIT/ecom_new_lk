@@ -44,3 +44,4 @@ function validateInn(inn, error) {
     }
     return result;
 }
+
