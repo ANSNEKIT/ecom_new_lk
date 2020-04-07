@@ -1,0 +1,52 @@
+.page-registrars .questItem {
+    align-items: center;
+  
+    border: none;
+    cursor: pointer;
+  
+    box-shadow: 0 0 0.9rem 0 rgba(44,51,73,.2);
+    //padding: 1rem 0;
+  }
+  
+  .page-registrars .questHeaderWrapper {
+    border-bottom: 1px solid $table-bd;
+  }
+  
+  .page-registrars .questHeader {
+    background-color: #fff;
+  }
+  
+  .page-registrars .btnPause, .page-registrars .btnPlay {
+    padding: 0;
+    margin: 0;
+  
+    border: none;
+    background-color: transparent;
+  }
+  
+  .pauseIcon, .playIcon {
+    width: 35px;
+    height: 35px;
+  
+    padding: 0;
+    margin: 0 1rem;
+    font-size: 2rem;
+  }
+  
+  .pauseIcon {
+    color: $bgc-btn-del;
+    background-color: transparent;
+  
+    &:hover {
+      color: $bgc-btn-del-hover;
+    }
+  }
+  
+  .playIcon {
+    color: $bgc-btn-add;
+    background-color: transparent;
+  
+    &:hover {
+      color: $bgc-btn-add-hover;
+    }
+  }

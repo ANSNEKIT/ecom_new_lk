@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Добавить счет</title>
+  <title></title>
 
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -11,7 +11,7 @@
 </head>
 
 
-<body>
+<body class="page-registrars">
 <div class="gridContainer" id="#gridWrapper">
   <header class="nav header">
     <div class="mx-1 menuGamburger mx-4">
@@ -251,296 +251,428 @@
     </nav>
   </aside>
   <main class="mainContent mt-5">
-    <!--<h2 class="page-header text-center py-5">Добавить счет</h2>-->
-    <form action="GET" method="get" class="addCheckForm">
-      <h2 class="page-header text-center pt-5 pb-5">Сформировать счет</h2>
-      <fieldset class="FormGroup1 mb-4">
-
-        <div class="form-group form-row">
-          <label for="storeID" class="col-sm-3 col-form-label">Магазин</label>
-          <div class="col-sm-9 parentSelect">
-            <select class="form-control select" name="storeID" id="storeID">
-              <option value="2" selected>Демо магазин для тестирования</option>
-            </select>
+    <h2 class="page-header text-center py-5">Список касс</h2>
+    <section class="companyBlock" id="accordion">
+        <div class="row mt-1">
+          <div class="col-sm-5 col-md-4 col-xl-3 mr-5 mb-5">
+            <h3 class="">Кассы</h3>
+          </div>
+          <div class="col-sm-4 col-md-3 col-xl-3">
+            <a href="addfiscal.html" class="btn btn-add mr-5 mb-5">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus-circle" width="20" height="20" class="svg-inline--fa fa-plus-circle fa-w-16 pr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"></path></svg>
+              Добавить кассу
+            </a>
           </div>
         </div>
-
-        <div class="form-group form-row">
-          <label for="saleCharge" class="col-sm-3 col-form-label">Признак расчета</label>
-          <div class="col-sm-9 parentSelect">
-            <select class="form-control select" name="saleCharge" id="saleCharge">
-              <option value="SALE" selected>Приход</option>
-              <option value="SALE_RETURN">Возврат прихода</option>
-              <option value="CHARGE">Расход</option>
-              <option value="CHARGE_RETURN">Возврат расхода</option>
-            </select>
-          </div>
-        </div>
-
-        <!--<div class="form-group form-row">
-          <label for="invoice" class="col-sm-3 col-form-label">Создать ссылку на оплату</label>
-          <div class="col-sm-9 parentSelect">
-            <select class="form-control select" name="saleCharge" id="invoice">
-              <option value="No" selected>Нет</option>
-              <option value="tinkoff">Тинькоф</option>
-              <option value="yandex">Яндекс касса</option>
-            </select>
-          </div>
-        </div>-->
-
-        <!--<div class="form-group" id="isElectronic_field">
-          <div class="form-check">
-            <input class="form-check-input" name="isElectronic" type="checkbox" id="isElectronic">
-            <label class="form-check-label" for="isElectronic">
-              Электронный чек
-            </label>
-          </div>
-        </div>-->
-      </fieldset>
-
-      <fieldset class="FormGroup2 mb-4">
-        <!--<legend class="pl-4">Данные о покупателе</legend>-->
-        <h3 class="pl-4 pb-4">Данные о покупателе</h3>
-
-        <div class="form-row">
-          <div class="col-md-6 mb-4 inp-group">
-            <input type="text" class="form-control inp-form" id="customer_name" placeholder="ФИО или паспортные данные"
-                   value=""
-                   name="customer.name" >
-            <label class="label-form" for="customer_name">Данные покупателя</label>
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 mb-4 inp-group">
-            <input type="text" class="form-control inp-form" id="customer_taxNumber" placeholder="" value=""
-                   name="customer.taxNumber" maxlength="10" pattern="(^$)|([0-9]{10})">
-            <label class="label-form" for="customer_taxNumber">ИНН покупателя</label>
-            <div class="valid-tooltip"></div>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col-md-6 mb-4 inp-group">
-            <input type="tel" class="form-control inp-form" id="customer_phone" placeholder="+71112223344" value=""
-                   name="customer.phone" pattern="(^$)|([\+]7[0-9]{10})">
-            <label class="label-form" for="customer_phone">Телефон </label>
-            <div class="valid-tooltip"></div>
-          </div>
-          <div class="col-md-6 mb-4 inp-group">
-            <input type="email" class="form-control inp-form" id="customer_email" placeholder="" value=""
-                   name="customer.email" pattern="(^$)|([a-z0-9\.@-]+@[a-z0-9\.@-]+)">
-            <label class="label-form" for="customer_email">Email покупателя</label>
-            <div class="valid-tooltip">Введите корретный email без заглавных символов. Пример: test-one@indextest.ru</div>
-          </div>
-        </div>
-      </fieldset>
-
-      <fieldset class="FormGroupProduct mb-4">
-        <!--<legend class="pl-4">Товарные позиции</legend>-->
-        <h3 class="pl-4 pb-4">Товарные позиции</h3>
-        <div class="btnAddPosition">
-          <button type="button" class="btn btn-add" name="action" value="add.item">Добавить</button>
-        </div>
-
-        <div class="mb-5 position_0">
-          <div class="form-group goods">
-            <div class="form-row">
-              <div class="col-md-12 mb-4 inp-group">
-                <input type="text" class="form-control inp-form" id="items_0_name" name="items[0].name" value="товар"
-                       maxlength="128" placeholder="Введите название товара/услуги" required>
-                <label class="label-form" for="items_0_name">Наименование</label>
-                <div class="valid-tooltip">Укажите название товарной позиции</div>
+        <div class="questItem mb-4">
+          <div class="d-flex align-items-center questHeaderWrapper">
+            <div class="flex-grow-1 questHeader" data-toggle="collapse" data-target="#collapse_1"
+                 aria-expanded="true" aria-controls="collapse_1">
+              <div class="row">
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span>ЗН ККТ:</span>
+                    <span>17000574</span>
+                  </p>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span>РН ККТ:</span>
+                    <span>0000000000045384</span>
+                  </p>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span class="pr-3">Статус ККТ:</span>
+                    <span data-js-id="status-img">
+                      <img src="img/wifi.png" alt="Касса в сети">
+                    </span>
+                  </p>
+                </div>
+                <!--<div class="col-md-1 text-center">-->
+                <!--<p>-->
+                <!--<span class="fas fa-pause-circle pauseIcon" data-toggle="tooltip" data-placement="top"-->
+                <!--title="Остановить кассу"></span>-->
+                <!--</p>-->
+                <!--</div>-->
               </div>
             </div>
-            <div class="form-row">
-              <div class="col-md-4 mb-4 inp-group">
-                <input type="text" class="form-control inp-form js-price" id="items_0_price" name="items[0].name"
-                       value="1.00" pattern="^\d{1,8}(?:\.\d{2})?$" required>
-                <label class="label-form" for="items_0_price">Цена, руб</label>
-                <div class="valid-tooltip">Укажите цену в рублях</div>
-              </div>
-              <div class="col-md-4 mb-4 inp-group">
-                <input type="number" class="form-control inp-form js-count" id="items_0_amount" value="1"
-                       min="1">
-                <label class="label-form" for="items_0_amount">Количество</label>
-                <div class="valid-tooltip">Укажите количество больше нуля</div>
-              </div>
-              <div class="col-md-4 mb-4 inp-group parentSelect">
-                <select class="form-control inp-form select" id="items_0_vatType" name="items[0].vatType">
-                  <option value="VAT_NONE" selected>Без НДС</option>
-                  <option value="VAT_0PCT">НДС 0%</option>
-                  <option value="VAT_10PCT">НДС 10%</option>
-                  <option value="VAT_110PCT">НДС 10/110</option>
-                  <option value="VAT_20PCT">НДС 20%</option>
-                  <option value="VAT_120PCT">НДС 20/120</option>
-                </select>
-                <label class="label-form" for="items_0_vatType">НДС</label>
-              </div>
+            <div class="text-center">
+              <form action="/admin/turnOn/reg" method="POST" class="">
+                <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
+                <button type="submit" value="submit" class="btnPlay" data-toggle="tooltip" data-placement="top"
+                        title="Включить кассу">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play-circle"  class="svg-inline--fa fa-play-circle fa-w-16 playIcon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"></path></svg>
+                </button>
+              </form>
             </div>
-
-            <div class="form-row">
-              <div class="col-md-6 mb-4 inp-group parentSelect">
-                <select class="form-control inp-form select" id="items_0_paymentObject" name="items[0].paymentObject">
-                  <option value="COMMODITY" selected>Товар</option>
-                  <option value="EXCISE">Подакцизный товар</option>
-                  <option value="JOB">Работа</option>
-                  <option value="SERVICE">Услуга</option>
-                  <option value="GAMBLING_BET">Ставка азартной игры</option>
-                  <option value="GAMBLING_PRIZE">Выигрыш азартной игры</option>
-                  <option value="LOTTERY">Лотерейный билет</option>
-                  <option value="LOTTERY_PRIZE">Выигрыш лотереи</option>
-                  <option value="INTELLECTUAL_ACTIVITY">Интеллектуальная собственность</option>
-                  <option value="PAYMENT">Платёж</option>
-                  <option value="AGENT_COMMISSION">Вознаграждение агента</option>
-                  <option value="COMPOSITE">Составной предмет расчёта</option>
-                  <option value="ANOTHER">Иной предмет расчёта</option>
-                  <option value="PROPERTY_RIGHT">Имущественное право</option>
-                  <option value="NON_OPERATING_GAIN">Внереализационный доход</option>
-                  <option value="INSURANCE_PREMIUM">Страховые взносы</option>
-                  <option value="SALES_TAX">Торговый сбор</option>
-                  <option value="RESORT_FEE">Курортный сбор</option>
-                </select>
-                <label class="label-form" for="items_0_paymentObject">Предмет расчета</label>
-              </div>
-              <div class="col-md-6 mb-4 inp-group parentSelect">
-                <select class="form-control inp-form select" id="items_0_paymentMethod" name="items[0].paymentMethod">
-                  <option value="FULL_PAYMENT" selected>Полный расчёт</option>
-                  <option value="FULL_PREPAYMENT">Полная предоплата</option>
-                  <option value="PREPAYMENT">Предоплата</option>
-                  <option value="ADVANCE">Аванс</option>
-                  <option value="PARTIAL_PAYMENT">Частичная оплата и кредит</option>
-                  <option value="CREDIT">Передача в кредит</option>
-                  <option value="CREDIT_PAYMENT">Оплата кредит</option>
-                </select>
-                <label class="label-form" for="items_0_paymentMethod">Признак расчета</label>
-              </div>
-
-            </div>
-
-            <!--<p>Являетесь ли вы платежным агентом?</p>
-
-            <div class="form-group form-row js-isAgent">
-              <div class="form-check col-sm-2 mb-2 js-isAgentFalse" id="isAgentFalse_0">
-                <input class="form-check-input js-AgentFalse" type="radio" id="AgentFalse_0" name="agent" checked>
-                <label class="form-check-label" for="AgentFalse_0">
-                  <span></span>Нет</label>
-              </div>
-              <div class="form-check col-sm-2 mb-2 js-isAgentTrue" id="isAgentTrue_0">
-                <input class="form-check-input js-AgentTrue" type="radio" id="AgentTrue_0" name="agent">
-                <label class="form-check-label" for="AgentTrue_0">
-                  <span></span>Да</label>
-              </div>
-            </div>-->
-
           </div>
-
-          <!--<fieldset class="form-group agentGoods visuallyHidden">
-            &lt;!&ndash;d-none  disabled visuallyHidden&ndash;&gt;
-            <div class="form-row mb-3 pr-1 pl-1 inp-group parentSelect">
-              <select class="form-control inp-form select" id="items_0_agentType" name="items[0].agentType">
-                <option value="PAYING_AGENT" selected>платежный агент</option>
-                <option value="PAYING_SUBAGENT">платежный субагент</option>
-                <option value="BANK_PAYING_AGENT">Банковский платежный агент</option>
-                <option value="BANK_PAYING_SUBAGENT">Банковский платежный субагент</option>
-                <option value="ATTORNEY">Поверенный</option>
-                <option value="COMMISSION_AGENT">Комиссионер</option>
-                <option value="ANOTHER">Прочие агенты</option>
-              </select>
-              <label class="label-form" for="items_0_agentType">Тип агента</label>
-            </div>
-            &lt;!&ndash; <div class="form-row">
-               <div class="col-md-6 mb-3 inp-group">
-                 <input type="text" class="form-control inp-form" id="items_0_agentOperation" name="items[0].agentOperation"
-                        placeholder="" value="" >
-                 <label class="label-form" for="items_0_agentOperation">Операция агента</label>
-                 <div class="valid-tooltip"></div>
-               </div>
-               <div class="col-md-6 mb-3 inp-group">
-                 <input type="tel" class="form-control inp-form" id="items_0_agentPhones" name="items[0].agentPhones"
-                        placeholder="+71112223344" value="" pattern="([\+]7[0-9]{10}[,]*)+">
-                 <label class="label-form" for="items_0_agentPhones">Телефоны агента</label>
-                 <div class="valid-tooltip"></div>
-               </div>
-             </div>
-
-             <div class="form-row">
-               <div class="col-md-6 mb-3 inp-group">
-                 <input type="text" class="form-control inp-form" id="items_0_agentName" name="items[0].agentName" placeholder=""
-                        value="">
-                 <label class="label-form" for="items_0_agentName">Наименование агента</label>
-                 <div class="valid-tooltip"></div>
-               </div>
-               <div class="col-md-6 mb-3 inp-group">
-                 <input type="text" class="form-control inp-form" id="items_0_agentAddress" name="items[0].agentAddress" placeholder=""
-                        value="">
-                 <label class="label-form" for="items_0_agentAddress">Адрес агента</label>
-                 <div class="valid-tooltip"></div>
-               </div>
-             </div>&ndash;&gt;
-
-            <div class="form-row">
-              &lt;!&ndash; <div class="col-md-6 mb-3 inp-group">
-                <input type="text" class="form-control inp-form" id="items_0_agentTaxNumber"
-                       name="items[0].agentTaxNumber"
-                       pattern="(^$)|([0-9]{10})">
-                <label class="label-form" for="items_0_agentTaxNumber">ИНН агента</label>
-                <div class="valid-tooltip"></div>
-              </div> &ndash;&gt;
-              <div class="col-md-12 mb-3 inp-group">
-                <input type="text" class="form-control inp-form inp-required" id="items_0_supplierName" name="items[0].supplierName"
-                       placeholder="">
-                <label class="label-form" for="items_0_supplierName">Наименование поставщика <span class="badge label-required">*</span></label>
-                <div class="valid-tooltip"></div>
+          <div id="collapse_1" class="collapse" aria-labelledby="questHeader" data-parent="#accordion"
+               data-js-id="container-store">
+            <div class="p-4 ">
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Идентификатор ФР:</p>
+                <p class="col-md-6 col-xl-8">1fa01ec7-5bcd-4302-bfa2-f3f2f4092531</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Модель:</p>
+                <p class="col-md-6 col-xl-8">Умка 01 ФА</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">ЗН ККТ:</p>
+                <p class="col-md-6 col-xl-8" data-class="znFiscal">17000574</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">РН ККТ:</p>
+                <p class="col-md-6 col-xl-8">0000000000045384</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">ФН:</p>
+                <p class="col-md-6 col-xl-8">9999078900012492</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Название ОФД:</p>
+                <p class="col-md-6 col-xl-8">ООО "ПЕТЕР-СЕРВИС Спецтехнологии"</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Провайдер:</p>
+                <p class="col-md-6 col-xl-8">FRWS</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Состояние:</p>
+                <p class="col-md-6 col-xl-8">TURNED_OFF</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Статус ФР:</p>
+                <p class="col-md-6 col-xl-8" data-js-id="status">Давно не было связи</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Последнее обновление:</p>
+                <p class="col-md-6 col-xl-8">2019-09-07T05:09:25.958Z</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3 pb-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Код состояния ФР:</p>
+                <p class="col-md-6 col-xl-8">3.0</p>
+              </div>
+              <div class="row mt-4">
+                <form action="" method="POST" class="col-sm-4 col-md-3 col-lg-4">
+                  <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
+                  <button type="submit" value="submit" class="btn btn-remove">
+                    <span class="fas fa-times-circle pr-1"></span>
+                    Удалить кассу
+                  </button>
+                </form>
               </div>
             </div>
-
-            <div class="form-row">
-              <div class="col-md-6 mb-3 inp-group">
-                <input type="tel" class="form-control inp-form inp-required" id="items_0_supplierPhones" name="items[0].supplierPhones"
-                       placeholder="+71112223344" value="" pattern="(^$)|([\+]7[0-9]{10}[,]*)+">
-                <label class="label-form" for="items_0_supplierPhones">Телефон поставщика <span class="badge label-required">*</span></label>
-                <div class="valid-tooltip"></div>
-              </div>
-              <div class="col-md-6 mb-3 inp-group">
-                <input type="text" class="form-control inp-form inp-required" id="items_0_supplierTaxNumber"
-                       name="items[0].supplierTaxNumber" maxlength="10"
-                       pattern="(^$)|([0-9]{10})">
-                <label class="label-form" for="items_0_supplierTaxNumber">ИНН Поставщика
-                  <span class="badge label-required">*</span>
-                </label>
-                <div class="valid-tooltip"></div>
-              </div>
-            </div>
-          </fieldset>-->
-
-          <!--
-          <div class="col-sm-12 text-right">
-            <button type="button" class="btn btn-remove mt-1 mb-3" name="action" value="remove.item.0">Удалить</button>
-          </div>
-          -->
-        </div>
-      </fieldset>
-
-      <fieldset class="FormGroup4 mb-5">
-        <!--<legend class="pl-4">Оплата</legend>-->
-        <h3 class="pl-4 pb-4">Оплата</h3>
-        <div class="form-group form-row">
-          <label for="invoice" class="col-sm-3 col-form-label pl-4">Вид платежа</label>
-          <div class="col-sm-9 parentSelect">
-            <select class="form-control select" name="saleCharge" id="invoice">
-              <option value="tinkoff">Тинькоф</option>
-              <option value="yandex" selected>Яндекс касса</option>
-            </select>
           </div>
         </div>
-
-      </fieldset>
-
-      <div class="form-group mb-5">
-        <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Создать чек</button>
-        <a href="orders.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
-      </div>
-
-    </form>
+        <div class="questItem mb-4">
+          <div class="d-flex align-items-center questHeaderWrapper">
+            <div class="flex-grow-1 questHeader" data-toggle="collapse" data-target="#collapse_2"
+                 aria-expanded="true" aria-controls="collapse_2">
+              <div class="row">
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span>ЗН ККТ:</span>
+                    <span>17000574</span>
+                  </p>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span>РН ККТ:</span>
+                    <span>0000000000045384</span>
+                  </p>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span class="pr-3">Статус ККТ:</span>
+                    <span data-js-id="status-img">
+                      <img src="img/no-wifi.png" alt="Нет связи с кассой" width="24" height="24">
+                    </span>
+                  </p>
+                </div>
+                <!--<div class="col-md-1 text-center">-->
+                <!--<p>-->
+                <!--<span class="fas fa-pause-circle pauseIcon" data-toggle="tooltip" data-placement="top"-->
+                <!--title="Остановить кассу"></span>-->
+                <!--</p>-->
+                <!--</div>-->
+              </div>
+            </div>
+            <div class="text-center">
+              <form action="/admin/turnOn/reg" method="POST" class="">
+                <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
+                <button type="submit" value="submit" class="btnPause" data-toggle="tooltip" data-placement="top" title="Остановить кассу">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pause-circle" class="svg-inline--fa fa-pause-circle fa-w-16 pauseIcon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-16 328c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v160zm112 0c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v160z"></path></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div id="collapse_2" class="collapse" aria-labelledby="questHeader" data-parent="#accordion" data-js-id="container-store">
+            <div class="p-4">
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Идентификатор ФР:</p>
+                <p class="col-md-6 col-xl-8">1fa01ec7-5bcd-4302-bfa2-f3f2f4092531</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Модель:</p>
+                <p class="col-md-6 col-xl-8">Умка 01 ФА</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">ЗН ККТ:</p>
+                <p class="col-md-6 col-xl-8" data-class="znFiscal">17000222</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">РН ККТ:</p>
+                <p class="col-md-6 col-xl-8">0000000000045384</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">ФН:</p>
+                <p class="col-md-6 col-xl-8">9999078900012492</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Название ОФД:</p>
+                <p class="col-md-6 col-xl-8">ООО "ПЕТЕР-СЕРВИС Спецтехнологии"</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Провайдер:</p>
+                <p class="col-md-6 col-xl-8">FRWS</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Состояние:</p>
+                <p class="col-md-6 col-xl-8">TURNED_OFF</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Статус ФР:</p>
+                <p class="col-md-6 col-xl-8" data-js-id="status">Давно не было связи</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Последнее обновление:</p>
+                <p class="col-md-6 col-xl-8">2019-09-07T05:09:25.958Z</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3 pb-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Код состояния ФР:</p>
+                <p class="col-md-6 col-xl-8">3.0</p>
+              </div>
+              <div class="row mt-4">
+                <form action="#" method="POST" class="col-sm-4 col-md-3 col-lg-4">
+                  <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
+                  <button type="submit" value="submit" class="btn btn-remove">
+                    <span class="fas fa-times-circle pr-1"></span>
+                    Удалить кассу
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="questItem mb-4">
+          <div class="d-flex align-items-center questHeaderWrapper">
+            <div class="flex-grow-1 questHeader" data-toggle="collapse" data-target="#collapse_3"
+                 aria-expanded="true" aria-controls="collapse_3">
+              <div class="row">
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span>ЗН ККТ:</span>
+                    <span>17000574</span>
+                  </p>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span>РН ККТ:</span>
+                    <span>0000000000045384</span>
+                  </p>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span class="pr-3">Статус ККТ:</span>
+                    <span data-js-id="status-img">
+                      <img src="img/no-wifi.png" alt="Нет связи с кассой">
+                    </span>
+                  </p>
+                </div>
+                <!--<div class="col-md-1 text-center">-->
+                <!--<p>-->
+                <!--<span class="fas fa-pause-circle pauseIcon" data-toggle="tooltip" data-placement="top"-->
+                <!--title="Остановить кассу"></span>-->
+                <!--</p>-->
+                <!--</div>-->
+              </div>
+            </div>
+            <div class="text-center">
+              <form action="/admin/turnOn/reg" method="POST" class="">
+                <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
+                <button type="submit" value="submit" class="btnPause" data-toggle="tooltip" data-placement="top" title="Остановить кассу">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pause-circle"
+                       class="svg-inline--fa fa-pause-circle fa-w-16 pauseIcon" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-16 328c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v160zm112 0c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v160z"></path></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div id="collapse_3" class="collapse" aria-labelledby="questHeader" data-parent="#accordion"
+               data-js-id="container-store">
+            <div class="p-4">
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Идентификатор ФР:</p>
+                <p class="col-md-6 col-xl-8">1fa01ec7-5bcd-4302-bfa2-f3f2f4092531</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Модель:</p>
+                <p class="col-md-6 col-xl-8">Умка 01 ФА</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">ЗН ККТ:</p>
+                <p class="col-md-6 col-xl-8" data-class="znFiscal">17000111</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">РН ККТ:</p>
+                <p class="col-md-6 col-xl-8">0000000000045384</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">ФН:</p>
+                <p class="col-md-6 col-xl-8">9999078900012492</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Название ОФД:</p>
+                <p class="col-md-6 col-xl-8">ООО "ПЕТЕР-СЕРВИС Спецтехнологии"</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Провайдер:</p>
+                <p class="col-md-6 col-xl-8">FRWS</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Состояние:</p>
+                <p class="col-md-6 col-xl-8">TURNED_OFF</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Статус ФР:</p>
+                <p class="col-md-6 col-xl-8" data-js-id="status">Ок</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Последнее обновление:</p>
+                <p class="col-md-6 col-xl-8">2019-09-07T05:09:25.958Z</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3 pb-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Код состояния ФР:</p>
+                <p class="col-md-6 col-xl-8">3.0</p>
+              </div>
+              <div class="row mt-4">
+                <form action="#" method="POST" class="col-sm-4 col-md-3 col-lg-4">
+                  <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
+                  <button type="submit" value="submit" class="btn btn-remove">
+                    <span class="fas fa-times-circle pr-1"></span>
+                    Удалить кассу
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="questItem mb-4">
+          <div class="d-flex align-items-center questHeaderWrapper">
+            <div class="flex-grow-1 questHeader" data-toggle="collapse" data-target="#collapse_4"
+                 aria-expanded="true" aria-controls="collapse_4">
+              <div class="row">
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span>ЗН ККТ:</span>
+                    <span>17000574</span>
+                  </p>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span>РН ККТ:</span>
+                    <span>0000000000045384</span>
+                  </p>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span class="pr-3">Статус ККТ:</span>
+                    <span data-js-id="status-img">
+                      <img src="img/no-wifi.png" alt="Нет связи с кассой">
+                    </span>
+                  </p>
+                </div>
+                <!--<div class="col-md-1 text-center">-->
+                <!--<p>-->
+                <!--<span class="fas fa-pause-circle pauseIcon" data-toggle="tooltip" data-placement="top"-->
+                <!--title="Остановить кассу"></span>-->
+                <!--</p>-->
+                <!--</div>-->
+              </div>
+            </div>
+            <div class="text-center">
+              <form action="/admin/turnOn/reg" method="POST" class="">
+                <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
+                <button type="submit" value="submit" class="btnPause" data-toggle="tooltip" data-placement="top" title="Остановить кассу">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pause-circle"
+                       class="svg-inline--fa fa-pause-circle fa-w-16 pauseIcon" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-16 328c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v160zm112 0c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v160z"></path></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div id="collapse_4" class="collapse" aria-labelledby="questHeader" data-parent="#accordion"
+               data-js-id="container-store">
+            <div class="p-4">
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Идентификатор ФР:</p>
+                <p class="col-md-6 col-xl-8">1fa01ec7-5bcd-4302-bfa2-f3f2f4092531</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Модель:</p>
+                <p class="col-md-6 col-xl-8">Умка 01 ФА</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">ЗН ККТ:</p>
+                <p class="col-md-6 col-xl-8" data-class="znFiscal">17000574</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">РН ККТ:</p>
+                <p class="col-md-6 col-xl-8">0000000000045384</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">ФН:</p>
+                <p class="col-md-6 col-xl-8">9999078900012492</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Название ОФД:</p>
+                <p class="col-md-6 col-xl-8">ООО "ПЕТЕР-СЕРВИС Спецтехнологии"</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Провайдер:</p>
+                <p class="col-md-6 col-xl-8">FRWS</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Состояние:</p>
+                <p class="col-md-6 col-xl-8">TURNED_OFF</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Статус ФР:</p>
+                <p class="col-md-6 col-xl-8" data-js-id="status">ОК</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Последнее обновление:</p>
+                <p class="col-md-6 col-xl-8">2019-09-07T05:09:25.958Z</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3 pb-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Код состояния ФР:</p>
+                <p class="col-md-6 col-xl-8">3.0</p>
+              </div>
+              <div class="row mt-4">
+                <form action="#" method="POST" class="col-sm-4 col-md-3 col-lg-4">
+                  <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
+                  <button type="submit" value="submit" class="btn btn-remove">
+                    <span class="fas fa-times-circle pr-1"></span>
+                    Удалить кассу
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
   </main>
   <footer class="nav mainFooter">
     <div class="row footerWrapper">
