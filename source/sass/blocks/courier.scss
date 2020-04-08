@@ -1,0 +1,19 @@
+.paidType {
+  margin-bottom: 0;
+  
+  line-height: 0.9;
+}
+
+.paidType p {
+  margin-bottom: 0;
+}
+
+.paidType .paidStatus {
+  color: $status;
+}
+
+.paidType .paidStatus small {
+  font-size: 70%;
+
+  //background-color: $bg-status;
+}
