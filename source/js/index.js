@@ -1,18 +1,17 @@
 (function () {
     let countPosition = 0;
-    let $checkGroupPosition = document.querySelector('.FormGroupProduct');
+    const $checkGroupPosition = document.querySelector('.FormGroupProduct');
 
 
     if (!$checkGroupPosition) {
         throw new Error("Нет функции добавления товарных позиций!");
     }
 
-    $checkGroupPosition.addEventListener("click", (evt) => {
-        let $elem = evt.target;
-        let template = document.querySelector('#checkItems').content;
-        let clone = document.importNode(template, true);
-        //let checkGroupPosition = document.querySelector('.FormGroupProduct');
-
+    const renderPosition = (evt) => {
+        const $elem = evt.target;
+        const template = document.querySelector('#checkItems').content;
+        const clone = document.importNode(template, true);
+        
 
         if ($elem.classList.contains("btn-add")) {
             countPosition += 1;
@@ -62,13 +61,17 @@
             let elemIsAgentTrue_count = $(clone).find("#isAgentTrue_count").attr("id", isAgentTrue_count);
             //console.log(elemIsAgentTrue_count);
 
+            let AgentAttrName_count = "agent_" + countPosition;
+
             let AgentFalse_count = "AgentFalse_" + countPosition;
             let elemAgentFalse_count = $(clone).find("#AgentFalse_count").attr("id", AgentFalse_count);
+            let AgentFalseAttrName_count = elemAgentFalse_count.attr("name", AgentAttrName_count);
             let label_elemAgentFalse = $(clone).find("[for='AgentFalse_count']").attr("for", AgentFalse_count);
-            //console.log(elemAgentFalse_count);
+            //console.log(AgentFalseAttrName_count);
 
             let AgentTrue_count = "AgentTrue_" + countPosition;
             let elemAgentTrue_count = $(clone).find("#AgentTrue_count").attr("id", AgentTrue_count);
+            let AgentTrueAttrName_count = elemAgentTrue_count.attr("name", AgentAttrName_count);
             let label_elemAgentTrue = $(clone).find("[for='AgentTrue_count']").attr("for", AgentTrue_count);
             //console.log(elemAgentTrue_count);
 
@@ -106,37 +109,58 @@
             let elemItems_btnRemove = $(clone).find(".btn-remove").attr("value", items_count_btnRemove);
             //console.log(elemItems_btnRemove);
 
+
             $checkGroupPosition.append(clone);
 
             checkSumm();
+        };
+    };
 
-        } else if ( ($elem.tagName === 'BUTTON') && ($elem.classList.contains("btn-remove")) ) {
+    const removePosition = (evt) => {
+        const $elem = evt.target;
+
+        if ( ($elem.tagName === 'BUTTON') && ($elem.classList.contains("btn-remove")) ) {
             let isRemoveFiscal = confirm('Удалить товарную позицию?');
             if (!isRemoveFiscal) {
-                evt.preventDefault();
+                evt.preventDefault(); 
                 return;
-            }
-            $elem.parentNode.parentNode.remove();
+            };
+            
+            const btnValue = $elem.value.slice(12);
+            const btnValueCount = parseInt(btnValue);
+            const $elemRemove = $checkGroupPosition.querySelector(`div[data-position].position_${btnValueCount}`);
+            $elemRemove.remove();
             countPosition -= 1;
             checkSumm();
-        } else if ($elem.classList.contains("js-AgentTrue")) {
-            if ($elem.parentNode.childNodes[1].checked === true) {
-                $elem.parentNode.parentNode.parentNode.nextSibling.nextSibling.classList.remove("visuallyHidden");
-            } else {
-                $elem.parentNode.parentNode.parentNode.nextSibling.nextSibling.classList.add("visuallyHidden");
+        };
+    };
+
+    const toggleAgentCheckbox = (evt) => {
+        const $elem = evt.target;
+        
+        if ($elem.classList.contains("js-AgentTrue")) {
+            const checkboxIdforTrue = $elem.id.slice(10);
+            const checkboxIdCountTrue = parseInt(checkboxIdforTrue);
+            const $elemParent = $checkGroupPosition.querySelector(`div.position_${checkboxIdCountTrue}`);
+            const $elemToggle = $elemParent.querySelector(`fieldset.agentGoods`);
+
+            if ($elem.checked === true) {
+                $elemToggle.classList.remove("visuallyHidden");                
             }
+
         } else if ($elem.classList.contains("js-AgentFalse")) {
-            if ($elem.parentNode.childNodes[1].checked === true) {
-                $elem.parentNode.parentNode.parentNode.nextSibling.nextSibling.classList.add("visuallyHidden");
-            } else {
-                $elem.parentNode.parentNode.parentNode.nextSibling.nextSibling.classList.remove("visuallyHidden");
+            const checkboxIdforFalse = $elem.id.slice(11);
+            const checkboxIdCountFalse = parseInt(checkboxIdforFalse);
+            const $elemParent = $checkGroupPosition.querySelector(`div.position_${checkboxIdCountFalse}`);
+            const $elemToggle = $elemParent.querySelector(`fieldset.agentGoods`);
+
+            if ($elem.checked === true) {
+                $elemToggle.classList.add("visuallyHidden");
             }
         }
-    });
+    };
 
-    $checkGroupPosition.addEventListener("change", checkSumm);
-
-    function checkSumm () {
+    const checkSumm = () => {
         let priceInput = jQuery('.js-price');
         let countInput = jQuery('.js-count');
         let totalSumElem = jQuery('#payments_0_amount');
@@ -157,7 +181,16 @@
 
         }
         totalSumElem.val(totalSum);
-    }
+    };
+
+    $checkGroupPosition.addEventListener("click", function(evt) {
+        renderPosition(evt);
+        removePosition(evt);
+        toggleAgentCheckbox(evt);
+    });
+        
+
+    $checkGroupPosition.addEventListener("change", checkSumm);
 
 })();
 
