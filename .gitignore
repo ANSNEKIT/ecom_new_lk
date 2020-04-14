@@ -11,4 +11,6 @@ node_modules/
 build/
 npm-debug.*
 source/css/
+style.css
+style.min.css
 Thumbs.db
