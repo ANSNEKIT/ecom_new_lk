@@ -256,7 +256,7 @@
       <fieldset class="FormGroup1 mb-4">
 
         <div class="form-row">
-          <div class="col-md-12 inp-group mb-4 parentSelect">
+          <div class="col-md-6 inp-group mb-4 parentSelect">
             <select id="firmID" name="firmID" class="form-control inp-form inp-required select">
               <option value="dd96ef75-fc76-4ca3-bb57-61225a678182">ООО "Центр нейротехнологий сна и бодрствования"</option>
               <option value="fa16f5ed-d366-4298-b2e6-6b43944d329a">БЛЭК МАШРУМ</option>
@@ -426,16 +426,17 @@
             <label class="label-form" for="firmID">Компания</label>
             <div class="invalid-feedback">Обязательное поле</div>
           </div>
+
+          <div class="col-md-6 inp-group mb-4">
+            <input type="text" id="customer" class="form-control inp-form inp-required" name="position" value=""
+                   placeholder="ФИО плательщика" pattern="[^0-9]" required>
+            <label class="label-form" for="customer">ФИО плательщика</label>
+            <div class="invalid-feedback">Обязательное поле</div>
+          </div>
         </div>
 
         <div class="form-row">
-          <div class="col-md-6 inp-group mb-4">
-            <input type="text" id="amount" class="form-control inp-form inp-required" name="amount" value=""
-                   placeholder="1234.00" pattern="[0-9]{1,8}\.[0-9]{2}" format="######.##" required>
-            <label class="label-form" for="amount">Сумма</label>
-            <div class="invalid-feedback">Разделитель точка. Пример 1.00</div>
-          </div>
-          <div class="col-md-6 inp-group mb-4 parentSelect">
+          <div class="col-md-4 inp-group mb-4 parentSelect">
             <select name="rateName" id="rateName" class="form-control inp-form inp-required select" required>
               <option value="Базовый">Базовый</option>
               <option value="Месяц">Месяц</option>
@@ -445,16 +446,30 @@
             <label class="label-form" for="rateName">Тариф</label>
             <div class="invalid-feedback">Обязательное поле</div>
           </div>
-        </div>
 
-        <div class="form-row">
-          <div class="col-md-12 inp-group mb-4">
-            <input type="text" id="customer" class="form-control inp-form inp-required" name="position" value=""
-                   placeholder="ФИО плательщика" pattern="[^0-9]" required>
-            <label class="label-form" for="customer">ФИО плательщика</label>
+          <div class="col-md-4 inp-group mb-4">
+            <!-- В старом шаблоне этих данных нет, поле name, оставляю пустыми -->
+            <select name="" id="rateAmount" class="form-control inp-form inp-required select" required>
+              <option value="Базовый">6000</option>
+              <option value="Месяц">2500</option>
+              <option value="Квартал">6000</option>
+              <option value="Год">20400</option>
+            </select>
+            <label class="label-form" for="rateAmount">Цена тарифа</label>
             <div class="invalid-feedback">Обязательное поле</div>
           </div>
+
+          <div class="col-md-4 inp-group mb-4">
+            <input type="text" id="amount" class="form-control inp-form inp-required" name="amount" value=""
+                   placeholder="1234.00" pattern="[0-9]{1,8}\.[0-9]{2}" format="######.##" required>
+            <label class="label-form" for="amount">Сумма</label>
+            <div class="invalid-feedback">Разделитель точка. Пример 1.00</div>
+          </div>
         </div>
+
+        <!-- <div class="form-row">
+          
+        </div> -->
 
         <div class="form-row">
           <div class="col-md-4 inp-group mb-4">
