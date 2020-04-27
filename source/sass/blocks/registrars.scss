@@ -1,4 +1,29 @@
-.page-registrars .questItem {
+.registrars {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+  padding: 2rem;
+
+  box-shadow: 0 0.5rem 1rem 0 $shadow-global;
+  margin-bottom: 3rem;
+
+  @media (max-width: 992px) {
+    padding: 2rem;
+  }
+
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.registrars p {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+
+.registrars .questItem {
     align-items: center;
   
     border: none;
@@ -8,15 +33,15 @@
     //padding: 1rem 0;
   }
   
-  .page-registrars .questHeaderWrapper {
+  .registrars .questHeaderWrapper {
     border-bottom: 1px solid $table-bd;
   }
   
-  .page-registrars .questHeader {
+  .registrars .questHeader {
     background-color: #fff;
   }
   
-  .page-registrars .btnPause, .page-registrars .btnPlay {
+  .registrars .btnPause, .registrars .btnPlay {
     padding: 0;
     margin: 0;
   

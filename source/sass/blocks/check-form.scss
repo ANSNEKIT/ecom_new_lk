@@ -35,7 +35,7 @@
   position: relative;
 }
 
-.addCheckForm .label-form {
+.label-form {
   position: absolute;
   top: -9px;
   left: 20px;
@@ -51,7 +51,7 @@
   transition: all 0.3s ease 0s;
 }
 
-.addCheckForm .inp-form:focus + .label-form {
+.inp-form:focus + .label-form {
   padding: 0 5px;
 }
 
