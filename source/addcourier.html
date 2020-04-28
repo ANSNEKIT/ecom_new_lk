@@ -270,7 +270,7 @@
               </div>
               <div class="col-md-4 mb-4 inp-group">
                 <input type="text" class="form-control inp-form js-count" id="items_0_character">
-                <label class="label-form" for="items_0_character">Характеристкика</label>
+                <label class="label-form" for="items_0_character">Код номенклатуры</label>
               </div>
               <div class="col-md-4 mb-4 inp-group">
                 <input type="text" class="form-control inp-form js-count" id="items_0_courier" 
@@ -307,6 +307,71 @@
                 <label class="label-form" for="items_0_discount">Скидка, %</label>
                 <div class="valid-tooltip">Укажите скидку товара</div>
               </div>
+      </fieldset>
+
+      <fieldset class="FormGroupProduct mb-4">
+        <h3 class="pl-4 pb-4">Данные покупателя</h3>
+        
+        <div class="form-group goods mb-5">
+          <div class="form-row">
+            <div class="col-md-4 mb-4 inp-group">
+              <input type="text" class="form-control inp-form" id="bayer-surname" name="" value=""
+                      maxlength="128" placeholder="Иванов">
+              <label class="label-form" for="bayer-surname">Фамилия</label>
+              <div class="valid-tooltip">Укажите фамилию покупателя</div>
+            </div>
+            <div class="col-md-4 mb-4 inp-group">
+              <input type="text" class="form-control inp-form" id="bayer-name" name="" value=""
+                      maxlength="128" placeholder="Иван">
+              <label class="label-form" for="bayer-name">Имя</label>
+              <div class="valid-tooltip">Укажите имя покупателя</div>
+            </div>
+            <div class="col-md-4 mb-4 inp-group">
+              <input type="text" class="form-control inp-form" id="bayer-middle-name" name="" value=""
+                      maxlength="128" placeholder="Иванович">
+              <label class="label-form" for="bayer-middle-name">Фамилия</label>
+              <div class="valid-tooltip">Укажите отчество покупателя</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4 mb-4 inp-group">
+              <input type="tel" class="form-control inp-form" id="bayer-phone" placeholder="+71112223344" value=""
+                    name="" pattern="(^$)|([\+]7[0-9]{10})" required>
+              <label class="label-form" for="customer_phone">Телефон</label>
+              <div class="valid-tooltip">Формат номера телефона должен быть через +7</div>
+            </div>
+            <div class="col-md-8 mb-4 inp-group">
+              <textarea class="form-control text-form" name="" id="comment" rows="1" maxlength="140" placeholder="Комментарий к заказу"></textarea>
+              <label class="label-form" for="comment">Комментарий</label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4 mb-4 inp-group">
+              <input type="text" class="form-control inp-form" id="city" placeholder="Москва" value=""
+                    name="" required>
+              <label class="label-form" for="city">Город</label>
+              <div class="valid-tooltip">Введите город</div>
+            </div>
+            <div class="col-md-4 mb-4 inp-group">
+              <input type="text" class="form-control inp-form" id="street" placeholder="ул. Пушкина" value=""
+                    name="" required>
+              <label class="label-form" for="street">Улица</label>
+              <div class="valid-tooltip">Введите улицу</div>
+            </div>
+            <div class="col-md-2 mb-4 inp-group">
+              <input type="text" class="form-control inp-form" id="house" placeholder="д.2 корп.3" value=""
+                    name="" required>
+              <label class="label-form" for="house">Дом</label>
+              <div class="valid-tooltip">Введите номер дома</div>
+            </div>
+            <div class="col-md-2 mb-4 inp-group">
+              <input type="text" class="form-control inp-form" id="door" placeholder="оф.222/1, ком.3" value=""
+                    name="" required>
+              <label class="label-form" for="door">Помещение</label>
+              <div class="valid-tooltip">Введите номер помещения/квартиры</div>
+            </div>
+          </div>
+        </div>
       </fieldset>
 
       <div class="form-group mb-5">
