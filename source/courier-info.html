@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Профиль организации</title>
+  <title>Информация о заказе</title>
 
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -11,26 +12,26 @@
 </head>
 
 
-<body class="page-firms">
+<body>
   <div class="gridContainer" id="#gridWrapper">
     <header class="nav header">
       <div class="mx-1 menuGamburger mx-4">
         <button class="navbar-toggler" type="button" data-toggle="tooltip" data-placement="top"
-                title="Показать/скрыть меню">
+          title="Показать/скрыть меню">
           <!-- data-toggle="collapse" data-target="#menu" aria-controls="menu"
-                aria-expanded="false" aria-label="Toggle navigation" -->
+          aria-expanded="false" aria-label="Toggle navigation" -->
 
           <span class="navbar-toggler-icon active">
             <!--<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                 x="0px" y="0px"
-                 width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">
-            <g>
-              <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
-              <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
-              <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
-            </g>
-            </svg>-->
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px"
+              width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">
+        <g>
+          <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
+          <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
+          <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
+        </g>
+        </svg>-->
           </span>
         </button>
         <!--<span class="labelForButtonMenu">Меню</span>-->
@@ -50,45 +51,52 @@
             <a href="mailto:help@ecomkassa.ru" class="nav-link mailTo">
               <span class="leftIcon">
                 <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" width="16" height="16"
-                     class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 512 512"><path fill="currentColor"
-                                                 d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path>
+                  class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
+                  </path>
                 </svg>
               </span>
               <span class="menuTitle">HELP@ECOMKASSA.RU</span>
             </a>
           </li>
           <li class="dropdown navParent">
-            <a class="nav-link" href="#" id="topHiddenMenu" role="button" data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link" href="#" id="topHiddenMenu" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
               <span class="leftIcon">
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-tie" width="16" height="19"
-                     class="svg-inline--fa fa-user-tie fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 448 512"><path fill="currentColor"
-                                                 d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"></path>
+                  class="svg-inline--fa fa-user-tie fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512">
+                  <path fill="currentColor"
+                    d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z">
+                  </path>
                 </svg>
               </span>
               <span class="menuTitle">Тестовый юзер</span>
               <span class="arrow">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
-                   <g data-name="Layer 2">
-                     <g data-name="chevron-down">
-                       <rect width="24" height="24" opacity="0"></rect>
-                       <path
-                           d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
-                       </path>
-                     </g>
-                   </g>
-                  </svg>
+                  <g data-name="Layer 2">
+                    <g data-name="chevron-down">
+                      <rect width="24" height="24" opacity="0"></rect>
+                      <path
+                        d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                      </path>
+                    </g>
+                  </g>
+                </svg>
               </span>
             </a>
             <ul class="dropdown-menu menuItems" aria-labelledby="topHiddenMenu">
               <li class="dropdown-item menuItem">
                 <a class="nav-link" href="profile.html">
                   <span class="leftIcon">
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="id-card-alt"
-                         width="16" height="15" class="svg-inline--fa fa-id-card-alt fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 576 512"><path fill="currentColor" d="M528 64H384v96H192V64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM288 224c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm93.3 224H194.7c-10.4 0-18.8-10-15.6-19.8 8.3-25.6 32.4-44.2 60.9-44.2h8.2c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h8.2c28.4 0 52.5 18.5 60.9 44.2 3.2 9.8-5.2 19.8-15.6 19.8zM352 32c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v96h128V32z"></path>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="id-card-alt" width="16"
+                      height="15" class="svg-inline--fa fa-id-card-alt fa-w-18" role="img"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M528 64H384v96H192V64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM288 224c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm93.3 224H194.7c-10.4 0-18.8-10-15.6-19.8 8.3-25.6 32.4-44.2 60.9-44.2h8.2c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h8.2c28.4 0 52.5 18.5 60.9 44.2 3.2 9.8-5.2 19.8-15.6 19.8zM352 32c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v96h128V32z">
+                      </path>
                     </svg>
                   </span>
                   <span class="menuTitle">Мой профиль</span>
@@ -98,7 +106,11 @@
                 <a class="nav-link" href="#">
                   <span class="leftIcon">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cogs" width="16" height="13"
-                         class="svg-inline--fa fa-cogs fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z"></path>
+                      class="svg-inline--fa fa-cogs fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 640 512">
+                      <path fill="currentColor"
+                        d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z">
+                      </path>
                     </svg>
                   </span>
                   <span class="menuTitle">Настройки</span>
@@ -107,8 +119,12 @@
               <li class="dropdown-item menuItem">
                 <a class="nav-link" href="faq.html">
                   <span class="leftIcon">
-                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="question-circle" width="16" height="16"
-                         class="svg-inline--fa fa-question-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 448c-110.532 0-200-89.431-200-200 0-110.495 89.472-200 200-200 110.491 0 200 89.471 200 200 0 110.53-89.431 200-200 200zm107.244-255.2c0 67.052-72.421 68.084-72.421 92.863V300c0 6.627-5.373 12-12 12h-45.647c-6.627 0-12-5.373-12-12v-8.659c0-35.745 27.1-50.034 47.579-61.516 17.561-9.845 28.324-16.541 28.324-29.579 0-17.246-21.999-28.693-39.784-28.693-23.189 0-33.894 10.977-48.942 29.969-4.057 5.12-11.46 6.071-16.666 2.124l-27.824-21.098c-5.107-3.872-6.251-11.066-2.644-16.363C184.846 131.491 214.94 112 261.794 112c49.071 0 101.45 38.304 101.45 88.8zM298 368c0 23.159-18.841 42-42 42s-42-18.841-42-42 18.841-42 42-42 42 18.841 42 42z"></path>
+                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="question-circle" width="16"
+                      height="16" class="svg-inline--fa fa-question-circle fa-w-16" role="img"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 448c-110.532 0-200-89.431-200-200 0-110.495 89.472-200 200-200 110.491 0 200 89.471 200 200 0 110.53-89.431 200-200 200zm107.244-255.2c0 67.052-72.421 68.084-72.421 92.863V300c0 6.627-5.373 12-12 12h-45.647c-6.627 0-12-5.373-12-12v-8.659c0-35.745 27.1-50.034 47.579-61.516 17.561-9.845 28.324-16.541 28.324-29.579 0-17.246-21.999-28.693-39.784-28.693-23.189 0-33.894 10.977-48.942 29.969-4.057 5.12-11.46 6.071-16.666 2.124l-27.824-21.098c-5.107-3.872-6.251-11.066-2.644-16.363C184.846 131.491 214.94 112 261.794 112c49.071 0 101.45 38.304 101.45 88.8zM298 368c0 23.159-18.841 42-42 42s-42-18.841-42-42 18.841-42 42-42 42 18.841 42 42z">
+                      </path>
                     </svg>
                   </span>
                   <span class="menuTitle">FAQ</span>
@@ -118,7 +134,11 @@
                 <a class="nav-link" href="changepass.html">
                   <span class="leftIcon">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="key" width="16" height="16"
-                         class="svg-inline--fa fa-key fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M512 176.001C512 273.203 433.202 352 336 352c-11.22 0-22.19-1.062-32.827-3.069l-24.012 27.014A23.999 23.999 0 0 1 261.223 384H224v40c0 13.255-10.745 24-24 24h-40v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-78.059c0-6.365 2.529-12.47 7.029-16.971l161.802-161.802C163.108 213.814 160 195.271 160 176 160 78.798 238.797.001 335.999 0 433.488-.001 512 78.511 512 176.001zM336 128c0 26.51 21.49 48 48 48s48-21.49 48-48-21.49-48-48-48-48 21.49-48 48z"></path>
+                      class="svg-inline--fa fa-key fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M512 176.001C512 273.203 433.202 352 336 352c-11.22 0-22.19-1.062-32.827-3.069l-24.012 27.014A23.999 23.999 0 0 1 261.223 384H224v40c0 13.255-10.745 24-24 24h-40v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-78.059c0-6.365 2.529-12.47 7.029-16.971l161.802-161.802C163.108 213.814 160 195.271 160 176 160 78.798 238.797.001 335.999 0 433.488-.001 512 78.511 512 176.001zM336 128c0 26.51 21.49 48 48 48s48-21.49 48-48-21.49-48-48-48-48 21.49-48 48z">
+                      </path>
                     </svg>
                   </span>
                   <span class="menuTitle">Изменить пароль</span>
@@ -127,8 +147,12 @@
               <li class="dropdown-item menuItem">
                 <a class="nav-link" href="login.html">
                   <span class="leftIcon">
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="door-open" width="16" height="13"
-                         class="svg-inline--fa fa-door-open fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M624 448h-80V113.45C544 86.19 522.47 64 496 64H384v64h96v384h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM312.24 1.01l-192 49.74C105.99 54.44 96 67.7 96 82.92V448H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h336V33.18c0-21.58-19.56-37.41-39.76-32.17zM264 288c-13.25 0-24-14.33-24-32s10.75-32 24-32 24 14.33 24 32-10.75 32-24 32z"></path>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="door-open" width="16"
+                      height="13" class="svg-inline--fa fa-door-open fa-w-20" role="img"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                      <path fill="currentColor"
+                        d="M624 448h-80V113.45C544 86.19 522.47 64 496 64H384v64h96v384h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM312.24 1.01l-192 49.74C105.99 54.44 96 67.7 96 82.92V448H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h336V33.18c0-21.58-19.56-37.41-39.76-32.17zM264 288c-13.25 0-24-14.33-24-32s10.75-32 24-32 24 14.33 24 32-10.75 32-24 32z">
+                      </path>
                     </svg>
                   </span>
                   <span class="menuTitle">Выход</span>
@@ -294,61 +318,98 @@
       </nav>
     </aside>
     <main class="mainContent mt-5">
-      <h2 class="page-header text-center mb-5">Организация</h2>
-      <div class="companyBlock">
-        <h4 class="mb-5">Компания "Компания для теста"
-          <a href="editfirm.html" class="rightIcon">
-            <svg width="20" height="20" aria-hidden="true" focusable="false" data-prefix="far" data-icon="edit"
-              class="svg-inline--fa fa-edit fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 576 512">
-              <path fill="currentColor"
-                d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z">
-              </path>
-            </svg>
-          </a>
-        </h4>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">ID:</p>
-          <p class="col-md-6 col-xl-8">9fd3f105-1b8a-42d9-8497-55d25edf0fb0</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Юр. наименование:</p>
-          <p class="col-md-6 col-xl-8">Компания для теста</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Система налогообложения:</p>
-          <p class="col-md-6 col-xl-8">УСН доход-расход</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">ИНН:</p>
-          <p class="col-md-6 col-xl-8">7708317992</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Адрес юридический:</p>
-          <p class="col-md-6 col-xl-8">г. Москва</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Адрес фактический:</p>
-          <p class="col-md-6 col-xl-8">ecomkassa.ru</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Телефон:</p>
-          <p class="col-md-6 col-xl-8">+79163316587</p>
-        </div>
-        <div class="row mb-5 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Блокировка:</p>
-          <p class="col-md-6 col-xl-8">
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="unlock-alt" width="20" height="20"
-                 class="svg-inline--fa fa-unlock-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 256H152V152.9c0-39.6 31.7-72.5 71.3-72.9 40-.4 72.7 32.1 72.7 72v16c0 13.3 10.7 24 24 24h32c13.3 0 24-10.7 24-24v-16C376 68 307.5-.3 223.5 0 139.5.3 72 69.5 72 153.5V256H48c-26.5 0-48 21.5-48 48v160c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zM264 408c0 22.1-17.9 40-40 40s-40-17.9-40-40v-48c0-22.1 17.9-40 40-40s40 17.9 40 40v48z"></path></svg>
-          </p>
-        </div>
-        <div class="row mb-3">
-          <a href="pointofsales.html" class="col-12">
-            Перейти к точкам продаж
-          </a>
-        </div>
-      </div>
+      <h2 class="page-header text-center pt-5 pb-5">Информация о заказе</h2>
+      <section class="sectionBlock mb-5">
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-7 mb-4">
+              <h3 class="pb-3">Данные покупателя</h3>
+              <p class="font-weight-bold text-nowrap pl-3">ФИО Клиента:
+                <span class="font-weight-normal">Иванов Иван Иванович</span>
+              </p>
+              <p class="font-weight-bold pl-3">Email:
+                <span class="font-weight-normal">test@test.ru</span>
+              </p>
+              <p class="font-weight-bold pl-3">Телефон:
+                <span class="font-weight-normal">+71112223344</span>
+              </p>
+              <p class="font-weight-bold pl-3">Адрес:
+                <span class="font-weight-normal">23456, г.Москва, ул.Пушкина, дом колотушкина, кв.1</span>
+              </p>
+              <p class="font-weight-bold pl-3">Комментарий:
+                <span class="font-weight-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+                  rerum.</span>
+              </p>
+            </div>
 
+            <div class="col-md-5 mb-4">
+              <h3 class="pb-3">Данные заказа</h3>
+              <p class="font-weight-bold pl-3">Статус оплаты:
+                <span class="font-weight-normal bg-success">Оплачен</span>
+                <!-- class="font-weight-normal bg-warning">Не оплачен</span> -->
+              </p>
+              <p class="font-weight-bold pl-3">Магазин:
+                <span class="font-weight-normal">Демо-магазин для тестирования</span>
+              </p>
+              <p class="font-weight-bold pl-3">Система налогообложения:
+                <span class="font-weight-normal">УСН доход-расход</span>
+              </p>
+              <p class="font-weight-bold pl-3">Курьер:
+                <span class="font-weight-normal">Апельсинов Антон</span>
+              </p>
+              <p class="font-weight-bold pl-3">Дата доставки:
+                <span class="font-weight-normal">18.05.2020</span>
+              </p>
+              <p class="font-weight-bold pl-3">Вид оплаты:
+                <span class="font-weight-normal">Банковская карта</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="pb-3">Номенклатура</h3>
+        <table class="table table-striped table-bordered table-sm table-hover tableOrders mb-5">
+          <thead class="">
+            <tr>
+              <th class="">Название товара</th>
+              <th class="">Цена</th>
+              <th class="">Кол-во</th>
+              <th class="">НДС</th>
+              <th class="">Предмет расчета</th>
+              <th class="">Признак расчета</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="">Детская обувь "DGsjls" asdf 45size</td>
+              <td class="">3999</td>
+              <td class="">1</td>
+              <td class="">Без НДС</td>
+              <td class="">Товар</td>
+              <td class="">Полный расчет</td>
+            </tr>
+            <tr>
+              <td class="">Перчатки "ВЫПываыа"</td>
+              <td class="">500</td>
+              <td class="">3</td>
+              <td class="">Без НДС</td>
+              <td class="">Товар</td>
+              <td class="">Полный расчет</td>
+            </tr>
+            <tr>
+              <td class="">Доставка по городу</td>
+              <td class="">250</td>
+              <td class="">1</td>
+              <td class="">Без НДС</td>
+              <td class="">Услуга</td>
+              <td class="">Полный расчет</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="page-header pb-5">Сумма заказа: <span id="" class="text-primary">4749.00</span> <span class="text-primary">руб.</span></h3>
+      </section>
     </main>
     <footer class="nav mainFooter">
       <div class="row footerWrapper">
@@ -356,11 +417,13 @@
           <h5 class="footerHeader">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</h5>
           <ul class="footerItems">
             <li class="footerItem">
-              <a href="https://app.ecomkassa.ru/assets/docs/license-agreement-ru.pdf" class="footerLink">Публичный договор
+              <a href="https://app.ecomkassa.ru/assets/docs/license-agreement-ru.pdf" class="footerLink">Публичный
+                договор
                 оферты</a>
             </li>
             <li class="footerItem">
-              <a href="https://app.ecomkassa.ru/assets/docs/leasing-public-ru.pdf" class="footerLink">Договор-оферта на аренду касс</a>
+              <a href="https://app.ecomkassa.ru/assets/docs/leasing-public-ru.pdf" class="footerLink">Договор-оферта на
+                аренду касс</a>
             </li>
             <li class="footerItem">
               <a href="https://ecomkassa.ru/docs" class="footerLink">Все документы</a>
@@ -373,18 +436,26 @@
             <li class="footerItem">
               <a href="#" class="footerLink">
                 <span class="">
-                  <svg width="16" height="16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="file-alt"
-                       class="svg-inline--fa fa-file-alt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M288 248v28c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-28c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm-12 72H108c-6.6 0-12 5.4-12 12v28c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-28c0-6.6-5.4-12-12-12zm108-188.1V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h204.1C264.8 0 277 5.1 286 14.1L369.9 98c9 8.9 14.1 21.2 14.1 33.9zm-128-80V128h76.1L256 51.9zM336 464V176H232c-13.3 0-24-10.7-24-24V48H48v416h288z"></path></svg>
+                  <svg width="16" height="16" aria-hidden="true" focusable="false" data-prefix="far"
+                    data-icon="file-alt" class="svg-inline--fa fa-file-alt fa-w-12" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path fill="currentColor"
+                      d="M288 248v28c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-28c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm-12 72H108c-6.6 0-12 5.4-12 12v28c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-28c0-6.6-5.4-12-12-12zm108-188.1V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h204.1C264.8 0 277 5.1 286 14.1L369.9 98c9 8.9 14.1 21.2 14.1 33.9zm-128-80V128h76.1L256 51.9zM336 464V176H232c-13.3 0-24-10.7-24-24V48H48v416h288z">
+                    </path>
+                  </svg>
                 </span>
                 Инструкции
               </a>
             </li>
             <li class="footerItem">
-              <a href="#"
-                 class="footerLink">
+              <a href="#" class="footerLink">
                 <span class="">
                   <svg width="18" height="18" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube"
-                       class="svg-inline--fa fa-youtube fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                    class="svg-inline--fa fa-youtube fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                    </path>
                   </svg>
                 </span>
                 Видеоинструкции
@@ -403,45 +474,53 @@
             <a href="mailto:help@ecomkassa.ru" class="footerLink">
               <span class="leftIcon">
                 <svg width="16" height="16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="at"
-                     class="svg-inline--fa fa-at fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z"></path>
+                  class="svg-inline--fa fa-at fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z">
+                  </path>
                 </svg>
               </span>
               help@ecomkassa.ru
             </a>
           </p>
         </div>
-      <div class="col-sm-6 col-lg-3 mb-3">
-        <h5 class="footerHeader">О КОМПАНИИ</h5>
-        <p class="footerText">ООО "Зе Поинт"</p>
-        <p class="footerText">ИНН: 7708317992</p>
-        <p class="footerText">
-          <a href="https://ecomkassa.ru" class="footerLink">
-            Официальный сайт Е-COM kassa
-          </a>
-        </p>
-        <p class="footerText">
-          <a href="https://ecomkassa.ru/blog" class="footerLink">
-            Блог компании
-          </a>
-        </p>
-        <p class="footerText">
-          <a href="https://ecomkassa.ru/news" class="footerLink">
-            Новости компании
-          </a>
-        </p>
-      </div>
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <h5 class="footerHeader">О КОМПАНИИ</h5>
+          <p class="footerText">ООО "Зе Поинт"</p>
+          <p class="footerText">ИНН: 7708317992</p>
+          <p class="footerText">
+            <a href="https://ecomkassa.ru" class="footerLink">
+              Официальный сайт Е-COM kassa
+            </a>
+          </p>
+          <p class="footerText">
+            <a href="https://ecomkassa.ru/blog" class="footerLink">
+              Блог компании
+            </a>
+          </p>
+          <p class="footerText">
+            <a href="https://ecomkassa.ru/news" class="footerLink">
+              Новости компании
+            </a>
+          </p>
+        </div>
 
       </div>
     </footer>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
   <script type="text/javascript" src="js/menu.js"></script>
 
   <script src="//code.jivosite.com/widget.js" data-jv-id="GfRebivBl2" defer></script>
 
 </body>
+
 </html>
