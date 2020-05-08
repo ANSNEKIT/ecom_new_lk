@@ -292,7 +292,7 @@
           </li>
         </ul>
       </nav>
-    </aside>
+  </aside>
   <main class="mainContent mt-5">
     <form action="GET" method="get" class="addCheckForm">
       <h2 class="page-header text-center pt-5 pb-5">Сформировать заказ</h2>
@@ -387,45 +387,28 @@
         <h3 class="pl-4 pb-4">Данные покупателя</h3>
         
         <div class="form-group goods mb-5">
+
           <div class="form-row">
             <div class="col-md-4 mb-4 inp-group">
-              <input type="text" class="form-control inp-form" id="bayer-surname" name="" value=""
-                      maxlength="128" placeholder="Иванов">
-              <label class="label-form" for="bayer-surname">Фамилия</label>
-              <div class="valid-tooltip">Укажите фамилию покупателя</div>
+              <input type="text" class="form-control inp-form" id="bayer" name="" value=""
+                      maxlength="100" placeholder="Иванов Иван Иванович">
+              <label class="label-form" for="bayer">ФИО покупателя</label>
+              <div class="valid-tooltip">Укажите фамилию имя отчество покупателя</div>
             </div>
             <div class="col-md-4 mb-4 inp-group">
-              <input type="text" class="form-control inp-form" id="bayer-name" name="" value=""
-                      maxlength="128" placeholder="Иван">
-              <label class="label-form" for="bayer-name">Имя</label>
-              <div class="valid-tooltip">Укажите имя покупателя</div>
-            </div>
-            <div class="col-md-4 mb-4 inp-group">
-              <input type="text" class="form-control inp-form" id="bayer-middle-name" name="" value=""
-                      maxlength="128" placeholder="Иванович">
-              <label class="label-form" for="bayer-middle-name">Отчество</label>
-              <div class="valid-tooltip">Укажите отчество покупателя</div>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="col-md-3 mb-4 inp-group">
               <input type="tel" class="form-control inp-form" id="bayer-phone" placeholder="+71112223344" value=""
                     name="" pattern="(^$)|([\+]7[0-9]{10})" required>
               <label class="label-form" for="customer_phone">Телефон</label>
               <div class="valid-tooltip">Формат номера телефона должен быть через +7</div>
             </div>
-            <div class="col-md-3 mb-4 inp-group">
+            <div class="col-md-4 mb-4 inp-group">
               <input type="email" class="form-control inp-form" id="customer_email" placeholder="test@test.ru" value=""
                      name="customer.email" pattern="(^$)|([a-z0-9\.@-]+@[a-z0-9\.@-]+)">
               <label class="label-form" for="customer_email">Email покупателя</label>
               <div class="valid-tooltip">Введите корретный email без заглавных символов. Пример: test-one@indextest.ru</div>
             </div>
-            <div class="col-md-6 mb-4 inp-group">
-              <input type="text" class="form-control inp-form" id="comment" name="" value=""
-              maxlength="100" placeholder="Домофон не работает">
-              <label class="label-form" for="comment">Комментарий</label>
-            </div>
           </div>
+          
           <div class="form-row">
             <div class="col-md-4 mb-4 inp-group">
               <input type="text" class="form-control inp-form" id="city" placeholder="Москва" value=""
@@ -452,6 +435,23 @@
               <div class="valid-tooltip">Введите номер помещения/квартиры</div>
             </div>
           </div>
+
+          <div class="form-row">
+            <div class="col-md-12 mb-4 inp-group">
+              <textarea 
+                class="form-control" 
+                id="comment" 
+                name="" 
+                value=""
+                maxlength="120" 
+                rows="3" 
+                resize="none"  
+                placeholder="Домофон не работает. Жду заказ после 17:00 Мск">
+              </textarea>
+              <label class="label-form" for="comment">Комментарий</label>
+            </div>
+          </div>
+
         </div>
       </fieldset>
 
@@ -460,7 +460,7 @@
           
         <div class="form-group goods mb-5">
           <div class="form-row">
-            <div class="col-md-12 mb-4 inp-group parentSelect">
+            <div class="col-md-4 mb-4 inp-group parentSelect">
               <select class="form-control inp-form select" id="courier-list" name="items[0].vatType">
                 <option value="Абрикосов Алексей">Абрикосов Алексей</option>
                 <option value="Бананов Борис">Бананов Борис</option>
@@ -472,18 +472,16 @@
                 <option value="Запоров Тест">Запоров Тест</option>
               </select>
               <label class="label-form" for="courier-list">Курьер</label>
-            </div> 
-          </div>
-          <div class="form-row">
-            <div class="col-md-12 mb-4 inp-group">
+            </div>
+            
+            <div class="col-md-4 mb-4 inp-group">
               <input type="date" class="form-control inp-form" id="date" value=""
                     name="" required>
               <label class="label-form" for="date">Дата доставки</label>
               <div class="valid-tooltip">Введите дату доставки</div>
             </div>
-          </div>
-          <div class="form-group form-row">
-            <div class="col-md-6 mb-3 inp-group parentSelect">
+
+            <div class="col-md-4 mb-3 inp-group parentSelect">
               <select class="form-control inp-form select" id="payments_0_type" name="payments[0].type">
                 <option value="CASH">Наличными</option>
                 <option value="CREDIT_CARD" selected>Банковская карта</option>
@@ -494,7 +492,9 @@
               <label class="label-form" for="payments_0_type">Вид оплаты</label>
               <div class="valid-tooltip"></div>
             </div>
-            <div class="col-md-6 mb-3 inp-group">
+          </div>
+          <div class="form-group form-row">
+            <div class="col-md-12 mb-3 inp-group">
               <input type="text" class="form-control inp-form" id="payments_0_amount" value="1.00"
                      disabled>
               <label class="label-form labelPayment" for="payments_0_amount">Итоговая сумма, руб</label>
