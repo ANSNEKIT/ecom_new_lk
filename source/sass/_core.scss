@@ -95,6 +95,22 @@ body{
   background-size: calc(.75em + .375rem) calc(.75em + .375rem);
 }
 
+.warningIcon {
+  width: 24px;
+  height: 24px;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: unset;
+  background-color: transparent;
+
+  font-size: 1.3rem;
+
+  color: $bgc-btn-del;
+}
+
 .unlockIcon, .blockedIcon {
   width: 2rem;
   height: 2rem;
