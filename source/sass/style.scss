@@ -17,8 +17,6 @@
 
 // Стили на остальных страницах
 @import "blocks/page-index";
-@import "blocks/login";
-@import "blocks/registration";
 @import "blocks/orders";
 @import "blocks/profile";
 @import "blocks/add-correction";
@@ -35,3 +33,7 @@
 @import "blocks/preloadcheck";
 @import "blocks/courier";
 @import "blocks/addcourier";
+
+// Стили с белым фоном у body
+@import "blocks/login";
+@import "blocks/registration";

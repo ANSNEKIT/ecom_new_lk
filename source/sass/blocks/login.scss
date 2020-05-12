@@ -1,8 +1,17 @@
-.loginPage {
+.pageWhite {
   background-color: $white;
 }
 
-.loginPage .loginForm {
+.pageWhite .gridContainer {
+  grid-template-areas:
+    "hedr"
+    "main"
+    "ftr";
+
+  grid-template-columns: 1fr;
+}
+
+.loginForm {
   width: 500px;
   margin: 0 auto;
   margin-top: 4rem;

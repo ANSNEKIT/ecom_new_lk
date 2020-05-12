@@ -1,4 +1,4 @@
-.page-changePass .inp-required {
+.changePass .inp-required {
   /*&:invalid {
     border: 1px solid $border-required;
   }*/
@@ -7,4 +7,10 @@
     border: 2px solid $border-valid;
   }
 
+}
+
+.changePass .FormGroup1{
+  width: 800px;
+
+  margin: 0 auto;
 }
