@@ -1,3 +1,20 @@
+'use strict';
+
+(function () {
+    window.addEventListener('load', function () {
+        var $forms = document.querySelectorAll('.needs-validation');
+        var validation = Array.prototype.filter.call($forms, function ($form) {
+            $form.addEventListener('submit', function (event) {
+                if ($form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                $form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
+
 function validateInn(inn, error) {
     var result = false;
     if (typeof inn === 'number') {
@@ -43,5 +60,4 @@ function validateInn(inn, error) {
         }
     }
     return result;
-}
-
+};
