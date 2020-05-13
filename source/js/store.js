@@ -32,7 +32,6 @@
 
 
     document.addEventListener('DOMContentLoaded', () => {
-        debugger;
         for (let i = 0; i < $questItem.length; i++) {
             let statusFiscal = $questItem[i].querySelector('p[data-js-id="status"]').textContent;
             let stateFiscal = $questItem[i].querySelector('p[data-js-id="state"]').textContent;
