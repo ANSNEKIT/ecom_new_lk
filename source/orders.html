@@ -302,7 +302,7 @@
           <div class="form-row">
             <div class="col-md-6 mb-3 inp-group">
               <label class="label-form" for="page">Номер страницы</label>
-              <input type="number" id="page" class="form-control inp-form"  name="page" maxlength="10" min="1" value="1">
+              <input type="number" id="page" class="form-control inp-form"  name="page" max="999999" min="1" value="1">
               <div class="valid-tooltip"></div>
             </div>
 
@@ -320,25 +320,25 @@
           <div class="form-row">
             <div class="col-md-6 mb-3 inp-group">
               <label class="label-form" for="storeId">Идентификатор магазина</label>
-              <input type="text" id="storeId" class="form-control"  name="storeId" maxlength="3" pattern="[0-9]">
+              <input type="text" id="storeId" class="form-control"  name="storeId" maxlength="4" pattern="[0-9]+">
               <div class="valid-tooltip"></div>
             </div>
             <div class="col-md-6 mb-3 inp-group">
               <label class="label-form" for="externalId">Внешний идетификатор чека</label>
-              <input type="text" id="externalId" class="form-control"  name="externalId" pattern="[0-9]">
+              <input type="text" id="externalId" class="form-control"  name="externalId" maxlength="50" pattern="[0-9]+">
               <div class="valid-tooltip"></div>
             </div>
           </div>
           <div class="form-row">
             <div class="col-md-6 mb-3 inp-group">
               <label class="label-form" for="since_field">Дата начала поиска</label>
-              <input type="datetime" id="since_field" class="form-control datetimepicker" name="since_field"
+              <input type="datetime-local" id="since_field" class="form-control" name="since_field"
                      autocomplete="false">
               <div class="valid-tooltip"></div>
             </div>
             <div class="col-md-6 mb-3 inp-group">
               <label class="label-form" for="until">Дата окончания поиска</label>
-              <input type="datetime" id="until" class="form-control datetimepicker" name="until"
+              <input type="datetime-local" id="until" class="form-control" name="until"
                      autocomplete="false">
               <div class="valid-tooltip"></div>
             </div>
@@ -359,7 +359,13 @@
             </div>
             <div class="col-md-6 mb-4 inp-group">
               <label class="label-form" for="cashier">Кассир</label>
-              <input type="text" id="cashier" class="form-control inp-form"  name="cashier">
+              <input 
+                type="text" 
+                id="cashier" 
+                class="form-control inp-form" 
+                maxlength="50" 
+                pattern="[А-Яа-яё\s\.]+" 
+                name="cashier">
               <div class="valid-tooltip"></div>
             </div>
           </div>
