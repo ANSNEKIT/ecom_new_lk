@@ -43,34 +43,63 @@
     <main class="container registrationPage">
       <h1 class="page-header text-center pt-5">Регистрация</h1>
       <p class="text-center">Зарегистрируйте новую учетную запись</p>
-      <form action="" method="get" class="loginForm mb-5">
+      <form action="" method="get" class="loginForm needs-validation" mb-5" novalidate>
         <div class="form-row">
           <div class="col-md-12 form-group mb-3">
             <label class="label-form" for="firmName">Название компании</label>
-            <input type="text" id="firmName" class="form-control inp-form"
-                   placeholder="ООО Тестовая компания, ИП Иванов Иван Иванович" name="firmName" maxlength="120" required>
+            <input 
+              type="text" 
+              id="firmName" 
+              class="form-control inp-form"
+              placeholder="ООО Тестовая компания, ИП Иванов Иван Иванович" 
+              name="firmName"
+              pattern="[\w\sа-яА-Я\"\-]+" 
+              maxlength="60" 
+              required>
+            <div class="invalid-feedback">Введите корректное название без спецсимволов. Допускаются только двойные кавычки</div>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-6 mb-3 inp-group">
             <label class="label-form" for="legalAddress">Юридический адрес</label>
-            <input type="text" class="form-control inp-form" id="legalAddress" name="legalAddress" maxlength="150"
-                   placeholder="112233, г.Москва, ул.Ленина, д.1, корп.2, оф.3" required>
-            <div class="valid-tooltip"></div>
+            <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="legalAddress" 
+              name="legalAddress" 
+              maxlength="120"
+              placeholder="112233, г.Москва, ул.Ленина, д.1, корп.2, оф.3"
+              pattern="[0-9а-яА-Я,\.\s]+"
+              required>
+            <div class="invalid-feedback">Введите корректный адрес без спецсимволов</div>
           </div>
           <div class="col-md-6 mb-3 inp-group">
             <label class="label-form" for="actualAddress">Фактический адрес</label>
-            <input type="text" class="form-control inp-form" id="actualAddress" name="actualAddress" maxlength="150"
-                   placeholder="112233, г.Москва, Красная площадь, мавзолей 1" required>
-            <div class="valid-tooltip"></div>
+            <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="actualAddress" 
+              name="actualAddress" 
+              maxlength="120"
+              placeholder="112233, г.Москва, Красная площадь, мавзолей 1"
+              pattern="[0-9а-яА-Я,\.\s]+" 
+              required>
+            <div class="invalid-feedback">Введите корректный адрес без спецсимволов</div>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-6 mb-3 inp-group">
             <label class="label-form" for="taxNo">ИНН организации</label>
-            <input type="text" class="form-control inp-form" id="taxNo" placeholder="1122334455" name="taxNo"
-                   maxlength="10" pattern="[0-9]{10}" required>
-            <div class="valid-tooltip"></div>
+            <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="taxNo" 
+              placeholder="1122334455" 
+              name="taxNo"
+              maxlength="12" 
+              pattern="([0-9]{10})|([0-9]{12})" 
+              required>
+            <div class="invalid-feedback">ИНН организации 10 или 12 знаков</div>
           </div>
           <div class="col-md-6 mb-3 inp-group parentSelect">
             <label class="label-form" for="taxVariant">Система налогообложения</label>
@@ -87,51 +116,109 @@
         <div class="form-row">
           <div class="col-md-4 mb-3 inp-group">
             <label class="label-form" for="lastName">Фамилия</label>
-            <input type="text" class="form-control inp-form" id="lastName"
-                   name="lastName" maxlength="50" required>
-            <div class="valid-tooltip"></div>
+            <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="lastName"
+              name="lastName" 
+              maxlength="50"
+              pattern="[а-яА-Яё\-\s]+"
+              required>
+            <div class="invalid-feedback">Введите корректное значение. Пример: Юрьев-Польский</div>
           </div>
           <div class="col-md-4 mb-3 inp-group">
             <label class="label-form" for="firstName">Имя</label>
-            <input type="text" class="form-control inp-form" id="firstName"
-                   name="firstName" maxlength="50" required>
-            <div class="valid-tooltip"></div>
+            <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="firstName"
+              name="firstName" 
+              maxlength="30"
+              pattern="[а-яА-Яё\-\s]+" 
+              required>
+            <div class="invalid-feedback">Введите корректное значение. Пример: Булат-Дамир</div>
           </div>
           <div class="col-md-4 mb-3 inp-group">
             <label class="label-form" for="middleName">Отчество</label>
-            <input type="text" class="form-control inp-form" id="middleName"
-                   name="middleName" maxlength="50">
-            <div class="valid-tooltip"></div>
+            <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="middleName"
+              name="middleName" 
+              maxlength="40"
+              pattern="[а-яА-Яё\-\s]+">
+            <div class="invalid-feedback">Введите корректное значение без спецсимволов</div>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-6 mb-3 inp-group">
-            <label class="label-form" for="phone">Телефон </label>
-            <input type="tel" class="form-control inp-form" id="phone" placeholder="+71112223344"
-                   name="phone" pattern="[\+]7[0-9]{10}" required>
-            <div class="valid-tooltip"></div>
+            <label class="label-form" for="phone">Телефон</label>
+            <input 
+              type="tel" 
+              class="form-control inp-form" 
+              id="phone" 
+              placeholder="+71112223344"
+              name="phone"
+              maxlength="12" 
+              pattern="\+7[0-9]{10}" 
+              required>
+            <div class="invalid-feedback">Введите телефон в формате +71112223344</div>
           </div>
           <div class="col-md-6 mb-3 inp-group">
             <label class="label-form" for="email">Email</label>
-            <input type="email" class="form-control inp-form" id="email" placeholder="" name="email"
-                   pattern="[a-z0-9\.@-]+@[a-z0-9\.@-]+" required>
-            <div class="valid-tooltip">Введите корретный email без заглавных символов. Пример: test-one@indextest.ru</div>
+            <input 
+              type="email" 
+              class="form-control inp-form" 
+              id="email" 
+              placeholder="" 
+              name="email"
+              maxlength="35"
+              pattern="[a-z0-9\.@-\_]+@[a-z0-9\.@-]+" 
+              required>
+            <div class="invalid-feedback">Введите корретный email без заглавных символов. Пример: test-one@indextest.ru</div>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-6 mb-3 inp-group">
             <label class="label-form" for="password">Введите пароль</label>
-            <input type="password" class="form-control inp-form" id="password" placeholder="Ваш пароль" minlength="4" maxlength="40" name="password" required>
+            <input 
+              type="password" 
+              class="form-control inp-form" 
+              id="password" 
+              placeholder="Ваш пароль" 
+              minlength="4" 
+              maxlength="40" 
+              name="password" 
+              required>
+            <div class="invalid-feedback">Пароль должен быть от 4 до 40 символов</div>
           </div>
           <div class="col-md-6 mb-3 inp-group">
             <label class="label-form" for="passwordRepeat">Повтор пароля</label>
-            <input type="password" class="form-control inp-form" id="passwordRepeat" placeholder="Ваш пароль" minlength="4" maxlength="40" name="passwordRepeat" required>
+            <input 
+              type="password" 
+              class="form-control inp-form" 
+              id="passwordRepeat" 
+              placeholder="Ваш пароль" 
+              minlength="4" 
+              maxlength="40" 
+              name="passwordRepeat" 
+              required>
+            <div class="invalid-feedback">Пароль должен быть от 4 до 40 символов</div>
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-6 mb-3 inp-group">
             <label class="label-form" for="partnerСode">Партнерский код</label>
-            <input type="text" class="form-control inp-form" id="partnerСode" placeholder="Введите партнерский код" minlength="4" maxlength="40" name="partnerСode">
+            <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="partnerСode" 
+              placeholder="Введите партнерский код" 
+              minlength="4" 
+              maxlength="20"
+              pattern="[\w]+" 
+              name="partnerСode">
+            <div class="invalid-feedback"></div>
           </div>
         </div>
         <div class="custom-control custom-checkbox">
@@ -244,6 +331,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="js/validate.js"></script>
 
 </body>
 </html>

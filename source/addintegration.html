@@ -300,9 +300,14 @@
       <fieldset class="FormGroup1 mb-4">
         <div class="form-row">
           <div class="col-md-6 inp-group mb-4">
-            <input type="text" id="email" class="form-control inp-form" placeholder="test@test.ru"
-            pattern="^([a-z0-9_-]{1})+([^а-яёЁА-Я])+@+[^а-яёЁА-Я]+\.[^а-яёЁА-Я]+$" name="email"
+            <input 
+            type="text" 
+            id="email" 
+            class="form-control inp-form"
+            name="email"
             value=""
+            placeholder="test@test.ru"
+            pattern="^([a-z0-9_-]{1})+([^а-яёЁА-Я])+@+[^а-яёЁА-Я]+\.[^а-яёЁА-Я]+$" 
             required>
             <label class="label-form" for="login">Логин</label>
             <div class="invalid-feedback">Введите логин от лк партнера</div>
@@ -317,7 +322,7 @@
 
       <div class="form-group mb-5">
         <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Сохранить</button>
-        <button type="button" class="btn btn-warning btn-lg mr-5" value="submit">Сбросить настройки</button>
+        <button type="button" class="btn btn-warning btn-lg mr-5" value="">Сбросить настройки</button>
         <a href="integration.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
       </div>
 

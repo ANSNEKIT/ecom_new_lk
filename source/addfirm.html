@@ -302,10 +302,17 @@
 
           <div class="form-row">
             <div class="col-md-9 inp-group mb-4">
-              <input type="text" id="name" class="form-control inp-form" name="name" value="Компания для теста"
-                     placeholder="Название" required>
+              <input 
+                type="text" 
+                id="name" 
+                class="form-control inp-form" 
+                name="name" value=""
+                placeholder="ООО 'Тестовая компания', ИП Иванов Иванов Иван Иванович" 
+                pattern="[\w\sа-яА-Я\"\-]+"
+                maxlength="60"
+                required>
               <label class="label-form" for="name">Название</label>
-              <div class="invalid-feedback"></div>
+              <div class="invalid-feedback">Введите корректное название без спецсимволов. Допускаются только двойные кавычки</div>
             </div>
             <div class="col-md-3 inp-group mb-4 parentSelect">
               <label class="label-form" for="taxVariant">СНО</label>
@@ -317,46 +324,73 @@
                 <option value="SINGLE_AGRICULTURE_TAX">ЕСХН</option>
                 <option value="PATENT">ПСН</option>
               </select>
-              <div class="invalid-feedback">Выберите систему налогооблажения</div>
             </div>
           </div>
 
           <div class="form-row">
             <div class="col-md-6 inp-group mb-4">
-              <input type="text" class="form-control inp-form" id="taxIdentityNumber" name="taxIdentityNumber"
-                     maxlength="10" pattern="(^$)|([0-9]{10})" required>
+              <input 
+                type="text" 
+                class="form-control inp-form" 
+                id="taxIdentityNumber" 
+                name="taxIdentityNumber"
+                maxlength="12" 
+                pattern="([0-9]{10})|([0-9]{12})" 
+                required>
               <label class="label-form" for="taxIdentityNumber">ИНН организации</label>
-              <div class="invalid-feedback">Должно быть 10 цифр</div>
+              <div class="invalid-feedback">ИНН организации 10 или 12 знаков</div>
             </div>
             <div class="col-md-6 inp-group mb-4">
               <label class="label-form" for="phone">Телефон </label>
-              <input type="tel" class="form-control inp-form" id="phone" placeholder="+71112223344" name="phone"
-                     maxlength="12"
-                     pattern="[\+]7[0-9]{10}" required>
-              <div class="invalid-feedback">Введите корректный номер через +7 без пробелов</div>
+              <input 
+                type="tel" 
+                class="form-control inp-form" 
+                id="phone" 
+                placeholder="+71112223344" 
+                name="phone"
+                maxlength="12"
+                pattern="[\+]7[0-9]{10}" 
+                required>
+              <div class="invalid-feedback">Введите телефон в формате +71112223344</div>
             </div>
           </div>
 
           <div class="form-row">
             <div class="col-md-12 mb-4 inp-group">
               <label class="label-form" for="legalAddress">Юридический адрес</label>
-              <input type="text" class="form-control inp-form" id="legalAddress" name="legalAddress" maxlength="150" placeholder="112233, г.Москва, ул.Ленина, д.1, корп.2, оф.3" required>
-              <div class="invalid-feedback">Обязательное поле</div>
+              <input 
+                type="text" 
+                class="form-control inp-form" 
+                id="legalAddress" 
+                name="legalAddress" 
+                maxlength="120"
+                placeholder="112233, г.Москва, ул.Ленина, д.1, корп.2, оф.3"
+                pattern="[0-9а-яА-Я,\.\s]+" 
+                required>
+              <div class="invalid-feedback">Введите корректный адрес без спецсимволов</div>
             </div>
           </div>
 
           <div class="form-row">
             <div class="col-md-12 mb-4 inp-group">
               <label class="label-form" for="actualAddress">Фактический адрес</label>
-              <input type="text" class="form-control inp-form" id="actualAddress" name="actualAddress" maxlength="150" placeholder="112233, г.Москва, Красная площадь, мавзолей 1" required>
-              <div class="invalid-feedback">Обязательное поле</div>
+              <input 
+                type="text" 
+                class="form-control inp-form" 
+                id="actualAddress" 
+                name="actualAddress" 
+                maxlength="120"
+                placeholder="112233, г.Москва, Красная площадь, мавзолей 1"
+                pattern="[0-9а-яА-Я,\.\s]+" 
+                required>
+              <div class="invalid-feedback">Введите корректный адрес без спецсимволов</div>
             </div>
           </div>
 
           <div class="form-row mb-5" id="blocked_field">
             <div class="col-md-12">
               <div class="form-check custom-control custom-checkbox">
-                <input type="checkbox" id="blocked" class="custom-control-input" name="blocked" value="true">
+                <input type="checkbox" id="blocked" class="custom-control-input" name="blocked" value="false">
                 <label class="custom-control-label" for="blocked">Заблокировано</label>
               </div>
             </div>

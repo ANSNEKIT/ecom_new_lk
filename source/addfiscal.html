@@ -378,7 +378,6 @@
                       <option value="OfdAstralNalog">Астрал ОФД</option>
                     </select>
                     <label class="label-form" for="ofd">Выберите ОФД</label>
-                    <div class="invalid-feedback"></div>
                   </div>
                 </div>
               </fieldset>
@@ -403,11 +402,11 @@
                 </div>
               </div>-->
               <div class="form-row">
-                <div class="col-md-5 mb-4 inp-group">
-                  <input type="text" id="model" class="form-control inp-form inp-required"
-                         name="model" value="Умка 01-ФА стандарт">
+                <div class="col-md-5 mb-4 inp-group parentSelect">
+                  <select id="model" name="ofd" class="form-control inp-form inp-required select">
+                    <option value="Умка 01-ФА стандарт" selected>Умка 01-ФА стандарт</option>
+                  </select>
                   <label class="label-form" for="model">Модель ККТ</label>
-                  <div class="invalid-feedback"></div>
                 </div>
                 <div class="col-md-3 mb-4 inp-group">
                   <input type="text" id="serialNo" class="form-control inp-form inp-required"
