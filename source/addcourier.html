@@ -153,7 +153,7 @@
             </a>
           </li>
           <li class="navParent">
-            <a class="nav-link" href="#collapse-menu_1" data-toggle="collapse"  role="button" aria-expanded="false" aria-controls="#collapse-menu_1">
+            <a class="nav-link" href="#collapse-menu_1" data-toggle="collapse"  role="button" aria-expanded="false" aria-controls="collapse-menu_1">
               <span class="leftIcon">
                 <svg aria-hidden="true" height="19" focusable="false" data-prefix="fas" data-icon="building"
                      class="svg-inline--fa fa-building fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M436 480h-20V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v456H12c-6.627 0-12 5.373-12 12v20h448v-20c0-6.627-5.373-12-12-12zM128 76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76zm0 96c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40zm52 148h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12zm76 160h-64v-84c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v84zm64-172c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40z"></path></svg>
@@ -181,7 +181,7 @@
           </li>
           <li class="navParent">
             <a class="nav-link" href="#collapse-menu_orders" data-toggle="collapse"  role="button" aria-expanded="false"
-               aria-controls="#collapse-menu_orders">
+               aria-controls="collapse-menu_orders">
               <span class="leftIcon">
                 <svg aria-hidden="true" height="19" focusable="false" data-prefix="far" data-icon="check-square"
                      class="svg-inline--fa fa-check-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm0 400H48V80h352v352zm-35.864-241.724L191.547 361.48c-4.705 4.667-12.303 4.637-16.97-.068l-90.781-91.516c-4.667-4.705-4.637-12.303.069-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l59.792 60.277 141.352-140.216c4.705-4.667 12.303-4.637 16.97.068l22.536 22.718c4.667 4.706 4.637 12.304-.068 16.971z"></path>
@@ -210,7 +210,7 @@
           </li>
           <li class="navParent">
             <a class="nav-link" href="#collapse-menu_couriers" data-toggle="collapse"  role="button" aria-expanded="false"
-               aria-controls="#collapse-menu_couriers">
+               aria-controls="collapse-menu_couriers">
               <span class="leftIcon">
                 <svg version="1.1" id="Capa_1" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.265 53.265"
@@ -295,21 +295,28 @@
       </nav>
   </aside>
   <main class="mainContent mt-5">
-    <form action="GET" method="get" class="addCheckForm">
+    <form action="GET" method="get" class="addCheckForm needs-validation" novalidate>
       <h2 class="page-header text-center pt-5 pb-5">Сформировать заказ</h2>
       <fieldset class="FormGroupProduct mb-4">
         <h3 class="pl-4 pb-4">Номенклатура</h3>
         <div class="btnAddPosition">
-          <button type="button" class="btn btn-add" name="action" value="add.item">Добавить</button>
+          <button type="button" class="btn btn-add" name="action" value="add.item" data-js-count="0">Добавить</button>
         </div>
 
         <div class="mb-5 bdr-bottom position_0">
           <div class="form-row">
             <div class="col-md-4 mb-4 inp-group">
-              <input type="text" class="form-control inp-form" id="items_0_name" name="items[0].name" value=""
-                      maxlength="128" placeholder="Введите название товара/услуги" required>
+              <input 
+                type="text" 
+                class="form-control inp-form" 
+                id="items_0_name" 
+                name="items[0].name" 
+                value=""
+                maxlength="126"
+                placeholder="Название товара/услуги" 
+                required>
               <label class="label-form" for="items_0_name">Наименование</label>
-              <div class="valid-tooltip">Укажите название товарной позиции</div>
+              <div class="invalid-tooltip">Укажите название товарной позиции</div>
             </div>
             
             <div class="col-md-4 mb-4 inp-group parentSelect">
@@ -351,16 +358,30 @@
           </div>
           <div class="form-row">
             <div class="col-md-4 mb-4 inp-group">
-              <input type="text" class="form-control inp-form js-price" id="items_0_price" name="items[0].name"
-                      value="1.00" pattern="^\d{1,8}(?:\.\d{2})?$" required>
+              <input 
+                type="text"
+                class="form-control inp-form js-price" 
+                id="items_0_price"
+                name="items[0].name"
+                placeholder="1.00"
+                value=""
+                maxlength="15" 
+                pattern="[0-9]{1,12}\.[0-9]{2}" 
+                required>
               <label class="label-form" for="items_0_price">Цена, руб</label>
-              <div class="valid-tooltip">Укажите цену в рублях</div>
+              <div class="invalid-tooltip">Цена товара с копейками. Разделитель точка. Пример 18.50</div>
             </div>
             <div class="col-md-4 mb-4 inp-group">
-              <input type="number" class="form-control inp-form js-count" id="items_0_amount" value="1"
-                      min="1">
+              <input 
+                type="number" 
+                class="form-control inp-form js-number" 
+                id="items_0_amount"
+                value="1"
+                min="1"
+                max="99999999" 
+                >
               <label class="label-form" for="items_0_amount">Количество</label>
-              <div class="valid-tooltip">Укажите количество больше нуля</div>
+              <div class="invalid-tooltip">Укажите количество больше нуля</div>
             </div>
             <div class="col-md-4 mb-4 inp-group parentSelect">
               <select class="form-control inp-form select" id="items_0_vatType" name="items[0].vatType">
@@ -373,15 +394,13 @@
               </select>
               <label class="label-form" for="items_0_vatType">НДС</label>
             </div>
-            
           </div>
-
           <div class="form-check custom-control custom-checkbox mb-3">
-            <input type="checkbox" id="marking" class="custom-control-input" name="" value="">
+            <input type="checkbox" id="marking" class="custom-control-input" name="marking" value="">
             <label class="custom-control-label" for="marking">Маркированный товар</label>
           </div>
-
         </div>
+ 
       </fieldset>
 
       <fieldset class="FormGroupProduct mb-4">
@@ -391,49 +410,103 @@
 
           <div class="form-row">
             <div class="col-md-4 mb-4 inp-group">
-              <input type="text" class="form-control inp-form" id="bayer" name="" value=""
-                      maxlength="100" placeholder="Иванов Иван Иванович">
+              <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="bayer" 
+              name="bayer" 
+              value=""
+              maxlength="100"
+              pattern="[a-zA-Zа-яА-ЯёЁ\-\s]+"
+              placeholder="Иванов Иван Иванович">
               <label class="label-form" for="bayer">ФИО покупателя</label>
-              <div class="valid-tooltip">Укажите фамилию имя отчество покупателя</div>
+              <div class="invalid-feedback">Укажите фамилию имя отчество покупателя</div>
             </div>
             <div class="col-md-4 mb-4 inp-group">
-              <input type="tel" class="form-control inp-form" id="bayer-phone" placeholder="+71112223344" value=""
-                    name="" pattern="(^$)|([\+]7[0-9]{10})" required>
-              <label class="label-form" for="customer_phone">Телефон</label>
-              <div class="valid-tooltip">Формат номера телефона должен быть через +7</div>
+              <input 
+                type="tel"
+                class="form-control inp-form" 
+                id="bayer-phone" 
+                placeholder="+71112223344" 
+                value=""
+                name="bayer-phone"
+                maxlength="12" 
+                pattern="(^$)|([+]7[0-9]{10})" 
+                required>
+              <label class="label-form" for="bayer-phone">Телефон</label>
+              <div class="invalid-feedback">Формат номера телефона должен быть через +7</div>
             </div>
             <div class="col-md-4 mb-4 inp-group">
-              <input type="email" class="form-control inp-form" id="customer_email" placeholder="test@test.ru" value=""
-                     name="customer.email" pattern="(^$)|([a-z0-9\.@-]+@[a-z0-9\.@-]+)">
+              <input 
+                type="email" 
+                class="form-control inp-form" 
+                id="customer_email" 
+                placeholder="test@test.ru" 
+                value=""
+                name="customer.email"
+                maxlength="50"
+                pattern="(^$)|([a-z0-9\.@\-_]+@[a-z0-9.@-_]+\.[a-z]+)">
               <label class="label-form" for="customer_email">Email покупателя</label>
-              <div class="valid-tooltip">Введите корретный email без заглавных символов. Пример: test-one@indextest.ru</div>
+              <div class="invalid-feedback">Введите корретный email без заглавных символов. Пример: test-one@indextest.ru</div>
             </div>
           </div>
           
           <div class="form-row">
             <div class="col-md-4 mb-4 inp-group">
-              <input type="text" class="form-control inp-form" id="city" placeholder="Москва" value=""
-                    name="" required>
+              <input 
+                type="text" 
+                class="form-control inp-form" 
+                id="city" 
+                placeholder="Москва" 
+                value=""
+                maxlength="30"
+                pattern="[а-яА-ЯёЁ\-\s]+"
+                name="city" 
+                required>
               <label class="label-form" for="city">Город</label>
-              <div class="valid-tooltip">Введите город</div>
+              <div class="invalid-feedback">Введите город</div>
             </div>
             <div class="col-md-4 mb-4 inp-group">
-              <input type="text" class="form-control inp-form" id="street" placeholder="ул. Пушкина" value=""
-                    name="" required>
+              <input 
+                type="text" 
+                class="form-control inp-form" 
+                id="street" 
+                placeholder="ул. Пушкина" 
+                value=""
+                name="street"
+                maxlength="60"
+                pattern="[а-яА-ЯёЁ\-\s]+" 
+                required>
               <label class="label-form" for="street">Улица</label>
-              <div class="valid-tooltip">Введите улицу</div>
+              <div class="invalid-feedback">Введите улицу</div>
             </div>
             <div class="col-md-2 mb-4 inp-group">
-              <input type="text" class="form-control inp-form" id="house" placeholder="д.2 корп.3" value=""
-                    name="" required>
+              <input 
+                type="text" 
+                class="form-control inp-form" 
+                id="house" 
+                placeholder="д.23А/1, корп.3" 
+                value=""
+                name="house"
+                maxlength="20"
+                pattern="[0-9а-яА-ЯёЁ\-\s.,/]+"  
+                required>
               <label class="label-form" for="house">Дом</label>
-              <div class="valid-tooltip">Введите номер дома</div>
+              <div class="invalid-feedback">Введите номер дома, корпуса</div>
             </div>
             <div class="col-md-2 mb-4 inp-group">
-              <input type="text" class="form-control inp-form" id="door" placeholder="оф.222/1, ком.3" value=""
-                    name="" required>
+              <input 
+                type="text" 
+                class="form-control inp-form" 
+                id="door" 
+                placeholder="оф.222/1, помещ.7А" 
+                value=""
+                name="door"
+                maxlength="35"
+                pattern="[0-9а-яА-ЯёЁ\-\s.,/]+" 
+                required>
               <label class="label-form" for="door">Помещение</label>
-              <div class="valid-tooltip">Введите номер помещения/квартиры</div>
+              <div class="invalid-feedback">Введите номер помещения/квартиры</div>
             </div>
           </div>
 
@@ -442,13 +515,10 @@
               <textarea 
                 class="form-control" 
                 id="comment" 
-                name="" 
-                value=""
+                name="comment"
                 maxlength="120" 
-                rows="3" 
-                resize="none"  
-                placeholder="Домофон не работает. Жду заказ после 17:00 Мск">
-              </textarea>
+                rows="3"  
+                placeholder="Домофон не работает. Жду заказ после 17:00 Мск"></textarea>
               <label class="label-form" for="comment">Комментарий</label>
             </div>
           </div>
@@ -461,7 +531,7 @@
           
         <div class="form-group goods mb-5">
           <div class="form-row">
-            <div class="col-md-4 mb-4 inp-group parentSelect">
+            <div class="col-md-6 mb-4 inp-group parentSelect">
               <select class="form-control inp-form select" id="courier-list" name="items[0].vatType">
                 <option value="Абрикосов Алексей">Абрикосов Алексей</option>
                 <option value="Бананов Борис">Бананов Борис</option>
@@ -475,14 +545,15 @@
               <label class="label-form" for="courier-list">Курьер</label>
             </div>
             
-            <div class="col-md-4 mb-4 inp-group">
+            <div class="col-md-6 mb-4 inp-group">
               <input type="date" class="form-control inp-form" id="date" value=""
-                    name="" required>
+                    name="date" required>
               <label class="label-form" for="date">Дата доставки</label>
-              <div class="valid-tooltip">Введите дату доставки</div>
+              <div class="invalid-feedback">Введите дату доставки</div>
             </div>
-
-            <div class="col-md-4 mb-3 inp-group parentSelect">
+          </div>
+          <div class="form-group form-row">
+            <div class="col-md-6 mb-3 inp-group parentSelect">
               <select class="form-control inp-form select" id="payments_0_type" name="payments[0].type">
                 <option value="CASH">Наличными</option>
                 <option value="CREDIT_CARD" selected>Банковская карта</option>
@@ -491,17 +562,15 @@
                 <option value="COUNTER_OFFER">Встречное предоставление</option>
               </select>
               <label class="label-form" for="payments_0_type">Вид оплаты</label>
-              <div class="valid-tooltip"></div>
+              <div class="invalid-feedback"></div>
             </div>
-          </div>
-          <div class="form-group form-row">
-            <div class="col-md-12 mb-3 inp-group">
-              <input type="text" class="form-control inp-form" id="payments_0_amount" value="1.00"
-                     disabled>
+            <div class="col-md-6 mb-3 inp-group">
+              <input type="text" class="form-control inp-form" id="payments_0_amount" value="0.00"
+                    data-js-id="result_amount" disabled>
               <label class="label-form labelPayment" for="payments_0_amount">Итоговая сумма, руб</label>
-              <div class="valid-tooltip"></div>
             </div>
           </div>
+        </div>
       </fieldset>
 
       <div class="form-group mb-5">
@@ -600,8 +669,10 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/menu.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/add-courier.js"></script>
+<script src="js/validate.js"></script>
 
 <script src="//code.jivosite.com/widget.js" data-jv-id="GfRebivBl2" defer></script>
 
