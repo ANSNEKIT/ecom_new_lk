@@ -296,7 +296,7 @@
   </aside>
     <main class="mainContent mt-5">
       <h2 class="page-header text-center py-5">Редактирование пользователя</h2>
-      <form class="addCheckForm was-validated" action="" method="get">
+      <form class="addCheckForm needs-validation" action="" method="get" novalidate>
         <fieldset class="FormGroup1 mb-4">
 
           <div class="form-row">
@@ -311,13 +311,30 @@
 
           <div class="form-row">
             <div class="col-md-6 inp-group mb-4">
-              <input type="text" id="firstName" class="form-control inp-form" name="firstName" value="Аскар" placeholder="Имя" pattern="^([А-Я]{1})+[а-я-]+$" required>
+              <input 
+                type="text" 
+                id="firstName" 
+                class="form-control inp-form" 
+                name="firstName" 
+                value="Аскар" 
+                placeholder="Алексей, Иван-Джеймс" 
+                maxlength="30" 
+                pattern="([А-Я]{1})+[А-Яа-яёЁ\-\s]+" 
+                required>
               <label class="label-form" for="firstName">Имя</label>
               <div class="invalid-feedback">Введите имя с заглавной буквы</div>
             </div>
             <div class="col-md-6 inp-group mb-4">
-              <input type="text" id="lastName" class="form-control inp-form" name="lastName" value="Амиров"
-                     placeholder="Фамилия" pattern="^([А-Я]{1})+[а-я-]+$" required>
+              <input 
+                type="text" 
+                id="lastName" 
+                class="form-control inp-form" 
+                name="lastName" 
+                value="Амиров"
+                placeholder="Иванов, Салтыков-Щедрин" 
+                pattern="([А-Я]{1})+[А-Яа-яёЁ\-\s]+"
+                maxlength="50" 
+                required>
               <label class="label-form" for="lastName">Фамилия</label>
               <div class="invalid-feedback">Введите фамилию с заглавной буквы</div>
             </div>
@@ -325,17 +342,31 @@
 
           <div class="form-row">
             <div class="col-md-6 inp-group mb-4">
-              <input type="text" id="position" class="form-control inp-form" name="position" value="Директор"
-                     placeholder="Должность" pattern="^([А-Я]{1})+[а-я-]+$" required>
+              <input 
+                type="text" 
+                id="position" 
+                class="form-control inp-form" 
+                name="position" 
+                value="Директор"
+                placeholder="Директор, бухгалтер" 
+                maxlength="40" 
+                pattern="([А-Я]{1})+[А-Яа-яёЁ\-\s]+" 
+                required>
               <label class="label-form" for="position">Должность</label>
               <div class="invalid-feedback">Введите должность с заглавной буквы</div>
             </div>
             <div class="col-md-6 inp-group mb-4">
               <label class="label-form" for="email">Введите email</label>
-              <input type="email" id="email" class="form-control inp-form" placeholder="Ваш email"
-                     pattern="^([a-z0-9_-]{1})+([^а-яёЁА-Я])+@+[^а-яёЁА-Я]+\.[^а-яёЁА-Я]+$" name="email"
-                     value="test@test.ru"
-                     required>
+              <input 
+                type="email" 
+                id="email" 
+                class="form-control inp-form"
+                name="email"
+                value="test@test.ru" 
+                placeholder="test@test.ru" 
+                pattern="^([a-z0-9_-]{1})+([^а-яёЁА-Я])+@+[^а-яёЁА-Я]+\.[^а-яёЁА-Я]+$" 
+                maxlength="50" 
+                required>
               <div class="invalid-feedback">Email не должен содержать кириллицу. Первый символ должен быть прописной</div>
             </div>
           </div>
@@ -343,17 +374,30 @@
           <div class="form-row">
             <div class="col-md-6 mb-4 inp-group">
               <label class="label-form" for="password">Пароль</label>
-              <input type="password" id="password" class="form-control inp-form" name="password" value="" minlength="8"
-                     maxlength="50"
-                     placeholder="Пароль" required>
-              <div class="invalid-feedback">Минимальное количество символов: 8</div>
+              <input 
+                type="password" 
+                id="password" 
+                class="form-control inp-form" 
+                name="password"
+                data-js-id="pass" 
+                value="" 
+                maxlength="50"
+                placeholder="Пароль">
+              <div class="invalid-feedback" data-js-id="passError">Минимальное количество символов: 8</div>
               <meter id="pass-strength-meter" min="0" max="8" low="8" value="0"></meter>
             </div>
             <div class="col-md-6 mb-4 inp-group">
               <label class="label-form" for="passwordRepeat">Повторите пароль</label>
-              <input type="password" id="passwordRepeat" class="form-control inp-form" name="passwordRepeat" value="" minlength="8"
-                     maxlength="50" placeholder="Повтор пароля" required>
-              <div class="invalid-feedback">Минимальное количество символов: 8</div>
+              <input 
+                type="password" 
+                id="passwordRepeat" 
+                class="form-control inp-form" 
+                name="passwordRepeat"
+                data-js-id="repeatPass" 
+                value="" 
+                maxlength="50" 
+                placeholder="Повтор пароля">
+              <div class="invalid-feedback" data-js-id="repeatPassError">Минимальное количество символов: 8</div>
               <meter id="password-strength-meter" min="0" max="8" low="8" value="0"></meter>
             </div>
           </div>
@@ -466,6 +510,7 @@
 
   <script type="text/javascript" src="js/menu.js"></script>
   <script type="text/javascript" src="js/meter.js"></script>
+  <script type="text/javascript" src="js/validate.js"></script>
 
 </body>
 </html>

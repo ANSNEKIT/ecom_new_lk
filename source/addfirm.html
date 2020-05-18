@@ -296,7 +296,7 @@
   </aside>
     <main class="mainContent mt-5">
       <h2 class="page-header text-center py-5">Создание компании</h2>
-      <form class="addCheckForm was-validated" action="" method="get">
+      <form class="addCheckForm needs-validation" action="" method="get" novalidate>
 
         <fieldset class="FormGroup1 mb-4">
 
@@ -308,7 +308,7 @@
                 class="form-control inp-form" 
                 name="name" value=""
                 placeholder="ООО 'Тестовая компания', ИП Иванов Иванов Иван Иванович" 
-                pattern="[\w\sа-яА-Я\"\-]+"
+                pattern="[0-9а-яА-ЯёЁ\w\s\x22,\._\-]+"
                 maxlength="60"
                 required>
               <label class="label-form" for="name">Название</label>
@@ -332,13 +332,15 @@
               <input 
                 type="text" 
                 class="form-control inp-form" 
-                id="taxIdentityNumber" 
+                id="taxIdentityNumber"
+                data-js-id="innFirm" 
                 name="taxIdentityNumber"
+                placeholder="ИНН организации 10 или 12 знаков"
                 maxlength="12" 
                 pattern="([0-9]{10})|([0-9]{12})" 
                 required>
               <label class="label-form" for="taxIdentityNumber">ИНН организации</label>
-              <div class="invalid-feedback">ИНН организации 10 или 12 знаков</div>
+              <div class="invalid-feedback" data-js-id="innFirmError">ИНН организации 10 или 12 знаков</div>
             </div>
             <div class="col-md-6 inp-group mb-4">
               <label class="label-form" for="phone">Телефон </label>
@@ -363,9 +365,9 @@
                 class="form-control inp-form" 
                 id="legalAddress" 
                 name="legalAddress" 
-                maxlength="120"
+                maxlength="150"
                 placeholder="112233, г.Москва, ул.Ленина, д.1, корп.2, оф.3"
-                pattern="[0-9а-яА-Я,\.\s]+" 
+                pattern="[0-9а-яА-Я,\.\s-]+" 
                 required>
               <div class="invalid-feedback">Введите корректный адрес без спецсимволов</div>
             </div>
@@ -379,9 +381,9 @@
                 class="form-control inp-form" 
                 id="actualAddress" 
                 name="actualAddress" 
-                maxlength="120"
+                maxlength="150"
                 placeholder="112233, г.Москва, Красная площадь, мавзолей 1"
-                pattern="[0-9а-яА-Я,\.\s]+" 
+                pattern="[0-9а-яА-Я,\.\s\-]+" 
                 required>
               <div class="invalid-feedback">Введите корректный адрес без спецсимволов</div>
             </div>
@@ -493,7 +495,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
   <script type="text/javascript" src="js/menu.js"></script>
+  <script type="text/javascript" src="js/validate.js"></script>
+
 
 </body>
 </html>

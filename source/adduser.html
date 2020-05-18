@@ -296,29 +296,51 @@
   </aside>
     <main class="mainContent mt-5">
       <h2 class="page-header text-center py-5">Добавить пользователя</h2>
-      <form class="addCheckForm was-validated" action="" method="get">
+      <form class="addCheckForm needs-validation" action="" method="get" novalidate>
         <fieldset class="FormGroup1 mb-4">
 
           <div class="form-row">
             <div class="col-md-12 inp-group mb-4">
-              <input type="text" id="login" class="form-control inp-form" placeholder="Ваш никнейм или email"  name="login"
-                     pattern="[^а-яА-Я]"
-                     required>
-
+              <input 
+                type="text" 
+                id="login" 
+                class="form-control inp-form" 
+                placeholder="Ваш никнейм или email"  
+                name="login"
+                maxlength="50"
+                pattern="[^а-яА-Я]+"
+                required>
               <label class="label-form" for="login">Логин</label>
-              <div class="invalid-feedback">Обязательное поле</div>
+              <div class="invalid-feedback">Введите корректное значение. Только латинские символы и цифры.</div>
             </div>
           </div>
 
           <div class="form-row">
             <div class="col-md-6 inp-group mb-4">
-              <input type="text" id="firstName" class="form-control inp-form" name="firstName" value="" placeholder="Имя" pattern="^([А-Я]{1})+[а-я-]+$" required>
+              <input 
+                type="text" 
+                id="firstName" 
+                class="form-control inp-form" 
+                name="firstName" 
+                value="" 
+                placeholder="Алексей, Иван-Джеймс"
+                maxlength="30" 
+                pattern="([А-Я]{1})+[А-Яа-яёЁ\-\s]+" 
+                required>
               <label class="label-form" for="firstName">Имя</label>
               <div class="invalid-feedback">Введите имя с заглавной буквы</div>
             </div>
             <div class="col-md-6 inp-group mb-4">
-              <input type="text" id="lastName" class="form-control inp-form" name="lastName" value=""
-                     placeholder="Фамилия" pattern="^([А-Я]{1})+[а-я-]+$" required>
+              <input 
+                type="text" 
+                id="lastName" 
+                class="form-control inp-form" 
+                name="lastName" 
+                value=""
+                placeholder="Иванов, Салтыков-Щедрин" 
+                maxlength="50" 
+                pattern="([А-Я]{1})+[А-Яа-яёЁ\-\s]+" 
+                required>
               <label class="label-form" for="lastName">Фамилия</label>
               <div class="invalid-feedback">Введите фамилию с заглавной буквы</div>
             </div>
@@ -326,14 +348,31 @@
 
           <div class="form-row">
             <div class="col-md-6 inp-group mb-4">
-              <input type="text" id="position" class="form-control inp-form" name="position" value="Директор"
-                     placeholder="Должность" pattern="^([А-Я]{1})+[а-я-]+$" required>
+              <input 
+                type="text" 
+                id="position" 
+                class="form-control inp-form" 
+                name="position" 
+                value="Директор"
+                placeholder="Директор, бухгалтер" 
+                maxlength="40" 
+                pattern="([А-Я]{1})+[А-Яа-яёЁ\-\s]+" 
+                required>
               <label class="label-form" for="position">Должность</label>
               <div class="invalid-feedback">Введите должность с заглавной буквы</div>
             </div>
             <div class="col-md-6 inp-group mb-4">
               <label class="label-form" for="email">Введите email</label>
-              <input type="email" id="email" class="form-control inp-form" placeholder="Ваш email" pattern="^([a-z0-9_-]{1})+([^а-яёЁА-Я])+@+[^а-яёЁА-Я]+\.[^а-яёЁА-Я]+$" name="email" value="" required>
+              <input 
+                type="email" 
+                id="email" 
+                class="form-control inp-form"
+                name="email" 
+                value="" 
+                placeholder="test@test.ru" 
+                pattern="^([a-z0-9_-]{1})+([^а-яёЁА-Я])+@+[^а-яёЁА-Я]+\.[^а-яёЁА-Я]+$" 
+                maxlength="50" 
+                required>
               <div class="invalid-feedback">Email не должен содержать кириллицу. Первый символ должен быть прописной</div>
             </div>
           </div>
@@ -341,17 +380,34 @@
           <div class="form-row">
             <div class="col-md-6 mb-4 inp-group">
               <label class="label-form" for="password">Пароль</label>
-              <input type="password" id="password" class="form-control inp-form" name="password" value="" minlength="8"
-                     maxlength="50"
-                     placeholder="Пароль" required>
-              <div class="invalid-feedback">Минимальное количество символов: 8</div>
+              <input 
+                type="password" 
+                id="password" 
+                class="form-control inp-form"
+                data-js-id="pass" 
+                name="password" 
+                value="" 
+                minlength="8"
+                maxlength="50"
+                placeholder="Пароль" 
+                required>
+              <div class="invalid-feedback" data-js-id="passError">Минимальное количество символов: 8</div>
               <meter id="pass-strength-meter" min="0" max="8" low="8" value="0"></meter>
             </div>
             <div class="col-md-6 mb-4 inp-group">
               <label class="label-form" for="passwordRepeat">Повторите пароль</label>
-              <input type="password" id="passwordRepeat" class="form-control inp-form" name="passwordRepeat" value="" minlength="8"
-                     maxlength="50" placeholder="Повтор пароля" required>
-              <div class="invalid-feedback">Минимальное количество символов: 8</div>
+              <input 
+                type="password" 
+                id="passwordRepeat" 
+                class="form-control inp-form"
+                data-js-id="repeatPass" 
+                name="passwordRepeat" 
+                value="" 
+                minlength="8"
+                maxlength="50" 
+                placeholder="Повтор пароля" 
+                required>
+              <div class="invalid-feedback" data-js-id="repeatPassError">Минимальное количество символов: 8</div>
               <meter id="password-strength-meter" min="0" max="8" low="8" value="0"></meter>
             </div>
           </div>
@@ -378,14 +434,6 @@
               </div>
             </div>
           </div>
-          <!--<div class="form-row mb-5">
-            <div class="col-md-6" id="isAdmin_field">
-              <div class="form-check custom-control custom-checkbox">
-                <input type="checkbox" id="isAdmin" class="custom-control-input" name="isAdmin" value="true">
-                <label class="custom-control-label" for="isAdmin">Администратор</label>
-              </div>
-            </div>
-          </div>-->
         </fieldset>
 
         <div class="form-group mb-5">
@@ -484,8 +532,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  
   <script type="text/javascript" src="js/menu.js"></script>
   <script type="text/javascript" src="js/meter.js"></script>
+  <script type="text/javascript" src="js/validate.js"></script>
 
 </body>
 </html>

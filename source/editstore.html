@@ -318,8 +318,15 @@
 
         <div class="form-row">
           <div class="col-md-12 inp-group mb-4">
-            <input type="text" id="name" class="form-control inp-form" name="name" value="Компания для теста"
-                   placeholder="Название" required>
+            <input 
+              type="text" 
+              id="name" 
+              class="form-control inp-form" 
+              name="name" 
+              value="Компания для теста"
+              maxlength="60"
+              placeholder="ПВЗ Московский" 
+              required>
             <label class="label-form" for="name">Название</label>
             <div class="invalid-feedback"></div>
           </div>
@@ -328,8 +335,15 @@
         <div class="form-row">
           <div class="col-md-12 mb-4 inp-group">
             <label class="label-form" for="address">Место продаж</label>
-            <input type="text" class="form-control inp-form" id="address" name="address" maxlength="150"
-                   placeholder="ebay.com или 112233, г.Москва, ул.Ленина, д.1, корп.2, оф.3" required>
+            <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="address" 
+              name="address" 
+              maxlength="150"
+              pattern="[0-9а-яА-Я,\.\s\-\w:/;]+"
+              placeholder="mysite.com или 112233, г.Москва, ул.Ленина, д.1, корп.2, оф.3" 
+              required>
             <div class="invalid-feedback">Обязательное поле</div>
           </div>
         </div>

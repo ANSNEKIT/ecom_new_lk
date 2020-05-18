@@ -4,18 +4,173 @@
     window.addEventListener('load', function () {
         var $forms = document.querySelectorAll('.needs-validation');
         var validation = Array.prototype.filter.call($forms, function ($form) {
+            const $pass = document.querySelector('input[data-js-id="pass"]');
+            const $repeatPass = document.querySelector('input[data-js-id="repeatPass"]');
+            const $error = document.querySelector('div[data-js-id="passError"]');
+            const $errorRepeat = document.querySelector('div[data-js-id="repeatPassError"]');
+
             $form.addEventListener('submit', function (event) {
                 if ($form.checkValidity() === false) {
                     event.preventDefault();
                     event.stopPropagation();
+                    $form.classList.add('was-validated');
                 }
-                $form.classList.add('was-validated');
+
+                validatePassAndRepeat($form, $pass, $repeatPass, $error, $errorRepeat);
+                validateInn($form);
+
             }, false);
         });
     }, false);
 })();
 
-function validateInn(inn, error) {
+const validatePassAndRepeat = (form, pass, repeatPass, error, errorRepeat) => {
+    if (form && pass && repeatPass && error) {
+        repeatPass.addEventListener('change', (evt) => {                
+            if(pass.value !== repeatPass.value) {
+                form.classList.remove('was-validated');
+
+                pass.classList.add('is-invalid');
+                repeatPass.classList.add('is-invalid');
+                error.textContent = 'Ошибка! Пароли не совпадают';
+                errorRepeat.textContent = 'Ошибка! Пароли не совпадают';
+            } else if (pass.value === evt.currentTarget.value) {
+                pass.classList.remove('is-invalid');
+                repeatPass.classList.remove('is-invalid');
+                error.classList.remove('invalid-feedback');
+                errorRepeat.classList.remove('invalid-feedback');
+
+                pass.classList.add('is-valid');
+                repeatPass.classList.add('is-valid');
+                error.classList.add('valid-feedback');
+                errorRepeat.classList.add('valid-feedback');
+
+                error.textContent = 'Пароли совпадают!';
+                errorRepeat.textContent = 'Пароли совпадают!';
+            }
+        });
+
+        if (pass.value !== repeatPass.value) {
+            event.preventDefault();
+            event.stopPropagation();
+            form.classList.remove('was-validated');
+
+            pass.classList.add('is-invalid');
+            repeatPass.classList.add('is-invalid');
+            error.textContent = 'Ошибка! Пароли не совпадают';
+            errorRepeat.textContent = 'Ошибка! Пароли не совпадают';
+            
+        } else if (pass.value === repeatPass.value) {
+            pass.classList.remove('is-invalid');
+            repeatPass.classList.remove('is-invalid');
+            error.textContent = '';
+            errorRepeat.textContent = '';
+
+            form.classList.add('was-validated');
+            //repeatPass.removeEventListener('change', validatePassAndRepeat);
+        }
+    } else {
+        return;
+    }
+};
+
+const validateInn = (form) => {
+    const $innFirm = document.querySelector('input[data-js-id="innFirm"]');
+    const $innFirmError = document.querySelector('div[data-js-id="innFirmError"]');
+    const innFirmValue = $innFirm.value;
+
+    let error = {
+        code: 0,
+        message: '',
+    };
+
+    const innChangeHadler = (event) => {
+        const innFirmValue = $innFirm.value;
+        let error = {
+            code: 0,
+            message: '',
+        };
+
+        let isValidInn = checkValidInn(innFirmValue, error);
+        if (isValidInn) {
+            form.classList.add('was-validated');
+            if ($innFirm.classList.contains('is-invalid')) {
+                $innFirm.classList.remove('is-invalid');
+            }
+
+            $innFirm.classList.add('is-valid');
+
+            if ($innFirmError.classList.contains('invalid-feedback')) {
+                $innFirmError.classList.remove('invalid-feedback');
+            }
+
+            $innFirmError.classList.add('valid-feedback');
+            $innFirmError.textContent = 'Инн корректный';
+        } else {
+            event.preventDefault();
+            event.stopPropagation();
+            $innFirmError.textContent = `${error.message}`;
+            form.classList.remove('was-validated');
+
+            if ($innFirm.classList.contains('is-valid')) {
+                $innFirm.classList.remove('is-valid');
+            };
+
+            $innFirm.classList.add('is-invalid');
+
+            if ($innFirmError.classList.contains('valid-feedback')) {
+                 $innFirmError.classList.remove('valid-feedback');
+            };
+            $innFirmError.classList.add('invalid-feedback');
+        }
+    }
+
+    if ($innFirm && $innFirmError) {
+
+        let isValidInn = checkValidInn(innFirmValue, error);
+
+        if (isValidInn) {
+            form.classList.add('was-validated');
+
+            if ($innFirm.classList.contains('is-invalid')) {
+                $innFirm.classList.remove('is-invalid');
+            }
+
+            $innFirm.classList.add('is-valid');
+
+            if ($innFirmError.classList.contains('invalid-feedback')) {
+                $innFirmError.classList.remove('invalid-feedback');
+            }
+
+            $innFirmError.classList.add('valid-feedback');
+            $innFirmError.textContent = 'Инн корректный';
+
+            $innFirm.removeEventListener('change', innChangeHadler);
+        } else {
+            event.preventDefault();
+            event.stopPropagation();
+            form.classList.remove('was-validated');
+            $innFirmError.textContent = `${error.message}`;
+
+            if ($innFirm.classList.contains('is-valid')) {
+                $innFirm.classList.remove('is-valid');
+            };
+
+            $innFirm.classList.add('is-invalid');
+
+            if ($innFirmError.classList.contains('valid-feedback')) {
+                 $innFirmError.classList.remove('valid-feedback');
+            };
+            $innFirmError.classList.add('invalid-feedback');
+
+            $innFirm.addEventListener('change', innChangeHadler);
+        }
+    } else {
+        new Error('В форме нет поля ИНН');
+    }
+};
+
+const checkValidInn = (inn, error) => {
     var result = false;
     if (typeof inn === 'number') {
         inn = inn.toString();
