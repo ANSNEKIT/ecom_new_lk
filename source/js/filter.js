@@ -1,19 +1,16 @@
-(function () {
-    let $filterBtn = document.querySelector('.filterBtn');
+'use strict';
 
-    if (!$filterBtn) {
-        throw new Error("filter icon not found!");
+let $filterBtn = document.querySelector('.filterBtn');
+
+if (!$filterBtn) {
+    throw new Error("filter icon not found!");
+}
+
+$filterBtn.addEventListener("click", () => {
+    let $formFilter = document.querySelector('.addCheckForm');
+    if ($formFilter.classList.contains('visuallyHidden')) {
+        $formFilter.classList.remove('visuallyHidden');
+    } else {
+        $formFilter.classList.add('visuallyHidden');
     }
-
-    $filterBtn.addEventListener("click", (evt) => {
-        let $formFilter = document.querySelector('.addCheckForm');
-        if ($formFilter.classList.contains('d-none')) {
-            $formFilter.classList.remove('d-none');
-        } else {
-            $formFilter.classList.add('d-none');
-        }
-    });
-
-})();
-
-
+});

@@ -1,27 +1,26 @@
 (function () {
     window.modules = {
         onClickAddConfirmInFiscal: function (evt) {
-            let $elem = evt.target;
+            const $elem = evt.target;
             if ( ($elem.tagName === 'BUTTON') && ($elem.classList.contains('btn-remove')) ) {
-                let $parentRow = $elem.parentNode.parentNode.parentNode;
-                let znFiscal = $parentRow.querySelector('p[data-class="znFiscal"]').textContent.trim();
-                let isRemoveFiscal = confirm(`Удалить кассу ЗН ${znFiscal}?`);
+                const $parentRow = $elem.closest('div[data-js-id="parentBox"]');
+                const znFiscal = $parentRow.querySelector('p[data-class="znFiscal"]').textContent.trim();
+                const isRemoveFiscal = confirm(`Удалить кассу ЗН ${znFiscal}?`);
                 if (!isRemoveFiscal) {
                     evt.preventDefault();
                 }
-
             } else {
                 return;
             }
         },
 
         onClickAddConfirmInStore: function (evt) {
-            let $elem = evt.target.closest('a.delIcon');
+            const $elem = evt.target.closest('.delIcon');
 
             if ($elem) {
-                let $parentRow = $elem.closest('tr');
-                let idStore = $parentRow.querySelector('th[data-class="idStore"]').textContent.trim();
-                let isRemoveStore = confirm(`Удалить точку продаж ${idStore}?`);
+                const $parentRow = $elem.closest('tr');
+                const idStore = $parentRow.querySelector('th[data-class="idStore"]').textContent.trim();
+                const isRemoveStore = confirm(`Удалить точку продаж ${idStore}?`);
                 if (!isRemoveStore) {
                     evt.preventDefault();
                 }
@@ -31,10 +30,10 @@
         },
 
         onClickAddConfirmInUsers: function (evt) {
-            let $elem = evt.target.closest('a.delIcon');
+            const $elem = evt.target.closest('.delIcon');
 
             if ($elem) {
-                let isRemoveFiscal = confirm(`Удалить пользователя?`);
+                const isRemoveFiscal = confirm(`Удалить пользователя?`);
                 if (!isRemoveFiscal) {
                     evt.preventDefault();
                 }
@@ -43,6 +42,10 @@
             }
 
         },
+
+        render: function (parent, template, position = `beforeend`) {
+            parent.insertAdjacentHTML(position, template);
+        }
     };
 })();
 

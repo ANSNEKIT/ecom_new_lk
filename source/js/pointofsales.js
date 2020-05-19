@@ -1,8 +1,8 @@
-(function () {
-    let $companyBlock = document.querySelector('.companyBlock');
+'use strict';
+    const $companyBlock = document.querySelector('.companyBlock');
 
-    $companyBlock.addEventListener('click', function (evt) {
+    $companyBlock.addEventListener('click', (evt) => {
         window.modules.onClickAddConfirmInStore(evt);
     });
-})();
+
 

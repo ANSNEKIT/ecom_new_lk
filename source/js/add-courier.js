@@ -120,7 +120,7 @@ const checkSumm = () => {
     } else {
       resultnumber = parseInt($numberInput[i].value.match(/[0-9.]+/));
     }
-    debugger;
+ 
     resultSum = (resultPrice * resultnumber);
     resultSum = (Math.round(resultSum * 100) / 100).toFixed(2);
 

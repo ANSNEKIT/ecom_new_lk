@@ -1,4 +1,4 @@
-let createLinkOfd = () => {
+const createLinkOfd = () => {
     const $linkToOfd = document.querySelector('a[data-js-id="linkToOfd"]');
     const INN = document.querySelector('span[data-class="inn"]').textContent.trim();
     const RNM = document.querySelector('span[data-class="rnm"]').textContent.trim();

@@ -1,46 +1,11 @@
-(function () {
-    let $toggleLeftMenu = document.querySelector(".navbar-toggler");
+'use strict';
 
-//let $aside = document.querySelector("#menu");
-
-
-// let height_content = $('main').height();
-// let height_menu = $('.menu').height();
-//let height_menu = $('.menu');
-
-    /*function calcHeightMenu() {
-        let scrollHeight = Math.max(
-            document.body.scrollHeight, document.documentElement.scrollHeight,
-            document.body.offsetHeight, document.documentElement.offsetHeight,
-            document.body.clientHeight, document.documentElement.clientHeight
-        );
-        let scrollWidth = Math.max(
-            document.body.scrollWidth, document.documentElement.scrollWidth,
-            document.body.offsetWidth, document.documentElement.offsetWidth,
-            document.body.clientWidth, document.documentElement.clientWidth
-        );
-        let height_content = $('main').height();
-        let height_menu = $('.menu').height();
-        let resultHeight = scrollHeight - 90;
-
-        if ((document.documentElement.clientWidth > 992) && (height_content < document.documentElement.clientHeight)) {
-            $('.menu').css({'height': resultHeight});
-            resultHeight = "auto";
-        } else if (document.documentElement.clientWidth < 992) {
-            $('.menu').css({'height': 'auto'});
-        }
-    }
-
-    calcHeightMenu();
-
-    window.onresize = function () {
-        calcHeightMenu();
-    };*/
+    const $toggleLeftMenu = document.querySelector(".navbar-toggler");
 
     $toggleLeftMenu.addEventListener("click", () => {
-        let $leftMenu = document.querySelector("#menu");
-        let $gridContainer = document.getElementById("#gridWrapper");
-        let $span = $toggleLeftMenu.querySelector('.navbar-toggler-icon');
+        const $leftMenu = document.querySelector("#menu");
+        const $gridContainer = document.getElementById("#gridWrapper");
+        const $span = $toggleLeftMenu.querySelector('.navbar-toggler-icon');
 
         if ($span.classList.contains('active')) {
             $span.classList.remove('active');
@@ -67,21 +32,20 @@
 
 
 
-// Click Element Action
+    // Click Element Action
     jQuery('.scroll-to-top.visible').on('click', function () {
         $('body, html').animate({
             scrollTop: 0
         }, 400);
-        return false;
     });
 
     /*
     document.addEventListener("click", (evt) => {
-        let icon = evt.target;
-        let menuTop = $(".userMenu .dropdown-menu");
+        const icon = evt.target;
+        const menuTop = $(".userMenu .dropdown-menu");
         console.log(icon.find(".arrow .js-icon")); //.toggleClass("fa-chevron-down fa-chevron-up");
 
-        let boolShow = menuTop.hasClass("show");
+        const boolShow = menuTop.hasClass("show");
         console.log(boolShow);
         if(boolShow === true) {
             //console.log(menuTop.hasClass("show"));
@@ -90,6 +54,6 @@
     });
 
     */
-})();
+
 
 
