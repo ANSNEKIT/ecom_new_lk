@@ -6,8 +6,8 @@
         var validation = Array.prototype.filter.call($forms, function ($form) {
             const $pass = document.querySelector('input[data-js-id="pass"]');
             const $repeatPass = document.querySelector('input[data-js-id="repeatPass"]');
-            const $error = document.querySelector('div[data-js-id="passError"]');
-            const $errorRepeat = document.querySelector('div[data-js-id="repeatPassError"]');
+            const $error = document.querySelector('input[data-js-id="pass"] + div');
+            const $errorRepeat = document.querySelector('input[data-js-id="repeatPass"] + div');
 
             $form.addEventListener('submit', function (event) {
                 if ($form.checkValidity() === false) {
