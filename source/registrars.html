@@ -654,7 +654,7 @@
         </div>
         <div class="questItem mb-4">
           <div class="d-flex align-items-center questHeaderWrapper">
-            <div class="flex-grow-1 questHeader" data-toggle="collapse" data-target="#collapse_4"
+            <div class="flex-grow-1 questHeader" data-toggle="collapse" data-target="#collapse_5"
                  aria-expanded="true" aria-controls="collapse_4">
               <div class="row">
                 <div class="col-md-4 col-lg-4">
@@ -742,6 +742,115 @@
               <div class="row mb-sm-3 mb-md-2 mx-3 pb-3">
                 <p class="col-md-6 col-xl-4 font-weight-bold">Код состояния ФР:</p>
                 <p class="col-md-6 col-xl-8">3.0</p>
+              </div>
+              <div class="row mt-4">
+                <form action="#" method="POST" class="col-sm-4 col-md-3 col-lg-4">
+                  <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
+                  <button type="submit" value="submit" class="btn btn-remove">
+                    <svg width="20" height="20" aria-hidden="true" focusable="false" data-prefix="fas"
+                      data-icon="times-circle" class="svg-inline--fa fa-times-circle fa-w-16" role="img"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z">
+                      </path>
+                    </svg>
+                    Удалить кассу
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="questItem mb-4">
+          <div class="d-flex align-items-center questHeaderWrapper">
+            <div class="flex-grow-1 questHeader" data-toggle="collapse" data-target="#collapse_5"
+                 aria-expanded="true" aria-controls="collapse_5">
+              <div class="row">
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span>ЗН ККТ:</span>
+                    <span>1255512346</span>
+                  </p>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span>РН ККТ:</span>
+                    <span>0000000000012345</span>
+                  </p>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <p>
+                    <span class="pr-3">Статус ККТ:</span>
+                    <span data-js-id="status-img">
+                      
+                    </span>
+                  </p>
+                </div>
+                <!--<div class="col-md-1 text-center">-->
+                <!--<p>-->
+                <!--<span class="fas fa-pause-circle pauseIcon" data-toggle="tooltip" data-placement="top"-->
+                <!--title="Остановить кассу"></span>-->
+                <!--</p>-->
+                <!--</div>-->
+              </div>
+            </div>
+            <div class="text-center">
+              <form action="/admin/turnOn/reg" method="POST" class="">
+                <input type="hidden" name="registrarID" value="1fa01ec7-5bcd-4302-bfa2-f3f2f4092531">
+                <button type="submit" value="submit" class="btnPause" data-toggle="tooltip" data-placement="top" title="Остановить кассу">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pause-circle"
+                       class="svg-inline--fa fa-pause-circle fa-w-16 pauseIcon" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-16 328c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v160zm112 0c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v160z"></path></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div id="collapse_5" class="collapse" aria-labelledby="questHeader" data-parent="#accordion"
+               data-js-id="container-store">
+            <div class="p-4">
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Идентификатор ФР:</p>
+                <p class="col-md-6 col-xl-8">1f1234567-1234-4321-bfa2-f3f2f4092531</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Модель:</p>
+                <p class="col-md-6 col-xl-8">Атол Онлайн</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">ЗН ККТ:</p>
+                <p class="col-md-6 col-xl-8" data-class="znFiscal">1255512346</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">РН ККТ:</p>
+                <p class="col-md-6 col-xl-8">0000000000012345</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">ФН:</p>
+                <p class="col-md-6 col-xl-8">9999888877776666</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Название ОФД:</p>
+                <p class="col-md-6 col-xl-8">Другой провайдер</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Провайдер:</p>
+                <p class="col-md-6 col-xl-8">Атол Онлайн</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Состояние:</p>
+                <p class="col-md-6 col-xl-8" data-js-id="state">TURNED_ON</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Статус ФР:</p>
+                <p class="col-md-6 col-xl-8" data-js-id="status">Неизвестно</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Последнее обновление:</p>
+                <p class="col-md-6 col-xl-8">2019-09-07T05:09:25.958Z</p>
+              </div>
+              <div class="row mb-sm-3 mb-md-2 mx-3 pb-3">
+                <p class="col-md-6 col-xl-4 font-weight-bold">Код состояния ФР:</p>
+                <p class="col-md-6 col-xl-8">-</p>
               </div>
               <div class="row mt-4">
                 <form action="#" method="POST" class="col-sm-4 col-md-3 col-lg-4">

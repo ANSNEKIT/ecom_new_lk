@@ -10,8 +10,9 @@
         
         if (!$parentButton) {
             return;
-        } else if ( ($parentButton.tagName === 'BUTTON') && ($parentButton.classList.contains('btnPlay')) ) {
-            evt.preventDefault();
+        } 
+        
+        /* else if ( ($parentButton.tagName === 'BUTTON') && ($parentButton.classList.contains('btnPlay')) ) {
             $parentButton.classList.remove('btnPlay');
             $parentButton.classList.add('btnPause');
             $parentButton.setAttribute('title', 'Остановить кассу');
@@ -19,14 +20,13 @@
             $parentButton.innerHTML = '';
             $parentButton.insertAdjacentHTML('afterbegin', pauseIcon);
         } else if ( ($parentButton.tagName === 'BUTTON') && $parentButton.classList.contains('btnPause') ){
-            evt.preventDefault();
             $parentButton.classList.remove('btnPause');
             $parentButton.classList.add('btnPlay');
             $parentButton.setAttribute('title', 'Включить кассу');
 
             $parentButton.innerHTML = '';
             $parentButton.insertAdjacentHTML('afterbegin', playIcon);
-        }
+        } */
     }
 
 
