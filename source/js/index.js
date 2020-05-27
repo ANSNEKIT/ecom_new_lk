@@ -160,6 +160,7 @@
                     class="form-control inp-form inp-required" 
                     id="items_${count}_supplierName" 
                     name="items[${count}].supplierName"
+                    data-js-id="agent-name"
                     maxlength="126"
                     placeholder='ООО "Тестовая компания"'>
                   <label class="label-form" for="items_${count}_supplierName">Наименование поставщика <span class="badge label-required">(*)</span></label>
@@ -174,10 +175,11 @@
                     class="form-control inp-form inp-required" 
                     id="items_${count}_supplierPhones" 
                     name="items[${count}].supplierPhones"
+                    data-js-id="agent-phone"
                     placeholder="+71112223344" 
                     value=""
                     maxlength="100" 
-                    pattern="(^$)|([\+]7[0-9]{10}[,]*)+">
+                    pattern="([\+]7[0-9]{10}[,\s]*)+">
                   <label class="label-form" for="items_${count}_supplierPhones">Телефон поставщика <span class="badge label-required">(*)</span></label>
                   <div class="invalid-feedback">Введите номер/номера телефона в формате +7ХХХХХХХХХХ</div>
                 </div>
@@ -187,7 +189,8 @@
                     class="form-control inp-form inp-required" 
                     id="items_${count}_supplierTaxNumber"
                     name="items[${count}].supplierTaxNumber"
-                    pattern="(^$)|([0-9]{10})|([0-9]{12})"
+                    data-js-id="agent-inn"
+                    pattern="([0-9]{10})|([0-9]{12})"
                     maxlength="12">
                   <label class="label-form" for="items_${count}_supplierTaxNumber">ИНН Поставщика
                     <span class="badge label-required">(*)</span>
@@ -350,14 +353,20 @@
         const $elem = evt.target;
         if ($elem.classList.contains("jsAgentTrueInp")) {
             const checkboxTrueVal = $elem.value;
-            
             const checkboxIdCountTrue = parseInt(checkboxTrueVal);
-
             const $elemParent = $commodityItems.querySelector(`div.position_${checkboxIdCountTrue}`);
             const $elemToggle = $elemParent.querySelector(`fieldset.agentGoods`);
+            const $agentName = $elemParent.querySelector(`input[data-js-id="agent-name"]`);
+            const $agentPhone = $elemParent.querySelector(`input[data-js-id="agent-phone"]`);
+            const $agentInn = $elemParent.querySelector(`input[data-js-id="agent-inn"]`);
 
             if ($elem.checked === true) {
-                $elemToggle.classList.remove("visuallyHidden");                
+              $elemToggle.classList.remove("visuallyHidden");
+
+              $agentName.setAttribute('required', '');
+              $agentPhone.setAttribute('required', '');
+              $agentInn.setAttribute('required', '');
+
             }
 
         } else if ($elem.classList.contains("jsAgentFalseInp")) {
@@ -365,9 +374,16 @@
             const checkboxIdCountFalse = parseInt(checkboxFalseVal);
             const $elemParent = $commodityItems.querySelector(`div.position_${checkboxIdCountFalse}`);
             const $elemToggle = $elemParent.querySelector(`fieldset.agentGoods`);
+            const $agentName = $elemParent.querySelector(`input[data-js-id="agent-name"]`);
+            const $agentPhone = $elemParent.querySelector(`input[data-js-id="agent-phone"]`);
+            const $agentInn = $elemParent.querySelector(`input[data-js-id="agent-inn"]`);
 
             if ($elem.checked === true) {
                 $elemToggle.classList.add("visuallyHidden");
+
+                $agentName.removeAttribute('required');
+                $agentPhone.removeAttribute('required');
+                $agentInn.removeAttribute('required');                
             }
         }
     };
