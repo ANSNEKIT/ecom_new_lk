@@ -1,9 +1,28 @@
+.preloadCheck {
+  max-width: 600px;
+  min-width: 320px;
 
-.page-preloadcheck .indexContent_image {
+  background-color: $white;
+
+  margin: 0 auto;
+
+  padding: 1rem;
+
+}
+
+.preloadCheck_author {
+  width: 200px;
+  border-top: 1px solid #000;
+
+  font-size: 0.7em;
+
+  margin: 0 auto;
+}
+.preloadCheck_image {
   margin-bottom: 4rem;
 }
 
-.page-preloadcheck .indexContent_image img {
+.preloadCheck_image img {
   width: auto;
   height: auto;
   max-width: 320px;
@@ -17,14 +36,14 @@
   }
 }
 
-.indexContent_header {
+.preloadCheck_header {
   @media (max-width: 576px) {
     font-size: 1.1rem;
     font-weight: 800;
   }
 }
 
-.indexContent_check-info {
+.preloadCheck_check-info {
   @media (max-width: 576px) {
     font-size: 0.9rem;
   }

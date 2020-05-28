@@ -14,3 +14,11 @@
 
   margin: 0 auto;
 }
+
+.changePass .changepassInfo {
+  border: 2px solid $bd-warning;
+}
+
+.changePass .changepassInfo p, ul {
+  font-size: 0.9rem;
+}

@@ -305,13 +305,13 @@
                 type="text" 
                 id="login" 
                 class="form-control inp-form" 
-                placeholder="Ваш никнейм или email"  
+                placeholder="+71112223344 или email"  
                 name="login"
                 maxlength="50"
-                pattern="[^а-яА-Я]+"
+                pattern="((\+7[0-9]{10})+|([^+]+@+.+))"
                 required>
               <label class="label-form" for="login">Логин</label>
-              <div class="invalid-feedback">Введите корректное значение. Только латинские символы и цифры.</div>
+              <div class="invalid-feedback">Введите корректное значение. Номер в формате +7ХХХХХХХХХХ или email</div>
             </div>
           </div>
 
@@ -531,7 +531,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
   
   <script type="text/javascript" src="js/menu.js"></script>
   <script type="text/javascript" src="js/meter.js"></script>

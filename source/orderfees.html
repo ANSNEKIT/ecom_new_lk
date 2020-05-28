@@ -336,7 +336,7 @@
             </div>
 
             <div class="col-md-6 mb-4 inp-group parentSelect">
-              <label class="label-form" for="status">Статус чека</label>
+              <label class="label-form" for="status">Статус заказа</label>
               <select id="status" class="form-control select" name="status">
                 <option value="none" selected>Не выбран</option>
                 <option value="CREATED">Создан</option>
@@ -423,10 +423,11 @@
         <table class="table table-bordered table-sm table-hover ">
           <thead class="">
             <tr>
-              <th class="">ID</th>
+              <th class="text-center">ID</th>
+              <th class="text-center">Организация</th>
               <th>Тип платежной системы</th>
-              <th class="">Дата и время</th>
-              <th class="">Сумма</th>
+              <th class="text-center">Дата и время</th>
+              <th class="text-center">Сумма</th>
               <th class="text-center">Статус</th>
               <th class="text-center">Чек</th>
               <th class="">Ссылка на платеж</th>
@@ -434,7 +435,8 @@
           </thead>
           <tbody>
             <tr>
-              <th class="">123456</th>
+              <td class="text-center">125113456</td>
+              <td class="text-center">ИП Иванов Иван Иванович</td>
               <td class="">Яндекс касса</td>
               <td class="">2019-09-12T12:19:16.831+03:00</td>
               <td class="">1250.00</td>
@@ -454,7 +456,8 @@
               </td>
             </tr>
             <tr>
-              <th class="">223344</th>
+              <td class="text-center">265165344</td>
+              <td class="text-center">ООО "Тестовая компания"</td>
               <td class="">Яндекс касса</td>
               <td class="">2019-09-12T12:19:16.831+03:00</td>
               <td class="">4000.00</td>
@@ -474,7 +477,8 @@
               </td>
             </tr>
             <tr>
-              <th class="">445566</th>
+              <td class="text-center">445516966</td>
+              <td class="text-center">Общество с ограниченной ответственностью "Вывппыфвафыва1233 ывфываыфвафываа"</td>
               <td class="">Тинькофф</td>
               <td class="">2019-09-12T12:19:16.831+03:00</td>
               <td class="">900.00</td>
@@ -604,7 +608,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 
   <script type="text/javascript" src="js/menu.js"></script>
   <script type="text/javascript" src="js/filter.js"></script>

@@ -334,6 +334,22 @@
 
         <meter class=" mb-4" id="password-strength-meter" min="0" max="8" low="8" value="0"></meter>
 
+        <div class="p-2 mb-4 changepassInfo">
+          <div class="d-flex">
+            <div class="spinner-grow text-warning" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <p class="ml-3">Внимание! Если у вас настроена интеграция к данной учетной записи одним из способов: </p>
+          </div>
+
+          <ul>
+            <li>Интернет-эквайринг Тинькофф, Сбребанк</li>
+            <li>Платежные системы UnitPay, CloudPayments</li>
+            <li>Плагин Атол, E-COM Kassa в админке вашего сайта</li>
+          </ul>
+          <p><strong>Необходимо так же изменить пароль в настройках интеграции кассы в ЛК интернет-эквайринга, в ЛК платежной системы, или в настройках плагина!</strong></p>
+        </div>
+
         <div class="form-row">
           <button type="submit" class="btn btn-primary btn-lg mt-4 mb-4 mr-5" value="submit">Изменить
           пароль</button>
@@ -430,7 +446,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 
   <script type="text/javascript" src="js/menu.js"></script>
   <script type="text/javascript" src="js/meter.js"></script>

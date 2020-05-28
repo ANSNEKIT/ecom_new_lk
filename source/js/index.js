@@ -8,7 +8,7 @@
         throw new Error("Нет формы добавления товарных позиций!");
     }
 
-    const createMarkup = () => {
+/*     const createMarkup = () => {
         return (
             `<div data-position class="position_${count} mb-5 bdr-bottom">
             <div class="form-group goods">
@@ -206,16 +206,15 @@
       
           </div>`
         )
-    }
+    } */
 
     const renderPosition = (evt) => {
-        const $elem = evt.target;
+       /*  const $elem = evt.target;
         if ($elem.classList.contains("btn-add")) {
             count += 1;
             $elem.value = count;
-            window.modules.render($commodityItems, createMarkup());
+            window.modules.render($commodityItems, createMarkup()); */
             checkSumm();
-        }
     }
 
     /* const renderPosition = (evt) => {
@@ -337,13 +336,13 @@
                 evt.preventDefault(); 
                 return;
             };
-            
+           /*  
             const btnValue = $elem.value;
             const btnValueCount = parseInt(btnValue);
             const $elemRemove = $commodityItems.querySelector(`.position_${btnValueCount}`);
             $elemRemove.remove();
             count -= 1;
-            $btnAdd.value = count;
+            $btnAdd.value = count; */
 
             checkSumm();
         };
@@ -421,12 +420,15 @@
         $totalSumElem.value = totalSum;
     };
 
-    $commodityItems.addEventListener("click", function(evt) {
-        renderPosition(evt);
-        removePosition(evt);
-        toggleAgentCheckbox(evt);
+    $commodityItems.addEventListener("click", (evt) => {
+      renderPosition(evt);
+      removePosition(evt);
+      toggleAgentCheckbox(evt);
     });
-        
+
+    window.addEventListener('load', () => {
+      checkSumm();
+    });        
 
     $commodityItems.addEventListener("change", checkSumm);
 

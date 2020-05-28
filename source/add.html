@@ -370,11 +370,13 @@
                 type="tel" 
                 class="form-control inp-form inp-required" 
                 id="customer_phone_field" 
-                placeholder="+71112223344" 
+                placeholder="+71112223344 или 1112223344" 
                 value=""
                 name="customer.phone" 
                 maxlength="12"
-                pattern="(^$)|([\+]7[0-9]{10})">
+                pattern="^(\+7)*[0-9]{10}$">
+                <!-- pattern="(^$)|((\+7)*[0-9]{10})"> -->
+                
               <label class="label-form" for="customer_phone_field">
                 Телефон
                 <span class="badge label-required">(*)</span>
@@ -578,9 +580,10 @@
                 <div class="col-md-12 mb-3 inp-group">
                   <input 
                     type="text" 
-                    class="form-control inp-form inp-required" 
+                    class="form-control inp-form" 
                     id="items_0_supplierName_field" 
                     name="items[0].supplierName"
+                    data-js-id="agent-name"
                     placeholder=""
                     maxlength="126">
                   <label class="label-form" for="items_0_supplierName_field">Наименование поставщика <span class="badge label-required">(*)</span></label>
@@ -592,24 +595,26 @@
                 <div class="col-md-6 mb-3 inp-group">
                   <input 
                     type="tel" 
-                    class="form-control inp-form inp-required" 
+                    class="form-control inp-form" 
                     id="items_0_supplierPhones" 
                     name="items[0].supplierPhones"
                     placeholder="+71112223344" 
                     value=""
+                    data-js-id="agent-phone"
                     maxlength="100"
-                    pattern="(^$)|([\+]7[0-9]{10}[,]*)+">
+                    pattern="([\+]7[0-9]{10}[,\s]*)+">
                   <label class="label-form" for="items_0_supplierPhones">Телефон поставщика <span class="badge label-required">(*)</span></label>
                   <div class="invalid-feedback">Введите номер/номера телефона в формате +7XXXXXXXXXX</div>
                 </div>
                 <div class="col-md-6 mb-3 inp-group">
                   <input 
                     type="text" 
-                    class="form-control inp-form inp-required" 
+                    class="form-control inp-form" 
                     id="items_0_supplierTaxNumber"
-                    name="items[0].supplierTaxNumber" 
+                    name="items[0].supplierTaxNumber"
+                    data-js-id="agent-inn" 
                     maxlength="12"
-                    pattern="(^$)|([0-9]{10})|([0-9]{12})">
+                    pattern="([0-9]{10})|([0-9]{12})">
                   <label class="label-form" for="items_0_supplierTaxNumber">ИНН Поставщика
                     <span class="badge label-required">(*)</span>
                   </label>
@@ -953,7 +958,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="js/modules.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript" src="js/menu.js"></script>
