@@ -68,7 +68,7 @@ function minimazeImg (done) {
 
 function copy(done) {
     gulp.src([
-        'source/fonts/**/*.{woff, woff2}',
+        'source/fonts/**/*',
         'source/img/**',
         'source/js/**',
         `source/css/**/*.min.css`

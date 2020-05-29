@@ -1,11 +1,17 @@
-.changePass .inp-required {
-  /*&:invalid {
-    border: 1px solid $border-required;
-  }*/
+/* .changePass .inp-required {
+*  
+*  &:invalid {
+*  border: 1px solid $border-required;
+*  }
+*
+*  &:valid {
+*    border: 2px solid $border-valid;
+*  }
+*
+* }  */
 
-  &:valid {
-    border: 2px solid $border-valid;
-  }
+.changePass .inp-required:valid {
+  border: 2px solid $border-valid;
 
 }
 
