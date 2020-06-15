@@ -1,4 +1,4 @@
-.page-stores .questItem {
+.sectionStoreRegistrars .questItem {
   align-items: center;
 
   border: none;
@@ -7,16 +7,13 @@
   box-shadow: 0 0 0.9rem 0 rgba(44,51,73,.2);
   //padding: 1rem 0;
 }
-
-.page-stores .questHeaderWrapper {
+ .questHeaderWrapper {
   border-bottom: 1px solid $table-bd;
 }
-
-.page-stores .questHeader {
+ .questHeader {
   background-color: #fff;
 }
-
-.page-stores .btnPause, .page-stores .btnPlay {
+ .btnPause, .btnPlay {
   padding: 0;
   margin: 0;
 

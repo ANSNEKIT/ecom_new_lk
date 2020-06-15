@@ -121,17 +121,16 @@
              )
 
             if (statusFiscal === 'Давно не было связи') {
-                $statusFiscalImg.innerHTML = '';
+                $statusFiscalImg.firstChild.remove();
                 $statusFiscalImg.insertAdjacentHTML('afterbegin', noWifiImg);
             } else if (statusFiscal === 'ОК' || statusFiscal === 'Неизвестно') {
-                $statusFiscalImg.innerHTML = '';
+                $statusFiscalImg.firstChild.remove();
                 $statusFiscalImg.insertAdjacentHTML('afterbegin', wifiImg);
-            }
-
-            if (stateFiscal === 'NOT_REGISTERED' || stateFiscal === 'NOT_FISCALIZED') {
-                $statusFiscalImg.innerHTML = '';
+            } else if (stateFiscal === 'NOT_REGISTERED' || stateFiscal === 'NOT_FISCALIZED') {
+                $statusFiscalImg.firstChild.remove();
                 $statusFiscalImg.insertAdjacentHTML('afterbegin', warningIcon);
             }
+
         }
 
     });
