@@ -335,7 +335,7 @@
         </div>
         <div class="companyItem">
           <div>
-            <img class="companyItem__img" src="img/rbk_money.png" alt="RBK Money" width="461" height="169">
+            <img class="companyItem__img" src="img/rbk_money.png" alt="RBK Money" width="230" height="99">
           </div>
           <div>
             <!--<button type="button" class="btn btn-primary disabled">Подключено</button>-->
@@ -622,18 +622,35 @@
             <div class="mb-4">
               <div class="modalMain__description mb-4">
                 <h4 class="font-weight-bold">Описание:</h4>
-                <p>Сервис по приему платежей на сайте</p>
+                <p>Интеграция с API платежным сервисом RBK money.
+                  <a href=" https://promo.rbk.money/ecomkassa">Подробнее</a>
+                </p>
               </div>
               <div class="modalMain__howWork mb-4">
                 <h4 class="font-weight-bold">Как работает:</h4>
-                <p>Если у вас нет собственного сайта, то в Личном Кабинете Екомкассы вы сможете генерить вашим клиентам прямые ссылки на оплату.</p>
+                <p>Сервер E-COM kassa подключается в API сервиса RBK money и создает ссылку на оплату. Ссылку можно скорпировать и отправить клиенту в личном кабинете или сформировать в приложения водителя или курьера в виде QR-кода</p>
 
               </div>
               <div class="modalMain__connection mb-4">
                 <h4 class="font-weight-bold">Подключение:</h4>
               
-                <a href="https://rbk.money/documentation/#types">Документация по подключению RBK Money</a>
-                
+                <p>1. Найти и скопировать айди магазина в разделе: ЛК Екомкассы - Интеграция - Магазины</p>
+                <p>2. Перейдите в раздел Интеграции - API key и создайте ключ доступа</p>
+                <p>3. Перейдите в раздел Webhook и нажмите «Устанвоить webhook». После выбора магазина установить галочки в пунктах:</p>
+                <ul class="">
+                  <li>
+                    <p class="h5">InvoicePaid (инвойс перешел в состояние "Оплачен")</p>
+                  </li>
+                  <li>
+                    <p class="h5">InvoiceCancelled (инвойс отменен по истечению срока давности)</p>
+                  </li>
+                  <li>
+                    <p class="h5">InvoiceFulfilled (инвойс успешно погашен)</p>
+                  </li>
+                </ul>
+                <p>и укажите URL для оповещений:</p>
+                <p><strong>https://env-5581354.mircloud.ru/api/v1/webhooks/tinkoff</strong></p>
+                                
               </div>
             </div>
 
