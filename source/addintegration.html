@@ -297,7 +297,8 @@
   <main class="mainContent mt-5">
     <h2 class="page-header text-center py-5">Настройка интеграции</h2>
     <form class="sectionMiniBlock mb-5" action="" method="get">
-      <fieldset class="FormGroup1 mb-4">
+      <fieldset class="sectionBlockIntegration">
+        
         <div class="form-row">
           <div class="col-md-6 inp-group mb-4">
             <input 
@@ -319,13 +320,30 @@
             <div class="invalid-feedback">Введите пароль от лк партнера</div>
           </div>
         </div>
+
+        <div class="form-row">
+          <div class="col-md-12 inp-group mb-4">
+            <input 
+              type="text" 
+              id="redirect_url" 
+              class="form-control inp-form"
+              name="redirect_url"
+              value=""
+              placeholder=""
+              maxlength="100" 
+            >
+            <label class="label-form" for="login">redirect URL</label>
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+
         <div class="form-row">
           <div class="col-md-12 inp-group mb-4 parentSelect">
-            <select id="mode" name="mode" class="form-control inp-form inp-required select">
+            <select id="modeSberbank" name="modeSberbank" class="form-control inp-form inp-required select">
               <option value="live" selected>Боевой</option>
               <option value="Test">Тестовый</option>
             </select>
-            <label class="label-form" for="mode">Режим</label>
+            <label class="label-form" for="modeSberbank">Режим</label>
             <div class="invalid-feedback"></div>
           </div>
         </div>

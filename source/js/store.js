@@ -120,17 +120,41 @@
                  </svg>`
              )
 
-            if (statusFiscal === 'Давно не было связи') {
-                $statusFiscalImg.firstChild.remove();
-                $statusFiscalImg.insertAdjacentHTML('afterbegin', noWifiImg);
-            } else if (statusFiscal === 'ОК' || statusFiscal === 'Неизвестно') {
-                $statusFiscalImg.firstChild.remove();
-                $statusFiscalImg.insertAdjacentHTML('afterbegin', wifiImg);
-            } else if (stateFiscal === 'NOT_REGISTERED' || stateFiscal === 'NOT_FISCALIZED') {
-                $statusFiscalImg.firstChild.remove();
-                $statusFiscalImg.insertAdjacentHTML('afterbegin', warningIcon);
-            }
+            // if (statusFiscal === 'Давно не было связи') {
+            //     $statusFiscalImg.firstChild.remove();
+            //     $statusFiscalImg.insertAdjacentHTML('afterbegin', noWifiImg);
+            // } else if (statusFiscal === 'ОК' || statusFiscal === 'Неизвестно') {
+            //     $statusFiscalImg.firstChild.remove();
+            //     $statusFiscalImg.insertAdjacentHTML('afterbegin', wifiImg);
+            // } else if (stateFiscal === 'NOT_REGISTERED' || stateFiscal === 'NOT_FISCALIZED') {
+            //     $statusFiscalImg.firstChild.remove();
+            //     $statusFiscalImg.insertAdjacentHTML('afterbegin', warningIcon);
+            // }
 
+
+            switch (statusFiscal) {
+                case 'Давно не было связи':
+                    if (stateFiscal === 'READY' || stateFiscal === 'TURNED_OFF') {
+                        $statusFiscalImg.firstChild.remove();
+                        $statusFiscalImg.insertAdjacentHTML('afterbegin', noWifiImg);
+                    }
+                    break;
+                case 'ОК':
+                    if (stateFiscal === 'READY' || stateFiscal === 'TURNED_OFF') {
+                        $statusFiscalImg.firstChild.remove();
+                        $statusFiscalImg.insertAdjacentHTML('afterbegin', wifiImg);
+                    }
+                    break;
+                case 'Неизвестно':
+                    if (stateFiscal === 'READY' || stateFiscal === 'TURNED_OFF' || stateFiscal === 'TURNED_ON') {
+                        $statusFiscalImg.firstChild.remove();
+                        $statusFiscalImg.insertAdjacentHTML('afterbegin', wifiImg);
+                    } else if (stateFiscal === 'NOT_REGISTERED' || stateFiscal === 'NOT_FISCALIZED') {
+                        $statusFiscalImg.firstChild.remove();
+                        $statusFiscalImg.insertAdjacentHTML('afterbegin', warningIcon);
+                    }
+                    break;
+            }
         }
 
     });
