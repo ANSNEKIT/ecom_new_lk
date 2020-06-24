@@ -8,7 +8,7 @@
         throw new Error("Нет формы добавления товарных позиций!");
     }
 
-/*     const createMarkup = () => {
+    /* const createMarkup = () => {
         return (
             `<div data-position class="position_${count} mb-5 bdr-bottom">
             <div class="form-group goods">
@@ -19,7 +19,7 @@
                     class="form-control inp-form" 
                     id="items_${count}_name" 
                     name="items[${count}].name"
-                    value=""
+                    value="Товар"
                     placeholder='Кружка "My-brand" или Доставка'
                     maxlength="126" 
                     required>
@@ -209,12 +209,13 @@
     } */
 
     const renderPosition = (evt) => {
-       /*  const $elem = evt.target;
-        if ($elem.classList.contains("btn-add")) {
-            count += 1;
-            $elem.value = count;
-            window.modules.render($commodityItems, createMarkup()); */
-            checkSumm();
+      /* const $elem = evt.target;
+      if ($elem.classList.contains("btn-add")) {
+        count += 1;
+        $elem.value = count;
+        window.modules.render($commodityItems, createMarkup()); */
+        checkSumm();
+      // }
     }
 
     /* const renderPosition = (evt) => {
@@ -401,27 +402,27 @@
             if ($priceInput[i].value.trim() === '') {
                 resultPrice = 0.00;
             } else {
-                resultPrice = parseFloat($priceInput[i].value.trim());
+                resultPrice = parseFloat($priceInput[i].value.trim()) * 100;
             }
 
             if ($quantityInput[i].value.trim() === '') {
                 resultQuantity = 0.000;
             } else {
-                resultQuantity = parseFloat($quantityInput[i].value.trim());
+                resultQuantity = parseFloat($quantityInput[i].value.trim()) * 100;
             }
 
-            resultSum = (resultPrice * resultQuantity);
+            resultSum = (resultPrice * resultQuantity) / 10000;
             resultSum = (Math.round(resultSum * 100) / 100).toFixed(2);
 
-            totalSum = parseFloat(totalSum) + parseFloat(resultSum);
-            totalSum = (Math.floor(totalSum * 100) / 100).toFixed(2);
+            totalSum = (parseFloat(totalSum) + parseFloat(resultSum));
+            totalSum = (Math.round(totalSum * 100) / 100).toFixed(2);
         }
 
         $totalSumElem.value = totalSum;
     };
 
     $commodityItems.addEventListener("click", (evt) => {
-      renderPosition(evt);
+      //renderPosition(evt);
       removePosition(evt);
       toggleAgentCheckbox(evt);
     });

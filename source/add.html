@@ -606,7 +606,7 @@
                   <label class="label-form" for="items_0_supplierPhones">Телефон поставщика <span class="badge label-required">(*)</span></label>
                   <div class="invalid-feedback">Введите номер/номера телефона в формате +7XXXXXXXXXX</div>
                 </div>
-                <div class="col-md-6 mb-3 inp-group">
+                <div class="col-md-5 mb-3 inp-group">
                   <input 
                     type="text" 
                     class="form-control inp-form" 
@@ -633,7 +633,32 @@
 
         <fieldset class="FormGroup4 mb-5">
           <!--<legend class="pl-4">Оплата</legend>-->
-          <h3 class="pl-4 pb-4">Оплата</h3>
+          <div class="d-flex justify-content-between">
+            <h3 class="pl-4 pb-4">Оплата</h3>
+            <div class="">
+              <button type="button" class="btn btn-add" name="action" value="0">Добавить</button>
+            </div>
+          </div>
+          
+          <div class="container">
+            <div class="form-group form-row">
+              <div class="col-md-6 mb-3 inp-group parentSelect">
+                <select class="form-control inp-form select" id="payments_0_type" name="payments[0].type">
+                  <option value="CASH">Наличными</option>
+                  <option value="CREDIT_CARD" selected>Банковская карта</option>
+                  <option value="PRE_PAID">Предоплата</option>
+                  <option value="POST_PAID">Постоплата</option>
+                  <option value="COUNTER_OFFER">Встречное предоставление</option>
+                </select>
+                <label class="label-form" for="payments_0_type">Вид оплаты</label>
+              </div>
+              <div class="col-md-6 mb-3 inp-group">
+                <input type="text" class="form-control inp-form" id="payments_0_amount" data-js-id="summ1" value="1.00"
+                  maxlength="12">
+                <label class="label-form labelPayment" for="payments_0_amount">Cумма, руб</label>
+              </div>
+            </div>
+
           <div class="form-group form-row">
             <div class="col-md-6 mb-3 inp-group parentSelect">
               <select class="form-control inp-form select" id="payments_0_type" name="payments[0].type">
@@ -649,19 +674,67 @@
               <input 
                 type="text" 
                 class="form-control inp-form" 
-                id="payments_0_amount" 
+                id="payments_1_amount" 
+                data-js-id="summ2"
+                value="1.00"
+                maxlength="12"
+                >
+              <label class="label-form labelPayment" for="payments_1_amount">Cумма, руб</label>
+            </div>
+
+            <div class="col-sm-12 text-right mb-3">
+              <button name="action" id="btn-remove_0" class="btn btn-remove mt-1" value="remove.item.0">Удалить вид оплаты</button>
+            </div>
+          </div>
+
+          <div class="form-group form-row">
+            <div class="col-md-6 mb-3 inp-group parentSelect">
+              <select class="form-control inp-form select" id="payments_0_type" name="payments[0].type">
+                <option value="CASH">Наличными</option>
+                <option value="CREDIT_CARD" selected>Банковская карта</option>
+                <option value="PRE_PAID">Предоплата</option>
+                <option value="POST_PAID">Постоплата</option>
+                <option value="COUNTER_OFFER">Встречное предоставление</option>
+              </select>
+              <label class="label-form" for="payments_0_type">Вид оплаты</label>
+            </div>
+            <div class="col-md-6 mb-3 inp-group">
+              <input 
+                type="text" 
+                class="form-control inp-form" 
+                id="payments_1_amount" 
+                data-js-id="summ2"
+                value="1.00"
+                maxlength="12"
+                >
+              <label class="label-form labelPayment" for="payments_1_amount">Cумма, руб</label>
+            </div>
+
+            <div class="col-sm-12 text-right mb-3">
+              <button name="action" id="btn-remove_0" class="btn btn-remove mt-1" value="remove.item.0">Удалить вид оплаты</button>
+            </div>
+          </div>
+          </div>
+
+
+          <div class="form-group form-row">
+            <div class="col-md-12 mb-3 inp-group">
+              <input 
+                type="text" 
+                class="form-control inp-form" 
+                id="payments_3_amount" 
                 data-js-id="totalSum"
                 value="1.00"
                 maxlength="12"
                 disabled>
-              <label class="label-form labelPayment" for="payments_0_amount">Итоговая сумма, руб</label>
+              <label class="label-form labelPayment" for="payments_3_amount">Итоговая сумма, руб</label>
             </div>
           </div>
 
         </fieldset>
 
         <div class="form-group mb-5">
-          <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Создать чек</button>
+          <button type="submit" class="btn btn-primary btn-lg mr-5 mb-4" value="submit">Создать чек</button>
           <a href="orders.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
         </div>
 

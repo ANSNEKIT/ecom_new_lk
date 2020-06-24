@@ -11,9 +11,10 @@
     padding: 0 2.5rem;
   }
 }
-.page-header {
 
-}
+/* .page-header {
+
+} */
 
 .FormGroup1, .FormGroup2, .FormGroup4, .FormGroupProduct {
   background-color: $white;
@@ -83,7 +84,7 @@
   border: 1px solid $border-required;
 }
 
-.FormGroupProduct .btnAddPosition {
+.btnAddPosition {
   position: absolute;
   //top: 0;
   top: 20px;
