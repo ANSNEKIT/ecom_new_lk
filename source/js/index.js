@@ -1,14 +1,18 @@
 'use strict';
 
     let count = 0;
+    let countAddPaynentType = 0;
     const $commodityItems = document.querySelector('fieldset[data-js-id="commodity-items"]');
+    const $payment = document.getElementById('payment');
+    const $parentPaymentType = document.getElementById('parent-block');
+    const $inpTotalSumm = document.getElementById('payments_0_amount');
 
 
     if (!$commodityItems) {
         throw new Error("Нет формы добавления товарных позиций!");
     }
 
-    /* const createMarkup = () => {
+    /* const createMarkupCommodity = () => {
         return (
             `<div data-position class="position_${count} mb-5 bdr-bottom">
             <div class="form-group goods">
@@ -213,119 +217,10 @@
       if ($elem.classList.contains("btn-add")) {
         count += 1;
         $elem.value = count;
-        window.modules.render($commodityItems, createMarkup()); */
+        window.modules.render($commodityItems, createMarkupCommodity()); */
         checkSumm();
       // }
     }
-
-    /* const renderPosition = (evt) => {
-        const $elem = evt.target;
-        const template = document.querySelector('#checkItems').content;
-        const clone = document.importNode(template, true);
-        
-
-        if ($elem.classList.contains("btn-add")) {
-            countPosition += 1;
-            let position_count = "position_" + countPosition;
-            let elemPosition_count = $(clone).children(".position_count").removeClass("position_count").addClass(position_count);
-
-            let items_count_name = "items_" + countPosition + "_name";
-            let attrNameCountName = "items[" + countPosition + "].name";
-            let elemItems_count_name = $(clone).find("#items_count_name").attr("id", items_count_name).attr("name", attrNameCountName);
-            let label_count_name = $(clone).find("[for='items_count_name']").attr("for", items_count_name);
-            //console.log(elemItems_label_count_name);
-
-            let items_count_price = "items_" + countPosition + "_price";
-            let attrNameCountPrice = "items[" + countPosition + "].price";
-            let elemItems_count_price = $(clone).find("#items_count_price").attr("id", items_count_price).attr("name", attrNameCountPrice);
-            let label_count_price = $(clone).find("[for='items_count_price']").attr("for", items_count_price);
-            //console.log(elemItems_label_count_price);
-
-            let items_count_paymentObject = "items_" + countPosition + "_paymentObject";
-            let attrNamePaymentObject = "items[" + countPosition + "].paymentObject";
-            let elemItems_count_paymentObject = $(clone).find("#items_count_paymentObject").attr("id", items_count_paymentObject).attr("name", attrNamePaymentObject);
-            let label_count_paymentObject = $(clone).find("[for='items_count_paymentObject']").attr("for", items_count_paymentObject);
-            //console.log(elemItems_count_paymentObject);
-
-            let items_count_vatType = "items_" + countPosition + "_vatType";
-            let attrNameCountvatType = "items[" + countPosition + "].vatType";
-            let elemItems_count_vatType = $(clone).find("#items_count_vatType").attr("id", items_count_vatType).attr("name", attrNameCountvatType);
-            let label_count_vatType = $(clone).find("[for='items_count_vatType']").attr("for", items_count_vatType);
-
-            let items_count_amount = "items_" + countPosition + "_amount";
-            let attrNameCountamount = "items[" + countPosition + "].amount";
-            let elemItems_count_amount = $(clone).find("#items_count_amount").attr("id", items_count_amount);
-            let label_count_amount = $(clone).find("[for='items_count_amount']").attr("for", items_count_amount);
-            //console.log(elemItems_count_amount);
-
-            let items_count_paymentMethod = "items_" + countPosition + "_paymentMethod";
-            let attrNameCountPaymentMethod = "items[" + countPosition + "].paymentMethod";
-            let elemItems_count_paymentMethod = $(clone).find("#items_count_paymentMethod").attr("id", items_count_paymentMethod).attr("name", attrNameCountPaymentMethod);
-            let label_count_paymentMethod = $(clone).find("[for='items_count_paymentMethod']").attr("for", items_count_paymentMethod);
-            //console.log(elemItems_count_paymentMethod);
-
-            let isAgentFalse_count = "isAgentFalse_" + countPosition;
-            let elemIsAgentFalse_count = $(clone).find("#isAgentFalse_count").attr("id", isAgentFalse_count);
-            //console.log(elemIsAgentFalse_count);
-
-            let isAgentTrue_count = "isAgentTrue_" + countPosition;
-            let elemIsAgentTrue_count = $(clone).find("#isAgentTrue_count").attr("id", isAgentTrue_count);
-            //console.log(elemIsAgentTrue_count);
-
-            let AgentAttrName_count = "agent_" + countPosition;
-
-            let AgentFalse_count = "AgentFalse_" + countPosition;
-            let elemAgentFalse_count = $(clone).find("#AgentFalse_count").attr("id", AgentFalse_count);
-            let AgentFalseAttrName_count = elemAgentFalse_count.attr("name", AgentAttrName_count);
-            let label_elemAgentFalse = $(clone).find("[for='AgentFalse_count']").attr("for", AgentFalse_count);
-            //console.log(AgentFalseAttrName_count);
-
-            let AgentTrue_count = "AgentTrue_" + countPosition;
-            let elemAgentTrue_count = $(clone).find("#AgentTrue_count").attr("id", AgentTrue_count);
-            let AgentTrueAttrName_count = elemAgentTrue_count.attr("name", AgentAttrName_count);
-            let label_elemAgentTrue = $(clone).find("[for='AgentTrue_count']").attr("for", AgentTrue_count);
-            //console.log(elemAgentTrue_count);
-
-            let items_count_agentType = "items_" + countPosition + "_agentType";
-            let attrNameitems_count_agentType = "items[" + countPosition + "].agentType";
-            let elemItems_items_count_agentType = $(clone).find("#items_count_agentType").attr("id", items_count_agentType).attr("name", attrNameitems_count_agentType);
-            let label_items_count_agentType = $(clone).find("[for='items_count_agentType']").attr("for", items_count_agentType);
-            //console.log(elemItems_items_count_agentType);
-
-            let items_count_agentTaxNumber = "items_" + countPosition + "_agentTaxNumber";
-            let attrNameitems_count_agentTaxNumber = "items[" + countPosition + "].agentTaxNumber";
-            let elemItems_items_count_agentTaxNumber = $(clone).find("#items_count_agentTaxNumber").attr("id", items_count_agentTaxNumber).attr("name", attrNameitems_count_agentTaxNumber);
-            let label_items_count_agentTaxNumber = $(clone).find("[for='items_count_agentTaxNumber']").attr("for", items_count_agentTaxNumber);
-            //console.log(elemItems_items_count_agentTaxNumber);
-
-            let items_count_supplierName = "items_" + countPosition + "_supplierName";
-            let attrNameitems_count_supplierName = "items[" + countPosition + "].supplierName";
-            let elemItems_items_count_supplierName = $(clone).find("#items_count_supplierName").attr("id", items_count_supplierName).attr("name", attrNameitems_count_supplierName);
-            let label_items_count_supplierName = $(clone).find("[for='items_count_supplierName']").attr("for", items_count_supplierName);
-            //console.log(elemItems_items_count_supplierName);
-
-            let items_count_supplierPhones = "items_" + countPosition + "_supplierPhones";
-            let attrNameitems_count_supplierPhones = "items[" + countPosition + "].supplierPhones";
-            let elemItems_items_count_supplierPhones = $(clone).find("#items_count_supplierPhones").attr("id", items_count_supplierPhones).attr("name", attrNameitems_count_supplierPhones);
-            let label_items_count_supplierPhones = $(clone).find("[for='items_count_supplierPhones']").attr("for", items_count_supplierPhones);
-            //console.log(elemItems_items_count_supplierPhones);
-
-            let items_count_supplierTaxNumber = "items_" + countPosition + "_supplierTaxNumber";
-            let attrNameitems_count_supplierTaxNumber = "items[" + countPosition + "].supplierTaxNumber";
-            let elemItems_items_count_supplierTaxNumber = $(clone).find("#items_count_supplierTaxNumber").attr("id", items_count_supplierTaxNumber).attr("name", attrNameitems_count_supplierTaxNumber);
-            let label_items_count_supplierTaxNumber = $(clone).find("[for='items_count_supplierTaxNumber']").attr("for", items_count_supplierTaxNumber);
-            //console.log(elemItems_items_count_supplierTaxNumber);
-
-            let items_count_btnRemove = "remove.item." + countPosition;
-            let elemItems_btnRemove = $(clone).find(".btn-remove").attr("value", items_count_btnRemove);
-            //console.log(elemItems_btnRemove);
-
-
-            $commodityItems.append(clone);
-
-            checkSumm();
-        };
-    }; */
 
     const removePosition = (evt) => {
         const $elem = evt.target;
@@ -346,6 +241,80 @@
             $btnAdd.value = count; */
 
             checkSumm();
+        };
+    };
+
+    const createMarkupPaymentType = (count) => {
+        return (
+            `<div class="form-group form-row mt-3">
+            <div class="col-md-6 mb-3 inp-group parentSelect">
+              <select class="form-control inp-form select" id="payments_${count}_type" name="payments[${count}].type">
+                <option value="CASH">Наличными</option>
+                <option value="CREDIT_CARD" selected>Банковская карта</option>
+                <option value="PRE_PAID">Предоплата</option>
+                <option value="POST_PAID">Постоплата</option>
+                <option value="COUNTER_OFFER">Встречное предоставление</option>
+              </select>
+              <label class="label-form" for="payments_${count}_type">Вид оплаты</label>
+            </div>
+            <div class="col-md-6 mb-3 inp-group">
+              <input 
+                type="text" 
+                class="form-control inp-form" 
+                id="payments_${count}_summ" 
+                data-js-id="summ"
+                value="1.00"
+                pattern="[0-9]{1,9}\.[0-9]{2}"
+                maxlength="12"
+                >
+              <label class="label-form" for="payments_${count}_summ">Cумма, руб</label>
+            </div>
+
+            <div class="col-sm-12 text-right mb-3">
+              <button type="button" id="btn-remove_${count}" class="btn btn-remove mt-1" name="action" value="${count}">Удалить вид оплаты</button>
+            </div>
+
+            <hr width="100%" style="border: 2px solid #ccc">
+          </div>`
+        );
+    }
+
+    const renderPaymentType = (evt) => {       
+        const $elem = evt.target;
+        if ($elem.classList.contains("btn-add")) {
+            countAddPaynentType += 1;
+            $elem.value = countAddPaynentType;
+            window.modules.render($parentPaymentType, createMarkupPaymentType(countAddPaynentType));
+            checkPaymetTypeSumm();
+            checkTotalSumAndAutoSumm();
+        }
+    }
+
+    const removePaymentType = (evt) => {
+        const $elem = evt.target;
+        const $btnAdd = document.querySelector('.btn-add');
+
+        if ( ($elem.tagName === 'BUTTON') && ($elem.classList.contains("btn-remove")) ) {
+            let isRemovePaymentType = confirm('Удалить вид оплаты?');
+            if (!isRemovePaymentType) {
+                evt.preventDefault(); 
+                return;
+            };
+            
+            const btnValue = $elem.value;
+            const btnValueCount = parseInt(btnValue);
+            const $elemsRemove = $parentPaymentType.querySelectorAll(`div.form-group.form-row`);
+            console.log($elemsRemove);
+            
+            for(let i = 0; i < $elemsRemove.length; i++) {
+                $elemsRemove[btnValueCount].remove();
+            };
+            console.log($elemsRemove);
+            countAddPaynentType -= 1;
+            $btnAdd.value = countAddPaynentType;
+
+            checkPaymetTypeSumm();
+            checkTotalSumAndAutoSumm();
         };
     };
 
@@ -391,7 +360,8 @@
     const checkSumm = () => {
         const $priceInput = document.querySelectorAll('input[data-js-id="js-price"]');
         const $quantityInput = document.querySelectorAll('input[data-js-id="js-quantity"]');
-        const $totalSumElem = document.querySelector('input[data-js-id="totalSum"]');
+        const $totalSumElem = document.querySelector('#autosumm span strong');
+        
         let totalSum = 0.00;
 
         for(let i=0; i < $priceInput.length; i++) {
@@ -418,8 +388,47 @@
             totalSum = (Math.round(totalSum * 100) / 100).toFixed(2);
         }
 
-        $totalSumElem.value = totalSum;
+        $totalSumElem.textContent = totalSum;
+        checkTotalSumAndAutoSumm();
     };
+
+    const checkPaymetTypeSumm = () => {
+        const $parentBlock = document.getElementById('parent-block');
+        const $inpSumm = $parentBlock.querySelectorAll('input[data-js-id="summ"]');
+
+        let totalSum = 0.00;
+
+        for (let i = 0; i < $inpSumm.length; i++) {
+            let resultSum = 0.00;
+
+            if ($inpSumm[i].value.trim() === '') {
+                resultSum = 0.00;
+            } else {
+                resultSum = parseFloat($inpSumm[i].value.trim()) * 100;
+            }
+
+            resultSum = (Math.round(resultSum * 100) / 10000).toFixed(2);
+
+            totalSum = (parseFloat(totalSum) + parseFloat(resultSum));
+            totalSum = (Math.round(totalSum * 100) / 100).toFixed(2);
+        }
+
+        $inpTotalSumm.value = totalSum;
+    }
+
+    const checkTotalSumAndAutoSumm = () => {
+        const $totalSumElem = document.querySelector('#autosumm span strong');
+        const $inpTotalSumm = document.getElementById('payments_0_amount');
+        const $errorTotalSumm = $payment.querySelector('.errorTotalSumm');
+
+        if ($totalSumElem.textContent !== $inpTotalSumm.value) {
+            $errorTotalSumm.textContent = 'Автосумма и итоговая сумма не равны. Прересчитайте сумму для каждого вида оплаты';
+        } else {
+            $errorTotalSumm.textContent = '';
+        }
+
+    }
+
 
     $commodityItems.addEventListener("click", (evt) => {
       //renderPosition(evt);
@@ -427,17 +436,21 @@
       toggleAgentCheckbox(evt);
     });
 
+    $payment.addEventListener("click", (evt) => {
+        renderPaymentType(evt);
+        removePaymentType(evt);
+      });
+
     window.addEventListener('load', () => {
       checkSumm();
+      checkPaymetTypeSumm();
     });        
 
     $commodityItems.addEventListener("change", checkSumm);
-
-
-
-
-
-
-
-
-
+    $payment.addEventListener("change", () => {
+        checkPaymetTypeSumm();
+        checkTotalSumAndAutoSumm();
+    });
+    /* $inpTotalSumm.addEventListener("change", () => {
+        checkTotalSumAndAutoSumm();
+    }) */

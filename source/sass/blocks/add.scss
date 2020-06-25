@@ -176,6 +176,10 @@ form.addCheckForm .labelPayment {
   background-color: transparent;
 }
 
+.errorTotalSumm {
+  color: $bgc-btn-del;
+}
+
 @-moz-document url-prefix() {
   .FormGroupProduct .btnAddPosition {
     position: absolute;
