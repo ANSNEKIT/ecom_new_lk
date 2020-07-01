@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Новый плательщик</title>
+
+  <link rel="stylesheet" href="../css/all.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.min.css">
+</head>
+
+
+<body>
+  <div class="gridContainer" id="#gridWrapper">
+    <header class="nav header">
+      <div class="mx-1 menuGamburger mx-4">
+        <button class="navbar-toggler" type="button" data-toggle="tooltip" data-placement="top"
+          title="Показать/скрыть меню">
+          <!-- data-toggle="collapse" data-target="#menu" aria-controls="menu"
+              aria-expanded="false" aria-label="Toggle navigation" -->
+
+          <span class="navbar-toggler-icon active">
+            <!--<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 x="0px" y="0px"
+                 width="100%" height="100%" fill="currentColor" viewBox="0 0 124 124">
+            <g>
+              <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
+              <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
+              <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
+            </g>
+            </svg>-->
+          </span>
+        </button>
+        <!--<span class="labelForButtonMenu">Меню</span>-->
+      </div>
+      <div class="logo">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo-02-blue.png" alt="E-COM Kassa" width="209" height="80">
+          <!-- E-COM Kassa-->
+        </a>
+      </div>
+      <nav class="nav ml-auto topNavbar">
+        <ul class="nav userMenu">
+          <li class="navParent navParent--active d-flex flex-column">
+            <p class="mailToText">
+              Нужна помощь?
+            </p>
+            <a href="mailto:help@ecomkassa.ru" class="nav-link mailTo">
+              <span class="leftIcon">
+                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" width="16" height="16"
+                  class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
+                  </path>
+                </svg>
+              </span>
+              <span class="menuTitle">HELP@ECOMKASSA.RU</span>
+            </a>
+          </li>
+          <li class="dropdown navParent">
+            <a class="nav-link" href="#" id="topHiddenMenu" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <span class="leftIcon">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-tie" width="16" height="19"
+                  class="svg-inline--fa fa-user-tie fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512">
+                  <path fill="currentColor"
+                    d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z">
+                  </path>
+                </svg>
+              </span>
+              <span class="menuTitle">Тестовый юзер</span>
+              <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+                  <g data-name="Layer 2">
+                    <g data-name="chevron-down">
+                      <rect width="24" height="24" opacity="0"></rect>
+                      <path
+                        d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                      </path>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </a>
+            <ul class="dropdown-menu menuItems" aria-labelledby="topHiddenMenu">
+              <li class="dropdown-item menuItem">
+                <a class="nav-link" href="profile.html">
+                  <span class="leftIcon">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="id-card-alt" width="16"
+                      height="15" class="svg-inline--fa fa-id-card-alt fa-w-18" role="img"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M528 64H384v96H192V64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM288 224c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm93.3 224H194.7c-10.4 0-18.8-10-15.6-19.8 8.3-25.6 32.4-44.2 60.9-44.2h8.2c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h8.2c28.4 0 52.5 18.5 60.9 44.2 3.2 9.8-5.2 19.8-15.6 19.8zM352 32c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v96h128V32z">
+                      </path>
+                    </svg>
+                  </span>
+                  <span class="menuTitle">Мой профиль</span>
+                </a>
+              </li>
+              <li class="dropdown-item menuItem">
+                <a class="nav-link" href="#">
+                  <span class="leftIcon">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cogs" width="16" height="13"
+                      class="svg-inline--fa fa-cogs fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 640 512">
+                      <path fill="currentColor"
+                        d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z">
+                      </path>
+                    </svg>
+                  </span>
+                  <span class="menuTitle">Настройки</span>
+                </a>
+              </li>
+              <li class="dropdown-item menuItem">
+                <a class="nav-link" href="faq.html">
+                  <span class="leftIcon">
+                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="question-circle" width="16"
+                      height="16" class="svg-inline--fa fa-question-circle fa-w-16" role="img"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 448c-110.532 0-200-89.431-200-200 0-110.495 89.472-200 200-200 110.491 0 200 89.471 200 200 0 110.53-89.431 200-200 200zm107.244-255.2c0 67.052-72.421 68.084-72.421 92.863V300c0 6.627-5.373 12-12 12h-45.647c-6.627 0-12-5.373-12-12v-8.659c0-35.745 27.1-50.034 47.579-61.516 17.561-9.845 28.324-16.541 28.324-29.579 0-17.246-21.999-28.693-39.784-28.693-23.189 0-33.894 10.977-48.942 29.969-4.057 5.12-11.46 6.071-16.666 2.124l-27.824-21.098c-5.107-3.872-6.251-11.066-2.644-16.363C184.846 131.491 214.94 112 261.794 112c49.071 0 101.45 38.304 101.45 88.8zM298 368c0 23.159-18.841 42-42 42s-42-18.841-42-42 18.841-42 42-42 42 18.841 42 42z">
+                      </path>
+                    </svg>
+                  </span>
+                  <span class="menuTitle">FAQ</span>
+                </a>
+              </li>
+              <li class="dropdown-item menuItem">
+                <a class="nav-link" href="changepass.html">
+                  <span class="leftIcon">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="key" width="16" height="16"
+                      class="svg-inline--fa fa-key fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M512 176.001C512 273.203 433.202 352 336 352c-11.22 0-22.19-1.062-32.827-3.069l-24.012 27.014A23.999 23.999 0 0 1 261.223 384H224v40c0 13.255-10.745 24-24 24h-40v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-78.059c0-6.365 2.529-12.47 7.029-16.971l161.802-161.802C163.108 213.814 160 195.271 160 176 160 78.798 238.797.001 335.999 0 433.488-.001 512 78.511 512 176.001zM336 128c0 26.51 21.49 48 48 48s48-21.49 48-48-21.49-48-48-48-48 21.49-48 48z">
+                      </path>
+                    </svg>
+                  </span>
+                  <span class="menuTitle">Изменить пароль</span>
+                </a>
+              </li>
+              <li class="dropdown-item menuItem">
+                <a class="nav-link" href="login.html">
+                  <span class="leftIcon">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="door-open" width="16"
+                      height="13" class="svg-inline--fa fa-door-open fa-w-20" role="img"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                      <path fill="currentColor"
+                        d="M624 448h-80V113.45C544 86.19 522.47 64 496 64H384v64h96v384h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM312.24 1.01l-192 49.74C105.99 54.44 96 67.7 96 82.92V448H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h336V33.18c0-21.58-19.56-37.41-39.76-32.17zM264 288c-13.25 0-24-14.33-24-32s10.75-32 24-32 24 14.33 24 32-10.75 32-24 32z">
+                      </path>
+                    </svg>
+                  </span>
+                  <span class="menuTitle">Выход</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <aside class="menu menu--active" id="menu">
+      <nav class="nav flex-column flex-fill justify-content-between pt-3" id="rightMenu">
+        <ul class="nav flex-column">
+          <li class="navParent navParent--active">
+            <a class="nav-link" href="#">
+              <span class="leftIcon">
+                <svg aria-hidden="true" height="19" focusable="false" data-prefix="fas" data-icon="home"
+                  class="svg-inline--fa fa-home fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 576 512">
+                  <path fill="currentColor"
+                    d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z">
+                  </path>
+                </svg>
+              </span>
+              <span class="menuTitle">Главная</span>
+            </a>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="#collapse-menu_1" data-toggle="collapse" role="button" aria-expanded="false"
+              aria-controls="#collapse-menu_1">
+              <span class="leftIcon">
+                <svg aria-hidden="true" height="19" focusable="false" data-prefix="fas" data-icon="building"
+                  class="svg-inline--fa fa-building fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512">
+                  <path fill="currentColor"
+                    d="M436 480h-20V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v456H12c-6.627 0-12 5.373-12 12v20h448v-20c0-6.627-5.373-12-12-12zM128 76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76zm0 96c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40zm52 148h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12zm76 160h-64v-84c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v84zm64-172c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40z">
+                  </path>
+                </svg>
+              </span>
+              <span class="menuTitle">Организации</span>
+              <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+                  <g data-name="Layer 2">
+                    <g data-name="chevron-down">
+                      <rect width="24" height="24" opacity="0"></rect>
+                      <path
+                        d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                      </path>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </a>
+            <ul class="menuItems collapse" id="collapse-menu_1">
+              <li class="menuItem"><a href="firms.html" class="nav-link"><span class="menuTitle">Организации</span></a>
+              </li>
+              <li class="menuItem"><a href="pointofsales.html" class="nav-link"><span class="menuTitle">Точки
+                    продаж</span></a></li>
+              <li class="menuItem"><a href="registrars.html" class="nav-link"><span class="menuTitle">Кассы</span></a>
+              </li>
+              <li class="menuItem"><a href="integration-list.html" class="nav-link"><span class="menuTitle">Список
+                    интеграций</span></a></li>
+            </ul>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="#collapse-menu_orders" data-toggle="collapse" role="button" aria-expanded="false"
+              aria-controls="#collapse-menu_orders">
+              <span class="leftIcon">
+                <svg aria-hidden="true" height="19" focusable="false" data-prefix="far" data-icon="check-square"
+                  class="svg-inline--fa fa-check-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512">
+                  <path fill="currentColor"
+                    d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm0 400H48V80h352v352zm-35.864-241.724L191.547 361.48c-4.705 4.667-12.303 4.637-16.97-.068l-90.781-91.516c-4.667-4.705-4.637-12.303.069-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l59.792 60.277 141.352-140.216c4.705-4.667 12.303-4.637 16.97.068l22.536 22.718c4.667 4.706 4.637 12.304-.068 16.971z">
+                  </path>
+                </svg>
+              </span>
+              <span class="menuTitle">Чеки</span>
+              <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+                  <g data-name="Layer 2">
+                    <g data-name="chevron-down">
+                      <rect width="24" height="24" opacity="0"></rect>
+                      <path
+                        d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                      </path>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </a>
+            <ul class="menuItems collapse" id="collapse-menu_orders">
+              <li class="menuItem"><a href="orders.html" class="nav-link">Список чеков</a></li>
+              <li class="menuItem"><a href="add.html" class="nav-link">Сформировать чек</a></li>
+              <li class="menuItem"><a href="addcorrection.html" class="nav-link">Создать чек коррекции</a></li>
+              <li class="menuItem"><a href="import.html" class="nav-link">Импорт чеков</a></li>
+            </ul>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="#collapse-menu_couriers" data-toggle="collapse" role="button"
+              aria-expanded="false" aria-controls="#collapse-menu_couriers">
+              <span class="leftIcon">
+                <svg version="1.1" id="Capa_1" width="24" height="24" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 53.265 53.265" style="enable-background:new 0 0 53.265 53.265;" xml:space="preserve">
+                  <g>
+                    <g>
+                      <path d="M43.726,25.36c-0.183-2.3-0.365-4.598-0.547-6.897c-0.223-2.807-2.578-5.037-5.443-4.881
+			c-0.912,0.049-1.775,0.357-2.521,0.844c-1.244-0.303-2.526-0.401-3.799-0.098c-0.113,0.027-0.218,0.067-0.327,0.099
+			c-1.652-4.215-8.533-4.112-9.78,0.369c-2.638,2.852-5.94,4.956-9.672,6.17c-3.712,1.208-2.123,7.082,1.618,5.864
+			c3.018-0.982,5.736-2.373,8.177-4.146c0.285,2.983,0.756,5.941,1.415,8.901c-4.126,5.785-5.955,12.145-4.818,19.474
+			c0.599,3.866,6.458,2.22,5.863-1.616c-0.79-5.099,0.66-9.758,3.488-13.838c0.084,0.002,0.168,0.006,0.252,0.002
+			c1.104,5.055,2.365,10.069,3.775,15.047c1.066,3.768,6.935,2.166,5.863-1.615c-1.647-5.816-3.102-11.684-4.322-17.604
+			c0.134-0.681,0.13-1.43-0.055-2.237c-0.091-0.398-0.172-0.797-0.252-1.193c0.43,0.191,0.869,0.369,1.329,0.513
+			c0.138,0.042,0.265,0.062,0.386,0.068c0.986,1.414,2.627,2.321,4.487,2.222C41.605,30.655,43.948,28.168,43.726,25.36z
+			 M31.967,24.016c-0.282-2.117-0.444-4.239-0.495-6.416c0.5-0.217,1.031-0.328,1.586-0.344c-0.174,0.561-0.253,1.156-0.203,1.77
+			c0.157,1.991,0.314,3.981,0.475,5.972C32.828,24.726,32.376,24.396,31.967,24.016z" />
+                      <circle cx="23.626" cy="5.155" r="5.155" />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="menuTitle">Заказы</span>
+              <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+                  <g data-name="Layer 2">
+                    <g data-name="chevron-down">
+                      <rect width="24" height="24" opacity="0"></rect>
+                      <path
+                        d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z">
+                      </path>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </a>
+            <ul class="menuItems collapse" id="collapse-menu_couriers">
+              <li class="menuItem"><a href="couriers.html" class="nav-link">Список заказов</a></li>
+              <li class="menuItem"><a href="addcourier.html" class="nav-link">Сформировать заказ</a></li>
+            </ul>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="fees.html">
+              <span class="leftIcon">
+                <svg aria-hidden="true" height="19" focusable="false" data-prefix="fas" data-icon="comments-dollar"
+                  class="svg-inline--fa fa-comments-dollar fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 576 512">
+                  <path fill="currentColor"
+                    d="M416 192c0-88.37-93.12-160-208-160S0 103.63 0 192c0 34.27 14.13 65.95 37.97 91.98C24.61 314.22 2.52 338.16 2.2 338.5A7.995 7.995 0 0 0 8 352c36.58 0 66.93-12.25 88.73-24.98C128.93 342.76 167.02 352 208 352c114.88 0 208-71.63 208-160zm-224 96v-16.29c-11.29-.58-22.27-4.52-31.37-11.35-3.9-2.93-4.1-8.77-.57-12.14l11.75-11.21c2.77-2.64 6.89-2.76 10.13-.73 3.87 2.42 8.26 3.72 12.82 3.72h28.11c6.5 0 11.8-5.92 11.8-13.19 0-5.95-3.61-11.19-8.77-12.73l-45-13.5c-18.59-5.58-31.58-23.42-31.58-43.39 0-24.52 19.05-44.44 42.67-45.07V96c0-4.42 3.58-8 8-8h16c4.42 0 8 3.58 8 8v16.29c11.29.58 22.27 4.51 31.37 11.35 3.9 2.93 4.1 8.77.57 12.14l-11.75 11.21c-2.77 2.64-6.89 2.76-10.13.73-3.87-2.43-8.26-3.72-12.82-3.72h-28.11c-6.5 0-11.8 5.92-11.8 13.19 0 5.95 3.61 11.19 8.77 12.73l45 13.5c18.59 5.58 31.58 23.42 31.58 43.39 0 24.53-19.05 44.44-42.67 45.07V288c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8zm346.01 123.99C561.87 385.96 576 354.27 576 320c0-66.94-53.49-124.2-129.33-148.07.86 6.6 1.33 13.29 1.33 20.07 0 105.87-107.66 192-240 192-10.78 0-21.32-.77-31.73-1.88C207.8 439.63 281.77 480 368 480c40.98 0 79.07-9.24 111.27-24.98C501.07 467.75 531.42 480 568 480c3.2 0 6.09-1.91 7.34-4.84 1.27-2.94.66-6.34-1.55-8.67-.31-.33-22.42-24.24-35.78-54.5z">
+                  </path>
+                </svg>
+              </span>
+              <span class="menuTitle">Оплата подписки</span>
+            </a>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="orderfees.html">
+              <span class="leftIcon">
+                <svg aria-hidden="true" height="19" focusable="false" data-prefix="far" data-icon="credit-card"
+                  class="svg-inline--fa fa-credit-card fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 576 512">
+                  <path fill="currentColor"
+                    d="M527.9 32H48.1C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48.1 48h479.8c26.6 0 48.1-21.5 48.1-48V80c0-26.5-21.5-48-48.1-48zM54.1 80h467.8c3.3 0 6 2.7 6 6v42H48.1V86c0-3.3 2.7-6 6-6zm467.8 352H54.1c-3.3 0-6-2.7-6-6V256h479.8v170c0 3.3-2.7 6-6 6zM192 332v40c0 6.6-5.4 12-12 12h-72c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12zm192 0v40c0 6.6-5.4 12-12 12H236c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12z">
+                  </path>
+                </svg>
+              </span>
+              <span class="menuTitle">Платежи</span>
+            </a>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="users.html">
+              <span class="leftIcon">
+                <svg aria-hidden="true" height="19" focusable="false" data-prefix="fas" data-icon="users"
+                  class="svg-inline--fa fa-users fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512">
+                  <path fill="currentColor"
+                    d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z">
+                  </path>
+                </svg>
+              </span>
+              <span class="menuTitle">Пользователи</span>
+            </a>
+          </li>
+          <li class="navParent">
+            <a class="nav-link" href="integration.html">
+              <span class="leftIcon">
+                <svg aria-hidden="true" height="19" focusable="false" data-prefix="far" data-icon="handshake"
+                  class="svg-inline--fa fa-handshake fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512">
+                  <path fill="currentColor"
+                    d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                  </path>
+                </svg>
+              </span>
+              <span class="menuTitle">Интеграции</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="mainContent mt-5">
+      <h2 class="page-header text-center py-5">Новый плательщик</h2>
+      <form class="addCheckForm needs-validation" action="" method="get" novalidate>
+        <fieldset class="FormGroup1 mb-4">
+
+          <div class="form-row">
+            <div class="col-md-12 inp-group mb-4 parentSelect">
+              <select id="firmID" name="firmID" class="form-control inp-form select">
+                <option value="dd96ef75-fc76-4ca3-bb57-61225a678182">ООО "Центр нейротехнологий сна и бодрствования"
+                </option>
+                <option value="fa16f5ed-d366-4298-b2e6-6b43944d329a">БЛЭК МАШРУМ</option>
+                <option value="0b486534-d95a-4ace-90bd-ef98684e5e8b">ИП Невзорова Лидия Алексеевна</option>
+                <option value="0e23b956-1e08-4456-87bf-6a70360a1b1e">Fedishen Alexey LLC</option>
+                <option value="cceac404-2e23-46c2-b6d5-a42b29eb2ac3">ИП Блохин Илья</option>
+                <option value="9f72c329-cd9a-49c7-ad04-77eb31a31d63">ООО "Фуди Фуд"</option>
+                <option value="8d3b00cf-50dd-47f8-bfbc-259f3d750ef0">ИП Ижболдин Степан Павлович</option>
+                <option value="a179083f-cfcb-4dcc-8655-f04b8e879677">ИП Дадаев Денис Олегович</option>
+                <option value="9f235d68-0da3-4c55-9079-a7b0d3751e08">ИП Лактионов Игорь Александрович</option>
+                <option value="26407792-2743-411b-8485-7fbab9ba7517">ИП Малышева Татьяна Иннокентьевна</option>
+                <option value="8a649c19-d63a-4fd0-907c-c651dead6362">ИП Киселев Алексей Алексеевич</option>
+                <option value="a99120ee-5df9-4141-8943-13715814e551">ИП</option>
+                <option value="5d2667cf-9c6c-45f8-bf5f-22ad4c5bed54">ИП Достовалов Андрей Николаевич</option>
+                <option value="e54ca2b0-57e9-41c8-bde6-8b95dac367db">ИП Гыскэ Валентина Павловна</option>
+                <option value="bd11012b-c975-49ee-a7b5-f679f43a1f0c">ИП Докучаев Павел Викторович</option>
+                <option value="6cf77aa4-ffa7-4da4-86be-04a9133f8b30">ООО «Пошив.ком»</option>
+                <option value="0350ab3f-039d-4b25-bbf0-a47deacfbdb3">ИП Сюльжина Наталья Константиновна</option>
+                <option value="27c8f219-8fec-4e34-a79e-fc8ee8eaaf7c">ООО ТК "Квик-Техномир"</option>
+                <option value="af722f72-206e-4072-af48-d6293ec22807">ИП Торбин Данила Игоревич</option>
+                <option value="9fd3f105-1b8a-42d9-8497-55d25edf0fb0">Компания для теста</option>
+                <option value="861ac199-9eb5-4d67-840a-2180fdca308c">Общество с ограниченной ответственностью "Белтрос"
+                </option>
+                <option value="1c03d357-c0e4-44de-8833-d9e00b446583">ИП Филимонова Елена Евгеньевна</option>
+                <option value="2108f881-2e87-4835-9d6d-d8c58906b3a6">ИП Тронько Владимир Николаевич</option>
+                <option value="a65d9906-14f8-4c91-9c60-f9b04ddceda1">ИП Новик Татьяна Андреевна</option>
+                <option value="5992126d-bb25-452d-990a-f6427acb77b8">ИП Барковский Дмитрий Алексеевич</option>
+                <option value="8d7657ec-13d0-4ef4-bb4a-142bff569527">ИП Давыдова Елена Валерьевна</option>
+                <option value="f4c95989-4c2e-4fac-8437-40b548f6fa40">ИП БУРЕНИН СТЕПАН ЕВГЕНЬЕВИЧ</option>
+                <option value="914d83c4-cb24-4737-98e1-9e2f698ac338">Ffggg</option>
+                <option value="b015a1fa-558b-453a-9b72-d9a4a6b138a8">ИП Воронина Наталья Витальевна</option>
+                <option value="5ff10b8c-f60d-4c86-bf25-38a6ce3d41a7">ИП Гаврилов Антон Геннадьевич</option>
+                <option value="1ce6a23f-8e3c-405f-a314-f0ced95196a2">ИП Безнаева Валерия Сергеевна</option>
+                <option value="ae9e42a5-6b3b-44da-938f-321422eb851f">ИП Халецкая Лелия Сергеевна</option>
+                <option value="c1afe2a2-7a01-411a-998d-71f06702d2ab">ИП Кузнецов Олег Васильевич</option>
+                <option value="df9ea80d-586d-4cef-9e95-aec20542a8bc">ИП Еремеева Мария Сергеевна</option>
+                <option value="aeadceec-7dcc-4b1f-9351-2236f0aa6001">ООО Зе Поинт</option>
+                <option value="ff1b31fd-d3a7-4b49-b108-c869b9ae39f1">ИП Амиров Аскар Рустемович</option>
+                <option value="680edd70-5ca9-4ac6-827b-534997e81bfb">ИП Рудчик Константин Станиславович</option>
+                <option value="1011c124-4d36-40e4-9107-131ddfa22c41">Торговые Поставки</option>
+                <option value="848b9c85-0396-4a4b-9128-bb7ff8cde05e">ООО "БЕЛТРОС"</option>
+                <option value="924e42bb-e9a5-428a-98f7-35d7dce7f24a">ААААА</option>
+                <option value="95fa4e29-9d07-4c57-8c5d-4522fd6a5ea8">ИП Митанов Денис Васильевич</option>
+                <option value="95dc4c86-a316-433d-a71f-96d091260ac7">ООО "Объединение Агрегейт"</option>
+                <option value="60d00869-3549-4f0d-9dbc-7bb15e5bf4df">ИП Минина О.Г.</option>
+                <option value="e12ad53a-ab7a-4a6b-a877-567343753c4e">ИП Диденко Ирина Сергеевна</option>
+                <option value="ef22e87b-a9b4-47c0-ac4f-9f6beb175e74">ООО "Киберком"</option>
+                <option value="2806d589-8e47-4026-b34c-f19c76e574ea">ИП Лебедева Надежда</option>
+                <option value="307fd553-dfb6-48e0-97b7-280356f877b6">ООО "Транс Атлантик"</option>
+                <option value="750fc1a3-6a4d-4073-a613-1982ca7f47a1">ООО "РАНТ"</option>
+                <option value="6e00e2f2-696e-442f-bd3e-8e909914cc9b">ИП Варламова Ольга Геннадьевна</option>
+                <option value="c677d366-ea27-477f-a5b6-4eb4e0324f41">ООО "ЛТ"</option>
+                <option value="c2a950af-020b-4bf9-b900-202eadc55aa2">ИП Белоусофф Роман Иванович</option>
+                <option value="e0cdbf06-bc21-4102-915a-859a71da89f3">ИП Орлова Кира</option>
+                <option value="c0b89a9b-661a-4348-b12e-0da42a0087ec">ИП Шидаков Мухтар Исмаилович</option>
+                <option value="af3e73aa-4650-4180-9d91-2bac52645d02">ИП ФЕДОРЕЦ АЛЕКСЕЙ ВАДИМОВИЧ</option>
+                <option value="0ef92f34-042e-4e32-9b1b-dde02281b695">ИП Шудрик Оксана Николаевна</option>
+                <option value="aaa35012-49c0-41b7-9db3-70670d0aaff9">ООО "Аугуст Фёрстер.Ру"</option>
+                <option value="511130c8-9e2a-4dec-9d6e-b3a57a74b87d">ИП Мерц Наталья Владимировна</option>
+                <option value="d984418c-64f6-488d-ba8b-c0fb8f3f0ff1">ИП Ануфриев Альберт Викторович</option>
+                <option value="95db47ea-9f0d-4dc6-a35c-bbc6f8e4375a">МИЛОСЕРДИЕ</option>
+                <option value="7900c4fe-a8ac-4390-b16b-ead086ef6079">ИП Нелюбина Ольга Вячеславовна</option>
+                <option value="cd9c2a6a-7202-4460-819f-be2d53bdb781">ООО «Доминанта мьюзик»</option>
+                <option value="61622b1d-da3e-44ae-9876-799f8e2b02c0">ИП Петрунин Сергей Иванович</option>
+                <option value="a516563c-4674-4e8f-8026-9669fbe83c8e">Ololoo</option>
+                <option value="01ca13c3-1a26-445b-9ab4-352dcfb8dbca">ИП Стеценко Михаил Андреевич</option>
+                <option value="6ab537bb-f746-40d0-b72d-ccfe3dfdc5c8">ИП Смирнова Влада Владимировна</option>
+                <option value="e2f551f4-d4fc-40e9-9201-9ec69c06b9af">ИП КОБАЯШИ ЭМИЛИЯ АЛЕКСАНДРОВНА</option>
+                <option value="93dab603-3d2c-4204-8d2b-9bc3edf93735">ИП Старостин Виталий Владимирович</option>
+                <option value="e01529b6-fa17-4032-bef1-cc0831dc361f">ИП Радова Анна Альбертовна</option>
+                <option value="dd42e26b-4fd1-45ec-b4b7-3370ff7b6046">ООО "Мир приключений"</option>
+                <option value="a3f40234-e424-4f5b-bd89-caddb099e447">ИП Тюрикова Е.Ф.</option>
+                <option value="18412171-a261-4a60-adb1-6a413b0dcac2">ООО "Бейби Арт СИТИ"</option>
+                <option value="e47ad750-fbce-41d5-9631-e1a556e11278">ООО "Мастерская Чебуркова"</option>
+                <option value="e69b4b52-84f7-41cc-98f2-43fa521feb7f">ИП Личак Наталья Анатольевна</option>
+                <option value="b7be0352-a6f2-4d62-af3b-a125032b8d59">ИП Березин Владимир Юрьевич</option>
+                <option value="59520ff7-2a49-4df1-9f53-c61fadacfb1b">ИП Писаренко Филипп Владимирович</option>
+                <option value="a5cfdfce-c4bd-4356-b72c-07461d294c49">ИП ПАРАВИН ДМИТРИЙ ВЛАДИСЛАВОВИЧ</option>
+                <option value="6918f5f9-b259-4159-bb86-d1fdbd4ae4dc">Тестовая Компания Тест</option>
+                <option value="a6f0368b-d810-4f71-887f-ac8c3a121350">ИП Рынков Сергей Львович</option>
+                <option value="41331659-59c4-42c0-9788-6a00305f5a1c">ИП Гордон Юрий Моисеевич</option>
+                <option value="07683f33-48a7-4743-a2dc-ad26529a526e">ИП Долженко Марина Викторовна</option>
+                <option value="d57915dc-b4ad-4dd2-8296-542c98be450a">ИП Омельченко А.А.</option>
+                <option value="0d7d9f97-1190-419e-847f-23af9c8b9636">ООО «КОРДА»</option>
+                <option value="2a528ab5-0d9e-4b03-b49c-be6e5fdfb39c">ООО "ТелеЦентр"</option>
+                <option value="d485670b-e666-469d-9b59-dcf5b74bba79">ООО "AРТ-ГРУПП"</option>
+                <option value="97b56938-6dbb-448b-bc52-f15fce5c6f58">ООО Научно-образовательный центр "Эрудит"</option>
+                <option value="8baba252-d385-4226-b6a1-b1150c41835a">ИП Кривоногова Анжелика Витальевна</option>
+                <option value="516998fb-a083-494a-a8ec-0d0e7076865e">ИП Кан Денис Александрович</option>
+                <option value="678c0e70-a200-4acd-82bd-eb658673fa81">ИП Любаневич Алёна Михайловна</option>
+                <option value="e15a54d2-48b6-4a92-b516-d643ab1a2993">ООО "РТЛ КОМПАНИ"</option>
+                <option value="c9efa4b5-de0d-41a5-a024-896772040c75">ИП Мосолов Павел Владимирович</option>
+                <option value="7d29cd96-d671-49e8-a4c4-76b38dd6af16">ИП Шустов Федор Иванович</option>
+                <option value="078a8701-ca5c-42f8-9bde-ac76c1366b4f">ИП МИХАЙЛОВ ОЛЕГ ВИКТОРОВИЧ</option>
+                <option value="427600bb-57d6-41ad-a271-5f6661e8083a">ООО "Издательство "СЧАСТЛИВЫЙ МИР"</option>
+                <option value="b805a607-c0f0-49d6-a3aa-7d7e57a21f05">ИП Смородин И.Н.</option>
+                <option value="7204821d-d4c7-46ac-819a-c53adb1424fa">ИП Сальников Дмитрий Владимирович</option>
+                <option value="a0a830da-db9f-47e5-b01c-703d62bf2aaa">ООО "Хибинская энергосбытовая компания"</option>
+                <option value="1357dd44-dbc1-4aed-a455-65290bdb0d74">ИП Торгаев Вадим Владимирович</option>
+                <option value="e2dc68f0-a7e1-49ff-9ded-bdbb4cbdaeb3">ИП Магай Кирилл Олегович</option>
+                <option value="b0ab9aed-3dc5-465e-9db4-0a7baa9cc109">АО "Новое качество дорог"</option>
+                <option value="44298a5e-38c7-4c3d-9641-b084e85cebcd">ИП Платонов Кирилл Дмитриевич</option>
+                <option value="83bf27ba-1264-46d0-87a5-124c9c1cc594">ИП Сутурин Дмитрий Владимирович</option>
+                <option value="fc2838d9-db5f-48aa-82e8-406458d64dac">ИП Толшин Александр Михайлович</option>
+                <option value="cde88c0c-1107-4c37-825a-635ff930a646">ООО "АБГрупп Страхование"</option>
+                <option value="c411e604-94df-46df-98c0-da2dbd7c7673">ИП Блинова Екатерина Николаевна</option>
+                <option value="52f8d6a8-4813-46dd-9a29-62e2ffa0fe91">ИП Конаков Владимир Сергеевич</option>
+                <option value="da4c87df-5202-44e8-9c0d-4299bbc5d048">ИП Бужинский Андрей Александрович</option>
+                <option value="99478eb4-c097-4c29-9cbc-3b400b13a708">ООО РЕЙС</option>
+                <option value="ce841fc9-02ff-4b9e-80a0-d0843a7104e8">ООО "ШОССЕ"</option>
+                <option value="2cf98b52-ba27-4bc9-8893-de2dd34ae0ab">ООО "ЛАДЬЯ"</option>
+                <option value="81020aef-1866-4b47-a624-b69ef8224b6e">ООО "Литораль"</option>
+                <option value="b03fa5f1-b894-408a-a49b-9e3e3b172ca9">ООО "Платан"</option>
+                <option value="6e6e163d-afb8-4daa-b2c6-3c4199d58bfc">ИП Логановский Станислав Юрьевич</option>
+                <option value="cb806ddd-2230-499b-8988-30a4074119d0">ООО "СТИЛЬ ТЛ"</option>
+                <option value="15de5690-7389-49a1-8fc1-4380307c7103">ИП Алексеенко Александр Анатольевич</option>
+                <option value="512da11e-ea77-48a5-a047-6700c44f7ac3">РСВО, ФГУП</option>
+                <option value="7e3b6705-828f-478e-bf74-af826be98781">ИП Суковатицын Андрей Александрович</option>
+                <option value="aba5b59f-e731-473a-9c23-ba859dbd8286">ИП Кононов Алексей Андреевич</option>
+                <option value="d3403ef7-a6cb-430b-8770-c9f9274f0967">ИП Кузьмина Анна Владимировна</option>
+                <option value="eeef04a5-6bd9-43f7-b348-0e45192fddbf">ООО "Пассажирские перевозки"</option>
+                <option value="e1f3c981-0ee9-43c4-bbc5-367c55ac2004">ИП Павреев Илья Владимирович</option>
+                <option value="6b53699e-a692-4015-a03a-a1d11e3a99d5">ООО “Управляющая компания “Хибины”</option>
+                <option value="1873d179-1ba3-4d38-aa7f-87b909de353a">ООО "ОФИЖ"</option>
+                <option value="e4f350ad-caf7-4f3e-9a6c-137e6759c5d6">ТСЖ "Строителей 103"</option>
+                <option value="59b29852-d773-4d1b-8531-ff8bf0c2d760">ООО "100 Домов - Новосибирск"</option>
+                <option value="0a124e2f-6d87-43f1-b1c2-6cddc073c18b">ООО "Торговый дом ПромСтрой"</option>
+                <option value="2a8f0cdd-5a56-45a7-86e1-7e53ed83241b">ИП Петрунин Алексей Вячеславович</option>
+                <option value="d47cbbb5-9324-4dce-8afb-38a61542847b">ООО "УК Наука"</option>
+                <option value="680a622f-2138-40f2-a1c5-0f8712cb9d9f">ООО "УК Академическая"</option>
+                <option value="69f8b299-b0f1-4df9-9830-d36f79906c68">ИП Лазарева Елена Владимировна</option>
+                <option value="11428b60-3d0a-4011-afc5-839f235683d2">ООО "Вторая управляющая +"</option>
+                <option value="39615636-f723-480c-89e2-2c6f60fa7b29">ООО "УК Престиж"</option>
+                <option value="c21a4350-ddfb-4f9c-b53f-89f6af873135">ИП Дуэль Александр Викторович</option>
+                <option value="a24dad92-6e9c-44a6-a08c-b07f587bbf65">ИП Дармокрик Михаил Вячеславович</option>
+                <option value="d15885de-8696-4e4c-b657-3faca8c7e7c3">ИП Арайс Сергей Александрович</option>
+                <option value="fdea822b-27b2-48c7-b0b9-288508873558">Дибил</option>
+                <option value="dcda536f-3b30-4cbe-83e1-5966828ec0e4">ООО «Городской Экспресс»</option>
+                <option value="2c2c7105-6723-4736-b965-b66a8e26e666">ИП Николаева Ирина Николаевна</option>
+                <option value="89c769ec-6b89-4bab-8885-545f355dc191">ИП Бахов Роман Иванович</option>
+                <option value="15cc3359-b611-4974-9cbf-0cf5aa221f33">ИП Власов Андрей Викторович</option>
+                <option value="8ba1ceaa-0522-468a-af71-28f5f95f9c64">ООО "УСВ ТРАНС"</option>
+                <option value="d746f070-3083-48e7-8b4c-0b6468acf7e2">ИП Деревенский Максим Алексеевич</option>
+                <option value="20374b2a-5774-48f9-9bf1-cc7176d3bb3c">ООО "ТОНКИЙ ЛЕД"</option>
+                <option value="e95f8ab5-e974-4de5-aec7-a8d64aeeff73">ООО Голода</option>
+                <option value="df53692c-d0d5-4c55-9831-1ee92022ba03">ИП Хохлов Олег Геннадиевич</option>
+                <option value="c72b6f45-c46f-4d70-a8fc-5f73726c6fbc">ООО АвтоЛайн+</option>
+                <option value="8a1cebf5-608e-47dd-988a-c7a71cc0420d">ООО «РСК КАПРИ»</option>
+                <option value="4e5485b5-f0fa-457f-be47-212ce80c75e2">ООО "СИМТРАНССЕРВИС"</option>
+                <option value="5a3fcb5c-7d84-4b75-aee6-0173ff7caf3b">ИП Панина Ольга Владимировна</option>
+                <option value="760eea87-5163-4d49-9a2e-5bf6fc3d92eb">ИП Боденко Юрий Борисович</option>
+                <option value="6e2e9afb-c2ee-41c0-970c-0aa77afa61c6">ООО "Интернет-холдинг "Интербиз"</option>
+                <option value="5e58615e-a82e-4e9d-91e3-61671c3ff350">ООО "ТК Альянс"</option>
+                <option value="9a30d682-1ff1-4ee8-9998-611337f5007e">ИП Мухамадеев Рим Фаатович</option>
+                <option value="71683ce6-d666-492c-b707-00b9f32f9e36">ИП Конопатова Дарья Вадимовна</option>
+                <option value="52eae954-e115-4e7a-832f-39ee01f2e4b2">ООО "ИТ-ЮГ"</option>
+                <option value="2a75a163-1dc0-466e-810e-273f82b740b7">ООО Городской Центр Лизинга</option>
+                <option value="17785789-687b-47e3-bc1d-e03a646dc1ad">ИП Лобанов Андрей Михайлович</option>
+                <option value="f0c256bd-87d0-4f96-9dbf-cf18caaa5397">ИП Грызунов Юрий Сергеевич</option>
+                <option value="75d74ae0-0a54-49ad-be2b-51c56b62a1d3">ИП Гришко Елена Владимировна</option>
+                <option value="28bd8c92-1bd9-4dab-9620-aae1880f0c1d">ООО «Телеритейл»</option>
+                <option value="a97c91a4-d5aa-420f-9cc1-1e94e91cf0a0">ООО "Спутник"</option>
+                <option value="02fcb2d0-11a8-4563-afd4-11a09cd3d5dd">ООО "Вектор"</option>
+                <option value="0e4db6f1-a232-4e9e-9040-ba45b8b5a391">ИП Павлова Виолетта Эдуардовна</option>
+              </select>
+
+              <label class="label-form" for="firmID">Компания</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-8 inp-group mb-4">
+              <input type="text" id="bank_bik" class="form-control inp-form inp-required" name="bank_bik" value=""
+                placeholder="БИК банка" maxlength="15" pattern="[0-9]+" required>
+              <label class="label-form" for="bank_bik">БИК банка</label>
+              <div class="invalid-tooltip">Обязательное поле</div>
+            </div>
+            <div class="col-md-4">
+              <a href="#" class="btn btn-primary btn-lg">
+                Поиск
+              </a>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="companyBlock">
+          <div class="d-flex justify-content-between pb-3">
+            <h4 class="pl-4">Плательщик <span>АО "ТИНЬКОФФ БАНК"</span></h4>
+            <div class="">
+              <button type="button" class="btn btn-remove" name="action" value="0">Удалить</button>
+            </div>
+          </div>
+  
+          <div class="row mb-3 mx-3">
+            <p class="col-md-6 col-xl-4 font-weight-bold">Название банка:</p>
+            <p class="col-md-6 col-xl-8">АО "ТИНЬКОФФ БАНК"</p>
+          </div>
+          <div class="row mb-3 mx-3">
+            <p class="col-md-6 col-xl-4 font-weight-bold">Адрес банка:</p>
+            <p class="col-md-6 col-xl-8">Москва, 123060, 1-й Волоколамский проезд, д. 12</p>
+          </div>
+          <div class="row mb-3 mx-3">
+            <p class="col-md-6 col-xl-4 font-weight-bold">Расчетный счет:</p>
+            <p class="col-md-6 col-xl-8">40702810701500012427</p>
+          </div>
+          <div class="row mb-3 mx-3">
+            <p class="col-md-6 col-xl-4 font-weight-bold">Корреспондентский счет банка:</p>
+            <p class="col-md-6 col-xl-8">30101810845250000999</p>
+          </div>
+          <div class="row mb-3 mx-3">
+            <p class="col-md-6 col-xl-4 font-weight-bold">БИК банка:</p>
+            <p class="col-md-6 col-xl-8">044525999</p>
+          </div>
+        </div>
+
+        <div class="form-group mb-5">
+          <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Сохранить</button>
+          <a href="fees.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
+        </div>
+
+      </form>
+    </main>
+    <footer class="nav mainFooter">
+      <div class="row footerWrapper">
+        <div class="col-sm-6 col-lg-3 blockInfo mb-3">
+          <h5 class="footerHeader">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</h5>
+          <ul class="footerItems">
+            <li class="footerItem">
+              <a href="https://app.ecomkassa.ru/assets/docs/license-agreement-ru.pdf" class="footerLink">Публичный
+                договор
+                оферты</a>
+            </li>
+            <li class="footerItem">
+              <a href="https://app.ecomkassa.ru/assets/docs/leasing-public-ru.pdf" class="footerLink">Договор-оферта на
+                аренду касс</a>
+            </li>
+            <li class="footerItem">
+              <a href="https://ecomkassa.ru/docs" class="footerLink">Все документы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <h5 class="footerHeader">ИНСТРУКЦИИ</h5>
+          <ul class="footerItems">
+            <li class="footerItem">
+              <a href="#" class="footerLink">
+                <span class="">
+                  <svg width="16" height="16" aria-hidden="true" focusable="false" data-prefix="far"
+                    data-icon="file-alt" class="svg-inline--fa fa-file-alt fa-w-12" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path fill="currentColor"
+                      d="M288 248v28c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-28c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm-12 72H108c-6.6 0-12 5.4-12 12v28c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-28c0-6.6-5.4-12-12-12zm108-188.1V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h204.1C264.8 0 277 5.1 286 14.1L369.9 98c9 8.9 14.1 21.2 14.1 33.9zm-128-80V128h76.1L256 51.9zM336 464V176H232c-13.3 0-24-10.7-24-24V48H48v416h288z">
+                    </path>
+                  </svg>
+                </span>
+                Инструкции
+              </a>
+            </li>
+            <li class="footerItem">
+              <a href="#" class="footerLink">
+                <span class="">
+                  <svg width="18" height="18" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube"
+                    class="svg-inline--fa fa-youtube fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                    </path>
+                  </svg>
+                </span>
+                Видеоинструкции
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <h5 class="footerHeader">ТЕХПОДДЕРЖКА</h5>
+          <p class="footerText">
+            <span class="far fa-clock leftIcon"></span>
+            Пн-Пт 9:00 - 18:00 Мск
+          </p>
+          <p class="footerText">Почта техподдержки:</p>
+          <p class="footerText">
+            <a href="mailto:help@ecomkassa.ru" class="footerLink">
+              <span class="leftIcon">
+                <svg width="16" height="16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="at"
+                  class="svg-inline--fa fa-at fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z">
+                  </path>
+                </svg>
+              </span>
+              help@ecomkassa.ru
+            </a>
+          </p>
+        </div>
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <h5 class="footerHeader">О КОМПАНИИ</h5>
+          <p class="footerText">ООО "Зе Поинт"</p>
+          <p class="footerText">ИНН: 7708317992</p>
+        </div>
+
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="../js/menu.js"></script>
+  <script type="text/javascript" src="../js/meter.js"></script>
+  <script type="text/javascript" src="../js/validate.js"></script>
+
+</body>
+
+</html>
