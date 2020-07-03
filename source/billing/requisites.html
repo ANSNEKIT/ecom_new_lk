@@ -295,77 +295,262 @@
       </nav>
   </aside>
     <main class="mainContent mt-5">
-      <h2 class="page-header text-center py-5">Реквизиты организации</h2>
-      <div class="companyBlock">
-        <h4 class="mb-4">Компания "Компания для теста"
-          <a href="editfirm.html" class="rightIcon mr-3">
-            <svg width="20" height="20" aria-hidden="true" focusable="false" data-prefix="far" data-icon="edit"
-              class="svg-inline--fa fa-edit fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 576 512">
-              <path fill="currentColor"
-                d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z">
-              </path>
-            </svg>
-          </a>
-        </h4>
+      <form class="addCheckForm needs-validation" action="" method="get" novalidate>
+        <h2 class="page-header text-center py-5">Реквизиты организации</h2>
+        <fieldset class="FormGroup1 mb-4">
+          <h5 class="mt-2 mb-4">Выберите организацию:</h5>
+          <div class="form-row">
+            <div class="col-md-12 inp-group mb-4 parentSelect">
+              <select id="firmID" name="firmID" class="form-control inp-form select">
+                <option value="dd96ef75-fc76-4ca3-bb57-61225a678182">ООО "Центр нейротехнологий сна и бодрствования"
+                </option>
+                <option value="fa16f5ed-d366-4298-b2e6-6b43944d329a">БЛЭК МАШРУМ</option>
+                <option value="0b486534-d95a-4ace-90bd-ef98684e5e8b">ИП Невзорова Лидия Алексеевна</option>
+                <option value="0e23b956-1e08-4456-87bf-6a70360a1b1e">Fedishen Alexey LLC</option>
+                <option value="cceac404-2e23-46c2-b6d5-a42b29eb2ac3">ИП Блохин Илья</option>
+                <option value="9f72c329-cd9a-49c7-ad04-77eb31a31d63">ООО "Фуди Фуд"</option>
+                <option value="8d3b00cf-50dd-47f8-bfbc-259f3d750ef0">ИП Ижболдин Степан Павлович</option>
+                <option value="a179083f-cfcb-4dcc-8655-f04b8e879677">ИП Дадаев Денис Олегович</option>
+                <option value="9f235d68-0da3-4c55-9079-a7b0d3751e08">ИП Лактионов Игорь Александрович</option>
+                <option value="26407792-2743-411b-8485-7fbab9ba7517">ИП Малышева Татьяна Иннокентьевна</option>
+                <option value="8a649c19-d63a-4fd0-907c-c651dead6362">ИП Киселев Алексей Алексеевич</option>
+                <option value="a99120ee-5df9-4141-8943-13715814e551">ИП</option>
+                <option value="5d2667cf-9c6c-45f8-bf5f-22ad4c5bed54">ИП Достовалов Андрей Николаевич</option>
+                <option value="e54ca2b0-57e9-41c8-bde6-8b95dac367db">ИП Гыскэ Валентина Павловна</option>
+                <option value="bd11012b-c975-49ee-a7b5-f679f43a1f0c">ИП Докучаев Павел Викторович</option>
+                <option value="6cf77aa4-ffa7-4da4-86be-04a9133f8b30">ООО «Пошив.ком»</option>
+                <option value="0350ab3f-039d-4b25-bbf0-a47deacfbdb3">ИП Сюльжина Наталья Константиновна</option>
+                <option value="27c8f219-8fec-4e34-a79e-fc8ee8eaaf7c">ООО ТК "Квик-Техномир"</option>
+                <option value="af722f72-206e-4072-af48-d6293ec22807">ИП Торбин Данила Игоревич</option>
+                <option value="9fd3f105-1b8a-42d9-8497-55d25edf0fb0">Компания для теста</option>
+                <option value="861ac199-9eb5-4d67-840a-2180fdca308c">Общество с ограниченной ответственностью "Белтрос"
+                </option>
+                <option value="1c03d357-c0e4-44de-8833-d9e00b446583">ИП Филимонова Елена Евгеньевна</option>
+                <option value="2108f881-2e87-4835-9d6d-d8c58906b3a6">ИП Тронько Владимир Николаевич</option>
+                <option value="a65d9906-14f8-4c91-9c60-f9b04ddceda1">ИП Новик Татьяна Андреевна</option>
+                <option value="5992126d-bb25-452d-990a-f6427acb77b8">ИП Барковский Дмитрий Алексеевич</option>
+                <option value="8d7657ec-13d0-4ef4-bb4a-142bff569527">ИП Давыдова Елена Валерьевна</option>
+                <option value="f4c95989-4c2e-4fac-8437-40b548f6fa40">ИП БУРЕНИН СТЕПАН ЕВГЕНЬЕВИЧ</option>
+                <option value="914d83c4-cb24-4737-98e1-9e2f698ac338">Ffggg</option>
+                <option value="b015a1fa-558b-453a-9b72-d9a4a6b138a8">ИП Воронина Наталья Витальевна</option>
+                <option value="5ff10b8c-f60d-4c86-bf25-38a6ce3d41a7">ИП Гаврилов Антон Геннадьевич</option>
+                <option value="1ce6a23f-8e3c-405f-a314-f0ced95196a2">ИП Безнаева Валерия Сергеевна</option>
+                <option value="ae9e42a5-6b3b-44da-938f-321422eb851f">ИП Халецкая Лелия Сергеевна</option>
+                <option value="c1afe2a2-7a01-411a-998d-71f06702d2ab">ИП Кузнецов Олег Васильевич</option>
+                <option value="df9ea80d-586d-4cef-9e95-aec20542a8bc">ИП Еремеева Мария Сергеевна</option>
+                <option value="aeadceec-7dcc-4b1f-9351-2236f0aa6001">ООО Зе Поинт</option>
+                <option value="ff1b31fd-d3a7-4b49-b108-c869b9ae39f1">ИП Амиров Аскар Рустемович</option>
+                <option value="680edd70-5ca9-4ac6-827b-534997e81bfb">ИП Рудчик Константин Станиславович</option>
+                <option value="1011c124-4d36-40e4-9107-131ddfa22c41">Торговые Поставки</option>
+                <option value="848b9c85-0396-4a4b-9128-bb7ff8cde05e">ООО "БЕЛТРОС"</option>
+                <option value="924e42bb-e9a5-428a-98f7-35d7dce7f24a">ААААА</option>
+                <option value="95fa4e29-9d07-4c57-8c5d-4522fd6a5ea8">ИП Митанов Денис Васильевич</option>
+                <option value="95dc4c86-a316-433d-a71f-96d091260ac7">ООО "Объединение Агрегейт"</option>
+                <option value="60d00869-3549-4f0d-9dbc-7bb15e5bf4df">ИП Минина О.Г.</option>
+                <option value="e12ad53a-ab7a-4a6b-a877-567343753c4e">ИП Диденко Ирина Сергеевна</option>
+                <option value="ef22e87b-a9b4-47c0-ac4f-9f6beb175e74">ООО "Киберком"</option>
+                <option value="2806d589-8e47-4026-b34c-f19c76e574ea">ИП Лебедева Надежда</option>
+                <option value="307fd553-dfb6-48e0-97b7-280356f877b6">ООО "Транс Атлантик"</option>
+                <option value="750fc1a3-6a4d-4073-a613-1982ca7f47a1">ООО "РАНТ"</option>
+                <option value="6e00e2f2-696e-442f-bd3e-8e909914cc9b">ИП Варламова Ольга Геннадьевна</option>
+                <option value="c677d366-ea27-477f-a5b6-4eb4e0324f41">ООО "ЛТ"</option>
+                <option value="c2a950af-020b-4bf9-b900-202eadc55aa2">ИП Белоусофф Роман Иванович</option>
+                <option value="e0cdbf06-bc21-4102-915a-859a71da89f3">ИП Орлова Кира</option>
+                <option value="c0b89a9b-661a-4348-b12e-0da42a0087ec">ИП Шидаков Мухтар Исмаилович</option>
+                <option value="af3e73aa-4650-4180-9d91-2bac52645d02">ИП ФЕДОРЕЦ АЛЕКСЕЙ ВАДИМОВИЧ</option>
+                <option value="0ef92f34-042e-4e32-9b1b-dde02281b695">ИП Шудрик Оксана Николаевна</option>
+                <option value="aaa35012-49c0-41b7-9db3-70670d0aaff9">ООО "Аугуст Фёрстер.Ру"</option>
+                <option value="511130c8-9e2a-4dec-9d6e-b3a57a74b87d">ИП Мерц Наталья Владимировна</option>
+                <option value="d984418c-64f6-488d-ba8b-c0fb8f3f0ff1">ИП Ануфриев Альберт Викторович</option>
+                <option value="95db47ea-9f0d-4dc6-a35c-bbc6f8e4375a">МИЛОСЕРДИЕ</option>
+                <option value="7900c4fe-a8ac-4390-b16b-ead086ef6079">ИП Нелюбина Ольга Вячеславовна</option>
+                <option value="cd9c2a6a-7202-4460-819f-be2d53bdb781">ООО «Доминанта мьюзик»</option>
+                <option value="61622b1d-da3e-44ae-9876-799f8e2b02c0">ИП Петрунин Сергей Иванович</option>
+                <option value="a516563c-4674-4e8f-8026-9669fbe83c8e">Ololoo</option>
+                <option value="01ca13c3-1a26-445b-9ab4-352dcfb8dbca">ИП Стеценко Михаил Андреевич</option>
+                <option value="6ab537bb-f746-40d0-b72d-ccfe3dfdc5c8">ИП Смирнова Влада Владимировна</option>
+                <option value="e2f551f4-d4fc-40e9-9201-9ec69c06b9af">ИП КОБАЯШИ ЭМИЛИЯ АЛЕКСАНДРОВНА</option>
+                <option value="93dab603-3d2c-4204-8d2b-9bc3edf93735">ИП Старостин Виталий Владимирович</option>
+                <option value="e01529b6-fa17-4032-bef1-cc0831dc361f">ИП Радова Анна Альбертовна</option>
+                <option value="dd42e26b-4fd1-45ec-b4b7-3370ff7b6046">ООО "Мир приключений"</option>
+                <option value="a3f40234-e424-4f5b-bd89-caddb099e447">ИП Тюрикова Е.Ф.</option>
+                <option value="18412171-a261-4a60-adb1-6a413b0dcac2">ООО "Бейби Арт СИТИ"</option>
+                <option value="e47ad750-fbce-41d5-9631-e1a556e11278">ООО "Мастерская Чебуркова"</option>
+                <option value="e69b4b52-84f7-41cc-98f2-43fa521feb7f">ИП Личак Наталья Анатольевна</option>
+                <option value="b7be0352-a6f2-4d62-af3b-a125032b8d59">ИП Березин Владимир Юрьевич</option>
+                <option value="59520ff7-2a49-4df1-9f53-c61fadacfb1b">ИП Писаренко Филипп Владимирович</option>
+                <option value="a5cfdfce-c4bd-4356-b72c-07461d294c49">ИП ПАРАВИН ДМИТРИЙ ВЛАДИСЛАВОВИЧ</option>
+                <option value="6918f5f9-b259-4159-bb86-d1fdbd4ae4dc">Тестовая Компания Тест</option>
+                <option value="a6f0368b-d810-4f71-887f-ac8c3a121350">ИП Рынков Сергей Львович</option>
+                <option value="41331659-59c4-42c0-9788-6a00305f5a1c">ИП Гордон Юрий Моисеевич</option>
+                <option value="07683f33-48a7-4743-a2dc-ad26529a526e">ИП Долженко Марина Викторовна</option>
+                <option value="d57915dc-b4ad-4dd2-8296-542c98be450a">ИП Омельченко А.А.</option>
+                <option value="0d7d9f97-1190-419e-847f-23af9c8b9636">ООО «КОРДА»</option>
+                <option value="2a528ab5-0d9e-4b03-b49c-be6e5fdfb39c">ООО "ТелеЦентр"</option>
+                <option value="d485670b-e666-469d-9b59-dcf5b74bba79">ООО "AРТ-ГРУПП"</option>
+                <option value="97b56938-6dbb-448b-bc52-f15fce5c6f58">ООО Научно-образовательный центр "Эрудит"</option>
+                <option value="8baba252-d385-4226-b6a1-b1150c41835a">ИП Кривоногова Анжелика Витальевна</option>
+                <option value="516998fb-a083-494a-a8ec-0d0e7076865e">ИП Кан Денис Александрович</option>
+                <option value="678c0e70-a200-4acd-82bd-eb658673fa81">ИП Любаневич Алёна Михайловна</option>
+                <option value="e15a54d2-48b6-4a92-b516-d643ab1a2993">ООО "РТЛ КОМПАНИ"</option>
+                <option value="c9efa4b5-de0d-41a5-a024-896772040c75">ИП Мосолов Павел Владимирович</option>
+                <option value="7d29cd96-d671-49e8-a4c4-76b38dd6af16">ИП Шустов Федор Иванович</option>
+                <option value="078a8701-ca5c-42f8-9bde-ac76c1366b4f">ИП МИХАЙЛОВ ОЛЕГ ВИКТОРОВИЧ</option>
+                <option value="427600bb-57d6-41ad-a271-5f6661e8083a">ООО "Издательство "СЧАСТЛИВЫЙ МИР"</option>
+                <option value="b805a607-c0f0-49d6-a3aa-7d7e57a21f05">ИП Смородин И.Н.</option>
+                <option value="7204821d-d4c7-46ac-819a-c53adb1424fa">ИП Сальников Дмитрий Владимирович</option>
+                <option value="a0a830da-db9f-47e5-b01c-703d62bf2aaa">ООО "Хибинская энергосбытовая компания"</option>
+                <option value="1357dd44-dbc1-4aed-a455-65290bdb0d74">ИП Торгаев Вадим Владимирович</option>
+                <option value="e2dc68f0-a7e1-49ff-9ded-bdbb4cbdaeb3">ИП Магай Кирилл Олегович</option>
+                <option value="b0ab9aed-3dc5-465e-9db4-0a7baa9cc109">АО "Новое качество дорог"</option>
+                <option value="44298a5e-38c7-4c3d-9641-b084e85cebcd">ИП Платонов Кирилл Дмитриевич</option>
+                <option value="83bf27ba-1264-46d0-87a5-124c9c1cc594">ИП Сутурин Дмитрий Владимирович</option>
+                <option value="fc2838d9-db5f-48aa-82e8-406458d64dac">ИП Толшин Александр Михайлович</option>
+                <option value="cde88c0c-1107-4c37-825a-635ff930a646">ООО "АБГрупп Страхование"</option>
+                <option value="c411e604-94df-46df-98c0-da2dbd7c7673">ИП Блинова Екатерина Николаевна</option>
+                <option value="52f8d6a8-4813-46dd-9a29-62e2ffa0fe91">ИП Конаков Владимир Сергеевич</option>
+                <option value="da4c87df-5202-44e8-9c0d-4299bbc5d048">ИП Бужинский Андрей Александрович</option>
+                <option value="99478eb4-c097-4c29-9cbc-3b400b13a708">ООО РЕЙС</option>
+                <option value="ce841fc9-02ff-4b9e-80a0-d0843a7104e8">ООО "ШОССЕ"</option>
+                <option value="2cf98b52-ba27-4bc9-8893-de2dd34ae0ab">ООО "ЛАДЬЯ"</option>
+                <option value="81020aef-1866-4b47-a624-b69ef8224b6e">ООО "Литораль"</option>
+                <option value="b03fa5f1-b894-408a-a49b-9e3e3b172ca9">ООО "Платан"</option>
+                <option value="6e6e163d-afb8-4daa-b2c6-3c4199d58bfc">ИП Логановский Станислав Юрьевич</option>
+                <option value="cb806ddd-2230-499b-8988-30a4074119d0">ООО "СТИЛЬ ТЛ"</option>
+                <option value="15de5690-7389-49a1-8fc1-4380307c7103">ИП Алексеенко Александр Анатольевич</option>
+                <option value="512da11e-ea77-48a5-a047-6700c44f7ac3">РСВО, ФГУП</option>
+                <option value="7e3b6705-828f-478e-bf74-af826be98781">ИП Суковатицын Андрей Александрович</option>
+                <option value="aba5b59f-e731-473a-9c23-ba859dbd8286">ИП Кононов Алексей Андреевич</option>
+                <option value="d3403ef7-a6cb-430b-8770-c9f9274f0967">ИП Кузьмина Анна Владимировна</option>
+                <option value="eeef04a5-6bd9-43f7-b348-0e45192fddbf">ООО "Пассажирские перевозки"</option>
+                <option value="e1f3c981-0ee9-43c4-bbc5-367c55ac2004">ИП Павреев Илья Владимирович</option>
+                <option value="6b53699e-a692-4015-a03a-a1d11e3a99d5">ООО “Управляющая компания “Хибины”</option>
+                <option value="1873d179-1ba3-4d38-aa7f-87b909de353a">ООО "ОФИЖ"</option>
+                <option value="e4f350ad-caf7-4f3e-9a6c-137e6759c5d6">ТСЖ "Строителей 103"</option>
+                <option value="59b29852-d773-4d1b-8531-ff8bf0c2d760">ООО "100 Домов - Новосибирск"</option>
+                <option value="0a124e2f-6d87-43f1-b1c2-6cddc073c18b">ООО "Торговый дом ПромСтрой"</option>
+                <option value="2a8f0cdd-5a56-45a7-86e1-7e53ed83241b">ИП Петрунин Алексей Вячеславович</option>
+                <option value="d47cbbb5-9324-4dce-8afb-38a61542847b">ООО "УК Наука"</option>
+                <option value="680a622f-2138-40f2-a1c5-0f8712cb9d9f">ООО "УК Академическая"</option>
+                <option value="69f8b299-b0f1-4df9-9830-d36f79906c68">ИП Лазарева Елена Владимировна</option>
+                <option value="11428b60-3d0a-4011-afc5-839f235683d2">ООО "Вторая управляющая +"</option>
+                <option value="39615636-f723-480c-89e2-2c6f60fa7b29">ООО "УК Престиж"</option>
+                <option value="c21a4350-ddfb-4f9c-b53f-89f6af873135">ИП Дуэль Александр Викторович</option>
+                <option value="a24dad92-6e9c-44a6-a08c-b07f587bbf65">ИП Дармокрик Михаил Вячеславович</option>
+                <option value="d15885de-8696-4e4c-b657-3faca8c7e7c3">ИП Арайс Сергей Александрович</option>
+                <option value="fdea822b-27b2-48c7-b0b9-288508873558">Дибил</option>
+                <option value="dcda536f-3b30-4cbe-83e1-5966828ec0e4">ООО «Городской Экспресс»</option>
+                <option value="2c2c7105-6723-4736-b965-b66a8e26e666">ИП Николаева Ирина Николаевна</option>
+                <option value="89c769ec-6b89-4bab-8885-545f355dc191">ИП Бахов Роман Иванович</option>
+                <option value="15cc3359-b611-4974-9cbf-0cf5aa221f33">ИП Власов Андрей Викторович</option>
+                <option value="8ba1ceaa-0522-468a-af71-28f5f95f9c64">ООО "УСВ ТРАНС"</option>
+                <option value="d746f070-3083-48e7-8b4c-0b6468acf7e2">ИП Деревенский Максим Алексеевич</option>
+                <option value="20374b2a-5774-48f9-9bf1-cc7176d3bb3c">ООО "ТОНКИЙ ЛЕД"</option>
+                <option value="e95f8ab5-e974-4de5-aec7-a8d64aeeff73">ООО Голода</option>
+                <option value="df53692c-d0d5-4c55-9831-1ee92022ba03">ИП Хохлов Олег Геннадиевич</option>
+                <option value="c72b6f45-c46f-4d70-a8fc-5f73726c6fbc">ООО АвтоЛайн+</option>
+                <option value="8a1cebf5-608e-47dd-988a-c7a71cc0420d">ООО «РСК КАПРИ»</option>
+                <option value="4e5485b5-f0fa-457f-be47-212ce80c75e2">ООО "СИМТРАНССЕРВИС"</option>
+                <option value="5a3fcb5c-7d84-4b75-aee6-0173ff7caf3b">ИП Панина Ольга Владимировна</option>
+                <option value="760eea87-5163-4d49-9a2e-5bf6fc3d92eb">ИП Боденко Юрий Борисович</option>
+                <option value="6e2e9afb-c2ee-41c0-970c-0aa77afa61c6">ООО "Интернет-холдинг "Интербиз"</option>
+                <option value="5e58615e-a82e-4e9d-91e3-61671c3ff350">ООО "ТК Альянс"</option>
+                <option value="9a30d682-1ff1-4ee8-9998-611337f5007e">ИП Мухамадеев Рим Фаатович</option>
+                <option value="71683ce6-d666-492c-b707-00b9f32f9e36">ИП Конопатова Дарья Вадимовна</option>
+                <option value="52eae954-e115-4e7a-832f-39ee01f2e4b2">ООО "ИТ-ЮГ"</option>
+                <option value="2a75a163-1dc0-466e-810e-273f82b740b7">ООО Городской Центр Лизинга</option>
+                <option value="17785789-687b-47e3-bc1d-e03a646dc1ad">ИП Лобанов Андрей Михайлович</option>
+                <option value="f0c256bd-87d0-4f96-9dbf-cf18caaa5397">ИП Грызунов Юрий Сергеевич</option>
+                <option value="75d74ae0-0a54-49ad-be2b-51c56b62a1d3">ИП Гришко Елена Владимировна</option>
+                <option value="28bd8c92-1bd9-4dab-9620-aae1880f0c1d">ООО «Телеритейл»</option>
+                <option value="a97c91a4-d5aa-420f-9cc1-1e94e91cf0a0">ООО "Спутник"</option>
+                <option value="02fcb2d0-11a8-4563-afd4-11a09cd3d5dd">ООО "Вектор"</option>
+                <option value="0e4db6f1-a232-4e9e-9040-ba45b8b5a391">ИП Павлова Виолетта Эдуардовна</option>
+              </select>
 
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">ID:</p>
-          <p class="col-md-6 col-xl-8">9fd3f105-1b8a-42d9-8497-55d25edf0fb0</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Юр. наименование:</p>
-          <p class="col-md-6 col-xl-8">Компания для теста</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">ИНН:</p>
-          <p class="col-md-6 col-xl-8">7708317992</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">ОРГРН:</p>
-          <p class="col-md-6 col-xl-8">123456789012345</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">КПП:</p>
-          <p class="col-md-6 col-xl-8">123456789</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Адрес юридический:</p>
-          <p class="col-md-6 col-xl-8">г. Москва, Красная площадь, мавзолей д.1</p>
-        </div>
-        
-      </div>
-
-      <div class="companyBlock">
-        <div class="d-flex justify-content-between pb-3">
-          <h4 class="pl-4">Плательщик <span>АО "ТИНЬКОФФ БАНК"</span></h4>
-          <div class="">
-            <button type="button" class="btn btn-remove" name="action" value="0">Удалить</button>
+              <label class="label-form" for="firmID">Компания</label>
+            </div>
           </div>
-        </div>
+        </fieldset>
+      </form>
+      
+      <section class="card mb-5">
+        <table class="table table-striped table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th class="">Наименование банка</th>
+              <th class="">Расчетный счет</th>
+              <th class="text-center">Действия</th>
+            </tr>
+          </thead>
 
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Название банка:</p>
-          <p class="col-md-6 col-xl-8">АО "ТИНЬКОФФ БАНК"</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Адрес банка:</p>
-          <p class="col-md-6 col-xl-8">Москва, 123060, 1-й Волоколамский проезд, д. 12</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Расчетный счет:</p>
-          <p class="col-md-6 col-xl-8">40702810701500012427</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">Корреспондентский счет банка:</p>
-          <p class="col-md-6 col-xl-8">30101810845250000999</p>
-        </div>
-        <div class="row mb-3 mx-3">
-          <p class="col-md-6 col-xl-4 font-weight-bold">БИК банка:</p>
-          <p class="col-md-6 col-xl-8">044525999</p>
-        </div>
-      </div>
+          <tbody>
+            <tr>
+              <td class="">
+                АО "ТИНЬКОФФ БАНК"
+              </td>
+              <td class="">40702810701500012427</td>
+              <td class="text-center">
+                <form action="" method="POST">
+                  <div class="parentEditDel">
+                    <a href="edituser.html" class="editIcon">
+                      <svg aria-hidden="true" width="20" height="20" focusable="false" data-prefix="fas"
+                        data-icon="pencil-alt" class="svg-inline--fa fa-pencil-alt fa-w-16" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z">
+                        </path>
+                      </svg>
+                    </a>
+                    <input type="hidden" name="registrarID" value="4513b883-b985-40b6-8e4c-7638d6e9772e">
+                    <a href="#" value="submit" class="delIcon">
+                      <svg aria-hidden="true" width="20" height="20" focusable="false" data-prefix="fas"
+                        data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                          d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z">
+                        </path>
+                      </svg>
+                    </a>
+                  </div>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td class="">
+                АО "Точка"
+              </td>
+              <td class="">40701557157600027432</td>
+              <td class="text-center">
+                <form action="" method="POST">
+                  <div class="parentEditDel">
+                    <a href="edituser.html" class="editIcon">
+                      <svg aria-hidden="true" width="20" height="20" focusable="false" data-prefix="fas"
+                        data-icon="pencil-alt" class="svg-inline--fa fa-pencil-alt fa-w-16" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z">
+                        </path>
+                      </svg>
+                    </a>
+                    <input type="hidden" name="registrarID" value="4513b883-b985-40b6-8e4c-7638d6e9772e">
+                    <a href="#" value="submit" class="delIcon">
+                      <svg aria-hidden="true" width="20" height="20" focusable="false" data-prefix="fas"
+                        data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                          d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z">
+                        </path>
+                      </svg>
+                    </a>
+                  </div>
+                </form>
+              </td>
+            </tr>
 
+          </tbody>
+        </table>
+      </section>
     </main>
     <footer class="nav mainFooter">
       <div class="row footerWrapper">
