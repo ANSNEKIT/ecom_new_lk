@@ -208,6 +208,18 @@ body{
 
 }
 
+.minusIcon {
+  background-color: transparent;
+  border: none;
+  border-radius: none;
+  color: $icon-color;
+  transition: color 300ms ease-in-out;
+
+  &:hover {
+    color: $bgc-btn-del-hover;
+  }
+}
+
 jdiv.wrap_3s {
   display: none;
 }
