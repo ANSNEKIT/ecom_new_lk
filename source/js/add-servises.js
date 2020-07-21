@@ -2,15 +2,15 @@
 
 
 const $btnAdd = document.querySelector('.btn-add');
-const $inpServises = document.querySelectorAll('select[data-js-id="servises"]');
-const $inpPrice = document.querySelectorAll('input[data-js-id="price"]');
-const $inpQuantity = document.querySelectorAll('input[data-js-id="quantity"]');
-const $inpCost = document.querySelectorAll('input[data-js-id="cost"]');
+//const $inpServises = document.querySelectorAll('select[data-js-id="servises"]');
+//const $inpPrice = document.querySelectorAll('input[data-js-id="price"]');
+//const $inpQuantity = document.querySelectorAll('input[data-js-id="quantity"]');
+//const $inpCost = document.querySelectorAll('input[data-js-id="cost"]');
 const $summ = document.querySelector('#summ span strong');
 const $container = document.getElementById('parent-block');
 let countPosition = 0;
 
-const price = ['10000', '7000', '400', '300', '200'];
+const price = ['10000', '7000.50', '400', '300', '200'];
 
 const createMarkupCommodity = () => {
   return (
@@ -36,6 +36,7 @@ const createMarkupCommodity = () => {
         class="form-control inp-form select" 
         id="items_${countPosition}_vatType" 
         name="items[${countPosition}].vatType"
+        data-js-id="vat"
       >
         <option value="VAT_NONE" selected="">Без НДС</option>
         <option value="VAT_0PCT">НДС 0%</option>
@@ -70,7 +71,7 @@ const createMarkupCommodity = () => {
         data-js-id="quantity" 
         value="1" 
         pattern="[0-9]+" 
-        maxlength="10">
+        maxlength="8">
       <label class="label-form" for="items_${countPosition}_amount">Кол-во</label>
       <div class="invalid-tooltip">Укажите количество больше нуля</div>
     </div>
@@ -134,23 +135,73 @@ const removePosition = (evt) => {
 const changePriceHandler = (evt) => {
   const $elem = evt.target;
   const attr = $elem.attributes;
-  const attrValue = attr['data-js-id'].value;
+    
   if ( attr['data-js-id'].value === 'servises' ) {
     const countInp = $elem.id.substring(9);
     const inpPrice = document.getElementById(`items_${countInp}_price`);
     inpPrice.value = price[$elem.value];
+  } 
+
+}
+
+const changeCostHandler = () => {
+  const $price = document.querySelectorAll('input[data-js-id="price"]');
+  const $quantity = document.querySelectorAll('input[data-js-id="quantity"]');
+  const $cost = document.querySelectorAll('input[data-js-id="cost"]');
+
+  for (let i = 0; i < $price.length; i++) {
+    let price = parseFloat($price[i].value.trim()) * 100; 
+    let quantity = parseFloat($quantity[i].value.trim()) * 100;
+    let cost = (price * quantity) / 10000;
+    cost = (Math.round(cost * 100) / 100).toFixed(2);
+
+    $cost[i].value = cost;
   }
+
+}
+
+const isChangedCost = (evt) => {
+  const $elem = evt.target;
+  const attrs = $elem.attributes;
+
+  if ( attrs['data-js-id'].value === 'quantity' || attrs['data-js-id'].value === 'servises' ) {
+    changeCostHandler();
+  }
+}
+
+const totalSum = () => {
+  const $cost = document.querySelectorAll('input[data-js-id="cost"]');
+  let totalSum = 0.00;
+
+  for (let i = 0; i < $cost.length; i++) {
+    let resultSum = parseFloat($cost[i].value.trim()) * 100;
+    totalSum = parseFloat(totalSum) + parseFloat(resultSum / 100);
+    totalSum = (Math.round(totalSum * 100) / 100).toFixed(2);
+  }
+  
+  $summ.textContent = totalSum;
+
 }
 
 $btnAdd.addEventListener("click", (evt) => {
   renderPosition(evt);
+  changeCostHandler();
+  totalSum();
 });
 
 $container.addEventListener("click", (evt) => {
   removePosition(evt);
-  changePriceHandler(evt);
-  
 });
 
-//$container.addEventListener("change", changePriceHandler(evt));
+$container.addEventListener("change", (evt) => {
+  changePriceHandler(evt);
+  isChangedCost(evt);
+  totalSum();
+});
+
+window.addEventListener('load', () => {
+  changeCostHandler();
+  totalSum();
+});
+
 

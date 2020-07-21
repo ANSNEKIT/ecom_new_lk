@@ -364,6 +364,7 @@
                 class="form-control inp-form select" 
                 id="items_0_vatType" 
                 name="items[0].vatType"
+                data-js-id="vat"
               >
                 <option value="VAT_NONE" selected="">Без НДС</option>
                 <option value="VAT_0PCT">НДС 0%</option>
@@ -398,7 +399,7 @@
                 data-js-id="quantity" 
                 value="1" 
                 pattern="[0-9]+" 
-                maxlength="10">
+                maxlength="8">
               <label class="label-form" for="items_0_amount">Кол-во</label>
               <div class="invalid-tooltip">Укажите количество больше нуля</div>
             </div>
@@ -427,7 +428,7 @@
       </fieldset>
 
       <div>
-        <h3 id="summ">Итоговая сумма: <span><strong>1500</strong></span>&nbsp;&#x20bd;</h3>
+        <h3 id="summ">Итоговая сумма: <span><strong></strong></span>&nbsp;&#x20bd;</h3>
         <div class="form-group  my-4 my-sm-5">
           <button type="submit" class="btn btn-primary btn-lg mr-5 mb-4" value="submit">Создать счет</button>
           <a href="./servises-list.html" class="btn btn-outline-secondary btn-lg mb-4">Отмена</a>
