@@ -570,104 +570,360 @@
           </div>
         </fieldset>
 
-        <fieldset class="FormGroup1 mb-4">
-          <h4 class="pl-4">Плательщик <span id="inp-bank-name">АО "ТИНЬКОФФ БАНК"</span></h4>
-              
-          <div class="form-group form-row mb-3 mx-3">
-            <label 
-              for="bank_name" 
-              class="col-sm-3 col-form-label font-weight-bold">Название банка:</label>
-            <div class="col-sm-9 inp-group">
-              <input 
-                type="text"
-                id="bank_name" 
-                class="form-control inp-form inp-required" 
-                name="bank_name"
-                value='АО "ТИНЬКОФФ БАНК"'
-                pattern="^[а-яА-ЯёЁ\s&quot;]+$"
-                maxlength="50">
+        <fieldset class="mb-4">
+          <div class="cardGrid">
+            <div class="cardGrid__item">
+              <h4 class="mb-4">Реквизиты организации</h4>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="firm_name" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >Название организации:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="firm_name" 
+                    class="form-control inp-form inp-required" 
+                    name="firm_name"
+                    value=""
+                    placeholder='ООО "Тестовая компания"'
+                    pattern="^[а-яА-ЯёЁ\s&quot;]+$"
+                    maxlength="50"
+                    required
+                  >
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="firm_address" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >Адрес организации:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                  type="text"
+                  id="firm_address" 
+                  class="form-control inp-form inp-required" 
+                  name="firm_address"
+                  value=""
+                  placeholder="123000, г.Москва, ул.Ленина, д.1, оф.1"
+                  pattern="^[^A-Za-z«»]+$"
+                  maxlength="170"
+                  required
+                >
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="firm_inn" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >ИНН:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="firm_inn" 
+                    class="form-control inp-form inp-required" 
+                    name="firm_inn"
+                    value=""
+                    pattern="[0-9]{10}|[0-9]{12}"
+                    maxlength="12"
+                    required
+                  >
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="firm_ogrn" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >ОГРН:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="firm_ogrn" 
+                    class="form-control inp-form inp-required" 
+                    name="firm_ogrn"
+                    value=""
+                    pattern="[0-9]{13}"
+                    maxlength="13"
+                    required
+                  >
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="firm_kpp" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >КПП:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="firm_kpp" 
+                    class="form-control inp-form inp-required" 
+                    name="firm_kpp"
+                    value=""
+                    pattern="[0-9]{9}"
+                    maxlength="9">
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="form-group form-row mb-3 mx-3">
-            <label 
-              for="bank_address" 
-              class="col-sm-3 col-form-label font-weight-bold">Адрес банка:</label>
-            <div class="col-sm-9 inp-group">
-              <input 
-              type="text"
-              id="bank_address" 
-              class="form-control inp-form inp-required" 
-              name="bank_address"
-              value="Москва, 123060, 1-й Волоколамский проезд, д. 10"
-              pattern="^[^A-Za-z«»]+$"
-              maxlength="150">
+
+            <div class="cardGrid__item">
+              <h4 class="mb-4">Плательщик <span id="inp-bank-name">АО "ТИНЬКОФФ БАНК"</span></h4>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="bank_name" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >Название банка:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="bank_name" 
+                    class="form-control inp-form inp-required" 
+                    name="bank_name"
+                    value='АО "ТИНЬКОФФ БАНК"'
+                    placeholder='АО "ТИНЬКОФФ БАНК"'
+                    pattern="^[а-яА-ЯёЁ\s&quot;]+$"
+                    maxlength="50"
+                  >
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="bank_address" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >Адрес банка:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="bank_address" 
+                    class="form-control inp-form inp-required" 
+                    name="bank_address"
+                    value="123060, г.Москва, 1-й Волоколамский проезд, д.10"
+                    placeholder="123060, г.Москва, 1-й Волоколамский проезд, д.10"
+                    pattern="^[^A-Za-z«»]+$"
+                    maxlength="170"
+                  >
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="bank_corr_account" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >Корреспондентский счет банка:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="bank_corr_account" 
+                    class="form-control inp-form inp-required" 
+                    name="bank_corr_account"
+                    value="30101810845250000999"
+                    pattern="[0-9]+"
+                    maxlength="50"
+                  >
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="bank_bik" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >БИК банка:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="bank_bik" 
+                    class="form-control inp-form inp-required" 
+                    name="bank_bik"
+                    value="044525999"
+                    pattern="[0-9]+"
+                    maxlength="20">
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="form-group form-row mb-3 mx-3">
-            <label 
-              for="bank_corr_account" 
-              class="col-sm-3 col-form-label font-weight-bold">Корреспондентский счет банка:</label>
-            <div class="col-sm-9 inp-group">
-              <input 
-                type="text"
-                id="bank_corr_account" 
-                class="form-control inp-form inp-required" 
-                name="bank_corr_account"
-                value="30101810845250000999"
-                pattern="[0-9]+"
-                maxlength="50">
-            </div>
-          </div>
-          <div class="form-group form-row mb-3 mx-3">
-            <label 
-              for="bank_bik" 
-              class="col-sm-3 col-form-label font-weight-bold">БИК банка:</label>
-            <div class="col-sm-9 inp-group">
-              <input 
-                type="text"
-                id="bank_bik" 
-                class="form-control inp-form inp-required" 
-                name="bank_bik"
-                value="044525999"
-                pattern="[0-9]+"
-                maxlength="20">
-            </div>
-          </div>
+          </div>    
+          
         </fieldset>
 
-        <div class="companyBlock">
-          <div class="d-flex justify-content-between pb-3">
-            <h4 class="pl-4">Плательщик <span>АО "ТИНЬКОФФ БАНК"</span></h4>
-            <div class="">
-              <button type="button" class="btn btn-remove" name="action" value="0">Удалить</button>
+        <fieldset class="mb-4">
+          <div class="cardGrid">
+            <div class="cardGrid__item">
+              <div class="d-flex justify-content-between pb-3">
+                <h4 class="pl-4">Реквизиты организации</h4>
+                <div>
+                  <button type="button" class="btn btn-remove" name="action" value="0">Удалить</button>
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="firm_name" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >Название организации:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="firm_name" 
+                    class="form-control inp-form inp-required" 
+                    name="firm_name"
+                    value=""
+                    placeholder='ООО "Тестовая компания"'
+                    pattern="^[а-яА-ЯёЁ\s&quot;]+$"
+                    maxlength="50"
+                    required
+                  >
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="firm_address" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >Адрес организации:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                  type="text"
+                  id="firm_address" 
+                  class="form-control inp-form inp-required" 
+                  name="firm_address"
+                  value=""
+                  placeholder="123000, г.Москва, ул.Ленина, д.1, оф.1"
+                  pattern="^[^A-Za-z«»]+$"
+                  maxlength="170"
+                  required
+                  >
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="firm_inn" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >ИНН:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="firm_inn" 
+                    class="form-control inp-form inp-required" 
+                    name="firm_inn"
+                    value=""
+                    pattern="[0-9]{10}|[0-9]{12}"
+                    maxlength="12"
+                    required
+                  >
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="firm_ogrn" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >ОГРН:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="firm_ogrn" 
+                    class="form-control inp-form inp-required" 
+                    name="firm_ogrn"
+                    value=""
+                    pattern="[0-9]{13}"
+                    maxlength="13"
+                    required
+                  >
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="firm_kpp" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >КПП:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="firm_kpp" 
+                    class="form-control inp-form inp-required" 
+                    name="firm_kpp"
+                    value=""
+                    pattern="[0-9]{9}"
+                    maxlength="9">
+                </div>
+              </div>
             </div>
-          </div>
-  
-          <div class="row mb-3 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Название банка:</p>
-            <p class="col-md-6 col-xl-8">АО "ТИНЬКОФФ БАНК"</p>
-          </div>
-          <div class="row mb-3 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Адрес банка:</p>
-            <p class="col-md-6 col-xl-8">Москва, 123060, 1-й Волоколамский проезд, д. 12</p>
-          </div>
-          <div class="row mb-3 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Расчетный счет:</p>
-            <p class="col-md-6 col-xl-8">40702810701500012427</p>
-          </div>
-          <div class="row mb-3 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">Корреспондентский счет банка:</p>
-            <p class="col-md-6 col-xl-8">30101810845250000999</p>
-          </div>
-          <div class="row mb-3 mx-3">
-            <p class="col-md-6 col-xl-4 font-weight-bold">БИК банка:</p>
-            <p class="col-md-6 col-xl-8">044525999</p>
-          </div>
-        </div>
 
-        <div class="form-group mb-5">
+           <div class="cardGrid__item">
+              <div class="d-flex justify-content-between pb-3">
+                <h4 class="pl-4">Плательщик <span>АО "ТИНЬКОФФ БАНК"</span></h4>
+                <div class="">
+                  <button type="button" class="btn btn-remove" name="action" value="0">Удалить</button>
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="bank_name" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >Название банка:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="bank_name" 
+                    class="form-control inp-form inp-required" 
+                    name="bank_name"
+                    value='АО "ТИНЬКОФФ БАНК"'
+                    pattern="^[а-яА-ЯёЁ\s&quot;]+$"
+                    maxlength="50">
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="bank_address" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >Адрес банка:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="bank_address" 
+                    class="form-control inp-form inp-required" 
+                    name="bank_address"
+                    value="123060, г.Москва, 1-й Волоколамский проезд, д.10"
+                    placeholder="123060, г.Москва, 1-й Волоколамский проезд, д.10"
+                    pattern="^[^A-Za-z«»]+$"
+                    maxlength="170"
+                  >
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="bank_corr_account" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >Корреспондентский счет банка:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="bank_corr_account" 
+                    class="form-control inp-form inp-required" 
+                    name="bank_corr_account"
+                    value="30101810845250000999"
+                    pattern="[0-9]+"
+                    maxlength="50">
+                </div>
+              </div>
+              <div class="form-group form-row mb-3 mx-3">
+                <label 
+                  for="bank_bik" 
+                  class="col-sm-4 col-form-label font-weight-bold"
+                >БИК банка:</label>
+                <div class="col-sm-8 inp-group">
+                  <input 
+                    type="text"
+                    id="bank_bik" 
+                    class="form-control inp-form inp-required" 
+                    name="bank_bik"
+                    value="044525999"
+                    pattern="[0-9]+"
+                    maxlength="20">
+                </div>
+              </div>
+            </div>
+          </div>    
+        </fieldset>
+
+
+        <div class="form-group my-5">
           <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Сохранить</button>
-          <a href="fees.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
+          <a href="fees.html" class="btn btn-outline-secondary btn-lg mt-4">Отмена</a>
         </div>
 
       </form>
