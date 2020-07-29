@@ -31,20 +31,16 @@ const createMarkupCommodity = () => {
       <label class="label-form" for="servises-${countPosition}">Выберите услугу</label>
     </div>
     
-    <div class="col-md-2 mb-4 inp-group parentSelect">
-      <select 
-        class="form-control inp-form select" 
+    <div class="col-md-2 mb-4 inp-group">
+      <input
+        type="text"
+        class="form-control inp-form" 
         id="items_${countPosition}_vatType" 
         name="items[${countPosition}].vatType"
+        value="Без НДС"
         data-js-id="vat"
-      >
-        <option value="VAT_NONE" selected="">Без НДС</option>
-        <option value="VAT_0PCT">НДС 0%</option>
-        <option value="VAT_10PCT">НДС 10%</option>
-        <option value="VAT_110PCT">НДС 10/110</option>
-        <option value="VAT_20PCT">НДС 20%</option>
-        <option value="VAT_120PCT">НДС 20/120</option>
-      </select>
+        disabled
+      />
       <label class="label-form" for="items_${countPosition}_vatType">НДС</label>
     </div>
 
