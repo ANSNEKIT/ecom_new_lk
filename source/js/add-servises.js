@@ -124,7 +124,8 @@ const removePosition = (evt) => {
       countPosition -= 1;
       $btnAdd.value = countPosition;
 
-      //checkSumm();
+      changeCostHandler();
+      totalSum();
   };
 };
 
