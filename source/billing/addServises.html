@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Создание счета</title>
+  <title>Заказать услуги</title>
 
   <link rel="stylesheet" href="../css/all.min.css">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -297,17 +297,18 @@
       </nav>
   </aside>
   <main class="mainContent my-5">
-    <h2 class="page-header text-center py-5">Создание счета</h2>
+    <h2 class="page-header text-center py-5">Заказать услуги</h2>
 
-    <!-- =============Контейнер для сообщений об ошибке от сервера===================
+     <!-- =============Контейнер для сообщений об ошибке от сервера=================== -->
     <div class="alert alert-danger alert-dismissible show" role="alert">
-      <p><strong>Ошибка!</strong>Описание ошибки</p>
+      <p><strong>Внимание!</strong></p><p> Нет реквизитов организации. Добавьте их на странице в меню: Финансы и Услуги - Счета - вкладка Реквизиты - Добавить плательщика</p>
+      <a href="addPayer.html">Добавить реквизиты</a>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
 
-     ================Контейнер для сообщений об успехе от сервера==========================
+    <!-- ================Контейнер для сообщений об успехе от сервера==========================
     <div class="alert alert-success alert-dismissible show" role="alert">
       <p><strong>Успех!</strong>Описание</p>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">

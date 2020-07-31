@@ -72,6 +72,10 @@
   box-shadow: 0 0.5rem 1rem 0 $shadow-global-plus;
   margin-bottom: 2rem;
 
+  &:hover {
+    box-shadow: 0 0.6rem 0.8rem 0 $shadow-global-hover;
+  }
+
   @media (max-width: 992px) {
     padding: 1rem;
   }

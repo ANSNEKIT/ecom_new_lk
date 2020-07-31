@@ -6,19 +6,22 @@
 
   @media (max-width: 992px) {
     grid-template-columns: auto;
-    grid-gap: 1rem;
   }
 }
 
 .cardGrid__item {
   background-color: #fff;
   box-shadow: 0 0.5rem 1rem 0 rgba(44, 51, 73, .4);
-  border-radius: 5px;
-  padding: 1.5rem;
+  padding: 2rem;
   margin-bottom: 2rem;
 
   @media (max-width: 992px) {
     padding: 1rem;
     margin-bottom: 1rem;
   }
+}
+
+.cardGrid__item p {
+  padding: 0 1rem;
+  margin-bottom: 0;
 }

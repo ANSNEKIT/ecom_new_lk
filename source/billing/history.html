@@ -295,10 +295,27 @@
       </nav>
   </aside>
   <main class="mainContent mt-5">
-    <h2 class="page-header text-center py-5">История платежей</h2>
+    <h2 class="page-header text-center py-5">Баланс</h2>
 
-    <section class="card mb-5">
-      <table class="table table-striped">
+    <section class="companyBlock mb-5">
+
+      <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="archive-tab" href="./history.html" aria-controls="history" aria-selected="true">Баланс</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="invoice-tab" href="./invoice.html" aria-controls="invoice" aria-selected="false">Счета</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="archive-tab" href="./acts.html" aria-controls="acts" aria-selected="false">Акты</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="archive-tab" href="./requisites.html" aria-controls="requisites" aria-selected="false">Реквизиты</a>
+        </li>
+      </ul>
+      
+      <table class="table table-striped mb-4"> 
+        <h4 class="text-center font-weight-bold mb-3">История баланса</h4> 
         <thead class="thead-dark">
         <tr>
           <th class="text-center">Дата</th>
@@ -355,6 +372,7 @@
           </tr>
         </tbody>
       </table>
+      <h3>Баланс: <span><strong>1570.00 &#8381;</strong></span></h3>
     </section>
   </main>
   <footer class="nav mainFooter">
