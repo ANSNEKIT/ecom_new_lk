@@ -157,7 +157,7 @@ const changeCostHandler = () => {
 
 }
 
-const isChangedCost = (evt) => {
+const isChangedQuantityOrServises = (evt) => {
   const $elem = evt.target;
   const attrs = $elem.attributes;
 
@@ -180,6 +180,56 @@ const totalSum = () => {
 
 }
 
+const testData = [
+  {
+    id: 0,
+    taxVariant: 1,
+    taxText: 'Без НДС',
+    price: 11110,
+  },
+  {
+    id: 1,
+    taxVariant: 1,
+    taxText: 'Без НДС',
+    price: 4999,
+  },
+  {
+    id: 2,
+    taxVariant: 1,
+    taxText: 'Без НДС',
+    price: 200,
+  },
+  {
+    id: 3,
+    taxVariant: 1,
+    taxText: 'Без НДС',
+    price: 300,
+  },
+  {
+    id: 4,
+    taxVariant: 1,
+    taxText: 'Без НДС',
+    price: 400,
+  }
+]
+
+// Важно! У тега option value должно быть от 0 до последнего элемента в массиве данных. По value ищем нужный элемент в массиве data в функции writeData
+
+const writeData = (evt, data) => {
+  const $elem = evt.target;
+  const attr = $elem.attributes;
+    
+  if ( attr['data-js-id'].value === 'servises' ) {
+    const countInp = $elem.id.substring(9);
+    const inpPrice = document.getElementById(`items_${countInp}_price`);
+    inpPrice.value = data[$elem.value].price;
+
+    const inpVatType = document.getElementById(`items_${countInp}_vatType`);
+    inpVatType.value = data[$elem.value].taxText
+  } 
+}
+
+
 $btnAdd.addEventListener("click", (evt) => {
   renderPosition(evt);
   changeCostHandler();
@@ -191,8 +241,9 @@ $container.addEventListener("click", (evt) => {
 });
 
 $container.addEventListener("change", (evt) => {
-  changePriceHandler(evt);
-  isChangedCost(evt);
+  writeData(evt, testData);
+  //changePriceHandler(evt);
+  isChangedQuantityOrServises(evt);
   totalSum();
 });
 
