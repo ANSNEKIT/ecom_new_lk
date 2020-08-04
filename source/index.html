@@ -12,8 +12,8 @@
 
 <body>
   <div class="gridContainer" id="#gridWrapper">
-    <header class="nav header">
-      <div class="mx-1 menuGamburger mx-4">
+    <header class="nav gridHeader">
+      <div class="menuGamburger">
         <button class="navbar-toggler" type="button" data-toggle="tooltip" data-placement="top"
                 title="Показать/скрыть меню">
           <!-- data-toggle="collapse" data-target="#menu" aria-controls="menu"
@@ -40,7 +40,16 @@
           <!-- E-COM Kassa-->
         </a>
       </div>
-      <nav class="nav ml-auto topNavbar">
+      <div class="balance">
+        <h5>
+          Баланс: 
+          <strong>
+            <span id="header-balanse">1234.00</span>
+            &nbsp;&#8381;
+          </strong>
+        </h5>
+      </div>
+      <nav class="topNavbar">
         <ul class="nav userMenu">
           <li class="navParent navParent--active d-flex flex-column">
             <p class="mailToText">

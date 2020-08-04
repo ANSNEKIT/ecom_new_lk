@@ -1,6 +1,25 @@
 @import "../variables";
 
-.header {
+.gridHeader {
+  display: grid;
+  grid-area: column;
+  grid-template-columns: 60px repeat(3, 1fr);
+  grid-auto-flow: column;
+
+  position: relative;
+
+  background-color: $white;
+  box-shadow: 0 0.5rem 1rem 0 $shadow-global;
+  z-index: 100;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 60px 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+  }
+}
+
+/* .header {
   //justify-content: center;
   position: relative;
 
@@ -9,11 +28,52 @@
   background-color: $white;
   box-shadow: 0 0.5rem 1rem 0 $shadow-global;
   z-index: 100;
+} */
+
+.menuGamburger {
+  justify-self: center;
+  align-items: center;
+
+  padding-top: 10px;
 }
 
 .logo {
-  display: flex;
-  //margin-left: 2rem;
+  @media (max-width: 768px) {
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+}
+
+.balance {
+  @media (max-width: 768px) {
+    grid-column: 3 / 4;
+    grid-row: 1;
+  }
+}
+
+.balance h5 {
+  padding: 0;
+  margin: 17px 30px 0;
+
+  white-space: nowrap;
+
+  @media (max-width: 768px) {
+    margin: 17px 10px 0;
+  }
+}
+
+
+
+.topNavbar {
+  margin-left: auto;
+  flex-wrap: nowrap;
+
+  @media (max-width: 768px) {
+    grid-column: 1 / 4;
+    grid-row: 2;
+
+    margin-left: 0;
+  }
 }
 
 .navbar-brand {
@@ -74,7 +134,7 @@
     content: "";
     position: absolute;
     left: 0;
-
+    
     background: rgba(0, 0, 0, 1);
   }
 
@@ -115,8 +175,9 @@
 }*/
 
 .topNavbar .userMenu {
+  flex-wrap: nowrap;
   //flex-grow: 1;
-  justify-content: flex-end;
+  //justify-content: flex-end;
 }
 
 .userMenu .arrow {
