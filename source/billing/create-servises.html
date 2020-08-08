@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Детали счета</title>
+  <title>Создание товара или услуги</title>
 
   <link rel="stylesheet" href="../css/all.min.css">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -303,77 +303,143 @@
         </ul>
       </nav>
   </aside>
-  <main class="mainContent mt-5">
-    <h2 class="page-header text-center py-5">Детали счета</h2>
+  <main class="mainContent my-5">
 
-    <!-- =============Контейнер для сообщений об ошибке от сервера===================
-    <div class="alert alert-danger alert-dismissible show" role="alert">
-      <p><strong>Ошибка!</strong>Описание ошибки</p>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+    <form action="GET" method="get" class="addCheckForm needs-validation" novalidate="">
+      <h2 class="page-header text-center py-5">Создание товара или услуги</h2>
+      <fieldset class="FormGroupProduct mb-4">
 
-     ================Контейнер для сообщений об успехе от сервера==========================
-    <div class="alert alert-success alert-dismissible show" role="alert">
-      <p><strong>Успех!</strong>Описание</p>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-
-     ================Контейнер для сообщений с нейстральным статусом от сервера==============
-    <div class="alert alert-primary alert-dismissible show" role="alert">
-      <p><strong>Успех!</strong>Описание</p>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div> -->
-
-    <div class="companyBlock">
-      <table class="table table-bordered table-striped mb-4"> 
-        <thead class="thead-dark">
-        <tr>
-          <th class="text-center">Наименование</th>
-          <th class="text-center">Количество</th>
-          <th class="text-center">Дата создания</th>
-        </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td class="text-center">Фискальный накопитель на 15 месяцев</td>
-            <td class="text-center">
-              <p>1</p>
-            </td>
-            <td class="text-center">
-              <p>2020-08-06T00:00:00.000Z</p> 
-            </td>
-          </tr>
-          <tr>
-            <td class="text-center">Тест поставщика</td>
-            <td class="text-center">
-              <p>1</p>
-            </td>
-            <td class="text-center">
-              <p>2020-08-06T00:00:00.000Z</p> 
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="d-flex justify-content-between">
-        <a class="mt-3 mr-5 text-nowrap" href="./invoice.html">&#10229; Назад</a>
-        <div>
-          <a class="btn btn-primary mr-2 mt-3" href="#">Посмотреть счет 1</a>
-          <a class="btn btn-primary mr-2 mt-3" href="#">Посмотреть счет 2</a>
-          <a class="btn btn-primary mr-2 mt-3" href="#">Посмотреть счет 3</a>
+        <div class="form-row">
+          <div class="col-md-6 mb-4 inp-group parentSelect">
+            <select class="form-control inp-form select" id="provider" name="">
+              <option value="COMMODITY" selected="">Товар</option>
+              <option value="EXCISE">Подакцизный товар</option>
+              <option value="JOB">Работа</option>
+              <option value="SERVICE">Услуга</option>
+              <option value="GAMBLING_BET">Ставка азартной игры</option>
+              <option value="GAMBLING_PRIZE">Выигрыш азартной игры</option>
+              <option value="LOTTERY">Лотерейный билет</option>
+              <option value="LOTTERY_PRIZE">Выигрыш лотереи</option>
+              <option value="INTELLECTUAL_ACTIVITY">Интеллектуальная собственность</option>
+              <option value="PAYMENT">Платёж</option>
+              <option value="AGENT_COMMISSION">Вознаграждение агента</option>
+              <option value="COMPOSITE">Составной предмет расчёта</option>
+              <option value="ANOTHER">Иной предмет расчёта</option>
+              <option value="PROPERTY_RIGHT">Имущественное право</option>
+              <option value="NON_OPERATING_GAIN">Внереализационный доход</option>
+              <option value="INSURANCE_PREMIUM">Страховые взносы</option>
+              <option value="SALES_TAX">Торговый сбор</option>
+              <option value="RESORT_FEE">Курортный сбор</option>
+            </select>
+            <label class="label-form" for="provider">Провайдер</label>
+          </div>
+          <div class="col-md-6 mb-4 inp-group">
+            <input type="text" class="form-control inp-form js-price" id="name-services" name=""
+              placeholder="Тестовая услуга" value="" maxlength="100" required>
+            <label class="label-form" for="name-services">Наименование</label>
+            <div class="invalid-tooltip"></div>
+          </div>
         </div>
+
+        <div class="form-row">
+          <div class="col-md-12 mb-4 inp-group">
+            <textarea class="form-control" style="resize: none" name="description" id="description" rows="5"
+              maxlength="300"></textarea>
+            <label class="label-form" for="items_0_amount">Описание</label>
+          </div>
+        </div>
+
+        <p>Тип сервиса</p>
+        <div class="form-group form-row mb-4">
+          <div class="form-check col-sm-2 mb-2">
+            <input class="form-check-input" type="radio" id="type-service-good" name="type-service" checked>
+            <label class="form-check-label" for="type-service-good">
+              <span></span>
+              Товар
+            </label>
+          </div>
+          <div class="form-check col-sm-2 mb-2">
+            <input class="form-check-input" type="radio" id="type-service-invoice" name="type-service">
+            <label class="form-check-label" for="type-service-invoice">
+              <span></span>
+              Услуга
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-4 inp-group">
+            <input type="text" class="form-control inp-form" id="period" name=""
+               maxlength="3" pattern="[0-9]+" required>
+            <label class="label-form" for="period">Период действия, мес</label>
+            <div class="invalid-tooltip"></div>
+          </div>
+          <div class="col-md-4 mb-4 inp-group">
+            <input type="text" class="form-control inp-form" id="price" name=""
+              placeholder="1.00" maxlength="15" pattern="[0-9]{1,12}\.[0-9]{2}" required>
+            <label class="label-form" for="price">Цена, руб</label>
+            <div class="invalid-tooltip">Цена товара с копейками. Разделитель точка. Пример 18.50</div>
+          </div>
+          <div class="col-md-4 mb-4 inp-group parentSelect">
+            <select class="form-control inp-form select" id="vatType" name="">
+              <option value="VAT_NONE" selected="">Без НДС</option>
+              <option value="VAT_0PCT">НДС 0%</option>
+              <option value="VAT_10PCT">НДС 10%</option>
+              <option value="VAT_110PCT">НДС 10/110</option>
+              <option value="VAT_20PCT">НДС 20%</option>
+              <option value="VAT_120PCT">НДС 20/120</option>
+            </select>
+            <label class="label-form" for="vatType">НДС</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-4 inp-group">
+            <input type="text" class="form-control inp-form" id="items_0_price" name=""
+               value="" maxlength="6" pattern="[0-9]+" required>
+            <label class="label-form" for="items_0_price">Измерение</label>
+            <div class="invalid-tooltip"></div>
+          </div>
+          <div class="col-md-4 mb-4 inp-group">
+            <input type="text" class="form-control inp-form" id="articul" name=""
+              maxlength="15">
+            <label class="label-form" for="articul">Артикул</label>
+            <div class="invalid-tooltip"></div>
+          </div>
+          <div class="col-md-4 mb-4 inp-group">
+            <input type="text" class="form-control inp-form" id="code" name=""
+              maxlength="15" pattern="[0-9]+">
+            <label class="label-form" for="code">OKEI код</label>
+            <div class="invalid-tooltip"></div>
+          </div>
+        </div>
+
+        <p>Статус</p>
+        <div class="form-group form-row">
+          <div class="form-check col-sm-2 mb-2">
+            <input class="form-check-input" type="radio" id="status-active" name="status" value="0" checked="">
+            <label class="form-check-label" for="status-active">
+              <span></span>
+              Активный
+            </label>
+          </div>
+          <div class="form-check col-sm-2 mb-2" >
+            <input class="form-check-input" type="radio" id="status-passive" name="status" value="0">
+            <label class="form-check-label" for="status-passive">
+              <span></span>
+              Неактивный
+            </label>
+          </div>
+        </div>
+
+      </fieldset>
+
+      <div class="form-group mb-5">
+        <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Создать</button>
+        <a href="servises-list.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
       </div>
-      
 
-    </div>
-
+    </form>
   </main>
   <footer class="nav mainFooter">
     <div class="row footerWrapper">

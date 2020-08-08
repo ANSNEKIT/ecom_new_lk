@@ -1,0 +1,26 @@
+.flexBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.flexBlock .nav-tabs {
+  min-width: 336px;
+
+  margin-right: 1rem;
+}
+
+.flexBlock .balanceText{
+  white-space: nowrap;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
