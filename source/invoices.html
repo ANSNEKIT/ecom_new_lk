@@ -263,7 +263,7 @@
             </a>
           </li>
           <li class="navParent">
-            <a class="nav-link" href="orderfees.html">
+            <a class="nav-link" href="invoices.html">
               <span class="leftIcon">
                 <svg aria-hidden="true" height="19" focusable="false" data-prefix="far" data-icon="credit-card"
                      class="svg-inline--fa fa-credit-card fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M527.9 32H48.1C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48.1 48h479.8c26.6 0 48.1-21.5 48.1-48V80c0-26.5-21.5-48-48.1-48zM54.1 80h467.8c3.3 0 6 2.7 6 6v42H48.1V86c0-3.3 2.7-6 6-6zm467.8 352H54.1c-3.3 0-6-2.7-6-6V256h479.8v170c0 3.3-2.7 6-6 6zM192 332v40c0 6.6-5.4 12-12 12h-72c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12zm192 0v40c0 6.6-5.4 12-12 12H236c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12z"></path>
@@ -327,17 +327,18 @@
           </div>
           <div class="form-row">
             <div class="col-md-6 mb-3 inp-group parentSelect">
-              <label class="label-form" for="typePayment">Тип платежной системы</label>
-              <select id="typePayment" class="form-control select" name="size">
-                <option value="Tinkoff" selected>Тинькофф</option>
+              <label class="label-form" for="paymentType">Тип платежной системы</label>
+              <select id="paymentType" class="form-control select" name="size">
+                <option value="none" selected>none</option>
+                <option value="Tinkoff">Тинькофф</option>
                 <option value="Sberbank">Сбербанк</option>
                 <option value="Yandex-kassa">Яндекс касса</option>
               </select>
             </div>
 
             <div class="col-md-6 mb-4 inp-group parentSelect">
-              <label class="label-form" for="status">Статус заказа</label>
-              <select id="status" class="form-control select" name="status">
+              <label class="label-form" for="paymentStatus">Статус заказа</label>
+              <select id="paymentStatus" class="form-control select" name="paymentStatus">
                 <option value="none" selected>Не выбран</option>
                 <option value="CREATED">Создан</option>
                 <option value="PAID">Оплачен</option>
@@ -350,39 +351,39 @@
           </div>
           <div class="form-row">
             <div class="col-md-6 mb-3 inp-group">
-              <label class="label-form" for="since_field">Дата создания</label>
+              <label class="label-form" for="since">Дата начала поиска</label>
               <input 
-                type="datetime-local" 
-                id="since_field" 
+                type="date" 
+                id="since" 
                 class="form-control" 
-                name="since_field"
+                name="since"
                 autocomplete="false">
               <div class="invalid-feedback"></div>
             </div>
             <div class="col-md-6 mb-3 inp-group">
-              <label class="label-form" for="since_after">Дата окончания поиска</label>
+              <label class="label-form" for="until">Дата окончания поиска</label>
               <input 
-                type="datetime-local" 
-                id="since_after" 
+                type="date" 
+                id="until" 
                 class="form-control" 
-                name="since_after"
+                name="until"
                 autocomplete="false">
               <div class="invalid-feedback"></div>
             </div>
           </div>
           <div class="form-row">
             <div class="col-md-6 mb-3 inp-group">
-              <label class="label-form" for="summ">Сумма заказа</label>
-              <input 
-                type="text" 
-                id="summ" 
-                class="form-control inp-form"  
-                name=""
-                placeholder="170.00"
-                maxlength="15"
-                pattern="[0-9]{1,12}\.[0-9]{2}">
-              <div class="invalid-feedback"></div>
+              <label class="label-form" for="priceMin">Мин.(сумма чека)</label>
+              <input type="number" id="priceMin" class="form-control inp-form"  name="priceMin" maxlength="12" pattern="[0-9]+">
+              <div class="valid-tooltip"></div>
             </div>
+            <div class="col-md-6 mb-3 inp-group">
+              <label class="label-form" for="priceMax">Макс.(сумма чека)</label>
+              <input type="number" id="priceMax" class="form-control inp-form"  name="priceMax" maxlength="12" pattern="[0-9]+">
+              <div class="valid-tooltip"></div>
+            </div>
+          </div>
+          <div class="form-row">
             <div class="col-md-6 mb-4 inp-group">
               <label class="label-form" for="cashier">Кассир</label>
               <input 

@@ -262,7 +262,7 @@
             </a>
           </li>
           <li class="navParent">
-            <a class="nav-link" href="orderfees.html">
+            <a class="nav-link" href="invoices.html">
               <span class="leftIcon">
                 <svg aria-hidden="true" height="19" focusable="false" data-prefix="far" data-icon="credit-card"
                      class="svg-inline--fa fa-credit-card fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M527.9 32H48.1C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48.1 48h479.8c26.6 0 48.1-21.5 48.1-48V80c0-26.5-21.5-48-48.1-48zM54.1 80h467.8c3.3 0 6 2.7 6 6v42H48.1V86c0-3.3 2.7-6 6-6zm467.8 352H54.1c-3.3 0-6-2.7-6-6V256h479.8v170c0 3.3-2.7 6-6 6zM192 332v40c0 6.6-5.4 12-12 12h-72c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12zm192 0v40c0 6.6-5.4 12-12 12H236c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12z"></path>
@@ -320,26 +320,38 @@
           <div class="form-row">
             <div class="col-md-6 mb-3 inp-group">
               <label class="label-form" for="storeId">Идентификатор магазина</label>
-              <input type="text" id="storeId" class="form-control"  name="storeId" maxlength="4" pattern="[0-9]+">
+              <input type="text" id="storeId" class="form-control inp-form"  name="storeId" maxlength="4" pattern="[0-9]+">
               <div class="valid-tooltip"></div>
             </div>
             <div class="col-md-6 mb-3 inp-group">
               <label class="label-form" for="externalId">Внешний идетификатор чека</label>
-              <input type="text" id="externalId" class="form-control"  name="externalId" maxlength="50" pattern="[0-9]+">
+              <input type="text" id="externalId" class="form-control inp-form"  name="externalId" maxlength="50" pattern="[0-9]+">
               <div class="valid-tooltip"></div>
             </div>
           </div>
           <div class="form-row">
             <div class="col-md-6 mb-3 inp-group">
-              <label class="label-form" for="since_field">Дата начала поиска</label>
-              <input type="datetime-local" id="since_field" class="form-control" name="since_field"
+              <label class="label-form" for="since">Дата начала поиска</label>
+              <input type="datetime-local" id="since" class="form-control inp-form" name="since"
                      autocomplete="false">
               <div class="valid-tooltip"></div>
             </div>
             <div class="col-md-6 mb-3 inp-group">
               <label class="label-form" for="until">Дата окончания поиска</label>
-              <input type="datetime-local" id="until" class="form-control" name="until"
+              <input type="datetime-local" id="until" class="form-control inp-form" name="until"
                      autocomplete="false">
+              <div class="valid-tooltip"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3 inp-group">
+              <label class="label-form" for="priceMin">Мин.(сумма чека)</label>
+              <input type="number" id="priceMin" class="form-control inp-form"  name="priceMin" maxlength="12" pattern="[0-9]+">
+              <div class="valid-tooltip"></div>
+            </div>
+            <div class="col-md-6 mb-3 inp-group">
+              <label class="label-form" for="priceMax">Макс.(сумма чека)</label>
+              <input type="number" id="priceMax" class="form-control inp-form"  name="priceMax" maxlength="12" pattern="[0-9]+">
               <div class="valid-tooltip"></div>
             </div>
           </div>
@@ -366,6 +378,18 @@
                 maxlength="50" 
                 pattern="[А-Яа-яё\s\.]+" 
                 name="cashier">
+              <div class="valid-tooltip"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-4 inp-group parentSelect">
+              <label class="label-form" for="company">Компания</label>
+              <select id="company" class="form-control select" name="company">
+                <option value="" selected>none</option>
+                <option value="g5d4k6dr-1561-lmdf-n94h-oedhui9e5her">ИП Иванов Иван Иванович</option>
+                <option value="dd96ef75-fc76-4ca3-bb57-61225a678182">ООО "Зе поинт"</option>
+                <option value="976sdg76-sd6g-97sd-qb9k-dfgh7897sdvb">ООО "Тестовая компания"</option>
+              </select>
               <div class="valid-tooltip"></div>
             </div>
           </div>
