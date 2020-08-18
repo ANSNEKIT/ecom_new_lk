@@ -247,7 +247,7 @@ $container.addEventListener("change", (evt) => {
   totalSum();
 });
 
-window.addEventListener('load', () => {
+window.addEventListener('load', (evt) => {
   changeCostHandler();
   totalSum();
 });
