@@ -8,14 +8,17 @@ const $filterBtn = document.querySelector('.filterBtn');
 
 const onRestHandler = () => {
     if ($filterBlockOrders !== null) {
-        const $pageNumber = $filterBlockOrders.querySelector('#page');
-        const $pageSize = $filterBlockOrders.querySelector('#size');
-        const $idStore = $filterBlockOrders.querySelector('#storeId');
-        const $externalId = $filterBlockOrders.querySelector('#externalId');
-        const $startDate = $filterBlockOrders.querySelector('#since_field');
-        const $dueDate = $filterBlockOrders.querySelector('#until');
-        const $status = $filterBlockOrders.querySelector('#status');
-        const $cashier = $filterBlockOrders.querySelector('#cashier');  
+        const $pageNumber = document.getElementById('page');
+        const $pageSize = document.getElementById('size');
+        const $idStore = document.getElementById('storeId');
+        const $externalId = document.getElementById('externalId');
+        const $startDate = document.getElementById('since');
+        const $dueDate = document.getElementById('until');
+        const $minSumm = document.getElementById('priceMin');
+        const $maxSumm = document.getElementById('priceMax');
+        const $status = document.getElementById('status');
+        const $cashier = document.getElementById('cashier');  
+        const $company = document.getElementById('company');  
 
         $pageNumber.value = '1';
         $pageSize.value = '25';
@@ -23,26 +26,35 @@ const onRestHandler = () => {
         $externalId.value = '';
         $startDate.value = '';
         $dueDate.value = '';
+        $minSumm.value = '';
+        $maxSumm.value = '';
         $status.value = 'none';
         $cashier.value = '';
+        if ($company) {
+            $company.value = '';
+        }
+        
+
 
     } else if ($filterBlockInvoices !== null) {
-        const $pageNumber = $filterBlockInvoices.querySelector('#page');
-        const $pageSize = $filterBlockInvoices.querySelector('#size');
-        const $typePayment = $filterBlockInvoices.querySelector('#typePayment');
-        const $status = $filterBlockInvoices.querySelector('#status');
-        const $startDate = $filterBlockInvoices.querySelector('#since_field');
-        const $dueDate = $filterBlockInvoices.querySelector('#since_after');
-        const $summ = $filterBlockInvoices.querySelector('#summ');
-        const $cashier = $filterBlockInvoices.querySelector('#cashier');  
+        const $pageNumber = document.getElementById('page');
+        const $pageSize = document.getElementById('size');
+        const $typePayment = document.getElementById('paymentType');
+        const $status = document.getElementById('paymentStatus');
+        const $startDate = document.getElementById('since');
+        const $dueDate = document.getElementById('until');
+        const $minSumm = document.getElementById('priceMin');
+        const $maxSumm = document.getElementById('priceMax');
+        const $cashier = document.getElementById('cashier');  
         
         $pageNumber.value = '1';
         $pageSize.value = '25';
-        $typePayment.value = 'Tinkoff';
+        $typePayment.value = 'none';
         $status.value = 'none';
         $startDate.value = '';
         $dueDate.value = '';
-        $summ.value = '';
+        $minSumm.value = '';
+        $maxSumm.value = '';
         $cashier.value = '';
     }
 }
@@ -62,7 +74,7 @@ $filterBtn.addEventListener('click', () => {
     }
 
     if (!$filterBlockOrders && !$filterBlockInvoices) {
-        throw new Error("filter icon not found!");
+        console.error("filter icon not found!");
     }
 });
 
