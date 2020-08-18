@@ -5,9 +5,7 @@
     const $commodityItems = document.querySelector('fieldset[data-js-id="commodity-items"]');
     const $payment = document.getElementById('payment');
     const $parentPaymentType = document.getElementById('parent-block');
-    const $inpTotalSumm = document.getElementById('payments_0_amount');
-
-
+  
     if (!$commodityItems) {
         throw new Error("Нет формы добавления товарных позиций!");
     }
@@ -304,7 +302,6 @@
             const btnValue = $elem.value;
             const btnValueCount = parseInt(btnValue);
             const $elemsRemove = $parentPaymentType.querySelectorAll(`div.form-group.form-row`);
-            console.log($elemsRemove);
             
             for(let i = 0; i < $elemsRemove.length; i++) {
                 $elemsRemove[btnValueCount].remove();
@@ -393,8 +390,8 @@
     };
 
     const checkPaymetTypeSumm = () => {
-        const $parentBlock = document.getElementById('parent-block');
-        const $inpSumm = $parentBlock.querySelectorAll('input[data-js-id="summ"]');
+        const $inpSumm = document.querySelectorAll('input[data-js-id="summ"]');
+        const $inpTotalSumm = document.querySelector('input[data-js-id="totalSum"]');
 
         let totalSum = 0.00;
 
@@ -418,11 +415,21 @@
 
     const checkTotalSumAndAutoSumm = () => {
         const $totalSumElem = document.querySelector('#autosumm span strong');
-        const $inpTotalSumm = document.getElementById('payments_0_amount');
+        const $inpTotalSumm = document.querySelector('input[data-js-id="totalSum"]');
         const $errorTotalSumm = $payment.querySelector('.errorTotalSumm');
 
+        const totalSumElem = parseFloat($totalSumElem.textContent) * 100; 
+        const totalSumPayment = parseFloat($inpTotalSumm.value) * 100;
+
+        const diff = (Math.round(totalSumElem - totalSumPayment) / 100).toFixed(2);
+
         if ($totalSumElem.textContent !== $inpTotalSumm.value) {
-            $errorTotalSumm.textContent = 'Автосумма и итоговая сумма не равны. Прересчитайте сумму для каждого вида оплаты';
+
+          if (diff > 0) {
+            $errorTotalSumm.textContent = `Автосумма и итоговая сумма не равны. Добавтьте оплату на ${diff} руб`;
+          } else if (diff < 0){
+            $errorTotalSumm.textContent = `Автосумма и итоговая сумма не равны. Оплата превышает на ${Math.abs(diff)} руб`;
+          }
         } else {
             $errorTotalSumm.textContent = '';
         }
@@ -436,11 +443,11 @@
       toggleAgentCheckbox(evt);
     });
 
-    $payment.addEventListener("click", (evt) => {
-        renderPaymentType(evt);
-        removePaymentType(evt);
+    /* $payment.addEventListener("click", (evt) => {
+        //renderPaymentType(evt);
+        //removePaymentType(evt);
       });
-
+ */
     window.addEventListener('load', () => {
       checkSumm();
       checkPaymetTypeSumm();
