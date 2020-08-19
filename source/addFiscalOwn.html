@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Добавить кассу</title>
+  <title>Добавить кассу в собственность</title>
 
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -295,251 +295,76 @@
       </nav>
   </aside>
   <main class="mainContent mt-5">
-    <h2 class="page-header text-center py-5">Добавить кассу</h2>
+    <h2 class="page-header text-center py-5">Добавить кассу в собственность</h2>
     <section class="companyBlock">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-             aria-selected="true">Арендная касса</a>
+          <a class="nav-link" id="home-tab" href="addFiscalLeasing.html" aria-controls="home"
+             aria-selected="false">Арендная касса</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-             aria-selected="false">Касса в собственность</a>
+          <a class="nav-link active" id="profile-tab" href="#" aria-controls="profile"
+             aria-selected="true">Касса в собственность</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="providers-tab" data-toggle="tab" href="#providers" role="tab" aria-controls="providers"
+          <a class="nav-link" id="providers-tab" href="addFiscalAtol.html" aria-controls="providers"
              aria-selected="false">Другой провайдер</a>
         </li>
       </ul>
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-          <form action="" method="post" class="mt-5 addCheckForm">
-              <h3 class="text-center">Резервирование арендной кассы</h3>
-              <hr>
-              <fieldset class="FormGroup2 mb-4">
-                <div class="form-row">
-                  <!--<div class="col-md-6 mb-4 inp-group">
-                    <input type="text" class="form-control inp-form inp-required" id="ceoName"
-                           name="ceoName" required>
-                    <label class="label-form" for="ceoName">ФИО директора</label>
-                    <div class="invalid-feedback">Обязательное поле</div>
-                  </div>-->
-                  <!--<div class="col-md-6 mb-4 inp-group parentSelect">
-                    <select id="firmType" class="form-control form-control select" name="firmType" required>
-                      <option value="BUSINESSMAN">Индивидуальный предприниматель</option>
-                      <option value="LLC" selected>Общество с ограниченной ответственностью</option>
-                    </select>
-                    <label class="label-form" for="firmType">Тип юр. лица</label>
-                    <div class=""></div>
-                  </div>-->
-                </div>
-                <div class="form-row mb-3">
-                  <div class="col-12">
-                    <p>Срок действия ФН</p>
-                  </div>
-                </div>
-                <div class="form-row mb-4">
-                  <div class="form-check col-sm-3">
-                    <input type="radio" id="fsLifetime_36" class="form-check-input mb-3" name="fsLifetime" value="36"
-                           checked>
-                    <label class="form-check-label" for="fsLifetime_36">
-                      <span></span>
-                      ФН 36 месяцев
-                    </label>
-                  </div>
-                  <div class="form-check col-sm-3 mb-2">
-                    <input type="radio" id="fsLifetime_15" class="form-check-input mb-3" name="fsLifetime" value="15">
-                    <label class="form-check-label" for="fsLifetime_15">
-                      <span></span>
-                      ФН 15 месяцев
-                    </label>
-                  </div>
-                  <div class="form-check col-sm-3 mb-2">
-                    <input type="radio" id="fsLifetime_13" class="form-check-input mb-3" name="fsLifetime" value="13">
-                    <label class="form-check-label" for="fsLifetime_13">
-                      <span></span>
-                      ФН 13 месяцев
-                    </label>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="col-md-12 inp-group mb-4 parentSelect">
-                    <select id="ofd" name="ofd" class="form-control inp-form inp-required select">
-                      <option value="PeterService" selected>ООО "ПЕТЕР-СЕРВИС Спецтехнологии"</option>
-                      <option value="Multicarta">ООО "МультиКарта"</option>
-                      <option value="PlatformaOfd">Платформа ОФД</option>
-                      <option value="OfdYa">ОФД-Я</option>
-                      <option value="Korus">КОРУС ОФД</option>
-                      <option value="Element">ОФД Группа Элемент</option>
-                      <option value="OfdYandex">ООО "Яндекс ОФД"</option>
-                      <option value="Sbis">ООО "Компания Тензор"</option>
-                      <option value="InitPro">ИнитПро ОФД</option>
-                      <option value="FirstOfd">Первый ОФД</option>
-                      <option value="Tander">ОФД АО Тандер</option>
-                      <option value="Garantexpress">Гарант ОФД</option>
-                      <option value="Taxcom">Такском</option>
-                      <option value="Kontur">КОНТУР ОФД</option>
-                      <option value="OfdAstralNalog">Астрал ОФД</option>
-                    </select>
-                    <label class="label-form" for="ofd">Выберите ОФД</label>
-                  </div>
-                </div>
-              </fieldset>
-
-            <div class="form-group my-5">
-              <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Добавить</button>
-              <a href="store.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
+      
+      <form action="" method="post" class="mb-5 addCheckForm">
+        <fieldset class="FormGroup2 mb-4">
+          <div class="form-row">
+            <div class="col-md-5 mb-4 inp-group parentSelect">
+              <select id="model" name="ofd" class="form-control inp-form inp-required select">
+                <option value="Умка 01-ФА стандарт" selected>Умка 01-ФА стандарт</option>
+              </select>
+              <label class="label-form" for="model">Модель ККТ</label>
             </div>
-          </form>
-        </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-          <form action="" method="post" class="mt-5 addCheckForm">
-            <h3 class="text-center">Резервирование кассы в собственность</h3>
-            <hr>
-            <fieldset class="FormGroup2 mb-4">
-              <!--<div class="form-row">
-                <div class="col-md-6 mb-4 inp-group">
-                  <input type="text" id="registarID" class="form-control inp-form inp-required"
-                         name="registarID">
-                  <label class="label-form" for="registarID">ID</label>
-                  <div class="invalid-feedback"></div>
-                </div>
-              </div>-->
-              <div class="form-row">
-                <div class="col-md-5 mb-4 inp-group parentSelect">
-                  <select id="model" name="ofd" class="form-control inp-form inp-required select">
-                    <option value="Умка 01-ФА стандарт" selected>Умка 01-ФА стандарт</option>
-                  </select>
-                  <label class="label-form" for="model">Модель ККТ</label>
-                </div>
-                <div class="col-md-3 mb-4 inp-group">
-                  <input type="text" id="serialNo" class="form-control inp-form inp-required"
-                         name="serialNo" pattern="[0-9]{8}" maxlength="8" required>
-                  <label class="label-form" for="serialNo">ЗН ККТ</label>
-                  <div class="invalid-feedback"></div>
-                </div>
-                <div class="col-md-4 mb-4 inp-group">
-                  <input type="text" id="fiscalStorageNo" class="form-control inp-form inp-required"
-                         name="fiscalStorageNo" pattern="[0-9]{16}" maxlength="16" required>
-                  <label class="label-form" for="fiscalStorageNo">ФН</label>
-                  <div class="invalid-feedback"></div>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-12 inp-group mb-4 parentSelect">
-                  <select id="ofdForBuy" name="ofd" class="form-control inp-form inp-required select">
-                    <option value="PeterService" selected>ООО "ПЕТЕР-СЕРВИС Спецтехнологии"</option>
-                    <option value="Multicarta">ООО "МультиКарта"</option>
-                    <option value="PlatformaOfd">Платформа ОФД</option>
-                    <option value="OfdYa">ОФД-Я</option>
-                    <option value="Korus">КОРУС ОФД</option>
-                    <option value="Element">ОФД Группа Элемент</option>
-                    <option value="OfdYandex">ООО "Яндекс ОФД"</option>
-                    <option value="Sbis">ООО "Компания Тензор"</option>
-                    <option value="InitPro">ИнитПро ОФД</option>
-                    <option value="FirstOfd">Первый ОФД</option>
-                    <option value="Tander">ОФД АО Тандер</option>
-                    <option value="Garantexpress">Гарант ОФД</option>
-                    <option value="Taxcom">Такском</option>
-                    <option value="Kontur">КОНТУР ОФД</option>
-                    <option value="OfdAstralNalog">Астрал ОФД</option>
-                  </select>
-                  <label class="label-form" for="ofdForBuy">Выберите ОФД</label>
-                  <div class="invalid-feedback"></div>
-                </div>
-              </div>
-            </fieldset>
-
-            <div class="form-group my-5">
-              <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Добавить</button>
-              <a href="store.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
+            <div class="col-md-3 mb-4 inp-group">
+              <input type="text" id="serialNo" class="form-control inp-form inp-required"
+                      name="serialNo" pattern="[0-9]{8}" maxlength="8" required>
+              <label class="label-form" for="serialNo">ЗН ККТ</label>
+              <div class="invalid-feedback"></div>
             </div>
-          </form>
-        </div>
-        <div class="tab-pane fade" id="providers" role="tabpanel" aria-labelledby="providers-tab">
-          <form action="" method="post" class="mt-5 addCheckForm">
-            <h3 class="text-center">Добавить кассу провайдера</h3>
-            <hr>
-            <fieldset class="FormGroup2 mb-4">
-              <div class="form-row">
-                <div class="col-md-12 mb-4 inp-group parentSelect">
-                  <select id="provider-model" name="model" class="form-control inp-form inp-required select">
-                    <option value="Атол" selected>Атол Онлайн</option>
-                    <option value="Кит Онлайн">Кит Онлайн</option>
-                    <option value="OFD.RU">OFD.RU</option>
-                    <option value="Ekam">Ekam</option>
-                    <option value="Komtet">Komtet</option>
-                  </select>
-                  <label class="label-form" for="provider-model">Модель ККТ</label>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-12 inp-group mb-4 parentSelect">
-                  <select id="ofdForBuy" name="ofd" class="form-control inp-form inp-required select">
-                    <option value="PeterService" selected>ООО "ПЕТЕР-СЕРВИС Спецтехнологии"</option>
-                    <option value="Multicarta">ООО "МультиКарта"</option>
-                    <option value="PlatformaOfd">Платформа ОФД</option>
-                    <option value="OfdYa">ОФД-Я</option>
-                    <option value="Korus">КОРУС ОФД</option>
-                    <option value="Element">ОФД Группа Элемент</option>
-                    <option value="OfdYandex">ООО "Яндекс ОФД"</option>
-                    <option value="Sbis">ООО "Компания Тензор"</option>
-                    <option value="InitPro">ИнитПро ОФД</option>
-                    <option value="FirstOfd">Первый ОФД</option>
-                    <option value="Tander">ОФД АО Тандер</option>
-                    <option value="Garantexpress">Гарант ОФД</option>
-                    <option value="Taxcom">Такском</option>
-                    <option value="Kontur">КОНТУР ОФД</option>
-                    <option value="OfdAstralNalog">Астрал ОФД</option>
-                  </select>
-                  <label class="label-form" for="ofdForBuy">Выберите ОФД</label>
-                  <div class="invalid-feedback"></div>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-5 mb-4 inp-group">
-                  <input 
-                    type="text" 
-                    id="provider-login" 
-                    class="form-control inp-form inp-required"
-                    name="login" 
-                    maxlength="50" 
-                    required>
-                  <label class="label-form" for="provider-login">Логин</label>
-                  <div class="invalid-feedback"></div>
-                </div>
-                <div class="col-md-5 mb-4 inp-group">
-                  <input 
-                    type="text" 
-                    id="provider-pass" 
-                    class="form-control inp-form inp-required"
-                    name="provider-pass" 
-                    maxlength="50" 
-                    required>
-                  <label class="label-form" for="provider-pass">Пароль</label>
-                  <div class="invalid-feedback"></div>
-                </div>
-                <div class="col-md-2 inp-group mb-4">
-                  <input 
-                    type="text" 
-                    id="provider-identity" 
-                    class="form-control inp-form inp-required"
-                    name="provider-identity" 
-                    maxlength="50" 
-                    required>
-                  <label class="label-form" for="provider-identity">Группа касс</label>
-                  <div class="invalid-feedback"></div>
-                </div>
-              </div>
-            </fieldset>
-
-            <div class="form-group my-5">
-              <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Добавить</button>
-              <a href="store.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
+            <div class="col-md-4 mb-4 inp-group">
+              <input type="text" id="fiscalStorageNo" class="form-control inp-form inp-required"
+                      name="fiscalStorageNo" pattern="[0-9]{16}" maxlength="16" required>
+              <label class="label-form" for="fiscalStorageNo">ФН</label>
+              <div class="invalid-feedback"></div>
             </div>
-          </form>
+          </div>
+          <div class="form-row">
+            <div class="col-md-12 inp-group mb-4 parentSelect">
+              <select id="ofdForBuy" name="ofd" class="form-control inp-form inp-required select">
+                <option value="PeterService" selected>ООО "ПЕТЕР-СЕРВИС Спецтехнологии"</option>
+                <option value="Multicarta">ООО "МультиКарта"</option>
+                <option value="PlatformaOfd">Платформа ОФД</option>
+                <option value="OfdYa">ОФД-Я</option>
+                <option value="Korus">КОРУС ОФД</option>
+                <option value="Element">ОФД Группа Элемент</option>
+                <option value="OfdYandex">ООО "Яндекс ОФД"</option>
+                <option value="Sbis">ООО "Компания Тензор"</option>
+                <option value="InitPro">ИнитПро ОФД</option>
+                <option value="FirstOfd">Первый ОФД</option>
+                <option value="Tander">ОФД АО Тандер</option>
+                <option value="Garantexpress">Гарант ОФД</option>
+                <option value="Taxcom">Такском</option>
+                <option value="Kontur">КОНТУР ОФД</option>
+                <option value="OfdAstralNalog">Астрал ОФД</option>
+              </select>
+              <label class="label-form" for="ofdForBuy">Выберите ОФД</label>
+              <div class="invalid-feedback"></div>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form-group my-5">
+          <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Добавить</button>
+          <a href="store.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
         </div>
-      </div>
+      </form>
+
     </section>
   </main>
   <footer class="nav mainFooter">
