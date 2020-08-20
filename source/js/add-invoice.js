@@ -3,8 +3,6 @@
 let count = 0;
 let countAddPaynentType = 0;
 const $commodityItems = document.querySelector('fieldset[data-js-id="invoice-commodity-items"]');
-const $payment = document.getElementById('payment');
-const $parentPaymentType = document.getElementById('parent-block');
 
 if (!$commodityItems) {
   throw new Error('Нет формы добавления товарных позиций!');

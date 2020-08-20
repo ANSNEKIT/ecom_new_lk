@@ -60,8 +60,17 @@
   @media (max-width: 768px) {
     margin: 17px 10px 0;
   }
+
+  @media (max-width: 420px) {
+    white-space: normal;
+  }
 }
 
+.balance h5 strong {
+  @media (max-width: 420px) {
+    white-space: nowrap;
+  }
+}
 
 
 .topNavbar {
