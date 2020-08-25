@@ -186,4 +186,4 @@ window.addEventListener('load', (evt) => {
     change();
     //changeCostHandler();
     totalSum();
-}
+});
