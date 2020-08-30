@@ -1,7 +1,5 @@
 'use strict';
 
-let count = 0;
-let countAddPaynentType = 0;
 const $commodityItems = document.querySelector('fieldset[data-js-id="invoice-commodity-items"]');
 
 if (!$commodityItems) {

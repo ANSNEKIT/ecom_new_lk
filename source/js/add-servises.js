@@ -19,7 +19,7 @@ let index = 0;
 //   }
 // };
 
-const removePosition = (evt) => {
+/* const removePosition = (evt) => {
     const $elem = evt.target.closest('.minusIcon');
 
     if ( $elem !== null && ($elem.tagName === 'BUTTON') && ($elem.classList.contains("minusIcon")) ) {
@@ -29,17 +29,17 @@ const removePosition = (evt) => {
             return;
         }
 
-        /* const btnValue = $elem.value;
+        const btnValue = $elem.value;
         const btnValueCount = parseInt(btnValue);
         const $elemRemove = $container.querySelector(`.position_${btnValueCount}`);
         $elemRemove.remove();
         index -= 1;
-        $btnAdd.value = index; */
+        $btnAdd.value = index;
 
         //changeCostHandler();
         totalSum();
     }
-};
+}; */
 
 /* const changePriceHandler = (evt) => {
   const $elem = evt.target;
