@@ -1,0 +1,34 @@
+.dataInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+
+}
+
+.dataInfo__client {
+  margin-bottom: 1.5rem;
+
+  @media (min-width: 1450px) {
+    width: 60%;
+  }
+}
+
+
+.dataInfo__order {
+  margin-bottom: 1.5rem;
+  
+  @media (min-width: 1450px) {
+    width: 40%;
+  }
+}
+
+.dataInfo__client .inlBlock,
+.dataInfo__order .inlBlock {
+  @media (max-width: 576px) {
+    display: inline-block;
+  }
+}

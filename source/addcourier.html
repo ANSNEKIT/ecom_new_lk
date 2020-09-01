@@ -314,7 +314,8 @@
                 value=""
                 maxlength="126"
                 placeholder="Название товара/услуги" 
-                required>
+                required
+              >
               <label class="label-form" for="items_0_name">Наименование</label>
               <div class="invalid-tooltip">Укажите название товарной позиции</div>
             </div>
@@ -531,7 +532,7 @@
           
         <div class="form-group goods mb-5">
           <div class="form-row">
-            <div class="col-md-12 mb-4 inp-group parentSelect">
+            <div class="col-md-4 mb-4 inp-group parentSelect">
               <select class="form-control inp-form select" id="courier-list" name="items[0].vatType">
                 <option value="Абрикосов Алексей">Абрикосов Алексей</option>
                 <option value="Бананов Борис">Бананов Борис</option>
@@ -545,12 +546,32 @@
               <label class="label-form" for="courier-list">Курьер</label>
             </div>
             
-            <!-- <div class="col-md-6 mb-4 inp-group">
-              <input type="date" class="form-control inp-form" id="date" value=""
-                    name="date" required>
+            <div class="col-md-4 mb-4 inp-group">
+              <input 
+                type="date" 
+                class="form-control inp-form" 
+                id="date" 
+                value=""    
+                name="date" 
+                required
+              >
               <label class="label-form" for="date">Дата доставки</label>
-              <div class="invalid-feedback">Введите дату доставки</div>
-            </div> -->
+              <div class="invalid-tooltip">Введите дату доставки</div>
+            </div>
+
+            <div class="col-md-4 mb-4 inp-group">
+              <input 
+                type="time" 
+                class="form-control inp-form" 
+                id="time" 
+                value=""
+                name="time" 
+                required
+              >
+              <label class="label-form" for="date">Время доставки</label>
+              <div class="invalid-tooltip">Введите время доставки</div>
+            </div>
+
           </div>
           <div class="form-group form-row">
             <div class="col-md-6 mb-3 inp-group parentSelect">

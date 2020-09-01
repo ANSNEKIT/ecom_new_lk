@@ -31,11 +31,13 @@
 @import "blocks/invoices";
 @import "blocks/integration";
 @import "blocks/preloadcheck";
-@import "blocks/courier";
-@import "blocks/addcourier";
+@import "blocks/couriers";
+@import "blocks/add-courier";
+@import "blocks/courier-info";
 @import "blocks/fiscal-data";
 @import "blocks/add-integration";
 @import "blocks/transactions";
+@import "blocks/transactionInfo";
 
 //billing
 @import "blocks/add-payer";
