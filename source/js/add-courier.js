@@ -1,9 +1,10 @@
 'use strict';
 
-const $fieldsetNomenclature = document.querySelector('.FormGroupProduct');
+const $fieldsetNomenclature = document.querySelector('fieldset[data-js-id="nomenclature"]');
 const $btnAdd = document.querySelector('.btnAddPosition .btn-add');
+const $payment = document.getElementById('payment');
 
-const createMarkup = () => {
+/* const createMarkup = () => {
   const countBtnAdd = $btnAdd.getAttribute('data-js-count');
   let count = parseInt(countBtnAdd) + 1;
   $btnAdd.setAttribute('data-js-count', count);
@@ -57,14 +58,31 @@ const createMarkup = () => {
       </div>
       <div class="form-row">
         <div class="col-md-4 mb-4 inp-group">
-          <input type="text" class="form-control inp-form js-price" id="items_${count}_price" name="items[${count}].name"
-                  value="" placeholder="1.00" maxlength="15" pattern="[0-9]{1,12}\.[0-9]{2}" required>
+          <input 
+            type="text" 
+            class="form-control inp-form" 
+            id="items_${count}_price" 
+            data-js-id="js-price" 
+            name="items[${count}].name"
+            value="1.00" 
+            placeholder="1.00" 
+            maxlength="15" 
+            pattern="[0-9]{1,12}\.[0-9]{2}" 
+            required
+          >
           <label class="label-form" for="items_${count}_price">Цена, руб</label>
           <div class="valid-tooltip">Укажите цену в рублях</div>
         </div>
         <div class="col-md-4 mb-4 inp-group">
-          <input type="number" class="form-control inp-form js-number" id="items_${count}_amount" value="1"
-                  min="1">
+          <input 
+            type="number" 
+            class="form-control inp-form js-number" 
+            id="items_${count}_amount"
+            data-js-id="js-quantity" 
+            value="1"
+            min="1"
+            max="99999999"
+          >
           <label class="label-form" for="items_${count}_amount">Количество</label>
           <div class="valid-tooltip">Укажите количество больше нуля</div>
         </div>
@@ -96,40 +114,90 @@ const createMarkup = () => {
 
 const render = (parent, template, position = `beforeend`) => {
   parent.insertAdjacentHTML(position, template);
-};
+}; */
 
 const checkSumm = () => {
-  const $priceInput = $fieldsetNomenclature.querySelectorAll('input.js-price');
-  const $numberInput = $fieldsetNomenclature.querySelectorAll('input.js-number');
-  const $totalSum = document.querySelector('input[data-js-id="result_amount"]');
+  debugger;
+  const $priceInput = document.querySelectorAll('input[data-js-id="js-price"]');
+  const $quantityInput = document.querySelectorAll('input[data-js-id="js-quantity"]');
+  const $totalSumElem = document.querySelector('#autosumm span strong');
+
   let totalSum = 0.00;
 
   for (let i = 0; i < $priceInput.length; i++) {
     let resultPrice = 0.00;
-    let resultnumber = 0;
+    let resultQuantity = 0.00;
     let resultSum = 0.00;
 
     if ($priceInput[i].value.trim() === '') {
-      resultPrice = 0.00
+      resultPrice = 0.00;
     } else {
-      resultPrice = parseFloat($priceInput[i].value.trim());
+      resultPrice = parseFloat($priceInput[i].value.trim()) * 100;
     }
 
-    if ($numberInput[i].value.trim() === '') {
-      resultnumber = 0;
+    if ($quantityInput[i].value.trim() === '') {
+      resultQuantity = 0.000;
     } else {
-      resultnumber = parseInt($numberInput[i].value.match(/[0-9.]+/));
+      resultQuantity = parseFloat($quantityInput[i].value.trim()) * 100;
     }
- 
-    resultSum = (resultPrice * resultnumber);
+
+    resultSum = (resultPrice * resultQuantity) / 10000;
     resultSum = (Math.round(resultSum * 100) / 100).toFixed(2);
 
-    totalSum = parseFloat(totalSum) + parseFloat(resultSum);
-    totalSum = (Math.floor(totalSum * 100) / 100).toFixed(2);
+    totalSum = (parseFloat(totalSum) + parseFloat(resultSum));
+    totalSum = (Math.round(totalSum * 100) / 100).toFixed(2);
   }
 
-  $totalSum.value = totalSum;
+  $totalSumElem.textContent = totalSum;
+  checkTotalSumAndAutoSumm();
 };
+
+const checkPaymetTypeSumm = () => {
+  const $inpSumm = document.querySelectorAll('input[data-js-id="summ"]');
+  const $inpTotalSumm = document.querySelector('input[data-js-id="totalSum"]');
+
+  let totalSum = 0.00;
+
+  for (let i = 0; i < $inpSumm.length; i++) {
+    let resultSum = 0.00;
+
+    if ($inpSumm[i].value.trim() === '') {
+      resultSum = 0.00;
+    } else {
+      resultSum = parseFloat($inpSumm[i].value.trim()) * 100;
+    }
+
+    resultSum = (Math.round(resultSum * 100) / 10000).toFixed(2);
+
+    totalSum = (parseFloat(totalSum) + parseFloat(resultSum));
+    totalSum = (Math.round(totalSum * 100) / 100).toFixed(2);
+  }
+
+  $inpTotalSumm.value = totalSum;
+}
+
+const checkTotalSumAndAutoSumm = () => {
+  const $totalSumElem = document.querySelector('#autosumm span strong');
+  const $inpTotalSumm = document.querySelector('input[data-js-id="totalSum"]');
+  const $errorTotalSumm = $payment.querySelector('.errorTotalSumm');
+
+  const totalSumElem = parseFloat($totalSumElem.textContent) * 100;
+  const totalSumPayment = parseFloat($inpTotalSumm.value) * 100;
+
+  const diff = (Math.round(totalSumElem - totalSumPayment) / 100).toFixed(2);
+
+  if ($totalSumElem.textContent !== $inpTotalSumm.value) {
+
+    if (diff > 0) {
+      $errorTotalSumm.textContent = `Автосумма и итоговая сумма не равны. Добавтьте оплату на ${diff} руб`;
+    } else if (diff < 0) {
+      $errorTotalSumm.textContent = `Автосумма и итоговая сумма не равны. Оплата превышает на ${Math.abs(diff)} руб`;
+    }
+  } else {
+    $errorTotalSumm.textContent = '';
+  }
+
+}
 
 $fieldsetNomenclature.addEventListener('click', (evt) => {
   if (evt.target.tagName === 'BUTTON' && evt.target.classList.contains('btn-remove')) {
@@ -161,4 +229,14 @@ $fieldsetNomenclature.addEventListener('change', checkSumm);
 
 $btnAdd.addEventListener('click', () => {
   render($fieldsetNomenclature, createMarkup());
+});
+
+window.addEventListener('load', () => {
+  checkSumm();
+  checkPaymetTypeSumm();
+});
+
+$payment.addEventListener("change", () => {
+  checkPaymetTypeSumm();
+  checkTotalSumAndAutoSumm();
 });
