@@ -117,7 +117,6 @@ const render = (parent, template, position = `beforeend`) => {
 }; */
 
 const checkSumm = () => {
-  debugger;
   const $priceInput = document.querySelectorAll('input[data-js-id="js-price"]');
   const $quantityInput = document.querySelectorAll('input[data-js-id="js-quantity"]');
   const $totalSumElem = document.querySelector('#autosumm span strong');

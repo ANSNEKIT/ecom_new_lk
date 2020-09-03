@@ -388,13 +388,11 @@
             </div>
             <div class="col-md-4 mb-4 inp-group">
               <input 
-                type="number" 
+                type="text" 
                 class="form-control inp-form" 
                 id="items_0_amount"
                 data-js-id="js-quantity"
-                value="1"
-                min="1"
-                max="99999999" 
+                value="1" 
               >
               <label class="label-form" for="items_0_amount">Количество</label>
               <div class="invalid-tooltip">Укажите количество больше нуля</div>
@@ -637,13 +635,13 @@
             <input 
               type="text" 
               class="form-control inp-form" 
-              id="payments_0_amount" 
+              id="totalSum" 
               data-js-id="totalSum"
               value="1.00"
               maxlength="12"
               disabled
             >
-            <label class="label-form labelPayment" for="payments_0_amount">Итоговая сумма, руб</label>
+            <label class="label-form labelPayment" for="totalSum">Итоговая сумма, руб</label>
             <div class="errorTotalSumm"></div>
           </div>
         </div>
