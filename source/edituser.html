@@ -402,7 +402,7 @@
             </div>
           </div>
 
-          <div class="form-row mb-5" id="blocked_field">
+          <div class="form-row mb-4" id="blocked_field">
             <div class="col-md-12">
               <div class="form-check custom-control custom-checkbox">
                 <input type="checkbox" id="blocked" class="custom-control-input" name="blocked" value="true">
@@ -410,6 +410,31 @@
               </div>
             </div>
           </div>
+
+          <p>Проверить работу почтового сервиса</p>
+
+          <div class="form-row">
+            <div class="col-md-6 inp-group mb-3">
+              <label class="label-form" for="emailForSend">Введите email</label>
+              <input 
+                type="email" 
+                id="emailForSend" 
+                class="form-control inp-form"
+                name="email"
+                value="test@test.ru" 
+                placeholder="test@test.ru" 
+                pattern="^([a-z0-9_-]{1})+([^а-яёЁА-Я])+@+([^а-яёЁА-Я])+\.([^а-яёЁА-Я])+$" 
+                maxlength="50" 
+                required>
+              <div class="invalid-feedback">Email не должен содержать кириллицу. Первый символ должен быть прописной</div>
+            </div>
+            <div class="col-md-6 inp-group mb-3">
+              <button class="btn btn-primary">Проверить</button>
+            </div>
+          </div>
+          
+          <p class="text-danger">Тестовая ошибка 502. Сервис не работает</p>
+
         </fieldset>
 
         <div class="form-group mb-5">

@@ -1,3 +1,5 @@
+const $copyBtn = document.querySelector('.sectionChecksInfo .copyBtn');
+
 const createLinkOfd = () => {
     const $linkToOfd = document.querySelector('a[data-js-id="linkToOfd"]');
     const ofdName = document.querySelector('.js-ofd-name p').textContent.trim();
@@ -46,7 +48,27 @@ const createLinkOfd = () => {
     }
 };
 
+const copyLinkToPayment = (evt) => {
+    const $linkToPayment = document.getElementById('linkToPayment');
+    const link = $linkToPayment.getAttribute('href');
+
+    if (link !== '') {
+        navigator.clipboard.writeText(link)
+        .then(() => {
+            // success
+        })
+        .catch(err => {
+            console.log('error on copy link', err);
+        });
+    } else {
+        console.error('empty linkToPayment');
+    }
+
+    
+}
+
 document.addEventListener('DOMContentLoaded', createLinkOfd);
 
+$copyBtn.addEventListener('click', copyLinkToPayment);
 
 
