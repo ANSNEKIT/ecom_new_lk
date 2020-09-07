@@ -545,7 +545,7 @@
           
         <div class="form-group goods mb-5">
           <div class="form-row">
-            <div class="col-md-4 mb-4 inp-group parentSelect">
+            <div class="col-md-6 mb-4 inp-group parentSelect">
               <select class="form-control inp-form select" id="courier-list" name="items[0].vatType">
                 <option value="Абрикосов Алексей">Абрикосов Алексей</option>
                 <option value="Бананов Борис">Бананов Борис</option>
@@ -559,7 +559,7 @@
               <label class="label-form" for="courier-list">Курьер</label>
             </div>
             
-            <div class="col-md-4 mb-4 inp-group">
+            <div class="col-md-6 mb-4 inp-group">
               <input 
                 type="date" 
                 class="form-control inp-form" 
@@ -571,20 +571,53 @@
               <label class="label-form" for="date">Дата доставки</label>
               <div class="invalid-tooltip">Введите дату доставки</div>
             </div>
-
-            <div class="col-md-4 mb-4 inp-group">
+          </div>
+          
+          <div class="form-row">
+            <div class="col-md-6 mb-4 inp-group">
               <input 
-                type="time" 
+                type="text" 
                 class="form-control inp-form" 
-                id="time" 
-                value=""
-                name="time" 
+                id="recipient" 
+                value=""    
+                name="recipient"
+                pattern="[а-яА-Яa-zA-Z\s/-]*" 
+                maxlength="100"
                 required
               >
-              <label class="label-form" for="date">Время доставки</label>
-              <div class="invalid-tooltip">Введите время доставки</div>
+              <label class="label-form" for="recipient">ФИО получателя</label>
+              <div class="invalid-tooltip">Введите фамилию имя отчество получателя</div>
+            </div>
+              
+              <div class="col-md-6 mb-4 inp-group">
+                <input 
+                  type="tel" 
+                  class="form-control inp-form" 
+                  id="recipient-phone" 
+                  value=""    
+                  name="recipient-phone"
+                  pattern="^(\+7)*[0-9]{10}$"
+                  maxlength="12" 
+                  required
+                >
+                <label class="label-form" for="recipient-phone">Телефон получателя</label>
+                <div class="invalid-tooltip">Введите телефон в кокрректном формате через +7</div>
+              </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-12">
+              <textarea 
+                class="form-control comment" 
+                name="comment" 
+                id="comment" 
+                rows="4" 
+                maxlength="200"
+              ></textarea>
+              <label class="label-form" for="comment">Комментарий к заказу:</label>
             </div>
           </div>
+
         </div>
       </fieldset>
 
