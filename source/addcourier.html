@@ -315,7 +315,7 @@
           <button type="button" class="btn btn-add" name="action" value="add.item" data-js-count="0">Добавить</button>
         </div>
 
-        <div class="mb-5 bdr-bottom position_0">
+        <div class="mb-3 bdr-bottom position_0">
           <div class="form-row">
             <div class="col-md-4 mb-4 inp-group">
               <input 
@@ -420,19 +420,19 @@
       <fieldset class="FormGroupProduct mb-4">
         <h3 class="pl-4 pb-4">Данные покупателя</h3>
         
-        <div class="form-group goods mb-5">
+        <div class="form-group goods mb-4">
 
           <div class="form-row">
             <div class="col-md-4 mb-4 inp-group">
               <input 
-              type="text" 
-              class="form-control inp-form" 
-              id="bayer" 
-              name="bayer" 
-              value=""
-              maxlength="100"
-              pattern="[a-zA-Zа-яА-ЯёЁ\-\s]+"
-              placeholder="Иванов Иван Иванович">
+                type="text" 
+                class="form-control inp-form" 
+                id="bayer" 
+                name="bayer" 
+                value=""
+                maxlength="100"
+                pattern="[a-zA-Zа-яА-ЯёЁ\-\s]+"
+                placeholder="Иванов Иван Иванович">
               <label class="label-form" for="bayer">ФИО покупателя</label>
               <div class="invalid-feedback">Укажите фамилию имя отчество покупателя</div>
             </div>
@@ -466,61 +466,18 @@
           </div>
           
           <div class="form-row">
-            <div class="col-md-4 mb-4 inp-group">
+            <div class="col-md-12 inp-group">
               <input 
                 type="text" 
                 class="form-control inp-form" 
-                id="city" 
-                placeholder="Москва" 
+                id="adress" 
+                placeholder="123000, г.Москва, ул.Ленина, Красная площадь, д.1, корп.1, пом.2а" 
                 value=""
-                maxlength="30"
-                pattern="[а-яА-ЯёЁ\-\s]+"
-                name="city" 
+                maxlength="170"
+                name="adress" 
                 required>
-              <label class="label-form" for="city">Город</label>
-              <div class="invalid-feedback">Введите город</div>
-            </div>
-            <div class="col-md-4 mb-4 inp-group">
-              <input 
-                type="text" 
-                class="form-control inp-form" 
-                id="street" 
-                placeholder="ул. Пушкина" 
-                value=""
-                name="street"
-                maxlength="60"
-                pattern="[а-яА-ЯёЁ\-\s]+" 
-                required>
-              <label class="label-form" for="street">Улица</label>
-              <div class="invalid-feedback">Введите улицу</div>
-            </div>
-            <div class="col-md-2 mb-4 inp-group">
-              <input 
-                type="text" 
-                class="form-control inp-form" 
-                id="house" 
-                placeholder="д.23А/1, корп.3" 
-                value=""
-                name="house"
-                maxlength="20"
-                pattern="[0-9а-яА-ЯёЁ\-\s.,/]+"  
-                required>
-              <label class="label-form" for="house">Дом</label>
-              <div class="invalid-feedback">Введите номер дома, корпуса</div>
-            </div>
-            <div class="col-md-2 mb-4 inp-group">
-              <input 
-                type="text" 
-                class="form-control inp-form" 
-                id="door" 
-                placeholder="оф.222/1, помещ.7А" 
-                value=""
-                name="door"
-                maxlength="35"
-                pattern="[0-9а-яА-ЯёЁ\-\s.,/]+" 
-                required>
-              <label class="label-form" for="door">Помещение</label>
-              <div class="invalid-feedback">Введите номер помещения/квартиры</div>
+              <label class="label-form" for="adress">Адрес доставки</label>
+              <div class="invalid-feedback">Введите адрес доставки</div>
             </div>
           </div>
 
@@ -543,7 +500,7 @@
       <fieldset class="FormGroupProduct mb-4">
         <h3 class="pl-4 pb-4">Данные доставки</h3>
           
-        <div class="form-group goods mb-5">
+        <div class="form-group goods mb-4">
           <div class="form-row">
             <div class="col-md-6 mb-4 inp-group parentSelect">
               <select class="form-control inp-form select" id="courier-list" name="items[0].vatType">
@@ -573,38 +530,6 @@
             </div>
           </div>
           
-          <div class="form-row">
-            <div class="col-md-6 mb-4 inp-group">
-              <input 
-                type="text" 
-                class="form-control inp-form" 
-                id="recipient" 
-                value=""    
-                name="recipient"
-                pattern="[а-яА-Яa-zA-Z\s/-]*" 
-                maxlength="100"
-                required
-              >
-              <label class="label-form" for="recipient">ФИО получателя</label>
-              <div class="invalid-tooltip">Введите фамилию имя отчество получателя</div>
-            </div>
-              
-              <div class="col-md-6 mb-4 inp-group">
-                <input 
-                  type="tel" 
-                  class="form-control inp-form" 
-                  id="recipient-phone" 
-                  value=""    
-                  name="recipient-phone"
-                  pattern="^(\+7)*[0-9]{10}$"
-                  maxlength="12" 
-                  required
-                >
-                <label class="label-form" for="recipient-phone">Телефон получателя</label>
-                <div class="invalid-tooltip">Введите телефон в кокрректном формате через +7</div>
-              </div>
-          </div>
-
           <div class="form-row">
             <div class="col-12">
               <textarea 
