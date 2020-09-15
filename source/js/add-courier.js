@@ -158,22 +158,14 @@ const checkPaymetTypeSumm = () => {
   let totalSum = 0.00;
 
   for (let i = 0; i < $inpSumm.length; i++) {
-    let resultSum;
-
-    if ($inpSumm[i].value.trim() === '') {
-      resultSum = 0.00;
-    } else {
-      resultSum = parseFloat($inpSumm[i].value.trim()) * 100;
+    let resultSum = 0.00;
+    if ($inpSumm[i].value.trim() !== '') {
+      resultSum = parseFloat(parseInt($inpSumm[i].value.trim() * 100) / 100).toFixed(2);
     }
-
-    resultSum = (Math.round(resultSum * 100) / 10000).toFixed(2);
-
     totalSum = (parseFloat(totalSum) + parseFloat(resultSum));
-    totalSum = (Math.round(totalSum * 100) / 100).toFixed(2);
   }
-
-  $inpTotalSumm.value = totalSum;
-}
+  $inpTotalSumm.value = totalSum.toFixed(2);
+};
 
 const checkTotalSumAndAutoSumm = () => {
   const $totalSumElem = document.querySelector('#autosumm span strong');
@@ -205,7 +197,7 @@ const convertSummOnload = () => {
   }
 
   $inpTotalSumm.value = summInRuble;
-}
+};
 
 $fieldsetNomenclature.addEventListener('click', (evt) => {
   if (evt.target.tagName === 'BUTTON' && evt.target.classList.contains('btn-remove')) {
