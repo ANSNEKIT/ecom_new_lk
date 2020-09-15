@@ -191,13 +191,19 @@ const checkTotalSumAndAutoSumm = () => {
 };
 
 const convertSummOnload = () => {
-  const $inpTotalSumm = document.querySelector('input[data-js-id="totalSum"]');
-  let summInRuble;
-  if ($inpTotalSumm.value.trim() === '100') {
-    summInRuble = parseFloat(parseInt($inpTotalSumm.value) / 100).toFixed(2);
-  }
+  const $inpSummAll = document.querySelectorAll('input[data-js-id="summ"]');
 
-  $inpTotalSumm.value = summInRuble;
+  for (let i = 0; i < $inpSummAll.length; i++) {
+    let $currentInput = $inpSummAll[i];
+    let summInRuble = $currentInput.value.trim();
+    debugger;
+
+    if ($currentInput.value.trim() === '100.00') {
+      summInRuble = parseFloat(parseInt($currentInput.value) / 100).toFixed(2);
+    }
+
+    $currentInput.value = summInRuble;
+  }
 };
 
 $fieldsetNomenclature.addEventListener('click', (evt) => {
