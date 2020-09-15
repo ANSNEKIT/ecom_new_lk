@@ -158,7 +158,7 @@ const checkPaymetTypeSumm = () => {
   let totalSum = 0.00;
 
   for (let i = 0; i < $inpSumm.length; i++) {
-    let resultSum = 0.00;
+    let resultSum;
 
     if ($inpSumm[i].value.trim() === '') {
       resultSum = 0.00;
@@ -195,7 +195,16 @@ const checkTotalSumAndAutoSumm = () => {
   } else {
     $errorTotalSumm.textContent = '';
   }
+};
 
+const convertSummOnload = () => {
+  const $inpTotalSumm = document.querySelector('input[data-js-id="totalSum"]');
+  let summInRuble;
+  if ($inpTotalSumm.value.trim() === '100') {
+    summInRuble = parseFloat(parseInt($inpTotalSumm.value) / 100).toFixed(2);
+  }
+
+  $inpTotalSumm.value = summInRuble;
 }
 
 $fieldsetNomenclature.addEventListener('click', (evt) => {
@@ -218,9 +227,7 @@ $fieldsetNomenclature.addEventListener('click', (evt) => {
       $btnAdd.setAttribute('data-js-count', countBtnAdd);
     } else {
       return;
-    }
-    
-
+    }  
   }
 });
 
@@ -231,6 +238,7 @@ $btnAdd.addEventListener('click', () => {
 });
 
 window.addEventListener('load', () => {
+  convertSummOnload();
   checkSumm();
   checkPaymetTypeSumm();
 });
