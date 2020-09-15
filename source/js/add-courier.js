@@ -163,8 +163,9 @@ const checkPaymetTypeSumm = () => {
       resultSum = parseFloat(parseInt($inpSumm[i].value.trim() * 100) / 100).toFixed(2);
     }
     totalSum = (parseFloat(totalSum) + parseFloat(resultSum));
+    totalSum = (Math.round(totalSum * 100) / 100).toFixed(2);
   }
-  $inpTotalSumm.value = totalSum.toFixed(2);
+  $inpTotalSumm.value = totalSum;
 };
 
 const checkTotalSumAndAutoSumm = () => {
