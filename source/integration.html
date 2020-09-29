@@ -345,6 +345,18 @@
             </button>
           </div>
         </div>
+        <div class="companyItem">
+          <div>
+            <img class="companyItem__img" src="img/invoice.svg" alt="invoice" width="532" height="100">
+          </div>
+          <div>
+            <!--<button type="button" class="btn btn-primary disabled">Подключено</button>-->
+            <button type="button" class="btn btn-add" data-toggle="modal" data-target="#modalInvoice">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus-circle" width="20" height="20" class="svg-inline--fa fa-plus-circle fa-w-16 pr-1 pb-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"></path></svg>
+              <span>Подключить</span>
+            </button>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="nav mainFooter">
@@ -666,6 +678,68 @@
     </div>
   </section>
 
+  <section class="modal fade" id="modalInvoice" tabindex="-1" role="dialog" data-backdrop="static"
+           aria-labelledby="modalInvoice" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalInvoiceHeader">Интеграция с Invoice</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body d-flex p-4">
+          <aside class="modalAside pr-4">
+            <div class="modalAside__logo mb-4">
+              <img class="modalAside__img" src="img/invoice.svg" alt="invoice" width="532" height="100">
+            </div>
+            <div class="modalAside__btnWrapper">
+              <button type="button" class="btn btn-outline-dark modalBtnStatus" disabled>Не подключено</button>
+            </div>
+          </aside>
+          <main class="modalMain">
+            <div class="mb-4">
+              <div class="modalMain__description mb-4">
+                <h4 class="font-weight-bold">Описание:</h4>
+                <p>Сервис для выставления счетов. Позволяет выставлять счет прямо из личного кабинета Екомкассы
+                </p>
+              </div>
+              <div class="modalMain__howWork mb-4">
+                <h4 class="font-weight-bold">Как работает:</h4>
+                <p>1. В личном кабинете Екомкассы в разделе "Платежи" создается платежная ссылка для оплаты в Invoice.</p>
+
+                <p>2. Ссылка передается клиенту/покупателю.</p>
+
+                <p>3. Клиент/покупатель переходит по ссылке, в платежной форме вводит данные банковской карты для оплаты и оплачивает заказ.</p>
+
+                <p>4. После оплаты будет создан чек автоматически. Ссылку на чек можно найти в разделе "Платежи" в ЛК Екомкассы.</p>
+
+              </div>
+              <div class="modalMain__connection mb-4">
+                <h4 class="font-weight-bold">Подключение:</h4>
+              
+                <p>
+                  Необходимо подключить интернет-эквайринг от Invoice.  Для подключения необходимо запомнить логин и API ключ, который нужно взять в разделе "Настройки" -> "Общие". Чтобы указать ID терминала, через который будут создаваться чеки - необходимо перейти в раздел "Терминалы" и нажать на порядковый номер. Система скопирует его айди.
+                </p>
+                <p>После внесения данных нажмите сохранить.</p>
+                <p>
+                  Для получение уведомлений от Invoice необходимо установить адрес для входящих уведомлений. Адрес для уведомления задается в личном кабинете в разделе Настройки - Уведомления - Добавить - WebHook - и вписать адрес https://env-5581354.mircloud.ru/api/v1/webhooks/invoice - Выбрать терминал, через который будем создавать ссылки
+                </p>
+                
+              </div>
+            </div>
+
+            <div class="modalMain__btnWrapper pt-3">
+              <a href="addintegration.html" role="button" class="btn btn-add mr-2 mt-2">Подключить</a>
+              <button class="btn btn-primary mr-2 mt-2">Проверить</button>
+              <button class="btn btn-remove mr-2 mt-2">Удалить настройки</button>
+            </div>
+
+          </main>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
