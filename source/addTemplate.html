@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Параметры шаблона</title>
+  <title>Добавить шаблон</title>
 
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -304,58 +304,173 @@
       </nav>
   </aside>
   <main class="mainContent mt-5">
-    <h2 class="page-header text-center py-5">Параметры шаблона</h2>
+    <form action="GET" method="get" class="addCheckForm needs-validation" novalidate>
+      <h2 class="page-header text-center pt-5 pb-5">Добавить шаблон</h2>
 
-    <section class="companyBlock mb-5">
-      <div class="container">
-        
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold">
-            <h5 class="font-weight-bold">Название шаблона: </h5>
+      <fieldset class="FormGroupProduct mb-4" data-js-id="commodity-items">
+        <h3 class="pl-4 pb-4">Параметры шаблона</h3>
+
+        <div class="form-row">
+          <div class="col-md-6 mb-4 inp-group">
+            <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="template_name" 
+              name="template_name" 
+              value=""
+              maxlength="126" 
+              placeholder="Шаблон 1, Для чека прихода" 
+              required>
+            <label class="label-form" for="template_name">Наименование шаблона</label>
+            <div class="invalid-feedback">Укажите название шаблона</div>
           </div>
-          <div class="col-md-6 text-left">
-            <h5>Проезд в такси фикс оплата + телефон</h5>
+          <div class="col-md-6 mb-4 inp-group">
+            <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="product_name" 
+              name="product_name" 
+              value=""
+              maxlength="126" 
+              placeholder="Поездка на автобусе АА111А, поездка на такси" 
+              required>
+            <label class="label-form" for="product_name">Наименование товара/услуги</label>
+            <div class="invalid-feedback">Укажите название товара</div>
           </div>
         </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>ID шаблона: </p></div>
-          <div class="col-md-6 text-left"><p>1234567890</p></div>
+        <div class="form-row">
+          <div class="col-md-4 mb-4 inp-group parentSelect">
+            <select class="form-control inp-form select" id="type_operation" name="">
+              <option value="FULL_PAYMENT" selected>Приход</option>
+              <option value="FULL_PREPAYMENT">Возврат прихода</option>
+            </select>
+            <label class="label-form" for="type_operation">Тип операции</label>
+          </div>
+          <div class="col-md-4 mb-4 inp-group">
+            <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="amount"
+              data-js-id="js-quantity" 
+              value="1"
+              pattern="[0-9]{1,8}(\.[0-9]{3})*"
+              maxlength="12">
+            <label class="label-form" for="amount">Количество</label>
+            <div class="invalid-tooltip">Укажите количество больше нуля</div>
+          </div>
+          <div class="col-md-4 mb-4 inp-group parentSelect">
+            <select class="form-control inp-form select" id="vatType" name="">
+              <option value="VAT_NONE" selected>Без НДС</option>
+              <option value="VAT_0PCT">НДС 0%</option>
+              <option value="VAT_10PCT">НДС 10%</option>
+              <option value="VAT_110PCT">НДС 10/110</option>
+              <option value="VAT_20PCT">НДС 20%</option>
+              <option value="VAT_120PCT">НДС 20/120</option>
+            </select>
+            <label class="label-form" for="vatType">НДС</label>
+          </div>
         </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>Наименование товара/услуги: </p></div>
-          <div class="col-md-6 text-left"><p>Поезка в такси</p></div>
+
+        <div class="form-row"> 
+          <div class="col-md-4 mb-4 inp-group parentSelect">
+            <select class="form-control inp-form select" id="paymentObject" name="">
+              <option value="COMMODITY" selected>Товар</option>
+              <option value="EXCISE">Подакцизный товар</option>
+              <option value="JOB">Работа</option>
+              <option value="SERVICE">Услуга</option>
+              <option value="GAMBLING_BET">Ставка азартной игры</option>
+              <option value="GAMBLING_PRIZE">Выигрыш азартной игры</option>
+              <option value="LOTTERY">Лотерейный билет</option>
+              <option value="LOTTERY_PRIZE">Выигрыш лотереи</option>
+              <option value="INTELLECTUAL_ACTIVITY">Интеллектуальная собственность</option>
+              <option value="PAYMENT">Платёж</option>
+              <option value="AGENT_COMMISSION">Вознаграждение агента</option>
+              <option value="COMPOSITE">Составной предмет расчёта</option>
+              <option value="ANOTHER">Иной предмет расчёта</option>
+              <option value="PROPERTY_RIGHT">Имущественное право</option>
+              <option value="NON_OPERATING_GAIN">Внереализационный доход</option>
+              <option value="INSURANCE_PREMIUM">Страховые взносы</option>
+              <option value="SALES_TAX">Торговый сбор</option>
+              <option value="RESORT_FEE">Курортный сбор</option>
+            </select>
+            <label class="label-form" for="paymentObject">Предмет расчета</label>
+          </div>
+          <div class="col-md-4 mb-4 inp-group parentSelect">
+            <select class="form-control inp-form select" id="paymentMethod" name="">
+              <option value="FULL_PAYMENT" selected>Полный расчёт</option>
+              <option value="FULL_PREPAYMENT">Полная предоплата</option>
+              <option value="PREPAYMENT">Предоплата</option>
+              <option value="ADVANCE">Аванс</option>
+              <option value="PARTIAL_PAYMENT">Частичная оплата и кредит</option>
+              <option value="CREDIT">Передача в кредит</option>
+              <option value="CREDIT_PAYMENT">Оплата кредит</option>
+            </select>
+            <label class="label-form" for="paymentMethod">Признак расчета</label>
+          </div>
+          
+          <div class="col-md-4 mb-4 inp-group parentSelect">
+            <select class="form-control inp-form select" id="agentType" name="">
+              <option value="NOT_AGENT" selected>Не является агентом</option>
+              <option value="PAYING_AGENT">платежный агент</option>
+              <option value="PAYING_SUBAGENT">платежный субагент</option>
+              <option value="BANK_PAYING_AGENT">Банковский платежный агент</option>
+              <option value="BANK_PAYING_SUBAGENT">Банковский платежный субагент</option>
+              <option value="ATTORNEY">Поверенный</option>
+              <option value="COMMISSION_AGENT">Комиссионер</option>
+              <option value="ANOTHER">Прочие агенты</option>
+            </select>
+            <label class="label-form" for="agentType">Тип агента</label>
+          </div>
         </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>Тип операции: </p></div>
-          <div class="col-md-6 text-left"><p>Приход</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>Количество: </p></div>
-          <div class="col-md-6 text-left"><p>1</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>НДС: </p></div>
-          <div class="col-md-6 text-left"><p>Без НДС</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>Предмет расчета: </p></div>
-          <div class="col-md-6 text-left"><p>Полный расчет</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>Тип агента: </p></div>
-          <div class="col-md-6 text-left"><p>Не является агентом</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>Наименование поставщика: </p></div>
-          <div class="col-md-6 text-left"><p>Нет</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>Телефон поставщика: </p></div>
-          <div class="col-md-6 text-left"><p>Нет</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>ИНН поставщика: </p></div>
-          <div class="col-md-6 text-left"><p>Нет</p></div>
+
+        <p class="text-info mb-4"><strong>Если вы не являетесь агентом - поля "Наименование поставщика", "Телефон поставщика", "ИНН поставщика" заполнять не нужно! Оставьте их пустыми</strong></p>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3 inp-group">
+            <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="supplierName_field" 
+              name=""
+              placeholder=""
+              maxlength="126"
+              >
+            <label class="label-form" for="supplierName_field">
+              Наименование поставщика
+            </label>
+            <div class="invalid-tooltip">Введите название поставщика</div>
+          </div>
+          <div class="col-md-4 mb-3 inp-group">
+            <input 
+              type="tel" 
+              class="form-control inp-form" 
+              id="supplierPhones" 
+              name=""
+              placeholder="+71112223344" 
+              value=""
+              maxlength="100"
+              pattern="([\+]7[0-9]{10}[,\s]*)+"
+              >
+            <label class="label-form" for="supplierPhones">
+              Телефон поставщика
+            </label>
+            <div class="invalid-feedback">Введите номер/номера телефона в формате +7XXXXXXXXXX</div>
+          </div>
+          <div class="col-md-4 mb-3 inp-group">
+            <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="supplierTaxNumber"
+              name="items[0].supplierTaxNumber"
+              data-js-id="agent-inn" 
+              maxlength="12"
+              pattern="([0-9]{10})|([0-9]{12})"
+              >
+            <label class="label-form" for="supplierTaxNumber">
+              ИНН Поставщика              
+            </label>
+            <div class="invalid-feedback">ИНН поставщика 10 или 12 знаков</div>
+          </div>
         </div>
 
         <div class="form-row my-4">
@@ -366,9 +481,7 @@
                 id="is_default" 
                 class="custom-control-input" 
                 name="" 
-                value="true"
-                checked
-                disabled
+                value="false"
               >
               <label class="custom-control-label" for="is_default">
                 Является шаблоном по умолчанию
@@ -385,7 +498,6 @@
                 class="custom-control-input" 
                 name="" 
                 value="false"
-                disabled
               >
               <label class="custom-control-label" for="is_email">
                 Указывать Email клиента
@@ -402,7 +514,6 @@
                 class="custom-control-input" 
                 name="" 
                 value="false"
-                disabled
               >
               <label class="custom-control-label" for="is_phone">
                 Указывать номер телефона клиента
@@ -419,7 +530,6 @@
                 class="custom-control-input" 
                 name="" 
                 value="false"
-                disabled
               >
               <label class="custom-control-label" for="is_requsit">
                 Указывать паспортные данные клиента
@@ -436,7 +546,6 @@
                 class="custom-control-input" 
                 name="" 
                 value="false"
-                disabled
               >
               <label class="custom-control-label" for="is_fix_summ">
                 Фиксированная сумма
@@ -444,10 +553,14 @@
             </div>
           </div>
         </div>
-        
-      </div>
-    </section>
+      </fieldset>
 
+      <div class="form-group mb-5">
+        <button type="submit" class="btn btn-primary btn-lg mr-5 mb-4" value="submit">Создать шаблон</button>
+        <a href="#" class="btn btn-outline-secondary btn-lg mb-4">Отмена</a>
+      </div>
+
+    </form>
   </main>
   <footer class="nav mainFooter">
     <div class="row footerWrapper">

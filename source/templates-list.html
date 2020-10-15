@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Параметры шаблона</title>
+  <title>Список шаблонов</title>
 
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -304,149 +304,47 @@
       </nav>
   </aside>
   <main class="mainContent mt-5">
-    <h2 class="page-header text-center py-5">Параметры шаблона</h2>
+    <h2 class="page-header text-center py-5">Список шаблонов</h2>
 
-    <section class="companyBlock mb-5">
-      <div class="container">
-        
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold">
-            <h5 class="font-weight-bold">Название шаблона: </h5>
-          </div>
-          <div class="col-md-6 text-left">
-            <h5>Проезд в такси фикс оплата + телефон</h5>
-          </div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>ID шаблона: </p></div>
-          <div class="col-md-6 text-left"><p>1234567890</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>Наименование товара/услуги: </p></div>
-          <div class="col-md-6 text-left"><p>Поезка в такси</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>Тип операции: </p></div>
-          <div class="col-md-6 text-left"><p>Приход</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>Количество: </p></div>
-          <div class="col-md-6 text-left"><p>1</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>НДС: </p></div>
-          <div class="col-md-6 text-left"><p>Без НДС</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>Предмет расчета: </p></div>
-          <div class="col-md-6 text-left"><p>Полный расчет</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>Тип агента: </p></div>
-          <div class="col-md-6 text-left"><p>Не является агентом</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>Наименование поставщика: </p></div>
-          <div class="col-md-6 text-left"><p>Нет</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>Телефон поставщика: </p></div>
-          <div class="col-md-6 text-left"><p>Нет</p></div>
-        </div>
-        <div class="row justify-content-md-center mb-2">
-          <div class="col-md-6 text-left font-weight-bold"><p>ИНН поставщика: </p></div>
-          <div class="col-md-6 text-left"><p>Нет</p></div>
-        </div>
+    <section class="card mb5">
+      <table class="table table-bordered table-sm table-hover">
+        <thead class="">
+          <tr>
+            <th class="text-center">ID шаблона</th>
+            <th class="text-center">Название шаблона</th>
+            <th class="text-center">Дата создания</th>
+          </tr>
+        </thead>
 
-        <div class="form-row my-4">
-          <div class="col-md-12">
-            <div class="form-check custom-control custom-checkbox">
-              <input 
-                type="checkbox" 
-                id="is_default" 
-                class="custom-control-input" 
-                name="" 
-                value="true"
-                checked
-                disabled
-              >
-              <label class="custom-control-label" for="is_default">
-                Является шаблоном по умолчанию
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="form-row mb-4">
-          <div class="col-md-12">
-            <div class="form-check custom-control custom-checkbox">
-              <input 
-                type="checkbox" 
-                id="is_email" 
-                class="custom-control-input" 
-                name="" 
-                value="false"
-                disabled
-              >
-              <label class="custom-control-label" for="is_email">
-                Указывать Email клиента
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="form-row mb-4">
-          <div class="col-md-12">
-            <div class="form-check custom-control custom-checkbox">
-              <input 
-                type="checkbox" 
-                id="is_phone" 
-                class="custom-control-input" 
-                name="" 
-                value="false"
-                disabled
-              >
-              <label class="custom-control-label" for="is_phone">
-                Указывать номер телефона клиента
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="form-row mb-4">
-          <div class="col-md-12">
-            <div class="form-check custom-control custom-checkbox">
-              <input 
-                type="checkbox" 
-                id="is_requsit" 
-                class="custom-control-input" 
-                name="" 
-                value="false"
-                disabled
-              >
-              <label class="custom-control-label" for="is_requsit">
-                Указывать паспортные данные клиента
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="form-row mb-4">
-          <div class="col-md-12">
-            <div class="form-check custom-control custom-checkbox">
-              <input 
-                type="checkbox" 
-                id="is_fix_summ" 
-                class="custom-control-input" 
-                name="" 
-                value="false"
-                disabled
-              >
-              <label class="custom-control-label" for="is_fix_summ">
-                Фиксированная сумма
-              </label>
-            </div>
-          </div>
-        </div>
-        
-      </div>
+        <tbody>
+          <tr>
+            <td class="text-center">
+              <a href="temlate.html">1234567890</a>
+            </td>
+            <td class="text-center">
+              Тестовый шаблон
+            </td>
+            <td class="text-center">
+              15.09.2020 15:46
+            </td>
+          </tr>
+
+          <tr>
+            <td class="text-center">
+              <a href="temlate.html">2345678901</a>
+            </td>
+            <td class="text-center">
+              Проезд в такси фикс оплата + телефон
+            </td>
+            <td class="text-center">
+              16.09.2020 08:20
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
     </section>
+    
 
   </main>
   <footer class="nav mainFooter">
