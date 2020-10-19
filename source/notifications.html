@@ -307,30 +307,38 @@
     <h2 class="page-header text-center pt-4 pb-5">Уведомления</h2>
 
     <section class="companyBlock mb-5">
-      <div class="alert alert-danger" role="alert">
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5><strong>Ошибка!</strong></h5>
         <div class="d-flex justify-content-between">
-          <h5><strong>Ошибка!</strong></h5>
+          <p>Это основное уведомление — check it out!</p>
           <p>14.10.2020 09:22:05</p>
         </div>
-        <p>Это основное уведомление — check it out!</p>
-      </div>
-  
-      <div class="alert alert-secondary" role="alert">
-        <div class="d-flex justify-content-between">
-          <h5><strong>Сообщение!</strong></h5>
-          <p>13.10.2020 18:55:03</p>
-        </div>
-        <p>Это второе уведомление — check it out!</p>
-      </div>
-  
-      <div class="alert alert-success" role="alert">
-        <div class="d-flex justify-content-between">
-          <h5><strong>Успех!</strong></h5>
-          <p>12.10.2020 15:12:54</p>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum illo enim consequatur debitis, obcaecati earum possimus quis culpa deleniti vitae.</p>
       </div>
 
+      <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5><strong>Сообщение!</strong></h5>
+        <div class="d-flex justify-content-between">
+          <p>Это второе уведомление — check it out!</p>
+          <p>13.10.2020 18:55:03</p>
+        </div>  
+      </div>
+
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5><strong>Успех!</strong></h5>
+        <div class="d-flex justify-content-between">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum illo enim consequatur debitis, obcaecati earum possimus quis culpa deleniti vitae.!</p>
+          <p>12.10.2020 15:12:54</p>
+        </div>  
+      </div>
 
     </section>
     

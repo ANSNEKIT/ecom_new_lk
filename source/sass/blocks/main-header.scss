@@ -189,6 +189,53 @@
   //justify-content: flex-end;
 }
 
+.userMenu .notification {
+  width: 100px;
+  padding-top: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: $color-active;
+}
+
+.notification .notification__number {
+  position: absolute;
+  top: 5px;
+  left: 58px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0 8px;
+  background-color:$logo-color;
+  color: #fff;
+
+  font-size: 12px;
+    line-height: 1.33;
+    font-weight: 700;
+}
+
+.notification .notification__text {
+  padding: 0;
+  margin: 0;
+
+  text-transform: none;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-size-adjust: none;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.notification:hover .notification__img,
+.notification:hover .notification__text {
+  color: #0056b3;
+}
+
+
 .userMenu .arrow {
   font-size: 1.3rem;
   line-height: 1rem;
