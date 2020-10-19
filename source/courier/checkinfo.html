@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Сформировать заказ</title>
+  <title>Кассовый чек</title>
 
-  <link rel="stylesheet" href="css/all.min.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="../css/all.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.min.css">
 </head>
 
 
-<body>
+<body class="page-checkinfo">
 <div class="gridContainer" id="#gridWrapper">
   <header class="nav header">
     <div class="mx-1 menuGamburger mx-4">
@@ -153,7 +153,7 @@
             </a>
           </li>
           <li class="navParent">
-            <a class="nav-link" href="#collapse-menu_1" data-toggle="collapse"  role="button" aria-expanded="false" aria-controls="collapse-menu_1">
+            <a class="nav-link" href="#collapse-menu_1" data-toggle="collapse"  role="button" aria-expanded="false" aria-controls="#collapse-menu_1">
               <span class="leftIcon">
                 <svg aria-hidden="true" height="19" focusable="false" data-prefix="fas" data-icon="building"
                      class="svg-inline--fa fa-building fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M436 480h-20V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v456H12c-6.627 0-12 5.373-12 12v20h448v-20c0-6.627-5.373-12-12-12zM128 76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76zm0 96c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40zm52 148h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12zm76 160h-64v-84c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v84zm64-172c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40z"></path></svg>
@@ -181,7 +181,7 @@
           </li>
           <li class="navParent">
             <a class="nav-link" href="#collapse-menu_orders" data-toggle="collapse"  role="button" aria-expanded="false"
-               aria-controls="collapse-menu_orders">
+               aria-controls="#collapse-menu_orders">
               <span class="leftIcon">
                 <svg aria-hidden="true" height="19" focusable="false" data-prefix="far" data-icon="check-square"
                      class="svg-inline--fa fa-check-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm0 400H48V80h352v352zm-35.864-241.724L191.547 361.48c-4.705 4.667-12.303 4.637-16.97-.068l-90.781-91.516c-4.667-4.705-4.637-12.303.069-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l59.792 60.277 141.352-140.216c4.705-4.667 12.303-4.637 16.97.068l22.536 22.718c4.667 4.706 4.637 12.304-.068 16.971z"></path>
@@ -210,7 +210,7 @@
           </li>
           <li class="navParent">
             <a class="nav-link" href="#collapse-menu_couriers" data-toggle="collapse"  role="button" aria-expanded="false"
-               aria-controls="collapse-menu_couriers">
+               aria-controls="#collapse-menu_couriers">
               <span class="leftIcon">
                 <svg version="1.1" id="Capa_1" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.265 53.265"
@@ -246,7 +246,7 @@
                   </svg>
                 </span>
             </a>
-            <ul class="menuItems collapse show" id="collapse-menu_couriers">
+            <ul class="menuItems collapse" id="collapse-menu_couriers">
               <li class="menuItem"><a href="couriers.html" class="nav-link">Список заказов</a></li>
               <li class="menuItem"><a href="addcourier.html" class="nav-link">Сформировать заказ</a></li>
             </ul>
@@ -294,324 +294,283 @@
         </ul>
       </nav>
   </aside>
-  <main class="mainContent mt-5">
-    <form action="GET" method="get" class="addCheckForm needs-validation" novalidate>
-      <h2 class="page-header text-center pt-5 pb-5">Сформировать заказ</h2>
+  <main class="mainContent mt-5" data-class="checkInfo">
+    <h2 class="page-header text-center py-5">Кассовый чек № 4214519</h2>
+    <div class="sectionBlock">
+      <ul class="bg-white nav nav-tabs mb-5" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link" href="courier-info.html" role="tab" aria-controls="courier-info" aria-selected="true">Информация</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#" role="tab" aria-controls="check-info" aria-selected="true">Чек</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="transaction-info.html" role="tab" aria-controls="bank-slip"
+            aria-selected="false">Банковский слип</a>
+        </li>
+      </ul>
 
-      <fieldset class="FormGroup1 mb-4">
-        <div class="form-group form-row">
-          <label for="storeID" class="col-sm-3 col-form-label">Магазин</label>
-          <div class="col-sm-9 parentSelect">
-            <select class="form-control select" name="storeID" id="storeID">
-              <option value="2" selected>Демо магазин для тестирования</option>
-            </select>
-          </div>
+      <div class="tab-content">
+        <div class="checkInfo__container">
+          <section class="sectionCheckAdmin">
+            <div class="row">
+              <div class="col-xl-12">
+                <button type="button" class="btn btn-block btn-lg btn-primary my-3 mb-sm-5">Повторить</button>
+              </div>
+            </div>
+            <div class="row">
+              <p class="col-md-6"><strong>Заявка на регистрацию:</strong></p>
+              <p class="col-md-6">24245449</p>
+              <p class="col-md-6">
+                Завершена с ошибкой
+              </p>
+              <p class="col-md-6">
+                224: Начисление налога на последнюю операцию невозможно
+              </p>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-12 col-md-6 col-sm-12"><strong>Статус: </strong></div>
+              <div class="col-xl-8 col-lg-12 col-md-6 col-sm-12">Ошибка</div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-12 col-md-6 col-sm-12"><strong>Тип документа: </strong></div>
+              <div class="col-xl-8 col-lg-12 col-md-6 col-sm-12">Чек</div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-12 col-md-6 col-sm-12"><strong>Входящий номер: </strong></div>
+              <div class="col-xl-8 col-lg-12 col-md-6 col-sm-12">c1e7e505-1840-45be-a5bb-58ad6459c3f9</div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-12 col-md-6 col-sm-12"><strong>ID компании: </strong></div>
+              <div class="col-xl-8 col-lg-12 col-md-6 col-sm-12">90f9a0f3-5e14-4932-b7e7-926632aced77</div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-12 col-md-6 col-sm-12"><strong>ID магазина: </strong></div>
+              <div class="col-xl-8 col-lg-12 col-md-6 col-sm-12">123</div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-12 col-md-6 col-sm-12"><strong>Название магазина: </strong></div>
+              <div class="col-xl-8 col-lg-12 col-md-6 col-sm-12">ООО "Тест999"</div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-12 col-md-6 col-sm-12"><strong>СНО: </strong></div>
+              <div class="col-xl-8 col-lg-12 col-md-6 col-sm-12">УСН, ЕНВД</div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-12 col-md-6 col-sm-12"><strong>ИНН: </strong></div>
+              <div class="col-xl-8 col-lg-12 col-md-6 col-sm-12">1234567890</div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-12 col-md-6 col-sm-12"><strong>Кассир: </strong></div>
+              <div class="col-xl-8 col-lg-12 col-md-6 col-sm-12">Иванов Иван Иванович</div>
+            </div>
+            <div class="row">
+              <div class="col-xl-5 col-lg-12 col-md-6 col-sm-12"><strong>Агент: </strong></div>
+              <div class="col-xl-7 col-lg-12 col-md-6 col-sm-12">Нет</div>
+            </div>
+            <div class="row">
+              <div class="col-xl-5 col-lg-12 col-md-6 col-sm-12"><strong>Маркированый товар: </strong></div>
+              <div class="col-xl-7 col-lg-12 col-md-6 col-sm-12">Да</div>
+            </div>
+            <div class="row">
+              <div class="col-xl-5 col-lg-12 col-md-6 col-sm-12"><strong>Только онлайн: </strong></div>
+              <div class="col-xl-7 col-lg-12 col-md-6 col-sm-12">Да</div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12">
+                <a href="repair.html" class="btn btn-lg btn-warning my-4 mb-sm-5">Список заявок</a>
+              </div>
+            </div>
+          </section>
+    
+          <section class="text-center sectionChecksInfo">
+            <div class="infoBlock">
+              <div class="row py-2">
+                <div class="col-6 text-right">
+                  <p><strong>Статус: </strong></p>
+                </div>
+                <div class="col-6 text-left">
+                  <p>Ошибка</p>
+                </div>
+              </div>
+              
+              <div class="row">
+                <p class="col-md-12">
+                  224: Начисление налога на последнюю операцию невозможно
+                </p>
+              </div>
+                
+            </div>
+    
+    
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <hr>
+                <h3 class="mb-0">Кассовый чек
+                  <a href="#" data-js-id="linkToOfd" title="Перейти к чеку в ОФД">
+                    <svg width="25" height="25" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="receipt" class="svg-inline--fa fa-receipt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M358.4 3.2L320 48 265.6 3.2a15.9 15.9 0 0 0-19.2 0L192 48 137.6 3.2a15.9 15.9 0 0 0-19.2 0L64 48 25.6 3.2C15-4.7 0 2.8 0 16v480c0 13.2 15 20.7 25.6 12.8L64 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L192 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L320 464l38.4 44.8c10.5 7.9 25.6.4 25.6-12.8V16c0-13.2-15-20.7-25.6-12.8zM320 360c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16z"></path></svg>
+                  </a>
+                </h3>
+                <div>
+                  <p class="d-inline-block mb-0">
+                    <a 
+                      id="linkToPayment" 
+                      target="_blank" 
+                      href="https://github.com" 
+                      class="mr-2"
+                    >ссылка на оплату</a>
+                  </p>
+                  <button class="btn copyBtn mb-1">
+                    <svg width="16" height="16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="copy" class="svg-inline--fa fa-copy fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z"></path></svg>
+                  </button>
+                </div>
+                <hr>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 mb-2">
+                <p>ИП Долженко Марина Викторовна</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 text-left"><p>ПРИЗНАК РАСЧЕТА</p></div>
+              <div class="col-6 text-right"><p>Приход</p></div>
+            </div>
+            <div class="row">
+              <div class="col-8 text-left"><p>ФИСКАЛЬНЫЙ ДОКУМЕНТ</p></div>
+              <div class="col-4 text-right"><span data-class="fd">341</span></div>
+            </div>
+            <div class="row">
+              <div class="col-5 text-left"><p>ДАТА СОЗДАНИЯ</p></div>
+              <div class="col-7 text-right brWo js-date"><p>2019-09-17T12:16:15.000+03:00</p></div>
+            </div>
+            <div class="row">
+              <div class="col-5 text-left"><p>АДРЕС РАСЧЕТОВ</p></div>
+              <div class="col-7 text-right brWo"><p>г.Ростов-на-Дону, пер.Отрадный, д.1Б,кв.18</p></div>
+            </div>
+            <div class="row">
+              <div class="col-5 text-left"><p>МЕСТО РАСЧЕТОВ</p></div>
+              <div class="col-7 text-right"><p>www.repetitorbio.ru</p></div>
+            </div>
+            <div class="row">
+              <div class="col-5 text-left"><p>КАССИР</p></div>
+              <div class="col-7 text-right"><p>Кассир 1</p></div>
+            </div>
+            <div class="row">
+              <div class="col-6 text-left"><p>НОМЕР СМЕНЫ</p></div>
+              <div class="col-6 text-right"><p>66</p></div>
+            </div>
+            <div class="row">
+              <div class="col-7 text-left"><p>ДОКУМЕНТ В СМЕНЕ</p></div>
+              <div class="col-5 text-right"><p>2</p></div>
+            </div>
+            <div class="row">
+              <div class="col-6 text-left"><p>ЭЛ.АДР.ПОКУПАТЕЛЯ</p></div>
+              <div class="col-6 text-right"><p>dorame_20@mail.ru</p></div>
+            </div>
+            <div class="row">
+              <div class="col-7 text-left"><p>ВЕРСИЯ ФФД</p></div>
+              <div class="col-5 text-right"><p>1.05</p></div>
+            </div>
+            <div class="row">
+              <div class="col-7 text-left"><p>ККТ для расчетов только в Интернет</p></div>
+              <div class="col-5 text-right"><p>Да</p></div>
+            </div>
+            <div class="row">
+              <div class="col-6 text-left"><p>Адрес эл. почты отправителя чека</p></div>
+              <div class="col-6 text-right"><p>noreply@ofd.ru</p></div>
+            </div>
+            <div class="row">
+              <div class="col-6 text-left"><p>сайт ФНС</p></div>
+              <div class="col-6 text-right"><p>nalog.ru</p></div>
+            </div>
+            <div class="row">
+              <div class="col-7 text-left">
+                <p>
+                  <span>РН ККТ</span>
+                  <span data-class="rnm">0003041888063705</span>
+                </p>
+              </div>
+              <div class="col-5 text-right">
+                <p>
+                  <span>ИНН</span>
+                  <span data-class="inn">616711010850</span>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 text-left">
+                <p>
+                  <span>ФН</span>
+                  <span data-class="fn">9287440300244390</span>
+                </p>
+              </div>
+              <div class="col-6 text-right">
+                <p>
+                  <span>ФПД</span>
+                  <span data-class="fp">2389671340</span>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4 text-left"><p>ОФД</p></div>
+              <div class="col-8 text-right js-ofd-name"><p>ООО "ПЕТЕР-СЕРВИС Спецтехнологии"</p></div>
+            </div>
+            <div class="row emptyLine">
+              <div class="col-12">
+                <hr>
+              </div>
+            </div>
+            <div class="goods">
+              <div class="row">
+                <div class="col-12 text-left"><p>Онлайн курсы по биологии | ОГЭ 2020</p></div>
+              </div>
+              <div class="row">
+                <div class="col-12 text-left"><p>1 * 1500.00</p></div>
+              </div>
+              <div class="row">
+                <div class="col-12 text-left"><p>Без НДС</p></div>
+              </div>
+            </div>
+            <div class="row emptyLine">
+              <div class="col-12">
+                <hr>
+              </div>
+            </div>
+            <div class="result">
+              <div class="row">
+                <div class="col-5 text-left"><h3>Итог</h3></div>
+                <div class="col-7 text-right"><h3>=1500.00</h3></div>
+              </div>
+              <div class="row">
+                <div class="col-5 text-left"><p>Наличными</p></div>
+                <div class="col-7 text-right"><p>=1500.00</p></div>
+              </div>
+              <div class="row">
+                <div class="col-5 text-left"><p>СНО</p></div>
+                <div class="col-7 text-right"><p>УСН доход</p></div>
+              </div>
+            </div>
+            <div class="row emptyLine">
+              <div class="col-12">
+                <hr>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 text-center"><p>Здесь должен быть QR код</p></div>
+            </div>
+            <hr>
+            <h5>
+              Предчек
+              <a href="/public/order/24177048/e1d89987a2786472fbec08d0fc1b551b" data-js-id="orderPermalink" title="Перейти на страницу предчека">
+                  <svg width="25" height="25" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="receipt" class="svg-inline--fa fa-receipt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M358.4 3.2L320 48 265.6 3.2a15.9 15.9 0 0 0-19.2 0L192 48 137.6 3.2a15.9 15.9 0 0 0-19.2 0L64 48 25.6 3.2C15-4.7 0 2.8 0 16v480c0 13.2 15 20.7 25.6 12.8L64 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L192 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L320 464l38.4 44.8c10.5 7.9 25.6.4 25.6-12.8V16c0-13.2-15-20.7-25.6-12.8zM320 360c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16z"></path>
+                  </svg>
+              </a>
+          </h5>
+          </section>
         </div>
-      </fieldset>
-
-      <fieldset class="FormGroupProduct mb-4" data-js-id="nomenclature">
-        <h3 class="pl-4 pb-4">Номенклатура</h3>
-        <div class="btnAddPosition">
-          <button type="button" class="btn btn-add" name="action" value="add.item" data-js-count="0">Добавить</button>
-        </div>
-
-        <div class="mb-3 bdr-bottom position_0">
-          <div class="form-row">
-            <div class="col-md-4 mb-4 inp-group">
-              <input 
-                type="text" 
-                class="form-control inp-form" 
-                id="items_0_name" 
-                name="items[0].name" 
-                value=""
-                maxlength="126"
-                placeholder="Название товара/услуги" 
-                required
-              >
-              <label class="label-form" for="items_0_name">Наименование</label>
-              <div class="invalid-tooltip">Укажите название товарной позиции</div>
-            </div>
-            
-            <div class="col-md-4 mb-4 inp-group parentSelect">
-              <select class="form-control inp-form select" id="items_0_paymentObject" name="items[0].paymentObject">
-                <option value="COMMODITY" selected>Товар</option>
-                <option value="EXCISE">Подакцизный товар</option>
-                <option value="JOB">Работа</option>
-                <option value="SERVICE">Услуга</option>
-                <option value="GAMBLING_BET">Ставка азартной игры</option>
-                <option value="GAMBLING_PRIZE">Выигрыш азартной игры</option>
-                <option value="LOTTERY">Лотерейный билет</option>
-                <option value="LOTTERY_PRIZE">Выигрыш лотереи</option>
-                <option value="INTELLECTUAL_ACTIVITY">Интеллектуальная собственность</option>
-                <option value="PAYMENT">Платёж</option>
-                <option value="AGENT_COMMISSION">Вознаграждение агента</option>
-                <option value="COMPOSITE">Составной предмет расчёта</option>
-                <option value="ANOTHER">Иной предмет расчёта</option>
-                <option value="PROPERTY_RIGHT">Имущественное право</option>
-                <option value="NON_OPERATING_GAIN">Внереализационный доход</option>
-                <option value="INSURANCE_PREMIUM">Страховые взносы</option>
-                <option value="SALES_TAX">Торговый сбор</option>
-                <option value="RESORT_FEE">Курортный сбор</option>
-              </select>
-              <label class="label-form" for="items_0_paymentObject">Предмет расчета</label>
-            </div>
-
-            <div class="col-md-4 mb-4 inp-group parentSelect">
-              <select class="form-control inp-form select" id="items_0_paymentMethod" name="items[0].paymentMethod">
-                <option value="FULL_PAYMENT" selected>Полный расчёт</option>
-                <option value="FULL_PREPAYMENT">Полная предоплата</option>
-                <option value="PREPAYMENT">Предоплата</option>
-                <option value="ADVANCE">Аванс</option>
-                <option value="PARTIAL_PAYMENT">Частичная оплата и кредит</option>
-                <option value="CREDIT">Передача в кредит</option>
-                <option value="CREDIT_PAYMENT">Оплата кредит</option>
-              </select>
-              <label class="label-form" for="items_0_paymentMethod">Признак расчета</label>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="col-md-4 mb-4 inp-group">
-              <input 
-                type="text"
-                class="form-control inp-form" 
-                id="items_0_price"
-                data-js-id="js-price"
-                name="items[0].name"
-                placeholder="1.00"
-                value="1.00"
-                maxlength="15" 
-                pattern="[0-9]{1,12}\.[0-9]{2}" 
-                required
-              >
-              <label class="label-form" for="items_0_price">Цена, руб</label>
-              <div class="invalid-tooltip">Цена товара с копейками. Разделитель точка. Пример 18.50</div>
-            </div>
-            <div class="col-md-4 mb-4 inp-group">
-              <input 
-                type="text" 
-                class="form-control inp-form" 
-                id="items_0_amount"
-                data-js-id="js-quantity"
-                value="1" 
-              >
-              <label class="label-form" for="items_0_amount">Количество</label>
-              <div class="invalid-tooltip">Укажите количество больше нуля</div>
-            </div>
-            <div class="col-md-4 mb-4 inp-group parentSelect">
-              <select class="form-control inp-form select" id="items_0_vatType" name="items[0].vatType">
-                <option value="VAT_NONE" selected>Без НДС</option>
-                <option value="VAT_0PCT">НДС 0%</option>
-                <option value="VAT_10PCT">НДС 10%</option>
-                <option value="VAT_110PCT">НДС 10/110</option>
-                <option value="VAT_20PCT">НДС 20%</option>
-                <option value="VAT_120PCT">НДС 20/120</option>
-              </select>
-              <label class="label-form" for="items_0_vatType">НДС</label>
-            </div>
-          </div>
-          <div class="form-check custom-control custom-checkbox mb-3">
-            <input type="checkbox" id="marking" class="custom-control-input" name="marking" value="">
-            <label class="custom-control-label" for="marking">Маркированный товар</label>
-          </div>
-        </div>
- 
-      </fieldset>
-
-      <fieldset class="FormGroupProduct mb-4">
-        <h3 class="pl-4 pb-4">Данные покупателя</h3>
-        
-        <div class="form-group goods mb-4">
-
-          <div class="form-row">
-            <div class="col-md-4 mb-4 inp-group">
-              <input 
-                type="text" 
-                class="form-control inp-form" 
-                id="bayer" 
-                name="bayer" 
-                value=""
-                maxlength="100"
-                pattern="[a-zA-Zа-яА-ЯёЁ\-\s]+"
-                placeholder="Иванов Иван Иванович">
-              <label class="label-form" for="bayer">ФИО покупателя</label>
-              <div class="invalid-feedback">Укажите фамилию имя отчество покупателя</div>
-            </div>
-            <div class="col-md-4 mb-4 inp-group">
-              <input 
-                type="tel"
-                class="form-control inp-form" 
-                id="bayer-phone" 
-                placeholder="+71112223344" 
-                value=""
-                name="bayer-phone"
-                maxlength="12" 
-                pattern="(^$)|([+]7[0-9]{10})" 
-                required>
-              <label class="label-form" for="bayer-phone">Телефон</label>
-              <div class="invalid-feedback">Формат номера телефона должен быть через +7</div>
-            </div>
-            <div class="col-md-4 mb-4 inp-group">
-              <input 
-                type="email" 
-                class="form-control inp-form" 
-                id="customer_email" 
-                placeholder="test@test.ru" 
-                value=""
-                name="customer.email"
-                maxlength="50"
-                pattern="(^$)|([a-z0-9\.@\-_]+@[a-z0-9.@-_]+\.[a-z]+)">
-              <label class="label-form" for="customer_email">Email покупателя</label>
-              <div class="invalid-feedback">Введите корретный email без заглавных символов. Пример: test-one@indextest.ru</div>
-            </div>
-          </div>
-          
-          <div class="form-row">
-            <div class="col-md-12 inp-group">
-              <input 
-                type="text" 
-                class="form-control inp-form" 
-                id="adress" 
-                placeholder="123000, г.Москва, ул.Ленина, Красная площадь, д.1, корп.1, пом.2а" 
-                value=""
-                maxlength="170"
-                name="adress" 
-                required>
-              <label class="label-form" for="adress">Адрес доставки</label>
-              <div class="invalid-feedback">Введите адрес доставки</div>
-            </div>
-          </div>
-
-          <!-- <div class="form-row">
-            <div class="col-md-12 mb-4 inp-group">
-              <textarea 
-                class="form-control" 
-                id="comment" 
-                name="comment"
-                maxlength="120" 
-                rows="3"  
-                placeholder="Домофон не работает. Жду заказ после 17:00 Мск"></textarea>
-              <label class="label-form" for="comment">Комментарий</label>
-            </div>
-          </div> -->
-
-        </div>
-      </fieldset>
-
-      <fieldset class="FormGroupProduct mb-4">
-        <h3 class="pl-4 pb-4">Данные доставки</h3>
-          
-        <div class="form-group goods mb-4">
-          <div class="form-row">
-            <div class="col-md-6 mb-4 inp-group parentSelect">
-              <select class="form-control inp-form select" id="courier-list" name="items[0].vatType">
-                <option value="Абрикосов Алексей">Абрикосов Алексей</option>
-                <option value="Бананов Борис">Бананов Борис</option>
-                <option value="Вишневский Василий">Вишневский Василий</option>
-                <option value="Горохов Григорий">Горохов Григорий</option>
-                <option value="Домофонов Дмитрий">Домофонов Дмитрий</option>
-                <option value="Ежевиков Евгений">Ежевиков Евгений</option>
-                <option value="Желудев Жанн">Желудев Жанн</option>
-                <option value="Запоров Тест">Запоров Тест</option>
-              </select>
-              <label class="label-form" for="courier-list">Курьер</label>
-            </div>
-            
-            <div class="col-md-6 mb-4 inp-group">
-              <input 
-                type="date" 
-                class="form-control inp-form" 
-                id="date" 
-                value=""    
-                name="date" 
-                required
-              >
-              <label class="label-form" for="date">Дата доставки</label>
-              <div class="invalid-tooltip">Введите дату доставки</div>
-            </div>
-          </div>
-          
-          <div class="form-row">
-            <div class="col-12">
-              <textarea 
-                class="form-control comment" 
-                name="comment" 
-                id="comment" 
-                rows="4" 
-                maxlength="200"
-              ></textarea>
-              <label class="label-form" for="comment">Комментарий к заказу:</label>
-            </div>
-          </div>
-
-        </div>
-      </fieldset>
-
-      <fieldset id="payment" class="FormGroup4 mb-5">
-        <div class="d-flex justify-content-between pb-3">
-          <h3 class="pl-4">Оплата</h3>
-          <div class="">
-            <button type="button" class="btn btn-add" name="action" value="0">Добавить</button>
-          </div>
-        </div>
-
-        <h5 id="autosumm" class="pb-4">Автоподсчет суммы товарных позиций: 
-          <span><strong></strong></span>
-        </h5>
-        
-        <div id="parent-block">
-          <div class="form-group form-row mt-3">
-            <div class="col-md-6 mb-3 inp-group parentSelect">
-              <select class="form-control inp-form select" id="payments_0_type" name="payments[0].type">
-                <option value="CASH">Наличными</option>
-                <option value="CREDIT_CARD" selected>Банковская карта</option>
-                <option value="PRE_PAID">Предоплата</option>
-                <option value="POST_PAID">Постоплата</option>
-                <option value="COUNTER_OFFER">Встречное предоставление</option>
-              </select>
-              <label class="label-form" for="payments_0_type">Вид оплаты</label>
-            </div>
-            <div class="col-md-6 mb-3 inp-group">
-              <input 
-                type="text" 
-                class="form-control inp-form" 
-                id="payments_0_summ" 
-                data-js-id="summ" 
-                value="100.00"
-                pattern="[0-9]{1,9}\.[0-9]{2}"
-                maxlength="12"
-              >
-              <label class="label-form" for="payments_0_summ">Cумма, руб</label>
-            </div>
-
-            <hr width="100%" style="border: 2px solid #ccc">
-          </div>
-        </div>
-
-
-        <div class="form-group form-row">
-          <div class="col-md-12 mb-3 inp-group">
-            <input 
-              type="text" 
-              class="form-control inp-form" 
-              id="totalSum" 
-              data-js-id="totalSum"
-              value="1.00"
-              maxlength="12"
-              disabled
-            >
-            <label class="label-form labelPayment" for="totalSum">Итоговая сумма, руб</label>
-            <div class="errorTotalSumm"></div>
-          </div>
-        </div>
-
-      </fieldset>
-
-      <div class="form-group mb-5">
-        <button type="submit" class="btn btn-primary btn-lg mr-5" value="submit">Создать заказ</button>
-        <a href="couriers.html" class="btn btn-outline-secondary btn-lg">Отмена</a>
       </div>
-
-    </form>
+    </div>
   </main>
   <footer class="nav mainFooter">
     <div class="row footerWrapper">
@@ -677,40 +636,18 @@
         <h5 class="footerHeader">О КОМПАНИИ</h5>
         <p class="footerText">ООО "Зе Поинт"</p>
         <p class="footerText">ИНН: 7708317992</p>
-        <p class="footerText">
-          <a href="https://ecomkassa.ru" class="footerLink">
-            Официальный сайт Е-COM kassa
-          </a>
-        </p>
-        <p class="footerText">
-          <a href="https://ecomkassa.ru/blog" class="footerLink">
-            Блог компании
-          </a>
-        </p>
-        <p class="footerText">
-          <a href="https://ecomkassa.ru/news" class="footerLink">
-            Новости компании
-          </a>
-        </p>
       </div>
 
     </div>
   </footer>
 </div>
 
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/add-courier.js"></script>
-<script src="js/validate.js"></script>
+<script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
 
-<script src="//code.jivosite.com/widget.js" data-jv-id="GfRebivBl2" defer></script>
+<script type="text/javascript" src="../js/menu.js"></script>
+<script type="text/javascript" src="../js/checkinfo.js"></script>
 
 </body>
 </html>
-
-
-  
