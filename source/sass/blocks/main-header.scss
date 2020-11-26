@@ -57,6 +57,8 @@
 
   white-space: nowrap;
 
+  font-size: 16px;
+
   @media (max-width: 768px) {
     margin: 17px 10px 0;
   }
@@ -72,6 +74,18 @@
   }
 }
 
+.balance p {
+  margin: 0 30px;
+
+  font-size: 13px;
+  line-height: 1.0;
+
+  @media (max-width: 768px) {
+    margin: 0 10px;
+    padding: 0;
+  }
+}
+
 
 .topNavbar {
   margin-left: auto;
@@ -79,7 +93,7 @@
 
   @media (max-width: 768px) {
     grid-column: 1 / 4;
-    grid-row: 2;
+    grid-row: 3;
 
     margin-left: 0;
   }
@@ -201,6 +215,11 @@
   text-decoration: none;
   box-sizing: border-box;
   color: $color-active;
+
+  @media (max-width: 768px) {
+    width: 80px;
+
+  }
 }
 
 .notification .notification__number {
@@ -214,8 +233,16 @@
   color: #fff;
 
   font-size: 10px;
-    line-height: 1.2;
-    font-weight: 700;
+  line-height: 1.2;
+  font-weight: 700;
+
+  @media (max-width: 768px) {
+    top: 10px;
+    left: 41px;
+    height: 11px;
+    padding: 0 5px;
+    font-size: 9px;
+  }
 }
 
 .notification .notification__text {
@@ -228,6 +255,11 @@
   text-size-adjust: none;
   font-size: 0.8rem;
   line-height: 1.2;
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+
+  }
 }
 
 .notification:hover .notification__img,
@@ -315,6 +347,14 @@
   font-size: .75rem;
   line-height: 1rem;
   color: $color-active;
+
+  @media (max-width: 768px) {
+    padding: 0 0.3rem;
+    margin: 0;
+
+    font-size: .6rem;
+    line-height: .8rem;
+  }
 }
 
 .mailToText {
@@ -325,4 +365,13 @@
   font-size: .75rem;
   line-height: 1rem;
   color: $black;
+
+  @media (max-width: 768px) {
+    padding: 0 0.3rem;
+    margin: 0;
+    margin-top: 0.5rem;
+
+    font-size: .68rem;
+    line-height: .8rem;
+  }
 }
