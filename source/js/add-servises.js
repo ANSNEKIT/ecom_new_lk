@@ -1,82 +1,9 @@
 'use strict';
 
 const $btnAdd = document.querySelector('.btn-add');
-//const $inpservices = document.querySelectorAll('select[data-js-id="services"]');
-//const $inpPrice = document.querySelectorAll('input[data-js-id="price"]');
-//const $inpQuantity = document.querySelectorAll('input[data-js-id="quantity"]');
-//const $inpCost = document.querySelectorAll('input[data-js-id="cost"]');
 const $summ = document.querySelector('#summ span strong');
 const $container = document.getElementById('parent-block');
 let index = 0;
-
-// const renderPosition = (evt) => {
-//   const $elem = evt.target;
-//   if ($elem.classList.contains("btn-add")) {
-//     index += 1;
-//     $elem.value = index;
-//     window.modules.render($container, createMarkupCommodity());
-//
-//   }
-// };
-
-/* const removePosition = (evt) => {
-    const $elem = evt.target.closest('.minusIcon');
-
-    if ( $elem !== null && ($elem.tagName === 'BUTTON') && ($elem.classList.contains("minusIcon")) ) {
-        let isRemoveFiscal = confirm('Удалить услугу?');
-        if (!isRemoveFiscal) {
-            evt.preventDefault();
-            return;
-        }
-
-        const btnValue = $elem.value;
-        const btnValueCount = parseInt(btnValue);
-        const $elemRemove = $container.querySelector(`.position_${btnValueCount}`);
-        $elemRemove.remove();
-        index -= 1;
-        $btnAdd.value = index;
-
-        //changeCostHandler();
-        totalSum();
-    }
-}; */
-
-/* const changePriceHandler = (evt) => {
-  const $elem = evt.target;
-  const attr = $elem.attributes;
-
-  if ( attr['data-js-id'].value === 'services' ) {
-    const index = $elem.id.substring(9);
-    const inpPrice = document.getElementById(`items_${index}_price`);
-    inpPrice.value = price[$elem.value];
-  }
-
-} */
-
-/* const changeCostHandler = () => {
-  const $price = document.querySelectorAll('input[data-js-id="price"]');
-  const $quantity = document.querySelectorAll('input[data-js-id="quantity"]');
-  const $cost = document.querySelectorAll('input[data-js-id="cost"]');
-
-  for (let i = 0; i < $price.length; i++) {
-    let price = parseFloat($price[i].value.trim()) * 100;
-    let quantity = parseFloat($quantity[i].value.trim()) * 100;
-    let cost = (price * quantity) / 10000;
-    cost = (Math.round(cost * 100) / 100).toFixed(2);
-
-    $cost[i].value = cost;
-  }
-
-}
-
-const isChangedQuantityOrservices = (evt) => {
-  const $elem = evt.target;
-  const attrs = $elem.attributes;
-
-  if ( attrs['data-js-id'].value === 'quantity' || attrs['data-js-id'].value === 'services' ) {
-    changeCostHandler();
-  }
-} */
 
 const totalSum = () => {
     const $cost = document.querySelectorAll('input[data-js-id="cost"]');
@@ -92,8 +19,6 @@ const totalSum = () => {
 };
 
 
-
-// Важно! У тега option value должно быть от 0 до последнего элемента в массиве данных. По value ищем нужный элемент в массиве data в функции writeData
 let servicesData;
 
 class Service {
@@ -161,29 +86,55 @@ const change = () => {
     }
 }
 
+const limitCount = (evt) => {
+    const $elem = evt.target
+    const $quantity = document.querySelectorAll('input[data-js-id="quantity"]');
 
+    if ($elem.tagName === 'SELECT' && $elem.value === '24') {
+        const count = $elem.id.substring(9);
+        for (const item of $quantity) {
+            if (item.id === `items_${count}_amount`) {
+                item.setAttribute('min', '1');
+                item.setAttribute('max', '20');
+            };
+        }
 
+    } else if ($elem.tagName === 'SELECT' && $elem.value === '27') {
+        const count = $elem.id.substring(9);
+        for (const item of $quantity) {
+            if (item.id === `items_${count}_amount`) {
+                item.setAttribute('min', '21');
+                item.setAttribute('max', '40');
+            };
+        }
+    } else if ($elem.tagName === 'SELECT' && $elem.value === '25') {
+        const count = $elem.id.substring(9);
+        for (const item of $quantity) {
+            if (item.id === `items_${count}_amount`) {
+                item.setAttribute('min', '41');
+                item.setAttribute('max', '1000000');
+            };
+        }
+    } else if ($elem.tagName === 'SELECT' && $elem.value !== ('24' || '27' || '25') ) {
+        const count = $elem.id.substring(9);
+        for (const item of $quantity) {
+            if (item.id === `items_${count}_amount`) {
+                item.setAttribute('min', '1');
+                item.setAttribute('max', '1000000');
+            };
+        }
+    }
+}
 
-
-/* $btnAdd.addEventListener("click", (evt) => {
-   // renderPosition(evt);
-  change();
-  changeCostHandler();
-  totalSum();
-}); */
-
-// $container.addEventListener("click", (evt) => {
-//     removePosition(evt);
-// });
 
 $container.addEventListener("change", (evt) => {
-    change();
-    //isChangedQuantityOrservices(evt);
+    //change();
+    limitCount(evt);
     totalSum();
 });
 
 window.addEventListener('load', (evt) => {
-    change();
-    //changeCostHandler();
+    //change();
+    limitCount(evt);
     totalSum();
 });
