@@ -358,16 +358,15 @@
             <label class="label-form" for="amount">Количество</label>
             <div class="invalid-tooltip">Укажите количество больше нуля</div>
           </div>
-          <div class="col-md-4 mb-4 inp-group parentSelect">
-            <select class="form-control inp-form select" id="vatType" name="">
-              <option value="VAT_NONE" selected>Без НДС</option>
-              <option value="VAT_0PCT">НДС 0%</option>
-              <option value="VAT_10PCT">НДС 10%</option>
-              <option value="VAT_110PCT">НДС 10/110</option>
-              <option value="VAT_20PCT">НДС 20%</option>
-              <option value="VAT_120PCT">НДС 20/120</option>
-            </select>
-            <label class="label-form" for="vatType">НДС</label>
+          <div class="col-md-4 mb-4 inp-group">
+            <input 
+              type="text" 
+              class="form-control inp-form" 
+              id="price"
+              pattern="[0-9]{1,8}(\.[0-9]{3})*"
+              maxlength="12">
+            <label class="label-form" for="price">Цена</label>
+            <div class="invalid-tooltip">Укажите цену</div>
           </div>
         </div>
 
@@ -409,6 +408,28 @@
           </div>
           
           <div class="col-md-4 mb-4 inp-group parentSelect">
+            <select class="form-control inp-form select" id="vatType" name="">
+              <option value="VAT_NONE" selected>Без НДС</option>
+              <option value="VAT_0PCT">НДС 0%</option>
+              <option value="VAT_10PCT">НДС 10%</option>
+              <option value="VAT_110PCT">НДС 10/110</option>
+              <option value="VAT_20PCT">НДС 20%</option>
+              <option value="VAT_120PCT">НДС 20/120</option>
+            </select>
+            <label class="label-form" for="vatType">НДС</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-6 mb-4 inp-group parentSelect">
+            <select class="form-control inp-form select" id="paymentType" name="">
+              <option value="NOT_SELECTED" selected>Не выбрано</option>
+              <option value="cash">Наличные</option>
+              <option value="card">Безналичные</option>
+            </select>
+            <label class="label-form" for="paymentType">Тип оплаты</label>
+          </div>
+          <div class="col-md-6 mb-4 inp-group parentSelect">
             <select class="form-control inp-form select" id="agentType" name="">
               <option value="NOT_AGENT" selected>Не является агентом</option>
               <option value="PAYING_AGENT">платежный агент</option>
