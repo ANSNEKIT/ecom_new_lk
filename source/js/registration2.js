@@ -76,13 +76,15 @@ $prevBtn.forEach((el) => {
 });
 
 window.addEventListener('load', () => {
-  const $form = document.getElementsByClassName('needs-validation');
+  const $forms = [...document.getElementsByClassName('needs-validation')];
 
-  $form.addEventListener('submit', function(evt) {
-    if ($form.checkValidity() === false) {
-      evt.preventDefault();
-      evt.stopPropagation();
-    }
-    $form.classList.add('was-validated');
-  }, false);
+  const validation = $forms.forEach(($form) => {
+    $form.addEventListener('submit', function(evt) {
+      if ($form.checkValidity() === false) {
+        evt.preventDefault();
+        evt.stopPropagation();
+      }
+      $form.classList.add('was-validated');
+    }, false);
+  });
 }, false);
