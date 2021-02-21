@@ -25,13 +25,7 @@ function style(done) {
         .pipe(sass())
         .pipe(postcss([
             autoprefixer({
-                browsers: [
-                    "last 1 version",
-                    "last 30 Chrome versions",
-                    "last 2 Firefox versions",
-                    "last 2 Opera versions",
-                    "last 2 Edge versions"
-                ]
+                
             })
         ]))
         .pipe(sourceMaps.write())
