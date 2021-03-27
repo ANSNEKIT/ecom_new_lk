@@ -41,7 +41,6 @@
   top: -9px;
   left: 20px;
 
-  //font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: bold;
   line-height: 18px;
@@ -50,9 +49,10 @@
   background-color: $white;
 
   transition: all 0.3s ease 0s;
+  z-index: 3;
 }
 
-.inp-form:focus + .label-form {
+.inp-form:focus ~ .label-form {
   padding: 0 5px;
 }
 
@@ -178,6 +178,14 @@ form.addCheckForm .labelPayment {
 
 .errorTotalSumm {
   color: $bgc-btn-del;
+}
+
+.modal .modal__resultBorder {
+  border: 2px solid $link-gray;
+  border-radius: 20px;
+
+  padding: 14px;
+  padding-top: 10px;
 }
 
 @-moz-document url-prefix() {

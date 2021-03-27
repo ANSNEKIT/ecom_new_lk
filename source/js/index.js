@@ -2,9 +2,14 @@
 
     let count = 0;
     let countAddPaynentType = 0;
+    let responseData = [];
+    let currentInputIndex = null;
+    
     const $commodityItems = document.querySelector('fieldset[data-js-id="commodity-items"]');
     const $payment = document.getElementById('payment');
     const $parentPaymentType = document.getElementById('parent-block');
+    const $findBtn = document.getElementById('modal-search');
+    const $currentResultBtn = document.getElementById('current-result');
   
     if (!$commodityItems) {
         throw new Error("Нет формы добавления товарных позиций!");
@@ -272,7 +277,7 @@
               <button type="button" id="btn-remove_${count}" class="btn btn-remove mt-1" name="action" value="${count}">Удалить вид оплаты</button>
             </div>
 
-            <hr width="100%" style="border: 2px solid #ccc">
+            <hr style="border: 2px solid #ccc">
           </div>`
         );
     }
@@ -411,7 +416,7 @@
         }
 
         $inpTotalSumm.value = totalSum;
-    }
+    };
 
     const checkTotalSumAndAutoSumm = () => {
         const $totalSumElem = document.querySelector('#autosumm span strong');
@@ -434,20 +439,171 @@
             $errorTotalSumm.textContent = '';
         }
 
+    };
+
+    const renderRequest = (data) => {
+      const $modalResult = document.querySelector('.modal .modal__result');
+      const $name = document.querySelector('.modal-body #name');
+      const $sku = document.querySelector('.modal-body #sku');
+      const name = $name.value.trim().toLowerCase();
+      const sku = $sku.value.trim().toLowerCase();
+      let newArr = [];
+
+      $modalResult.innerHTML = "";
+      
+      if (data.length) {
+        data.forEach((obj) => {
+          if (
+            (!!$name.value.trim().length) && (obj.name.toLowerCase().includes(name))
+            ) {
+            newArr.push(obj);
+          } else if (
+            (!!$sku.value.trim().length) && (obj.sku.toLowerCase().includes(sku))
+          ) {
+            newArr.push(obj);
+          }
+        });
+      }
+
+      for (let i = 0; i < newArr.length; i++) {
+        let currentDiv = document.createElement("div");
+        currentDiv.innerHTML = (
+          `<input class="form-check-input" type="radio" id="itemID_${newArr[i].itemId}" value="${newArr[i].itemId}" name="data_response">
+          <label class="form-check-label" for="itemID_${newArr[i].itemId}">
+            <span></span>
+            ${newArr[i].name}, Стоимость: ${newArr[i].price}
+          </label>`
+        );
+        currentDiv.classList.add("form-check", "mb-2");
+        currentDiv.setAttribute("id", `data_response_${i}`);
+
+        $modalResult.appendChild(currentDiv);
+      }
+    };
+
+    const fetchRequest = async () => {
+      try {
+        const request = await fetch(
+          'https://app.ecomkassa.ru/admin/catalog/search.json'
+        );
+        const response = await request.json();
+  
+        if (response.errorCode === 0) {
+          responseData = response.payload.items;
+        };
+  
+        /* responseData = [
+          {"itemId": 111, "name": "Adidas", "sku": "Кроссовки", "price": 100.00, "vatType": "vat20",
+          "paymentObject": "service"},
+          {"itemId": 222, "name": "asdfgdfh atg", "sku": "SDF", "price": 999999.00, "vatType": "vat20",
+                        "paymentObject": "service"},
+          {"itemId": 333, "name": "1651Adidas 156", "sku": "", "price": 123.00, "vatType": "vat20",
+                        "paymentObject": "service"},
+          {"itemId": 444, "name": "ADIDas", "sku": "Кросс", "price": 2300.99, "vatType": "vat20",
+                        "paymentObject": "service"},
+          {"itemId": 555, "name": "TTTAdwertsXXX", "sku": "Кроссовки", "price": 5800.00, "vatType": "none",
+                        "paymentObject": "service"},
+        ]; */
+        
+  
+        renderRequest(responseData);
+      } catch (e) {
+        console.error(e);
+      }
+      
+    };
+
+    const getItemIdOfModalResult = ($modal) => {
+      const $checkedInp = $modal.querySelector('.modal__result .form-check-input:checked');
+      return +$checkedInp.value;
     }
 
+    const findIndexInpForCatalog = (evt) => {
+      const $elem = evt.target;
+      let isCurrentElemBtn = null;
+      let currentBtn = null;
+      
+      if ( $elem.tagName === 'path' ) {
+        $elem.parentElement.parentElement.tagName === 'BUTTON' ? isCurrentElemBtn = true : isCurrentElemBtn = false;
+        currentBtn = $elem.parentElement.parentElement;
+      } else if ( $elem.tagName === 'svg' ) {
+        $elem.parentElement.tagName === 'BUTTON' ? isCurrentElemBtn = true : isCurrentElemBtn = false;
+        currentBtn = $elem.parentElement;
+      } else if (($elem.tagName === 'BUTTON') && ($elem.classList.contains("js-btnSearch")) ) {
+        isCurrentElemBtn = true;
+        currentBtn = $elem;
+      }
+
+      if ( isCurrentElemBtn ) {
+        currentInputIndex = Number(currentBtn.id.slice(11));
+      };
+    };
+
+    const fillInputDataVal = (commodityIndex, itemId) => {
+      const objResult = responseData.find((obj) => obj.itemId === itemId);
+
+      const nameId = `items_${commodityIndex}_name`;
+      const priceId = `items_${commodityIndex}_price`;
+      let vatType = objResult.vatType;
+      const paymentType = objResult.paymentObject.toUpperCase();
+
+      switch (vatType) {
+        case "none": 
+          vatType = "VAT_NONE";
+          break;
+        case "vat0": 
+          vatType = "VAT_0PCT";
+          break;
+        case "vat10": 
+          vatType = "VAT_10PCT";
+          break;
+        case "vat110": 
+          vatType = "VAT_110PCT";
+          break;
+        case "vat20": 
+          vatType = "VAT_20PCT";
+          break;
+        case "vat120": 
+          vatType = "VAT_120PCT";
+          break;
+        default: 
+          vatType = "VAT_NONE";
+      }
+
+      const $name = document.getElementById(nameId);
+      const $price = document.getElementById(priceId);
+      const $vatType = document.querySelector(`#items_${commodityIndex}_vatType option[value='${vatType}']`);
+      const $paymentType = document.querySelector(`#items_${commodityIndex}_paymentObject option[value='${paymentType}']`);
+
+      $name.value = objResult.name;
+      $price.value = objResult.price;
+      $vatType.setAttribute('selected', 'true');
+      $paymentType.setAttribute('selected', 'true');
+
+      checkSumm();
+      checkPaymetTypeSumm();
+      checkTotalSumAndAutoSumm();
+    };
+
+    const cleanCatalogResult = (modalResultDiv) => {
+      modalResultDiv.innerHTML = '';
+    };
+
+    const createResultCatalogFunction = (inpIndex) => {
+      const modalResult = document.querySelector('.modal__result');
+
+      const itemId = getItemIdOfModalResult(modalResult);
+      fillInputDataVal(inpIndex, itemId);
+      cleanCatalogResult(modalResult);
+    }
 
     $commodityItems.addEventListener("click", (evt) => {
       //renderPosition(evt);
       removePosition(evt);
       toggleAgentCheckbox(evt);
+      findIndexInpForCatalog(evt);
     });
 
-    /* $payment.addEventListener("click", (evt) => {
-        //renderPaymentType(evt);
-        //removePaymentType(evt);
-      });
- */
     window.addEventListener('load', () => {
       checkSumm();
       checkPaymetTypeSumm();
@@ -458,6 +614,11 @@
         checkPaymetTypeSumm();
         checkTotalSumAndAutoSumm();
     });
-    /* $inpTotalSumm.addEventListener("change", () => {
-        checkTotalSumAndAutoSumm();
-    }) */
+
+    $findBtn.addEventListener("click", () => {
+      fetchRequest();      
+    });
+
+    $currentResultBtn.addEventListener("click", () => {
+      createResultCatalogFunction(currentInputIndex);
+    })
