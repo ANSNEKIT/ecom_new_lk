@@ -483,9 +483,7 @@
 
     const fetchRequest = async () => {
       try {
-        const request = await fetch(
-          'https://app.ecomkassa.ru/admin/catalog/search.json'
-        );
+        const request = await fetch('/admin/catalog/search.json');
         const response = await request.json();
   
         if (response.errorCode === 0) {
