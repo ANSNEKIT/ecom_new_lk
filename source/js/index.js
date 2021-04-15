@@ -10,7 +10,7 @@
     const $parentPaymentType = document.getElementById('parent-block');
     const $findBtn = document.getElementById('modal-search');
     const $currentResultBtn = document.getElementById('current-result');
-  
+     
     if (!$commodityItems) {
         throw new Error("Нет формы добавления товарных позиций!");
     }
@@ -323,8 +323,8 @@
     const toggleAgentCheckbox = (evt) => {
         const $elem = evt.target;
         if ($elem.classList.contains("jsAgentTrueInp")) {
-            const checkboxTrueVal = $elem.value;
-            const checkboxIdCountTrue = parseInt(checkboxTrueVal);
+            const checkboxIdCountTrue = $elem.id.slice(10);
+
             const $elemParent = $commodityItems.querySelector(`div.position_${checkboxIdCountTrue}`);
             const $elemToggle = $elemParent.querySelector(`fieldset.agentGoods`);
             const $agentName = $elemParent.querySelector(`input[data-js-id="agent-name"]`);
@@ -341,8 +341,7 @@
             }
 
         } else if ($elem.classList.contains("jsAgentFalseInp")) {
-            const checkboxFalseVal = $elem.value;
-            const checkboxIdCountFalse = parseInt(checkboxFalseVal);
+            const checkboxIdCountFalse = $elem.id.slice(10);
             const $elemParent = $commodityItems.querySelector(`div.position_${checkboxIdCountFalse}`);
             const $elemToggle = $elemParent.querySelector(`fieldset.agentGoods`);
             const $agentName = $elemParent.querySelector(`input[data-js-id="agent-name"]`);
