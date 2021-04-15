@@ -128,13 +128,13 @@ const limitCount = (evt) => {
 
 
 $container.addEventListener("change", (evt) => {
-    //change();
+    change();
     limitCount(evt);
     totalSum();
 });
 
 window.addEventListener('load', (evt) => {
-    //change();
+    change();
     limitCount(evt);
     totalSum();
 });
