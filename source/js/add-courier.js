@@ -2,7 +2,7 @@
 
 const $fieldsetNomenclature = document.querySelector('fieldset[data-js-id="nomenclature"]');
 const $btnAdd = document.querySelector('.btnAddPosition .btn-add');
-const $payment = document.getElementById('payment');
+const $paymentBlock = document.getElementById('payment');
 
 /* const createMarkup = () => {
   const countBtnAdd = $btnAdd.getAttribute('data-js-count');
@@ -116,7 +116,7 @@ const render = (parent, template, position = `beforeend`) => {
   parent.insertAdjacentHTML(position, template);
 }; */
 
-const checkSumm = () => {
+const checkSummCourier = () => {
   const $priceInput = document.querySelectorAll('input[data-js-id="js-price"]');
   const $quantityInput = document.querySelectorAll('input[data-js-id="js-quantity"]');
   const $totalSumElem = document.querySelector('#autosumm span strong');
@@ -148,10 +148,10 @@ const checkSumm = () => {
   }
 
   $totalSumElem.textContent = totalSum;
-  checkTotalSumAndAutoSumm();
+  syncTotalSumAndAutoSumm();
 };
 
-const checkPaymetTypeSumm = () => {
+const checkPaymetTypeSummCourier = () => {
   const $inpSumm = document.querySelectorAll('input[data-js-id="summ"]');
   const $inpTotalSumm = document.querySelector('input[data-js-id="totalSum"]');
 
@@ -168,10 +168,10 @@ const checkPaymetTypeSumm = () => {
   $inpTotalSumm.value = totalSum;
 };
 
-const checkTotalSumAndAutoSumm = () => {
+const syncTotalSumAndAutoSumm = () => {
   const $totalSumElem = document.querySelector('#autosumm span strong');
   const $inpTotalSumm = document.querySelector('input[data-js-id="totalSum"]');
-  const $errorTotalSumm = $payment.querySelector('.errorTotalSumm');
+  const $errorTotalSumm = $paymentBlock.querySelector('.errorTotalSumm');
 
   const totalSumElem = parseFloat($totalSumElem.textContent) * 100;
   const totalSumPayment = parseFloat($inpTotalSumm.value) * 100;
@@ -230,7 +230,7 @@ $fieldsetNomenclature.addEventListener('click', (evt) => {
   }
 });
 
-$fieldsetNomenclature.addEventListener('change', checkSumm);
+$fieldsetNomenclature.addEventListener('change', checkSummCourier);
 
 $btnAdd.addEventListener('click', () => {
   render($fieldsetNomenclature, createMarkup());
@@ -238,11 +238,11 @@ $btnAdd.addEventListener('click', () => {
 
 window.addEventListener('load', () => {
   convertSummOnload();
-  checkSumm();
-  checkPaymetTypeSumm();
+  checkSummCourier();
+  checkPaymetTypeSummCourier();
 });
 
-$payment.addEventListener("change", () => {
-  checkPaymetTypeSumm();
-  checkTotalSumAndAutoSumm();
+$paymentBlock.addEventListener("change", () => {
+  checkPaymetTypeSummCourier();
+  syncTotalSumAndAutoSumm();
 });
