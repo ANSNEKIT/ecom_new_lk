@@ -196,7 +196,6 @@ const convertSummOnload = () => {
   for (let i = 0; i < $inpSummAll.length; i++) {
     let $currentInput = $inpSummAll[i];
     let summInRuble = $currentInput.value.trim();
-    debugger;
 
     if ($currentInput.value.trim() === '100.00') {
       summInRuble = parseFloat(parseInt($currentInput.value) / 100).toFixed(2);
