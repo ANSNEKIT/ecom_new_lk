@@ -20,11 +20,11 @@ const bankData = {
   errorName: '',
 };
 
-/* const testData = {
+const testData = {
   data: {},
   URL: 'https://jsonplaceholder.typicode.com/posts/1',
   errorName: '',
-}; */
+};
  
 
 const changeTabs = (evt) => {
@@ -122,7 +122,7 @@ const searchInnBtnHandler = (evt) => {
 
   if (innValue) {
     loadingModeOn();
-    fetchData(firmData.URL + innValue);
+    fetchData(firmData, innValue);
     console.log(firmData);
     
     sessionStorage.setItem('searchedAccount', JSON.stringify(firmData));
@@ -138,7 +138,7 @@ const serchBikBtnHandler = (evt) => {
 
   if (bikValue) {
     loadingModeOn();
-    fetchData(bankData.URL + bikValue);
+    fetchData(bankData, bikValue);
     console.log(bankData);
     
     sessionStorage.setItem('searchedBank', JSON.stringify(bankData));
