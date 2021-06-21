@@ -1,12 +1,31 @@
 'use strict';
 
-const $serchBtn = document.querySelector('#search-btn');
-const $nextBtnFirst = document.querySelector('.next-step');
+const $searchFirmBtn = document.querySelector('#searchFirmBtn');
+const $serchBikBtn = document.querySelector('#searchBikBtn');
 const $submit = document.querySelector('#submit');
-const $nextBtn = [...document.querySelectorAll('.next-step')];
-const $prevBtn = [...document.querySelectorAll('.prev-step')];
 const $navTabs = document.querySelector('.nav-tabs');
 const $tabs = [...document.querySelectorAll('.nav-tabs a[data-toggle="tab"]')];
+const $nextBtn = [...document.querySelectorAll('.next-step')];
+const $prevBtn = [...document.querySelectorAll('.prev-step')];
+
+const firmData = {
+  data: {},
+  URL: '/signUp/search/firm/',
+  errorName: '',
+};
+
+const bankData = {
+  data: {},
+  URL: '/signUp/search/bank/',
+  errorName: '',
+};
+
+/* const testData = {
+  data: {},
+  URL: 'https://jsonplaceholder.typicode.com/posts/1',
+  errorName: '',
+}; */
+ 
 
 const changeTabs = (evt) => {
   const active = document.querySelector('.wizard .nav-tabs li.active');
@@ -26,54 +45,135 @@ const prevTab = (elem) => {
   elem.previousElementSibling.querySelector('a[data-toggle="tab"]').click();
 };
 
+const loadingModeOn = () => {
+  const $loaderBtn = $searchFirmBtn.querySelector('.spinner-grow');
+  $loaderBtn.classList.remove('visuallyHidden');
+  $searchFirmBtn.setAttribute('disabled', true);
+};
 
-document.addEventListener('DOMContentLoaded', () => {
-  if (sessionStorage.getItem('searched')) {
-    $serchBtn.setAttribute('disabled', true);
-    $nextBtnFirst.removeAttribute('disabled');
+const fetchData = async (type, param) => {
+  try {
+
+    /* пример с параметром
+    /* 
+      fetch('https://example.com?' + new URLSearchParams({
+      foo: 'value',
+      bar: 2,
+      })) 
+    */
+
+    const response = await fetch(type.URL + param);
+    if (response.ok) {
+      const data = await response.message?.json();
+      type.data = data;
+      console.log(data);
+    }
+
+    const $loaderBtn = $searchFirmBtn.querySelector('.spinner-grow');
+    $loaderBtn.classList.add('visuallyHidden');
+    $searchFirmBtn.removeAttribute('disabled');
+  } catch (err) {
+    type.errorName = err.error;
+    console.error(err.error);
+
+    const $loaderBtn = $searchFirmBtn.querySelector('.spinner-grow');
+    $loaderBtn.classList.add('visuallyHidden');
+    $searchFirmBtn.removeAttribute('disabled');
   }
-});
+};
 
-$navTabs.addEventListener('click', changeTabs);
+const renderData = (dataType) => {
+  const data = dataType.data.message;
+  if (dataType === firmData) {
+    const $firmName = document.getElementById('firmName');
+    const $inn = document.getElementById('inn');
+    const $kpp = document.getElementById('kpp');
+    const $ogrn = document.getElementById('firm_ogrn');
+    const $legalAddress = document.getElementById('legalAddress');
+    const $firmError = document.getElementById('searchInnError');
 
-$serchBtn.addEventListener('click', (evt) => {
-  const $accountBtn = document.querySelector('#account');
-  const $bicBtn = document.querySelector('#bic');
+    $firmName.value = data.name;
+    $inn.value = data.taxNumber;
+    $kpp.value = data.kpp;
+    $ogrn.value = data.ogrn;
+    $legalAddress.value = data.legalAddress;
+    $firmError.textContent = dataType.errorName;
+  } else if (dataType === bankData) {
+    const $bankName = document.getElementById('bank_name');
+    const $bankInn = document.getElementById('bank_inn');
+    const $bankBik = document.getElementById('bank_bik');
+    const $bankAccount = document.getElementById('bank_corr_account');
+    const $bankAddress = document.getElementById('bank_address');
+    const $bankError = document.getElementById('searchBikError');
 
-  let accountVal = $accountBtn.value.trim();
-  let bicVal = $bicBtn.value.trim();
+    $bankName.value = data.name;
+    $bankInn.value = data.inn;
+    $bankBik.value = data.bic;
+    $bankAccount.value = data.corr_account;
+    $bankAddress.value = data.address;
+    $bankError.textContent = dataType.errorName;
+  }
+  
+};
 
-  if (accountVal && bicVal) {
-    sessionStorage.setItem('searched', 'true');
+const searchInnBtnHandler = (evt) => {
+  const $innInput = document.querySelector('#inn-search');
+  let innValue = $innInput.value.trim();
 
-    $serchBtn.setAttribute('disabled', true);
-    $nextBtnFirst.removeAttribute('disabled');
+  if (innValue) {
+    loadingModeOn();
+    fetchData(firmData.URL + innValue);
+    console.log(firmData);
+    
+    sessionStorage.setItem('searchedAccount', JSON.stringify(firmData));
+    renderData(firmData);
   } else {
     evt.preventDefault();
   }
-});
+};
+
+const serchBikBtnHandler = (evt) => {
+  const $bikInput = document.querySelector('#bic');
+  let bikValue = $bikInput.value.trim();
+
+  if (bikValue) {
+    loadingModeOn();
+    fetchData(bankData.URL + bikValue);
+    console.log(bankData);
+    
+    sessionStorage.setItem('searchedBank', JSON.stringify(bankData));
+    renderData(bankData);
+  } else {
+    evt.preventDefault();
+  }
+};
+
+const stepBtnHandler = (evt) => {
+  if (evt.target.classList.contains('next-step')) {
+    const active = document.querySelector('.wizard .nav-tabs li.active');
+    nextTab(active);
+  } else if (evt.target.classList.contains('prev-step')) {
+    const active = document.querySelector('.wizard .nav-tabs li.active');
+    prevTab(active);
+  }
+};
+
+
+
+document.addEventListener('click', stepBtnHandler);
+
+$navTabs.addEventListener('click', changeTabs);
+
+$searchFirmBtn.addEventListener('click', searchInnBtnHandler);
+$serchBikBtn.addEventListener('click', serchBikBtnHandler);
 
 $submit.addEventListener('click', (evt) => {
-  sessionStorage.removeItem('searched');
+  sessionStorage.removeItem('searchedAccount');
+  sessionStorage.removeItem('searchedBank');
 
-  $serchBtn.removeAttribute('disabled');
-  $nextBtnFirst.setAttribute('disabled', true);
+  document.removeEventListener('click', stepBtnHandler);
 });
 
-$nextBtn.forEach((el) => {
-  el.addEventListener('click', () => {
-    const active = document.querySelector('.wizard .nav-tabs li.active');
-      active.nextElementSibling.classList.remove('disabled');
-      nextTab(active);
-  });
-});
-
-$prevBtn.forEach((el) => {
-  el.addEventListener('click', () => {
-    var active = document.querySelector('.wizard .nav-tabs li.active');
-    prevTab(active);
-  });
-});
 
 window.addEventListener('load', () => {
   const $forms = [...document.getElementsByClassName('needs-validation')];

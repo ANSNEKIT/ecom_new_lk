@@ -147,52 +147,9 @@
                             <div class="invalid-tooltip">Введите телефон в формате +71112223344</div>
                           </div>
                         </div>
-                        <p>Введите номер р/с и БИК банка. Нажмите кнопку "Поиск". <br> 
-                          Данные юр. лица и реквизиты банка подгрузятся автоматически. </p>
-                        <div class="form-row">
-                          <div class="col-lg-5 form-group">
-                            <input
-                              type="text"
-                              id="account"
-                              name="account"
-                              value=""
-                              class="form-control form-control inp-form inp-required"
-                              pattern="[0-9]+"
-                              maxLength="25"
-                              required
-                            >
-                            <label class="control-label label-form" for="account">Расчетный счет</label>
-                          </div>
-                          <div class="col-lg-4 form-group">
-                            <input
-                              type="text"
-                              id="bic"
-                              name="bic"
-                              value=""
-                              class="form-control form-control inp-form inp-required"
-                              pattern="[0-9]+"
-                              maxlength="15"
-                              required
-                            >
-                            <label class="control-label label-form" for="bic">Бик банка</label>
-                          </div>
-                          
-                          <div class="col-lg-3 form-group">
-                            <button
-                              type="button"
-                              id="search-btn"
-                              class="btn btn-primary btn-lg btn-block"
-                              name="action"
-                              value="searchFirmInfo"
-                            >Поиск</button>
-                          </div>
-                        </div>
-                        <div class="form-row">
-                          
-                        </div>
                       </fieldset>
                       <ul class="list-inline pull-right">
-                        <li><button type="button" class="btn btn-info next-step mr-2" disabled>Продолжить</button></li>
+                        <li><button type="button" class="btn btn-info next-step mr-2">Продолжить</button></li>
                       </ul>
                     </div>
 
@@ -200,6 +157,39 @@
                     <div class="tab-pane" role="tabpanel" id="step2">
                       <h4 class="text-center mb-5">2. Проверьте данные организации</h4>
                       <fieldset class="p-4 mb-4">
+                        <p class="text-center font-weight-bold">Введите ИНН вашей организации. Нажмите кнопку "Поиск". <br> 
+                        Данные юр. лица подгрузятся автоматически. </p>
+                        
+                        <div class="form-row">
+                          <div class="col-lg-8 form-group">
+                            <input
+                              type="text"
+                              class="form-control inp-form"
+                              id="inn-search"
+                              name="inn-search"
+                              placeholder="1122334455"
+                              maxlength="12"
+                              pattern="(^|[0-9]{10})|([0-9]{12})"
+                            >
+                            <label class="label-form" for="inn-search">ИНН</label>
+                          </div>                          
+                          <div class="col-lg-4 form-group d-flex">
+                            <button
+                              type="button"
+                              id="searchFirmBtn"
+                              class="btn btn-primary btn-lg btn-block"
+                              name="action"
+                              value="searchFirm"
+                            >
+                              <span class="spinner-grow spinner-grow-sm mb-1 visuallyHidden" role="status" aria-hidden="true"></span>
+                              Поиск
+                            </button>
+                          </div>
+                          <span id="searchInnError" class="text-danger"></span>
+                        </div>
+                        
+                        <p class="mb-5 mt-4">Если данные не подгрузились, вы можете заполнить их вручную ниже.</p>
+
                         <div class="form-row">
                           <div class="col-md-6 form-group mb-3">
                             <input
@@ -227,9 +217,24 @@
                               maxlength="60"
                               required
                             >
-                            <label class="label-form" for="firmName">ФИО директора/ИП</label>
+                            <label class="label-form" for="directorName">ФИО директора/ИП</label>
                             <div class="invalid-tooltip">Введите корректные ФИО без спецсимволов. Допускаются только
                               двойные кавычки</div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col-md-12 form-group">
+                            <input
+                              type="text"
+                              id="account"
+                              name="account"
+                              value=""
+                              class="form-control inp-form inp-required"
+                              pattern="[0-9]+"
+                              maxLength="25"
+                              required
+                            >
+                            <label class="label-form" for="account">Расчетный счет</label>
                           </div>
                         </div>
                         <div class="form-row">
@@ -238,14 +243,13 @@
                               type="text"
                               class="form-control inp-form inp-required"
                               id="inn"
-                              data-js-id="innFirm"
                               name="inn"
                               placeholder="1122334455"
                               maxlength="12"
                               pattern="([0-9]{10})|([0-9]{12})"
                               required
                             >
-                            <label class="label-form" for="taxNo">ИНН</label>
+                            <label class="label-form" for="inn">ИНН</label>
                             <div class="invalid-tooltip" data-js-id="innFirmError">ИНН организации 10 или 12 знаков
                             </div>
                           </div>
@@ -276,8 +280,8 @@
                               maxlength="13"
                               required
                             >
-                            <label class="label-form" for="taxNo">ОГРН/ОГНИП</label>
-                            <div class="invalid-tooltip" data-js-id="kppFirmError">Неверный ОГРН/ОГРНИП</div>
+                            <label class="label-form" for="firm_ogrn">ОГРН/ОГНИП</label>
+                            <div class="invalid-tooltip" data-js-id="ogrnFirmError">Неверный ОГРН/ОГРНИП</div>
                           </div>
                         </div>
                         <div class="form-row">
@@ -315,11 +319,11 @@
 
                         <p class="">Выберите систему налогообложения:</p>
                         <div class="form-row">
-                          <div class="col-md-4 mb-3 inp-group">
+                          <div class="col-md-4 mb-3 inp-group parentSelect">
                             <select
                               id="firmInfo_taxVariants"
                               name="firmInfo.taxVariants"
-                              class="form-control form-control inp-form"
+                              class="form-control form-control inp-form select"
                             >
                               <option value="GENERAL">ОСН</option>
                               <option value="SIMPLIFIED_INCOME">УСН доход</option>
@@ -341,6 +345,40 @@
                     <div class="tab-pane" role="tabpanel" id="step3">
                       <h4 class="text-center mb-5">3. Проверьте банковское реквизиты</h4>
                       <fieldset class="p-4 mb-4">
+                        <p class="text-center font-weight-bold">Введите БИК банка. Нажмите кнопку "Поиск". <br> 
+                          Реквизиты банка подгрузятся автоматически. 
+                        </p>
+                        
+                        <div class="form-row">
+                          <div class="col-lg-8 form-group">
+                            <input
+                              type="text"
+                              id="bic"
+                              name="bic"
+                              class="form-control form-control inp-form"
+                              pattern="^|[0-9]+"
+                              maxlength="15"
+                            >
+                            <label class="control-label label-form" for="bic">БИК банка</label>
+                          </div>
+                          
+                          <div class="col-lg-4 form-group">
+                            <button
+                              type="button"
+                              id="searchBikBtn"
+                              class="btn btn-primary btn-lg btn-block"
+                              name="action"
+                              value="searchBik"
+                            >
+                              <span class="spinner-grow spinner-grow-sm mb-1 visuallyHidden" role="status" aria-hidden="true"></span>
+                              Поиск
+                            </button>
+                          </div>
+                          <span id="searchBikError" class="text-danger"></span>
+                        </div>
+
+                        <p class="mb-5 mt-4">Если данные не подгрузились, вы можете заполнить их вручную ниже.</p>
+
                         <div class="form-row">
                           <div class="col-md-12 form-group mb-3">
                             <input 
@@ -348,7 +386,7 @@
                               id="bank_name"
                               class="form-control inp-form inp-required"
                               name="bank_name"
-                              value='АО "ТИНЬКОФФ БАНК"'
+                              value=''
                               placeholder='АО "ТИНЬКОФФ БАНК"'
                               pattern="^[а-яА-ЯёЁ\s&quot;]+$"
                               maxlength="50"
@@ -364,7 +402,7 @@
                               id="bank_address"
                               class="form-control inp-form inp-required"
                               name="bank_address"
-                              value="123060, г.Москва, 1-й Волоколамский проезд, д.10"
+                              value=""
                               placeholder="123060, г.Москва, 1-й Волоколамский проезд, д.10"
                               pattern="^[^A-Za-z«»]+$"
                               maxlength="170"
@@ -398,7 +436,6 @@
                               id="bank_bik"
                               class="form-control inp-form inp-required"
                               name="bank_bik"
-                              value="044525999"
                               pattern="[0-9]+"
                               maxlength="20"
                               required
@@ -413,7 +450,6 @@
                               id="bank_corr_account"
                               class="form-control inp-form inp-required"
                               name="bank_corr_account"
-                              value="30101810845250000999"
                               pattern="[0-9]+"
                               maxlength="50"
                               required
