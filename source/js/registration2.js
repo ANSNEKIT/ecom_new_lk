@@ -20,7 +20,6 @@ const bankData = {
   errorName: '',
 };
  
-
 const changeTabs = (evt) => {
   const active = document.querySelector('.wizard .nav-tabs li.active');
   active.classList.remove('active');
@@ -59,8 +58,8 @@ const fetchData = async (type, param) => {
     
     renderData(type, data);
   } catch (err) {
-    type.errorName = data.errorCode;
-    console.error(data.errorCode);
+    type.errorName = type.data.error;
+    console.error(err);
 
     const $loaderBtn = $searchFirmBtn.querySelector('.spinner-grow');
     $loaderBtn.classList.add('visuallyHidden');
@@ -99,7 +98,6 @@ const renderData = (dataType, data) => {
     $bankAddress.value = message.address;
     $bankError.textContent = data.errorName;
   }
-  
 };
 
 const searchInnBtnHandler = (evt) => {
@@ -109,7 +107,6 @@ const searchInnBtnHandler = (evt) => {
   if (innValue) {
     loadingModeOn();
     fetchData(firmData, innValue);
-    console.log(firmData);
     
     sessionStorage.setItem('searchedAccount', JSON.stringify(firmData));
   } else {
@@ -124,7 +121,6 @@ const serchBikBtnHandler = (evt) => {
   if (bikValue) {
     loadingModeOn();
     fetchData(bankData, bikValue);
-    console.log(bankData);
     
     sessionStorage.setItem('searchedBank', JSON.stringify(bankData));
   } else {
@@ -142,8 +138,6 @@ const stepBtnHandler = (evt) => {
   }
 };
 
-
-
 document.addEventListener('click', stepBtnHandler);
 
 $navTabs.addEventListener('click', changeTabs);
@@ -157,7 +151,6 @@ $submit.addEventListener('click', (evt) => {
 
   document.removeEventListener('click', stepBtnHandler);
 });
-
 
 window.addEventListener('load', () => {
   const $forms = [...document.getElementsByClassName('needs-validation')];
