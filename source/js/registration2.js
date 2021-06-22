@@ -56,6 +56,8 @@ const fetchData = async (type, param) => {
     const $loaderBtn = $searchFirmBtn.querySelector('.spinner-grow');
     $loaderBtn.classList.add('visuallyHidden');
     $searchFirmBtn.removeAttribute('disabled');
+    
+    renderData(type, data);
   } catch (err) {
     type.errorName = data.errorCode;
     console.error(data.errorCode);
@@ -66,8 +68,8 @@ const fetchData = async (type, param) => {
   }
 };
 
-const renderData = (dataType) => {
-  const { message } = dataType.data;
+const renderData = (dataType, data) => {
+  const { message } = data;
   if (dataType === firmData) {
     const $firmName = document.getElementById('firmName');
     const $inn = document.getElementById('inn');
@@ -81,7 +83,7 @@ const renderData = (dataType) => {
     $kpp.value = message.kpp;
     $ogrn.value = message.ogrn;
     $legalAddress.value = message.legalAddress;
-    $firmError.textContent = dataType.data.errorName;
+    $firmError.textContent = data.errorName;
   } else if (dataType === bankData) {
     const $bankName = document.getElementById('bank_name');
     const $bankInn = document.getElementById('bank_inn');
@@ -95,7 +97,7 @@ const renderData = (dataType) => {
     $bankBik.value = message.bic;
     $bankAccount.value = message.corr_account;
     $bankAddress.value = message.address;
-    $bankError.textContent = dataType.data.errorName;
+    $bankError.textContent = data.errorName;
   }
   
 };
@@ -110,7 +112,6 @@ const searchInnBtnHandler = (evt) => {
     console.log(firmData);
     
     sessionStorage.setItem('searchedAccount', JSON.stringify(firmData));
-    renderData(firmData);
   } else {
     evt.preventDefault();
   }
@@ -126,7 +127,6 @@ const serchBikBtnHandler = (evt) => {
     console.log(bankData);
     
     sessionStorage.setItem('searchedBank', JSON.stringify(bankData));
-    renderData(bankData);
   } else {
     evt.preventDefault();
   }
