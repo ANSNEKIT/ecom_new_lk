@@ -19,12 +19,6 @@ const bankData = {
   URL: '/signUp/search/bank/',
   errorName: '',
 };
-
-const testData = {
-  data: {},
-  URL: 'https://jsonplaceholder.typicode.com/posts/1',
-  errorName: '',
-};
  
 
 const changeTabs = (evt) => {
@@ -53,20 +47,10 @@ const loadingModeOn = () => {
 
 const fetchData = async (type, param) => {
   try {
-
-    /* пример с параметром
-    /* 
-      fetch('https://example.com?' + new URLSearchParams({
-      foo: 'value',
-      bar: 2,
-      })) 
-    */
-
     const response = await fetch(type.URL + param);
     if (response.ok) {
       const data = await response.json();
-      type.data = data.message;
-      console.log(data.message);
+      type.data = data;
     }
 
     const $loaderBtn = $searchFirmBtn.querySelector('.spinner-grow');
@@ -83,7 +67,7 @@ const fetchData = async (type, param) => {
 };
 
 const renderData = (dataType) => {
-  const data = dataType.data.message;
+  const { message } = dataType.data;
   if (dataType === firmData) {
     const $firmName = document.getElementById('firmName');
     const $inn = document.getElementById('inn');
@@ -92,12 +76,12 @@ const renderData = (dataType) => {
     const $legalAddress = document.getElementById('legalAddress');
     const $firmError = document.getElementById('searchInnError');
 
-    $firmName.value = data.name;
-    $inn.value = data.taxNumber;
-    $kpp.value = data.kpp;
-    $ogrn.value = data.ogrn;
-    $legalAddress.value = data.legalAddress;
-    $firmError.textContent = dataType.errorName;
+    $firmName.value = message.name;
+    $inn.value = message.taxNumber;
+    $kpp.value = message.kpp;
+    $ogrn.value = message.ogrn;
+    $legalAddress.value = message.legalAddress;
+    $firmError.textContent = dataType.data.errorName;
   } else if (dataType === bankData) {
     const $bankName = document.getElementById('bank_name');
     const $bankInn = document.getElementById('bank_inn');
@@ -106,12 +90,12 @@ const renderData = (dataType) => {
     const $bankAddress = document.getElementById('bank_address');
     const $bankError = document.getElementById('searchBikError');
 
-    $bankName.value = data.name;
-    $bankInn.value = data.inn;
-    $bankBik.value = data.bic;
-    $bankAccount.value = data.corr_account;
-    $bankAddress.value = data.address;
-    $bankError.textContent = dataType.errorName;
+    $bankName.value = message.name;
+    $bankInn.value = message.inn;
+    $bankBik.value = message.bic;
+    $bankAccount.value = message.corr_account;
+    $bankAddress.value = message.address;
+    $bankError.textContent = dataType.data.errorName;
   }
   
 };
