@@ -56,7 +56,7 @@ const fetchData = async (type, param) => {
     $loaderBtn.classList.add('visuallyHidden');
     $searchFirmBtn.removeAttribute('disabled');
     
-    renderData(type, data);
+    renderData(type);
   } catch (err) {
     type.errorName = type.data.error;
     console.error(err);
@@ -67,8 +67,8 @@ const fetchData = async (type, param) => {
   }
 };
 
-const renderData = (dataType, data) => {
-  const { message } = data;
+const renderData = (dataType) => {
+  const { message } = dataType.data;
   if (dataType === firmData) {
     const $firmName = document.getElementById('firmName');
     const $inn = document.getElementById('inn');
