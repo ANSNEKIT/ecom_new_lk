@@ -64,17 +64,17 @@ const fetchData = async (type, param) => {
 
     const response = await fetch(type.URL + param);
     if (response.ok) {
-      const data = await response.message?.json();
-      type.data = data;
-      console.log(data);
+      const data = await response.json();
+      type.data = data.message;
+      console.log(data.message);
     }
 
     const $loaderBtn = $searchFirmBtn.querySelector('.spinner-grow');
     $loaderBtn.classList.add('visuallyHidden');
     $searchFirmBtn.removeAttribute('disabled');
   } catch (err) {
-    type.errorName = err.error;
-    console.error(err.error);
+    type.errorName = data.errorCode;
+    console.error(data.errorCode);
 
     const $loaderBtn = $searchFirmBtn.querySelector('.spinner-grow');
     $loaderBtn.classList.add('visuallyHidden');
