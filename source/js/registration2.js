@@ -38,13 +38,14 @@ const prevTab = (elem) => {
   elem.previousElementSibling.querySelector('a[data-toggle="tab"]').click();
 };
 
-const loadingModeOn = ($btn) => {
+const loadingModeOn = (idBtn) => {
+  const $btn = document.getElementById(idBtn);
   const $loaderBtn = $btn.querySelector('.spinner-grow');
   $loaderBtn.classList.remove('visuallyHidden');
   $btn.setAttribute('disabled', true);
 };
 
-const fetchData = async (type, param) => {
+const fetchData = async (type, param, idBtn) => {
   try {
     const response = await fetch(type.URL + param);
     if (response.ok) {
@@ -52,9 +53,10 @@ const fetchData = async (type, param) => {
       type.data = data;
     }
 
-    const $loaderBtn = $searchFirmBtn.querySelector('.spinner-grow');
+    const $btn = document.getElementById(idBtn);
+    const $loaderBtn = $btn.querySelector('.spinner-grow');
     $loaderBtn.classList.add('visuallyHidden');
-    $searchFirmBtn.removeAttribute('disabled');
+    $btn.removeAttribute('disabled');
     
     renderData(type);
   } catch (err) {
@@ -105,8 +107,8 @@ const searchInnBtnHandler = (evt) => {
   let innValue = $innInput.value.trim();
 
   if (innValue) {
-    loadingModeOn(evt.currentTarget);
-    fetchData(firmData, innValue);
+    loadingModeOn('searchFirmBtn');
+    fetchData(firmData, innValue, 'searchFirmBtn');
     
     sessionStorage.setItem('searchedAccount', JSON.stringify(firmData));
   } else {
@@ -119,8 +121,8 @@ const serchBikBtnHandler = (evt) => {
   let bikValue = $bikInput.value.trim();
 
   if (bikValue) {
-    loadingModeOn(evt.currentTarget);
-    fetchData(bankData, bikValue);
+    loadingModeOn('searchBikBtn');
+    fetchData(bankData, bikValue, 'searchBikBtn');
     
     sessionStorage.setItem('searchedBank', JSON.stringify(bankData));
   } else {
